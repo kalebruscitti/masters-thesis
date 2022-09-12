@@ -1,0 +1,73 @@
+\documentclass[]{article}
+
+%opening
+\title{no title}
+\date{\today}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{tikz-cd}
+\usepackage{quiver}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\Ann}{\text{Ann}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\MM}{\mathcal{M}}
+\newcommand{\End}{\text{End}}
+\newcommand{\coker}{\text{coker}~}
+\newcommand{\dbar}{\overline{\partial}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\Tr}{\text{Tr }}
+
+\begin{document}
+	We describe the moduli space of parabolic $SL(2,\C)$ bundles $(E,\alpha)$, following Thaddeus and Hurtubise and Jeffrey. Twist the bundles by a fixed line bundle $L$ , so that they are globally generated. Then we can consider our bundles as quotients of the trivial bundle
+	\begin{equation}
+		\phi:\OO^N \to E.
+	\end{equation}
+	This quotient induces a map from $\wedge^2(\OO^N) \to \wedge^2(E)$ and the $SL(2,\C)$ structure induces an isomorphism $\wedge^2(E)\cong L^2$. Hence, a quotient of the trivial bundle induces an element $\hat{\beta}$ in 
+	\begin{equation}
+		V_1 := \Hom(H^0(\wedge^2(\OO^N)), H^0(L^2)).
+	\end{equation}
+	Let $R^{ss}\subset Quot$ be the space of semi-stable quotients of $\OO^N$. Let $Z$ be the direct image bundle over the Picard variety $Pic^d(\Sigma)$ with fibre $\PP(V_1)$ at $L$. (elaboration needed)  Then we have an action of $SL(N,\C)$ on $R^{ss}$ and $Z$, and the map sending $\phi \to \hat{\beta}$ is a $SL(N,\C)$ morphism(?). Thaddeus shows that this map is an embedding (c.f. page 717).
+	
+	Suppose we have a deformation of $\phi$ by $\psi_1:\OO^N \to E$, namely $\phi(\epsilon) = \phi + \epsilon\psi_1$ with $\epsilon^2=0$. Suppose also we have a section $s_0 \in H^0(\OO^N)$ deformed by $s_1 \in H^0(\OO^N)$ to $s(\epsilon) = s_0 + \epsilon(s_1)$. Then we can compute the differential of the determinant map;
+	\begin{align*}
+		dT\psi_1(s_1\wedge s_2) :&= \frac{d}{d\epsilon}|_{\epsilon=0} T(\phi(\epsilon))(s_1\wedge s_2)\\
+		&=\frac{d}{d\epsilon}|_{\epsilon=0}\phi(\epsilon)(s_1)\wedge \phi(\epsilon)(s_2)\\
+		&= \phi(s_1) \psi_1(s_2) +(-??) \psi_1(s_1)\phi(s_2)\\
+		&= \phi\wedge \psi_1
+	\end{align*}
+	
+	
+	We now aim to compute the pullback of the Fubini-Study metric on $\PP(V_1)$ to $R^{ss}$. The inner product on $V_1$ which we use comes from the metric $\langle, \rangle_E$ on $E$ as follows; we define $\langle v_1, v_2 \rangle_{\OO^N} = \langle \phi\circ v_1, \phi\circ v_1\rangle_E$ as a metric on $\OO^N$, and then we define 
+	\begin{equation}
+		\langle v_1 \wedge v_2, w_1 \wedge w_2 \rangle = \langle v_1, w_1\rangle\langle v_2,w_2\rangle_{\OO^N} - \langle v_1,w_2\rangle\langle v_2,w_1\rangle_{\OO^N}.
+	\end{equation}
+	as a metric on $\wedge^2 \OO^N$, and finally we can use this to define an inner product on $H^0(\wedge^2 \OO^N)$ by integrating this metric over $\Sigma$. Choosing a metric $\langle, \rangle_L$ on $L$, we get one for $L^2$ in a similar manner. This allows us to define the $\dagger$ operator on $V_1$ in the standard manner; by requiring that for $A\in V_1$ and all $s_1 \wedge s_2 \in H^0(\wedge^2 \OO^N)$ and $t_1\wedge t_2 \in L^2$, we have
+	\begin{equation}
+		\langle A(s_1 \wedge s_2), t_1\wedge t_2 \rangle = \langle s_1 \wedge s_2, A^\dagger(t_1 \wedge t_2)\rangle.
+	\end{equation}
+	Finally, we can then define the inner product on $V_1$ as $\Tr(A^\dagger B)$. In particular, for tangent vectors $\psi_1, \psi_2$ to $R^{ss}$, we have:
+	\begin{align*}
+		\Tr((\phi \wedge \psi_1)^\dagger (\phi \wedge \psi_2)) &= \Tr(\phi^\dagger \phi)\Tr(\psi_1^\dagger \psi_2) \\
+		&= \Tr(\phi^\dagger \phi)\sum_{k} \langle \psi_1^\dagger\psi_2(e_k), e_k\rangle\\
+		&= \Tr(\phi^\dagger \phi)\int\limits_{\Sigma} \sum_k \langle \psi_1^\dagger \psi_2(e_k)(z), e_k(z)\rangle_{\OO^N}~dz\wedge d\bar{z}\\
+		&= \Tr(\phi^\dagger \phi)\int\limits_{\Sigma} \sum_k \langle \phi\circ \psi_1^\dagger \psi_2(e_k)(z), \phi(e_k(z))\rangle_E ~dz\wedge d\bar{z}
+	\end{align*}
+	\iffalse
+	Now we add in the parabolic structure. At a puncture $p_i$, the map $\alpha_i:E\to \C_{p_i}$ acts on global sections $\sigma \in \Gamma(E)$ by
+	\begin{equation}
+		\alpha_i(\sigma) = \alpha_i(\sigma(p_i)),
+	\end{equation}
+	and we call this action $\hat{\alpha_i}$, in 
+	\begin{equation}
+		V_2 := H^0(\OO^N)^\ast.
+	\end{equation}
+	We get one copy of $V_2$ for each puncture. Furthermore, parabolic structures are only up to the independent scale of the $\alpha_i$, so we represent the equivalence class of $(E,\alpha)$ as \begin{equation}
+	[\hat{\beta}],[\hat{\alpha}])\in \PP(V_1)\times_{i=1}^n \PP(V_2).
+	\end{equation}
+	Let $X$ denote the closed subvariety of this space consisting of the image of Quot under the above injection.
+	\fi
+	
+\end{document}

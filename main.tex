@@ -19,22 +19,9 @@
 \newcommand{\dbar}{\overline{\partial}}
 
 \begin{document}
-	Let $\Sigma$ be a Riemann surface, and fix a smooth complex vector bundle $E$ over $\Sigma$, of rank $n$ and degree $k$. We are interested in the space of possible holomorphic structures we can put on $E$. A holomorphic structure is a choice of trivialization $\{U_\alpha\}$ for $E$, such that the transition functions $T_{\alpha,\beta}:U_\alpha\cap U_\beta \to GL(\mathbb{C},n)$ are biholomorphic. An equivalent and convenient characterization is as follows. Given a holomorphic structure, in every chart $\{U_\alpha\}$, with local frame $\{e_1,...,e_n\}$ for $E$, we can define a local operator taking a section $s = s^i e_i$ to
-	\begin{equation*}
-		\dbar_E(s) = \dbar(s^i)\otimes e_i,
-	\end{equation*}
-	where $\dbar$ is the usual Cauchy-Riemann operator on $\mathbb{C}$. Now, let us check this operator is well defined globally on $E$. On the intersection $U_\alpha \cap U_\beta$, with local frames $\{e_i\}$ and $\{f_i\}$, we have $s = s^i e_i = \tilde{s}^i f_i$, with $s^i = {T_{\alpha\beta}}^i_j\tilde{s}^j.$ Since $T_{\alpha\beta}$ is biholomorphic, we have:
-	\begin{align*}
-		\dbar_E(s) = \dbar(s^i)\otimes e_i &= \dbar({T_{\alpha\beta}}^i_j \tilde{s}^j)\otimes f_i\\
-		&= {T_{\alpha\beta}}^i_j \dbar(\tilde{s}^j)\otimes f_i.
-	\end{align*}
-	Hence $\dbar_E$ transforms with $T_{\alpha\beta}$ and it is globally well defined. We call $\dbar_E$ the \textit{Dolbeault Operator} corresponding to the holomorphic structure on $E$. Conversely, if we have a differential operator $\dbar_E:\Gamma(E) \to \Omega^{0,1}(M)\otimes \Gamma(E)$, we can define (by argument in Atiyah-Bott or Newlander-Nirenberg theorem) a unique holomorphic structure on $E$ for which $\dbar_E$ is the corresponding Dolbeault operator.
-	
-	Therefore, in order to study the space of holomorphic structures on $E$, we will equivalently study the space of Dolbeault operators on $E$. In a smooth local trivialization of $E$, we can write 
-	\begin{equation*}
-		\dbar_E = \dbar + B,
-	\end{equation*}
-	where $\dbar$ is the usual Cauchy-Riemann operator and $B \in \Omega^{0,1}(M, \End(E))$. Since $\dim \Sigma = 1$ there is no constraints on $B$ (citation needed) and so our space is an affine complex space with translations $\Omega^{0,1}(M,\End(E))$. We have an action of $\text{Aut}(E)$ on this space by change of basis, whose orbits are (by definition of Aut) isomorphism classes of holomorphic bundles $E$ of rank $n$ and degree $k$, and it is the space of these orbits, $N(n,k)$, that we wish to describe.
-	
-	However, in order to get a well-behaved moduli space, we must introduce a condition called stability. The \textit{slope} of a bundle $E$ is defined $\mu := c_1(E)/\text{rank}(E)$. Then $E$ is said to be \textit{stable} if, for every proper subbundle $F$ of $E$, $\mu(F) < \mu(E)$. If the inequality is not strict, $E$ is \textit{semi-stable}. We will restrict our attention to only the subset of $N(n,k)$ consisting of semi-stable bundles. 
+\section{Introduction}
+\section{Vector Bundles on a Riemann Surface}
+\section{Toric Structure on SL(2,C) bundles with punctures}
+\section{Parabolic Bundles and Degeneration}
+\section{Harada and Kaveh's Theorem and Integrability}
 \end{document}

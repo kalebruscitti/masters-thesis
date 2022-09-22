@@ -1,0 +1,118 @@
+\documentclass[]{article}
+
+%opening
+\title{no title}
+\date{\today}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{tikz-cd}
+\usepackage{quiver}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\Ann}{\text{Ann}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\MM}{\mathcal{M}}
+\newcommand{\End}{\text{End }}
+\newcommand{\coker}{\text{coker}~}
+\newcommand{\dbar}{\overline{\partial}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\Tr}{\text{Tr }}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\sslash}{\mathbin{/\mkern-4mu/}}
+
+\begin{document}
+	\subsection{Complex Picture}
+	Let $\Sigma$ be a Riemann surface, and fix a smooth complex vector bundle $E$ over $\Sigma$, of rank $n$ and degree $k$. We are interested in the space of possible holomorphic structures we can put on $E$. A holomorphic structure is a choice of trivialization $\{U_\alpha\}$ for $E$, such that the transition functions $T_{\alpha,\beta}:U_\alpha\cap U_\beta \to GL(\mathbb{C},n)$ are biholomorphic. An equivalent and convenient characterization is as follows. Given a holomorphic structure, in every chart $\{U_\alpha\}$, with local frame $\{e_1,...,e_n\}$ for $E$, we can define a local operator taking a section $s = s^i e_i$ to
+	\begin{equation*}
+		\dbar_E(s) = \dbar(s^i)\otimes e_i,
+	\end{equation*}
+	where $\dbar$ is the usual Cauchy-Riemann operator on $\mathbb{C}$. Now, let us check this operator is well defined globally on $E$. On the intersection $U_\alpha \cap U_\beta$, with local frames $\{e_i\}$ and $\{f_i\}$, we have $s = s^i e_i = \tilde{s}^i f_i$, with $s^i = {T_{\alpha\beta}}^i_j\tilde{s}^j.$ Since $T_{\alpha\beta}$ is biholomorphic, we have:
+	\begin{align*}
+		\dbar_E(s) = \dbar(s^i)\otimes e_i &= \dbar({T_{\alpha\beta}}^i_j \tilde{s}^j)\otimes f_i\\
+		&= {T_{\alpha\beta}}^i_j \dbar(\tilde{s}^j)\otimes f_i.
+	\end{align*}
+	Hence $\dbar_E$ transforms with $T_{\alpha\beta}$ and it is globally well defined. We call $\dbar_E$ the \textit{Dolbeault Operator} corresponding to the holomorphic structure on $E$. Conversely, if we have a differential operator $\dbar_E:\Gamma(E) \to \Omega^{0,1}(M)\otimes \Gamma(E)$, we can define (by argument in Atiyah-Bott or Newlander-Nirenberg theorem) a unique holomorphic structure on $E$ for which $\dbar_E$ is the corresponding Dolbeault operator.
+	
+	Therefore, in order to study the space of holomorphic structures on $E$, we can equivalently study the space of Dolbeault operators on $E$. In a smooth local trivialization of $E$, we can write 
+	\begin{equation*}
+		\dbar_E = \dbar + B,
+	\end{equation*}
+	where $\dbar$ is the usual Cauchy-Riemann operator and $B \in \Omega^{0,1}(M, \End(E))$. Since $\dim \Sigma = 1$ there is no constraints on $B$ (citation needed) and so our space is an affine complex space with translations $\Omega^{0,1}(M,\End(E))$. We have an action of $\text{Aut}(E)$ on this space by change of basis, whose orbits are (by definition of Aut) isomorphism classes of holomorphic bundles $E$ of rank $n$ and degree $k$, and it is the space of these orbits, $N(n,k)$, that we wish to describe. 
+	
+	However, in order to get a well-behaved moduli space, we must introduce a condition called stability. 
+	\begin{definition}
+		Let the \textit{slope} of a bundle $E$ be
+		$$\mu := c_1(E)/\text{rank}(E),$$
+		where $c_1(E)$ denotes the first Chern class. Then $E$ is said to be \textit{stable} if, for every proper subbundle $F$ of $E$, $\mu(F) < \mu(E)$. If the inequality is not strict, $E$ is \textit{semi-stable}.
+	\end{definition}
+	Stability is required to guarantee that once we quotient our space by $\text{Aut}(E)$, we end up with a space that is Hausdorff (citation needed). For this reason, we will restrict our attention to only the subset of $N(n,k)$ consisting of semi-stable bundles. In particular, we will denote the space of degree $0$ semi-stable bundles as $\MM$.
+	
+	Since stability is an open condition, we are safe to consider deformations. At a bundle $(E,\dbar_E)$ with holomorphic structure given by transition functions $T_{\alpha,\beta}$, we can consider deforming the holomorphic structure to 
+	\begin{equation}
+		T_{\alpha,\beta}(\epsilon) = T_{\alpha,\beta} + \epsilon t_{\alpha,\beta},
+	\end{equation}
+	where $t_{\alpha,\beta} \in \Omega^{0,1}(M,\End(E))$ and $\epsilon^2=0$. For this to remain a well-defined holomorphic structure, we require that $T_{\alpha,\beta}(\epsilon)$ satisfies the cocycle condition for all $\epsilon$. That is, on $U_{\alpha}\cap U_{\beta}\cap U_{\gamma}$,
+	\begin{align*}
+		T_{\alpha,\beta}(\epsilon)T_{\beta,\gamma}(\epsilon) &= T_{\alpha,\gamma}(\epsilon)\\
+		\left(T_{\alpha,\beta} + \epsilon t_{\alpha,\beta} \right)
+		\left(T_{\beta,\gamma} + \epsilon t_{\beta,\gamma} \right) &=
+		\left(T_{\alpha,\gamma} + \epsilon t_{\alpha,\gamma} \right)\\
+		T_{\alpha,\beta}T_{\beta,\gamma} + \epsilon(t_{\alpha,\beta}T_{\beta,\gamma} + T_{\alpha,\beta} t_{\beta,\gamma}) + \epsilon^2 t_{\alpha,\beta}t_{\beta,\gamma} &= T_{\alpha,\gamma} + \epsilon t_{\alpha,\gamma}
+	\end{align*}
+	using that $\epsilon^2 = 0$ and $T_{\alpha,\beta}$ satisfy the cocycle condition, we have
+	\begin{align*}
+		T_{\alpha,\gamma} + \epsilon(t_{\alpha,\beta} T_{\beta,\gamma} + T_{\alpha,\beta} t_{\beta,\gamma}) &= T_{\alpha,\gamma} + \epsilon t_{\alpha,\gamma}\\
+		t_{\alpha,\beta} T_{\beta,\gamma} + T_{\alpha,\beta} t_{\beta,\gamma} &= t_{\alpha,\gamma}.
+	\end{align*}
+	This condition tells us that $t_{\alpha,\beta}$ is a 1 cocycle in the sheaf $\End(E)$. When we quotient the action of of $\text{Aut}(E)$, we find that the tangent space to $N(n,k)$ is $H^1(\End(E))$. 
+	
+	When $E$ has a hermitian metric $h:E\otimes E \to \C$, the conjugate Hodge star $\bar{\star}:\Omega^{0,1}(\Sigma) \to \Omega^{1,0}(\Sigma)$ combined with $h$ allows us to define a hermitian inner product on $H^1(\End (E))$.  First $h$ defines a metric on $\End E$; if $A,B\in \End E$, let
+	\begin{equation}
+		g(A,B) = \Tr(A^\dagger B),
+	\end{equation}
+	where $\dagger$ is defined in terms of $h$, by $h(Ae,e) = h(e,A^\dagger e)$ for all $e\in E$. Then for any $\alpha = A \otimes a$, $A\in \End E$ and $a \in \Omega^{0,1}(\Sigma)$, we define:
+	\begin{align}
+		\bar{\ast}_E \alpha = g(A,-)\otimes \bar{\ast}a, 
+	\end{align}
+	and
+	\begin{equation}
+		\langle \alpha, \beta \rangle = \int\limits_\Sigma \alpha \wedge_g \bar{\ast}_E \beta =\int\limits_\Sigma g(A,B)~a\wedge \bar{\ast} b.
+	\end{equation}
+	This is just another form of Serre Duality (citation). In a local co-ordinate chart where $\alpha = Adz$ and $\beta = Bdz$, this takes the form
+	\begin{equation}
+		\langle \alpha, \beta \rangle = \int\limits_\Sigma \Tr(A^\dagger B)~dz\wedge d\bar{z}.
+	\end{equation}
+
+	\subsection{Symplectic Picture}
+	There is another picture of this moduli space, thanks to Narasimhan and Seshadri, as well as by Donaldson. Consider the trivial principal $G=SU(2)$ bundle $P$, and the space $\cA$ of flat smooth connections. In a fixed trivialization $P \cong G\times \Sigma$, a connection is determined by a form $A \in \Omega^1(\Sigma)\otimes \mathfrak{g}$, so we can identify $\cA$ as the subset of $\Omega^1(\Sigma)\otimes\mathfrak{g}$ of flat connections, namely:
+	\begin{equation}
+		\cA = \{A \in \Omega^1(\Sigma)\otimes\mathfrak{g} ~|~ dA + A\wedge A = 0\}.
+	\end{equation}
+	Then the gauge group, $\cG = \Hom(\Sigma, G)$ acts on $\cA$ as follows: for $g\in \cG$,
+	\begin{equation}
+		g\circlearrowright A := g^{-1}Ag + g^{-1}dg.
+	\end{equation}
+	The vector space $\cA$ has a natural symplectic structure, which comes from the inner product (the Killing form) on the Lie Algebra $\mathfrak{g}$, $K:\mathfrak{g}\otimes\mathfrak{g}\to\mathbb{C}$. If $A = \alpha \otimes X$ and $B = \beta \otimes Y$ then we can define
+	\begin{equation}
+		\omega(A,B) = \int\limits_\Sigma K(X,Y)\alpha\wedge \beta.
+	\end{equation}
+	This symplectic stucture is preserved by the action of $\cG$; we have
+	\begin{align*}
+		(g^{-1} A g + g^{-1}dg) \wedge (g^{-1} B g + g^{-1}dg) &= g^{-1}A\wedge B g + g^{-1}(dg\wedge Bg) + g^{-1}A\wedge dg + g^{-1}dg \wedge g^{-1}dg \\
+		&= g^{-1} A\wedge B g + g^{-1}(d(gB) + d(Ag)g^{-1} - dA - gdB)g
+	\end{align*}
+	
+	Importantly, the curvature $F = dA + A\wedge A$ is actually a moment map for the action of $\cG$ (also to be shown here). This lets us acquire the moduli space of flat connections by symplectic reduction:
+	\begin{equation}
+		\MM = \cA\sslash\cG = F^{-1}(0)/ \cG.
+	\end{equation} 
+	
+	
+\end{document}

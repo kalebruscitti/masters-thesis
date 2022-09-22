@@ -1,0 +1,38 @@
+\documentclass[]{article}
+
+%opening
+\title{no title}
+\date{\today}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{tikz-cd}
+\usepackage{quiver}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\Ann}{\text{Ann}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\MM}{\mathcal{M}}
+\newcommand{\End}{\text{End}}
+\newcommand{\coker}{\text{coker}~}
+\newcommand{\dbar}{\overline{\partial}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\Tr}{\text{Tr }}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\sslash}{\mathbin{/\mkern-4mu/}}
+
+
+\begin{document}
+\subsection{$SL(2,\C)$ bundles on punctured surface.}
+	As before, let $\Sigma$ be a compact Riemann surface and $\MM$ the moduli space of flat connections on $\Sigma$, which here we consider in the symplectic picture. Following Jeffrey and Weitsman, we describe a Hamiltonian system on this moduli space, exhibiting it as a toric variety. Let $C$ be a closed oriented curve in $\Sigma$ and pick a basepoint $y\in C$. We can define a function $\tilde{f}_C:\cA \to \mathbb{R}$ by 
+	\begin{equation}
+		\tilde{f}_C(A) = \frac{1}{2}\text{hol}_C(A),
+	\end{equation}
+	where hol$_C(A)$ means the holonomy of $A$ around $C$ from $y$ to $y$. Since the holonomy is $\cG$ invariant, this passes to $f_C:\MM \to \mathbb{R}$. $\Sigma$ admits a decomposition into \textit{trinions} or \textit{pairs of pants}, which are copies of a disc with two holes:
+	\begin{equation}
+		D = \{z \in \mathbb{C}~|~ |z|\leq 2 \} - \{z~|~|z-1|<1/2\}\cup \{z~|~ |z+1| < 1/2\},
+	\end{equation}
+	with marked points on the boundary of $D$. Suppose we are given such a decomposition of $\Sigma$ into $2g-2$ trinions $D_\gamma$, $\gamma\in\{1,2,...,2g-2\}$, joined along their boundaries and with the marked points on the boundaries coinciding for any trinions with non-trivial intersection. Then the boundary circles of $D_\gamma$ give a collection $C_i$, $i\in\{1,2,...,3g-3\}$ of closed oriented curves in $\Sigma$ for which we get corresponding functions $f_i = f_{C_i}:\MM \to \mathbb{R}$ using the above definition.
+\end{document}

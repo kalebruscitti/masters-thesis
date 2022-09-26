@@ -29,7 +29,15 @@
 
 \begin{document}
 	\subsection{Complex Picture}
-	Let $\Sigma$ be a Riemann surface, and fix a smooth complex vector bundle $E$ over $\Sigma$, of rank $n$ and degree $k$. We are interested in the space of possible holomorphic structures we can put on $E$. A holomorphic structure is a choice of trivialization $\{U_\alpha\}$ for $E$, such that the transition functions $T_{\alpha,\beta}:U_\alpha\cap U_\beta \to GL(\mathbb{C},n)$ are biholomorphic. An equivalent and convenient characterization is as follows. Given a holomorphic structure, in every chart $\{U_\alpha\}$, with local frame $\{e_1,...,e_n\}$ for $E$, we can define a local operator taking a section $s = s^i e_i$ to
+	Let $\Sigma$ be a Riemann surface, and fix a smooth complex vector bundle $E$ over $\Sigma$, of rank $n$ and degree $k$. We are interested in the space of possible holomorphic structures we can put on $E$.
+	\begin{definition}
+		A \textit{holomorphic structure} on a complex vector bundle $E$ is a choice of trivializations $\{U_\alpha, \phi_\alpha\}$ for $E$, such that the transition functions
+		\begin{equation*}
+			T_{\alpha,\beta} = \phi_\alpha \circ \phi^{-1}_\beta: E|_{U_\alpha \cap U_\beta} \to E|_{U_\alpha \cap U_\beta},
+		\end{equation*}
+		are biholomorphic. 
+	\end{definition}
+	 An equivalent and convenient characterization is as follows. Given a holomorphic structure, in every chart $\{U_\alpha\}$, with local frame $\{e_1,...,e_n\}$ for $E$, we can define a local operator taking a section $s = s^i e_i$ to
 	\begin{equation*}
 		\dbar_E(s) = \dbar(s^i)\otimes e_i,
 	\end{equation*}
@@ -38,7 +46,7 @@
 		\dbar_E(s) = \dbar(s^i)\otimes e_i &= \dbar({T_{\alpha\beta}}^i_j \tilde{s}^j)\otimes f_i\\
 		&= {T_{\alpha\beta}}^i_j \dbar(\tilde{s}^j)\otimes f_i.
 	\end{align*}
-	Hence $\dbar_E$ transforms with $T_{\alpha\beta}$ and it is globally well defined. We call $\dbar_E$ the \textit{Dolbeault Operator} corresponding to the holomorphic structure on $E$. Conversely, if we have a differential operator $\dbar_E:\Gamma(E) \to \Omega^{0,1}(M)\otimes \Gamma(E)$, we can define (by argument in Atiyah-Bott or Newlander-Nirenberg theorem) a unique holomorphic structure on $E$ for which $\dbar_E$ is the corresponding Dolbeault operator.
+	Hence $\dbar_E$ transforms with $T_{\alpha\beta}$ and it is globally well defined. We call $\dbar_E$ the \textit{Dolbeault Operator} corresponding to the holomorphic structure on $E$. Conversely, if we have a differential operator $\dbar_E:\Gamma(E) \to \Omega^{0,1}(\Sigma)\otimes \Gamma(E)$, we can define a holomorphic structure on $E$. (pf or citation needed)
 	
 	Therefore, in order to study the space of holomorphic structures on $E$, we can equivalently study the space of Dolbeault operators on $E$. In a smooth local trivialization of $E$, we can write 
 	\begin{equation*}
@@ -48,11 +56,58 @@
 	
 	However, in order to get a well-behaved moduli space, we must introduce a condition called stability. 
 	\begin{definition}
-		Let the \textit{slope} of a bundle $E$ be
+		Let the \emph{slope} of a bundle $E$ be
 		$$\mu := c_1(E)/\text{rank}(E),$$
 		where $c_1(E)$ denotes the first Chern class. Then $E$ is said to be \textit{stable} if, for every proper subbundle $F$ of $E$, $\mu(F) < \mu(E)$. If the inequality is not strict, $E$ is \textit{semi-stable}.
 	\end{definition}
-	Stability is required to guarantee that once we quotient our space by $\text{Aut}(E)$, we end up with a space that is Hausdorff (citation needed). For this reason, we will restrict our attention to only the subset of $N(n,k)$ consisting of semi-stable bundles. In particular, we will denote the space of degree $0$ semi-stable bundles as $\MM$.
+	Stability is required to guarantee that once we quotient our space by $\text{Aut}(E)$, we end up with a space that is Hausdorff (Mumford,Fogarty GIT book). To motivate this claim, let us give an example of two isomorphism classes of holomorphic bundle which intersect at an unstable bundle. Let $\Sigma = \mathbb{P}^1$ and $E = \OO(1)\oplus \OO(-1)$. Then
+	\begin{equation}
+		c_1(E) = c_1(\OO(1))c_1(\OO(-1)) = -1,
+	\end{equation} 
+	therefore $\mu(E) = -1/2$. However $\OO(1)$ is a proper subbundle of $E$ and $\mu(\OO(1)) = 1$, so $E$ is unstable. Letting $U_0 = \mathbb{P}^1 - \{\infty\}$ and $U_1 = \mathbb{P}^1 - \{0\}$, $E$ has transition function $T$ on $U_0 \cap U_1$ given by
+	\begin{equation*}
+	T(z) = \begin{bmatrix}
+	z & 0\\
+	0 & \frac{1}{z}
+	\end{bmatrix}, z \neq 0, z\neq \infty.
+	\end{equation*}
+	Now consider conjugating $E$ by the following family in $Aut(E)$
+	\begin{align*}
+		\begin{bmatrix}
+		1 & b\\
+		c & 1\\
+		\end{bmatrix}
+		\begin{bmatrix}
+		z & 0\\
+		0 & \frac{1}{z}\\
+		\end{bmatrix}
+		\begin{bmatrix}
+		1 & -c\\
+		-b & 1\\
+		\end{bmatrix} = \begin{bmatrix}
+		z - \frac{b^2}{z} & \frac{b}{z}-cz\\
+		cz - \frac{b}{z} & \frac{1}{z}-c^2 z\\
+		\end{bmatrix}.
+	\end{align*}
+	If we let $c=0$ and $b=t$ we get a family $F(t)$ of vector bundles with transition matrices
+	\begin{equation*}
+		T_{F}(t) = \begin{bmatrix}
+		z-t^2/z & t/z\\
+		-t/z & 1/z
+		\end{bmatrix},
+	\end{equation*}
+	and if we let $c=t$ and $b=0$ we get a family $G(t)$ of vector bundles with transition matrices
+	\begin{equation*}
+		T_{G}(t) = \begin{bmatrix}
+		z & -tz\\
+		tz & \frac{1}{z}-t^2 z
+		\end{bmatrix}.
+	\end{equation*}
+	As $t\to 0$, both $F(t)$ and $G(t)$ go to $E$. Therefore, $E$ is in the orbit of both $F(1)$ and $G(1)$ under the action of Aut$(E)$. This means any open set containing $[F(1)]$ must contain $E$, and any open set containing $[G(1)]$ must contain $E$, and therefore these two points serve as a counterexample to Hausdorffness.
+	
+	For this reason, we will restrict our attention to only the subset of $N(n,k)$ consisting of semi-stable bundles. In particular, we will denote the space of degree $0$ semi-stable bundles as $\MM$. 
+	
+	
 	
 	Since stability is an open condition, we are safe to consider deformations. At a bundle $(E,\dbar_E)$ with holomorphic structure given by transition functions $T_{\alpha,\beta}$, we can consider deforming the holomorphic structure to 
 	\begin{equation}
@@ -113,6 +168,6 @@
 	\begin{equation}
 		\MM = \cA\sslash\cG = F^{-1}(0)/ \cG.
 	\end{equation} 
-	
+	The relationship between this space of connections and the space of holomorphic vector bundles is described by the Narasimhan-Seshadri theorem. In one direction, given a flat connection $A$ on $P$, inducing a connection on the associated bundle $E$, we can decompose $A = A^{0,1} + A^{1,0}$. This allows us to take $\dbar_E = A^{0,1}$ as a complex structure on $E$ corresponding to the flat connection $A$. The Narasimhan-Seshadri theorem guarantees that this structure will define a stable bundle, and also gives the converse direction; that flat stable structures $\dbar_E$ define flat unitary connections $A$. 
 	
 \end{document}

@@ -25,8 +25,8 @@
 
 
 \begin{document}
-\subsection{$SL(2,\C)$ bundles on punctured surface.}
-	As before, let $\Sigma$ be a compact Riemann surface and $\MM$ the moduli space of flat connections on $\Sigma$, which here we consider in the symplectic picture. Following Jeffrey and Weitsman, we describe a Hamiltonian system on this moduli space, exhibiting it as a toric variety. Let $C$ be a closed oriented curve in $\Sigma$ and pick a basepoint $y\in C$. We can define a function $\tilde{f}_C:\cA \to \mathbb{R}$ by 
+\subsection{Torus Action on $\MM$}
+	As before, let $\Sigma$ be a compact Riemann surface and $\MM$ the moduli space of flat $G=SU(2)$ connections on $\Sigma$, which here we consider in the symplectic picture. Following Jeffrey and Weitsman, we describe an action of $T^{3g-3}$ on $\MM$. Let $C$ be a closed oriented curve in $\Sigma$ and pick a basepoint $y\in C$. We can define a function $\tilde{f}_C:\cA \to \mathbb{R}$ by 
 	\begin{equation}
 		\tilde{f}_C(A) = \frac{1}{2}\text{hol}_C(A),
 	\end{equation}
@@ -34,5 +34,22 @@
 	\begin{equation}
 		D = \{z \in \mathbb{C}~|~ |z|\leq 2 \} - \{z~|~|z-1|<1/2\}\cup \{z~|~ |z+1| < 1/2\},
 	\end{equation}
-	with marked points on the boundary of $D$. Suppose we are given such a decomposition of $\Sigma$ into $2g-2$ trinions $D_\gamma$, $\gamma\in\{1,2,...,2g-2\}$, joined along their boundaries and with the marked points on the boundaries coinciding for any trinions with non-trivial intersection. Then the boundary circles of $D_\gamma$ give a collection $C_i$, $i\in\{1,2,...,3g-3\}$ of closed oriented curves in $\Sigma$ for which we get corresponding functions $f_i = f_{C_i}:\MM \to \mathbb{R}$ using the above definition.
+	with marked points on the boundary of $D$. Suppose we are given such a decomposition of $\Sigma$ into $2g-2$ trinions $D_\gamma$, $\gamma\in\{1,2,...,2g-2\}$, joined along their boundaries and with the marked points on the boundaries coinciding for any trinions with non-trivial intersection. Then the boundary circles of $D_\gamma$ give a collection $C_i$, $i\in\{1,2,...,3g-3\}$ of closed oriented curves in $\Sigma$ for which we get corresponding functions $f_i = f_{C_i}:\MM \to \mathbb{R}$ using the above definition. Since these functions are the trace of $SU(2)$ matrices, they can be described by cosine of angles $\theta_i$,
+	\begin{equation}
+		\theta_i(A) = \cos^{-1}(f_i(A)),
+	\end{equation}
+	where $\theta_i$ is taken to lie in $[0,\pi]$. This defines a map $\theta = (\theta_1,...,\theta_{3g-3}):\MM \to \mathbb{R}^{3g-3}$. These $\theta_i$ are smooth on $U_i := \theta_i^{-1}(0,\pi) \subset \MM$, which is open and dense. Thus, the Hamiltonian flows of each $\theta_i$ are defined on $\MM^{s} = \bigcap_{i=1}^{3g-3} U_i \subset \MM$. These Hamiltonian flows are periodic with constant period, which means they induce a torus action on $\MM^{s}$. Explicitly, if we let $X_i$ denote the Hamiltonian vector field of $\theta_i$, defined by
+	\begin{equation}
+		\iota_{X_i}\omega = d\theta_i,
+	\end{equation}
+	and let $e^{tX_i}$ be the corresponding vector field flow, then the action is given by $g = (\alpha_1,...,\alpha_{3g-3}) \in T^{3g-3}$ acts by
+	\begin{equation}
+		A \to e^{\alpha_1 X_1 + ... + \alpha_{3g-3}X_{3g-3}}A.
+	\end{equation}
+	 The Lie algebra of $T^{3g-3}$ is $
+	\mathbb{R}^3$ and we interpret $\theta(A)$ as being dual by $\langle \theta, X \rangle = \sum \theta_i X_i$. Then
+	\begin{equation}
+		d\left(\langle \theta(A),X\rangle\right) = d\sum\theta_i X_i = \sum X_i d\theta_i = \iota_{X}\omega,
+	\end{equation}
+	which means $\theta$ is the moment map for the torus action.
 \end{document}

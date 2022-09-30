@@ -1,35 +1,33 @@
-\documentclass[]{article}
+\section{Moduli Space of Unitary Connections on a Riemann Surface}
+\label{s:vectorbundles}
+	\subsection{Symplectic Picture}
+	 Let $\Sigma$ be the compact connected Riemann surface of genus $g$. Consider the trivial principal $G=SU(2)$ bundle $P$, over $\Sigma$ and let $\cA$ denote the space of smooth prinicpal connections on $P$. In a fixed trivialization $P \cong G\times \Sigma$, a connection is determined by a form $A \in \Omega^1(\Sigma)\otimes \mathfrak{g}$. If we let $\cA_0$ denote the subspace of flat connections $(0 = F:=dA + A\wedge A)$, we can identify
+	\begin{equation}
+	\cA_0 = \{A \in \Omega^1(\Sigma)\otimes\mathfrak{g} (=\cA) ~|~ dA + A\wedge A = 0\}.
+	\end{equation}
+	Then the gauge group, $\cG = \Hom(\Sigma, G)$ acts on $\cA$ as follows: for $g\in \cG$,
+	\begin{equation}
+	g\circlearrowright A := g^{-1}Ag + g^{-1}dg.
+	\end{equation}
+	The vector space $\cA$ has a natural symplectic structure, which comes from the inner product (the Killing form) on the Lie Algebra $\mathfrak{g}$, $K:\mathfrak{g}\otimes\mathfrak{g}\to\mathbb{C}$. If $A = \alpha \otimes X$ and $B = \beta \otimes Y$ then we can define
+	\begin{equation}
+	\omega(A,B) = \int\limits_\Sigma K(X,Y)\alpha\wedge \beta.
+	\end{equation}
+	This symplectic stucture is preserved by the action of $\cG$; we have
+	\begin{align*}
+	(g^{-1} A g + g^{-1}dg) \wedge (g^{-1} B g + g^{-1}dg) &= g^{-1}A\wedge B g + g^{-1}(dg\wedge Bg) + g^{-1}A\wedge dg + g^{-1}dg \wedge g^{-1}dg \\
+	&= g^{-1} A\wedge B g + g^{-1}(d(gB) + d(Ag)g^{-1} - dA - gdB)g
+	\end{align*}
+	
+	Importantly, the curvature $F = dA + A\wedge A$ is actually a moment map for the action of $\cG$ (also to be shown here). This lets us acquire the moduli space of flat connections by symplectic reduction:
+	\begin{equation}
+	\MM = \cA\sslash\cG = F^{-1}(0)/ \cG= \cA_0/ \cG.
+	\end{equation} 
+	Symplectic reduction also gives us a symplectic structure on the quotient space $\MM$, such that under the pullback by the quotient map, $q:\cA_0 \to \MM$, we recover the symplectic form $\omega$ for $\cA$.
 
-%opening
-\title{no title}
-\date{\today}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{tikz-cd}
-\usepackage{quiver}
 
-\newtheorem{theorem}{Theorem}
-\newtheorem{definition}{Definition}
-
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\Hom}{\text{Hom}}
-\newcommand{\Ann}{\text{Ann}}
-\newcommand{\OO}{\mathcal{O}}
-\newcommand{\LL}{\mathcal{L}}
-\newcommand{\MM}{\mathcal{M}}
-\newcommand{\End}{\text{End }}
-\newcommand{\coker}{\text{coker}~}
-\newcommand{\dbar}{\overline{\partial}}
-\newcommand{\cA}{\mathcal{A}}
-\newcommand{\cG}{\mathcal{G}}
-\newcommand{\Tr}{\text{Tr }}
-\newcommand{\HH}{\mathbb{H}}
-\newcommand{\sslash}{\mathbin{/\mkern-4mu/}}
-
-\begin{document}
 	\subsection{Complex Picture}
-	Let $\Sigma$ be a Riemann surface, and fix a smooth complex vector bundle $E$ over $\Sigma$, of rank $n$ and degree $k$. We are interested in the space of possible holomorphic structures we can put on $E$.
+	There is another picture of this moduli space, thanks to Narasimhan and Seshadri, as well as by Donaldson. Fix a smooth complex vector bundle $E$ over $\Sigma$, of rank $n$ and degree $k$. We are interested in the space of possible holomorphic structures we can put on $E$.
 	\begin{definition}
 		A \textit{holomorphic structure} on a complex vector bundle $E$ is a choice of trivializations $\{U_\alpha, \phi_\alpha\}$ for $E$, such that the transition functions
 		\begin{equation*}
@@ -144,30 +142,5 @@
 	\begin{equation}
 		\langle \alpha, \beta \rangle = \int\limits_\Sigma \Tr(A^\dagger B)~dz\wedge d\bar{z}.
 	\end{equation}
-
-	\subsection{Symplectic Picture}
-	There is another picture of this moduli space, thanks to Narasimhan and Seshadri, as well as by Donaldson. Consider the trivial principal $G=SU(2)$ bundle $P$, and the space $\cA$ of flat smooth connections. In a fixed trivialization $P \cong G\times \Sigma$, a connection is determined by a form $A \in \Omega^1(\Sigma)\otimes \mathfrak{g}$, so we can identify $\cA$ as the subset of $\Omega^1(\Sigma)\otimes\mathfrak{g}$ of flat connections, namely:
-	\begin{equation}
-		\cA = \{A \in \Omega^1(\Sigma)\otimes\mathfrak{g} ~|~ dA + A\wedge A = 0\}.
-	\end{equation}
-	Then the gauge group, $\cG = \Hom(\Sigma, G)$ acts on $\cA$ as follows: for $g\in \cG$,
-	\begin{equation}
-		g\circlearrowright A := g^{-1}Ag + g^{-1}dg.
-	\end{equation}
-	The vector space $\cA$ has a natural symplectic structure, which comes from the inner product (the Killing form) on the Lie Algebra $\mathfrak{g}$, $K:\mathfrak{g}\otimes\mathfrak{g}\to\mathbb{C}$. If $A = \alpha \otimes X$ and $B = \beta \otimes Y$ then we can define
-	\begin{equation}
-		\omega(A,B) = \int\limits_\Sigma K(X,Y)\alpha\wedge \beta.
-	\end{equation}
-	This symplectic stucture is preserved by the action of $\cG$; we have
-	\begin{align*}
-		(g^{-1} A g + g^{-1}dg) \wedge (g^{-1} B g + g^{-1}dg) &= g^{-1}A\wedge B g + g^{-1}(dg\wedge Bg) + g^{-1}A\wedge dg + g^{-1}dg \wedge g^{-1}dg \\
-		&= g^{-1} A\wedge B g + g^{-1}(d(gB) + d(Ag)g^{-1} - dA - gdB)g
-	\end{align*}
-	
-	Importantly, the curvature $F = dA + A\wedge A$ is actually a moment map for the action of $\cG$ (also to be shown here). This lets us acquire the moduli space of flat connections by symplectic reduction:
-	\begin{equation}
-		\MM = \cA\sslash\cG = F^{-1}(0)/ \cG.
-	\end{equation} 
-	The relationship between this space of connections and the space of holomorphic vector bundles is described by the Narasimhan-Seshadri theorem. In one direction, given a flat connection $A$ on $P$, inducing a connection on the associated bundle $E$, we can decompose $A = A^{0,1} + A^{1,0}$. This allows us to take $\dbar_E = A^{0,1}$ as a complex structure on $E$ corresponding to the flat connection $A$. The Narasimhan-Seshadri theorem guarantees that this structure will define a stable bundle, and also gives the converse direction; that flat stable structures $\dbar_E$ define flat unitary connections $A$. 
-	
+The relationship between this space of connections and the space of holomorphic vector bundles is described by the Narasimhan-Seshadri theorem. In one direction, given a flat connection $A$ on $P$, inducing a connection on the associated bundle $E$, we can decompose $A = A^{0,1} + A^{1,0}$. This allows us to take $\dbar_E = A^{0,1}$ as a complex structure on $E$ corresponding to the flat connection $A$. The Narasimhan-Seshadri theorem guarantees that this structure will define a stable bundle, and also gives the converse direction; that flat stable structures $\dbar_E$ define flat unitary connections $A$. 
 \end{document}

@@ -5,8 +5,12 @@
 \date{\today}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{tikz-cd}
 \usepackage{quiver}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
 
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Hom}{\text{Hom}}
@@ -25,7 +29,11 @@
 
 
 \begin{document}
-\subsection{Torus Action on $\MM$}
+\subsection{Geometric Quantization of the Moduli Space}	
+	Now we have a symplectic moduli space $(\MM,\omega)$, which contains an open smooth symplectic manifold, and over this space there exists a line bundle $\LL$ with curvature $2\pi i \omega$ (cite Quillen, Weitsman). This is exactly the data of a prequantum system to which we can apply geometric quantization. Jeffrey and Weitsman describe this quantization following an approach of (cite Weitsman), which is for a compact symplectic manifold $(M,\omega)$ and line bundle $\LL$, using a real polarization of $M$. A real polarization of $M$ is a map $\pi:M\to B$ onto a manifold of half dimension, such that $\omega|_{\pi^{-1}(b)} =0$ for all $b\in B$. Under some hypotheses, there will be a finite set of \textit{Bohr-Sommerfeld points} $b_i$ for which $\LL$ restricted to the fibers $L_{b_i}$ of $\pi$ possesses global covariant constant sections. Then the quantization of the system is naturally isomorphic to the space of all such sections (cite Sniatycki).
+	
+	If $(\MM,\omega)$ was smooth, then this quantization would carry through perfectly to this case, but instead we must restrict ourselves to the smooth locus of $\MM$, and come back to the general case.
+
 	As before, let $\Sigma$ be a compact Riemann surface and $\MM$ the moduli space of flat $G=SU(2)$ connections on $\Sigma$, which here we consider in the symplectic picture. Following Jeffrey and Weitsman, we describe an action of $T^{3g-3}$ on $\MM$. Let $C$ be a closed oriented curve in $\Sigma$ and pick a basepoint $y\in C$. We can define a function $\tilde{f}_C:\cA \to \mathbb{R}$ by 
 	\begin{equation}
 		\tilde{f}_C(A) = \frac{1}{2}\text{hol}_C(A),
@@ -51,5 +59,65 @@
 	\begin{equation}
 		d\left(\langle \theta(A),X\rangle\right) = d\sum\theta_i X_i = \sum X_i d\theta_i = \iota_{X}\omega,
 	\end{equation}
-	which means $\theta$ is the moment map for the torus action.
+	which means $\theta$ is the moment map for the torus action. These functions $f_i$ also give us a real polarization of $\MM$. Let $B \subset \mathbb{R}^{3g-3}$ be the image of the $f_i$,
+	\begin{equation}
+		B = \{(f_i(E),...,f_{3g-3}(E))~|~ E \in \MM\},
+	\end{equation}
+	then the fibers of the map $\pi = (f_1,...,f_{3g-3})$ foliate the smooth locus of $\MM$, and the generic fibre is a Lagrangian subvariety (cite J\&W). 
+	
+	Alternatively, one can describe the polarization using the picture of connections as representations of the fundamental group $\pi_1(\Sigma)$. First, a preliminary result. Let $T\subset SU(2)$ be a maximal torus.
+	\begin{definition}
+		A connection $A$ on $\Sigma^g$ is said to be \emph{adapted to a trinion decomposition} (a.t.d.) if there is a tubular neighbourhood $V_i \cong (-1,1)\times S^1$ of each boundary circle $C_i$ in the decomposition, such that in co-ordinates $(s,\theta)$ for $V_i$,
+		\begin{equation}
+			A|_{V_i} = X_i d\theta, 
+		\end{equation}
+		where $X_i$ is a constant element in $\mathfrak{t} = \text{Lie}(T)$.
+	\end{definition}
+	\begin{theorem}
+		For all $y\in \pi^{-1}(b)$, there exists an adapted to trinion decomposition connection $A$ in the gauge equivalence class $y$.
+	\end{theorem}
+	\begin{proof}
+	tbd
+	\end{proof}
+	
+	This lets us define subgroups of $G=SU(2)$, which correspond to stabilizers of flat connections. Suppose $A$ is an a.t.d connection. Then the stabilizer of $A|_{C_i}$ in $\cG(C_i) = \Hom(C_i, G)$ consists of constant maps, and can thus be identified with a subgroup $H_i$ in $G$. If $\theta_i(A) \in \{0,\pi\}$, then $\text{hol}_{C_i}(A) = \pm\text{Id}$ and so $H_i = G$. Otherwise, $H_i = T$. 
+	
+	We can describe the fibre $\pi^{-1}(b)$ using these subgroups. Suppose $A$ is a.t.d. and $[A] \in \pi^{-1}(b)$. Let $\tau_i \in H_i$ for each circle $C_i$, $i\in (1,2,...,3g-3)$. Then define the map
+	\begin{equation}
+		\psi_A : \prod_{i=1}^{3g-3} \to \pi^{-1}(b)
+	\end{equation}
+	as follows. Denote the trinions composing $\Sigma$ as $D_{\gamma}$, $\gamma\in{1,2,...,2g-2}$. For any circle $C_i$, let $D_{\gamma(i)}$, $D_{\gamma'(i)}$ be the trinions on either side. For $\tau=(\tau_1,\tau_2,...,\tau_{3g-3})$, choose a collection of maps $\zeta_\gamma : D_\gamma \to g$ such that for every $C_i$, $\zeta_{\gamma(i)}$ and $\zeta_{\gamma'(i)}$ are constant on a tubular neighbourhood of $C_i$, and such that
+	\begin{equation}
+		\zeta_{\gamma(i)}|_{C_i} = \tau_i \zeta_{\gamma'(i)}|_{C_i}.
+	\end{equation}
+	Here, adopt the convention that the orientation of the tubular neighbourhood is $v\wedge w$, where $w$ is tangent to the oriented circle $C_i$ and $v$ is transverse to $c_i$ and pointing \textit{into} $D_{\gamma(i)}$, thus away from $D_{\gamma'(i)}$.
+	
+	Now we define a connection $A_\tau$ on $\Sigma$ by defining $A_\tau$ on each trinion: $A_\tau|_{D_\gamma} := \zeta_\gamma \circlearrowright A|_{D_\gamma}$. Finally define $\psi_A(\tau) = [A_\tau]$. Next we ask, for $\tau,\tau' \in \prod_{i=1}^{3g-3} H_i$, when are $A_\tau$ and $A_{\tau'}$ gauge equivalent? 
+	
+	Let $J_\gamma$ be the stabilizer of $A|_{D_\gamma}$ under $\cG|_{D_\gamma} = \Hom(D_\gamma,G)$. Since $A$ is a.t.d., this also consists of constant maps. $J_\gamma = Z(G) = \{\pm \text{Id}\}$ if $A$ corresponds to an irrep of $SU(2)$ under Narasimhan-Seshadri, and otherwise $J_\gamma =T$ (resp $G$) if it reduces to $T$ (resp $Z(G)$).  
+	
+	Jeffrey and Weitsmasn give us the following lemma and theorem:
+	\begin{theorem}
+		If $\tau,\tau'$ are in $\prod_{i=1}^{3g-3} H_i$, then $[A_\tau] = [A_{\tau'}]$ if and only if there is a set of gauge transformations $\Phi_\gamma:D_\gamma \to G$ such that:
+		\begin{enumerate}
+			\item $\Phi_\gamma \in J_\gamma$ for all $\gamma$.
+			\item For each boundary circle $C_i$, we have
+			$$
+				\Phi_{\gamma'(i)}|_{C_i} \tau_i = \tau_i' \Phi_{\gamma(i)}|_{C_i}.
+			$$
+		\end{enumerate}
+	\end{theorem} 
+	\begin{theorem}
+		The map $\psi_A:\prod_i H_i \to \pi^{-1}(b)$ is surjective and the group $\prod_\gamma J_\gamma$ has a natural action on $\prod_i H_i$ so that
+		\begin{equation}
+			\pi^{-1}(b) = \left(\prod_i H_i\right)/\left(\prod_\gamma J_\gamma\right).
+		\end{equation}
+	\end{theorem}
+	\begin{proof}
+		jeffrey and weitsman page 600
+	\end{proof}
+
+\subsection{Moduli of Connections on a Trinion}
+	For a more detailed description of the quantization, including how to find Bohr-Sommerfield points, and how to count the dimension of the quantization, one can read the original work of Jeffrey and Weitsman. Instead here we move to a description of the moduli space of $SU(2)$ connections on a single trinion.
+	
 \end{document}

@@ -5,9 +5,14 @@
 \date{\today}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{tikz-cd}
 \usepackage{quiver}
 \usepackage{mathtools}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
 
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Hom}{\text{Hom}}
@@ -21,10 +26,11 @@
 \newcommand{\PP}{\mathbb{P}}
 \newcommand{\Tr}{\text{Tr }}
 \newcommand{\HH}{\mathbb{H}}
+\newcommand{\sslash}{\mathbin{/\mkern-4mu/}}
 
 \begin{document}
 	\subsection{Projective Embedding of $\MM$}
-	The moduli $\MM$ of flat $SL(n,\C)$ bundles can be embedded into projective space, as we will now describe following the work of Thaddeus, Giesker and Bertram, Daskalopoulos and Wentworth. First, fix a line bundle $L$ of sufficiently high degree so that for all $E\in N(k,d)$ $E\otimes L$  is globally generated (and redefine $E$). Then, for some large $N$ we can write $E$ as a quotient:
+	The moduli $\MM$ of flat $SL(n,\C)$ bundles can be embedded into projective space, as we will now describe following the work of Thaddeus and Giesker (cite). First, fix a line bundle $L$ of sufficiently high degree so that for all $E\in N(k,d)$ $E\otimes L$  is globally generated (and redefine $E$). Then, for some large $N$ we can write $E$ as a quotient:
 	\begin{equation}
 	\phi:\OO^N \to E.
 	\end{equation}
@@ -36,129 +42,45 @@
 	\begin{equation}
 		\hat{\beta}_2 = \mu(\wedge^k \phi_2) = \mu(\wedge^k \Lambda^{-1}\phi_1 \Lambda) = \det\Lambda \mu(\wedge^k \phi_1) = \det\Lambda~ \hat{\beta}_1.
 	\end{equation}
-	Therefore the orbits of $GL(k,\C)$ correspond to equivalence classes in $\PP(V_1)$. It is this mapping, which we will denote $T:\MM\to \PP(V_1)$, which we claim is an embedding. Suppose that $T(E) = T(F)$ where $\phi_1:\OO^N \to E$ and $\phi_2:\OO^N \to F$. Taking out any point $p\in \Sigma$, $E$ and $F$ are free on $\Sigma - p$. Let $s_1,...,s_N$ be a set which globally generates $E$. Then the sections $\{s_{i_1}\wedge...\wedge s_{i_k}\}$ form a map from $\Sigma - p$ to the Grassmannian $G(N,N-k)$
-	\iffalse
-	The moduli $\MM$ of flat $SL(n,\C)$ bundles can be embedded into projective space, as we will now describe following the work of Thaddeus, Giesker and Bertram, Daskalopoulos and Wentworth. First, fix a line bundle $L$ of sufficiently high degree that all $E\otimes L$  are globally generated (and redefine $E$). Then, for some large $N$ we can write $E$ as a quotient:
-	\begin{equation}
-		\phi:\OO^N \to E.
-	\end{equation}
-	This quotient induces a map from $\wedge^2(\OO^N) \to \wedge^2(E)$ and the $SL(2,\C)$ structure induces an isomorphism $\wedge^2(E)\cong L^2$. Hence, a quotient of the trivial bundle induces an element $\hat{\beta}$ in 
-	\begin{equation}
-		V_1 := \Hom(H^0(\wedge^2(\OO^N)), H^0(L^2)).
-	\end{equation}
-	There exists a scheme $Quot_{\OO^N}$ which parameterizes the isomorphism classes of quotients of $\OO^N$ (citation grothendieck). Let $R^{ss}\subset Quot$ be those which are semi-stable. Let $F$ be a bundle over $Quot$ with fibre $V_1$, and let $\det:E\to L^2$ be the composition of the determinant with the $SL(2,\C)$ structure. Then we have a direct image bundle $Z = \det_\ast F$ over $\text{Jac}^d(\Sigma)$, with fiber at $L^2$ given by
-	\begin{equation}
-	Z_{\det E = L^2} = F_E = V_1.
-	\end{equation}
-	The map above taking the quotient $\phi$ to $\hat{\beta}$ can then be thought of as a map $T:R^{ss} \to Z$. We have an action of $SL(N,\C)$ on $R^{ss}$ and $Z$ and the map  $T:R^{ss}\to $ is a $SL(N,\C)$ morphism. Thaddeus claims there is a linearization $\LL$ on $Z$ such that $T^{-1}Z^{ss}(\LL) = R^{ss}$ and $T$ is finite. Thaddeus shows that this map is an embedding (c.f. page 717), and from GIT it shows $R^{ss}$ has a good quotient by $SL(N,\C)$, recovering the moduli space $\MM$ of semistable bundles on $\Sigma$.
+	Therefore the orbits of $GL(k,\C)$ correspond to equivalence classes in $\PP(V_1)$. It is this mapping, which we will denote $\iota:\MM\to \PP(V_1)$, which we claim is an embedding. 
+	\begin{lemma}
+		The map $\iota:\MM \to \PP(V_1)$ is injective.
+	\end{lemma}
+	\begin{proof}
+		 Suppose $(E_1, \dbar_{E_1})$ and $(E_2, \dbar_{E_2})$ are holomorphic vector bundles for which $\hat{\beta}_1 = \iota(E_1) = \iota(E_2) = \hat{\beta_2}$. Since the $SL(k,\C)$ structure is unique up to $\C^\ast$, this means that
+		\begin{equation}
+		\wedge^k \phi_1 = \lambda \wedge^k \phi_2
+		\end{equation}
+		for some $\lambda \in \C^\ast$. Fixing a local trivialization of $E_1$, $E_1|_U \cong U\times \C^k$, and picking a local frame $e_1,..,e_k$, choose any sections $s_1,...,s_k \in \OO^N|_{U}$ so that $\phi_1(e_i) = s_i$. Let $s = s_1 \wedge s_2 \wedge ... \wedge s_k$. Then
+		\begin{equation}
+		e_1\wedge...\wedge s_k=\phi_1(s_1)\wedge...\wedge \phi_1(s_k)= \wedge^k \phi_1(s) = \lambda \wedge^k \phi_2(s) = \lambda \phi_2(s_1)\wedge...\wedge \phi_2(s_k)
+		\end{equation}
+		Since $\{e_i\}$ was a local frame, the LHS is non-zero, and thus the RHS is non-zero. Therefore $\{\phi_2(s_i)\}$ is a local frame trivializing $E_2$ on $U$. This map $e_i \to \phi_2(s_2)$ gives an isomorphism of $E_1$ with $E_2$. Note that this isomorphism is not unique as we could have picked other sections $\tilde{s}_i$ with $\phi_1(\tilde{s}_i) = e_i$.
+	\end{proof}
+	\begin{theorem}
+		The map $\iota:\MM \to \PP(V_1)$ is an embedding.
+	\end{theorem}
+	\begin{proof}
+		Since the lemma shows it is injective, it remains to show its derivative is everywhere injective. We give a proof following Thaddeus (GIT and flips page 717).
+	\end{proof}
+
+	\subsection{Parabolic Vector Bundles}
+	Following section 4 of (Hurtubise  and Jeffrey), we describe the moduli space of framed parabolic vector bundles.
+	\begin{definition}
+		A \emph{parabolic bundle} over a complex manifold $\Sigma$ is a holomorphic vector bundle $E$ over $\Sigma$ with a \emph{parabolic structure}, which is a point of marked points $\{p_1,...,p_n\}$ and for each point, a flag of subspaces in the fibre $E_{p_k}$. 
+	\end{definition}
+	In particular if $E$ has rank 2, then a parabolic structure on $E$ is a choice of points $\{p_k\}$ and a sheaf homomorphism $\alpha:E\to S$ where $S := \bigoplus_{k} \C_{p_k}$.
 	
-	Suppose $\phi_1$ and $\phi_2$ differ by conjugation in $SL(N,\C)$. Then since $T$ involves taking $\det \phi$ we will have $T(\phi_1) = T(\phi_2)$. On the other hand, if $T(\phi_1) = \lambda T(\phi_2)$ for some $\lambda \in \C^\ast$, we can find 
+	There is an adapted notion of stability for parabolic vector bundles.
+	\begin{definition}
+		Let $\gamma_1,...,\gamma_n \in [0,1]$ be a set of weights. For a subbundle (not neccesarily proper) $F$ of $E$ we set $\mu_i(F) = 1$ if $F_{p_i} \subset \ker\alpha_i$, and $\mu_i = 0$ otherwise. Define $\sigma(F) = \frac{1}{rk(E)}$ if $F=E$ and $0$ otherwise. Then we say a pair $(E,\alpha)$ is \emph{stable} with respect to $\gamma$ if 
+		\begin{equation}
+		rk(E)\deg(F) < rk(F)\left(\deg(E) - \sum_{i=1}^n \gamma_i\right) 
+		+ rk(E)\sum_{i=1}^n(1 - \mu_i(F) + \sigma_i(F))\gamma_i.
+		\end{equation}
+		If the inequality is not strict, $(E,\alpha)$ is \emph{semi-stable}.
+	\end{definition}
 	
-	
-	Suppose we have a deformation of $\phi$ by $\psi_1:\OO^N \to E$, namely $\phi(\epsilon) = \phi + \epsilon\psi_1$ with $\epsilon^2=0$. Suppose also we have a section $s_0 \in H^0(\OO^N)$ deformed by $s_1 \in H^0(\OO^N)$ to $s(\epsilon) = s_0 + \epsilon(s_1)$. Then we can compute the differential of the determinant map;
-	\begin{align*}
-		dT\psi_1(s_1\wedge s_2) :&= \frac{d}{d\epsilon}|_{\epsilon=0} T(\phi(\epsilon))(s_1\wedge s_2)\\
-		&=\frac{d}{d\epsilon}|_{\epsilon=0}\phi(\epsilon)(s_1)\wedge \phi(\epsilon)(s_2)\\
-		&= \phi(s_1) \psi_1(s_2) +(-??) \psi_1(s_1)\phi(s_2)\\
-		&= \phi\wedge \psi_1
-	\end{align*}
-	Our map $\phi$ induces a map $\phi^\ast :H^1(\End E) \to H^1(E\otimes \OO^N)$. Since $\OO^N$ is trivial, $H^1(\OO^N) =0$. That is to say, given $\alpha \in H^1(\End E)$ we have that $\phi^\ast(\alpha) = \alpha \phi = \dbar_E \psi$ for some $\psi \in H^0(E\otimes \OO^N)$.  Suppose that there are two choices $\alpha_1$ and $\alpha_2$ for which $\alpha_1 \phi = \alpha_2 \phi = \dbar_E \psi$. Then $(\alpha_1 - \alpha_2)\phi = 0$. If $v\in \OO^N, v\neq 0$ and $(\alpha_1 - \alpha_2)\phi(v) = 0$ then either $\phi(v)=0$ or $\alpha_1(\phi(v)) = \alpha_2(\phi(v))$. Since $E := \OO^N / \ker(\phi)$, this means that $\alpha_1 = \alpha_2$ for every element of $E$. Thus, it makes sense to define a symplectic form on $R^{ss}$ by
-	\begin{equation}
-		\omega_R(\psi_1,\psi_2) = \omega_\MM(\alpha, \beta) = \int\limits_{\Sigma} \Tr(A^\dagger B) ~dz \wedge d\bar{z} = \int\limits_{\Sigma} \sum_{k=0}^{\dim E} g_E\langle Be_k, Ae_k\rangle ~dz\wedge d\bar{z}.
-	\end{equation}
-	\subsection{Fubini-Study Metric on $\PP(V_1)$}
-	To define a Fubini-Study metric on $\PP(V_1)$ we first need to define an inner product on $V_1 = \Hom(H^0(\wedge^2 \OO^N), H^0(L^2))$. Typically, given vector spaces $V,W$ with inner products $\langle,\rangle_V$ and $\langle,\rangle_W$, one defines an inner product on $\Hom(V,W)$ by
-	\begin{equation}
-		\langle A, B \rangle = \Tr(A^\dagger B) = \sum_{k=0}^{\dim V} \langle A^\dagger B e_k, e_k\rangle_V = \sum_{k=0}^{\dim V} \langle Be_k, Ae_k\rangle_W, 
-	\end{equation}
-	where $\{e_k\}$ is an orthonormal basis for $V$ with respect to $\langle,\rangle_V$. Thus, to put an inner product on $V_1$, we first define ones for $H^0(\wedge^2 \OO^N)$ and $H^0(L^2)$. By assumption, we have a metric $g$ on $E$, which we can use to define a metric on $\wedge^2 E$ by 
-	\begin{align*}
-		g_{\wedge^2 E}(\alpha \wedge \beta, \sigma\wedge \tau) &= \frac{1}{2}g(\alpha \otimes \beta - \beta\otimes \alpha, \sigma\otimes \tau - \tau \wedge \sigma)\\
-		&= \frac{1}{2}\left(
-		g(\alpha, \sigma)g(\beta,\tau) - g(\beta,\sigma)g(\alpha,\tau) - g(\alpha,\tau)g(\beta,\sigma) + g(\beta,\tau)g(\alpha,\sigma)
-		\right)\\
-		&= g(\alpha,\sigma)g(\beta,\tau) - g(\beta,\sigma)g(\alpha,\tau).
-	\end{align*}
-	We pullback to $\phi^\ast g_{\wedge^2 \OO^N}$, and finally we can integrate over $\Sigma$ to get 
-	\begin{equation}
-		\langle s_1 \wedge s_2, t_1\wedge t_2 \rangle_{H^0(\wedge^2\OO^N)} := \int\limits_{\Sigma} g_{\wedge^2 E}(\phi(s_1)\wedge \phi(s_2), \phi(t_1)\wedge \phi(t_2))(z) ~dz\wedge d\bar{z}.
-	\end{equation}
-	To put an inner product on $H^0(L^2)$, we follow the exact same process starting from any choice of metric $g_L$. 
-	\fi
-	\iffalse
-	We now aim to compute the pullback of the Fubini-Study metric on $\PP(V_1)$ to $R^{ss}$. The inner product on $V_1$ which we use comes from the metric $\langle, \rangle_E$ on $E$ as follows; we define $\langle v_1, v_2 \rangle_{\OO^N} = \langle \phi(v_1), \phi(v_2)\rangle_E$ as a metric on $\OO^N$, and then we define 
-	\begin{equation}
-		\langle v_1 \wedge v_2, w_1 \wedge w_2 \rangle = \langle v_1, w_1\rangle\langle v_2,w_2\rangle_{\OO^N} - \langle v_1,w_2\rangle\langle v_2,w_1\rangle_{\OO^N}.
-	\end{equation}
-	as a metric on $\wedge^2 \OO^N$, and finally we can use this to define an inner product on $H^0(\wedge^2 \OO^N)$ by integrating this metric over $\Sigma$. Choosing a metric $\langle, \rangle_L$ on $L$, we get one for $L^2$ in a similar manner. This allows us to define the $\dagger$ operator on $V_1$ in the standard manner; by requiring that for $A\in V_1$ and all $s_1 \wedge s_2 \in H^0(\wedge^2 \OO^N)$ and $t_1\wedge t_2 \in L^2$, we have
-	\begin{equation}
-		\langle A(s_1 \wedge s_2), t_1\wedge t_2 \rangle = \langle s_1 \wedge s_2, A^\dagger(t_1 \wedge t_2)\rangle.
-	\end{equation}
-	Finally, we can then define the inner product on $V_1$ as $\Tr(A^\dagger B)$. In particular, for tangent vectors $\psi_1, \psi_2$ to $R^{ss}$, we have:
-	\begin{align*}
-		\Tr((\phi \wedge \psi_1)^\dagger (\phi \wedge \psi_2)) &= \Tr(\phi^\dagger \phi)\Tr(\psi_1^\dagger \psi_2) \\
-		&= \Tr(\phi^\dagger \phi)\sum_{k} \langle \psi_1^\dagger\psi_2(e_k), e_k\rangle\\
-		&= \Tr(\phi^\dagger \phi)\int\limits_{\Sigma} \sum_k \langle \psi_1^\dagger \psi_2(e_k)(z), e_k(z)\rangle_{\OO^N}~dz\wedge d\bar{z}\\
-		&= \Tr(\phi^\dagger \phi)\int\limits_{\Sigma} \sum_k \langle 
-		\psi_2 (e_k), \psi_1(e_k)
-		\rangle_E ~dz\wedge d\bar{z}\\
-	\end{align*}
-	On the other hand, given $\phi_1$ tangent to $R^{ss}$ at $\phi$, we can obtain an element of $H^1(\End E)$, a vector tangent to $E_\phi$ in $\MM$. The tangent space to $Quot$ is the first hypercohomology group of the complex [c.f. thaddeus pg 717]
-	\begin{equation}
-		0 \to \End E \xrightarrow{\phi} E\otimes \OO^N \to 0 \to...
-	\end{equation}
-	Let us pick injective objects ${I_{i}}$ so that we have the resolution
-	\[\begin{tikzcd}
-		{\End E} & {E\otimes \OO^N} & 0 & {...} \\
-		{I_1} & {I_2} & 0 & {...}
-		\arrow[from=2-2, to=2-3]
-		\arrow["\phi", from=1-1, to=1-2]
-		\arrow[from=1-2, to=1-3]
-		\arrow["\phi", from=2-1, to=2-2]
-		\arrow[from=1-1, to=2-1]
-		\arrow[from=1-2, to=2-2]
-		\arrow[from=1-3, to=1-4]
-		\arrow[from=2-3, to=2-4]
-	\end{tikzcd}\]
-	Then $\HH^1(\End E\xrightarrow{\phi} E\otimes \OO^N) := I_2/\phi(I_1)$. So a tangent vector to $(E,\phi)$ is determined? However, we also have the short exact sequence
-	\begin{equation}
-		\ker \phi \hookrightarrow \End E \to E\otimes \OO^N
-	\end{equation}
-	which, gives us the exact sequence in cohomology
-	\[\begin{tikzcd}
-		{...} & {H^1(\ker \phi)} & {H^1(\End E)} & {H^1(E\otimes \OO^N)} & {...}
-		\arrow[from=1-2, to=1-3]
-		\arrow[from=1-3, to=1-4]
-		\arrow[from=1-1, to=1-2]
-		\arrow[from=1-4, to=1-5]
-	\end{tikzcd}.\]
-	Then, since $\OO^N$ is a trivial bundle, $H^1(E\otimes \OO^N) = 0$ and we have a surjection $H^1(\ker\phi) \to H^1(\End E)$. That is to say, given $\alpha \in H^1(\End E)$ we have that $\alpha \phi = \dbar_E \psi$ for some $\psi \in H^0(E\otimes \OO^N)$.
-	
-	$\psi \in C^0(E\otimes \OO^N)$ defines $\dbar \psi \in C^1(E\otimes \OO^N)$ and then we should have an $\alpha \in C^1(\End E)$ for which $\phi^\ast \alpha = \dbar \psi$. Suppose $\alpha = A~dz$, and $v\in \Gamma(\OO^N)$.
-	\begin{equation}
-	A(\phi(v)) ~dz =\phi^\ast A(v) = \dbar_E \psi(v)= \frac{\partial \psi(v)}{\partial \bar{z}} ~d\bar{z} + \theta(\phi(v)) ~dz
-	\end{equation}
-	want roughly $\psi(\phi^{-1}(e)) = A$ i.e. $\psi = A\circ \phi$
-	
-	So modulo some conjugations(?) $\alpha(\phi(v)) = \frac{\partial\psi}{\partial \bar{z}}(v)$. Then symplectic form becomes
-	\begin{align*}
-		\omega(\alpha,\beta)&=\int\limits_{\Sigma} \Tr (A^\dagger B) ~ dz\wedge d\bar{z}\\
-		&= \int\limits_{\Sigma}\sum_{k} \langle A^\dagger B e_k, e_k\rangle_E ~dz \wedge d\bar{z}
-	\end{align*}
-	\fi
-	\iffalse
-	Now we add in the parabolic structure. At a puncture $p_i$, the map $\alpha_i:E\to \C_{p_i}$ acts on global sections $\sigma \in \Gamma(E)$ by
-	\begin{equation}
-		\alpha_i(\sigma) = \alpha_i(\sigma(p_i)),
-	\end{equation}
-	and we call this action $\hat{\alpha_i}$, in 
-	\begin{equation}
-		V_2 := H^0(\OO^N)^\ast.
-	\end{equation}
-	We get one copy of $V_2$ for each puncture. Furthermore, parabolic structures are only up to the independent scale of the $\alpha_i$, so we represent the equivalence class of $(E,\alpha)$ as \begin{equation}
-	[\hat{\beta}],[\hat{\alpha}])\in \PP(V_1)\times_{i=1}^n \PP(V_2).
-	\end{equation}
-	Let $X$ denote the closed subvariety of this space consisting of the image of Quot under the above injection.
-	\fi
+	Just as we constructed the moduli space of vector bundles, let us now construct that of parabolic vector bundles.  
 	
 \end{document}

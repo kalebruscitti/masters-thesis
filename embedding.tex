@@ -65,22 +65,25 @@
 	\end{proof}
 
 	\subsection{Parabolic Vector Bundles}
-	Following section 4 of (Hurtubise  and Jeffrey), we describe the moduli space of framed parabolic vector bundles.
-	\begin{definition}
-		A \emph{parabolic bundle} over a complex manifold $\Sigma$ is a holomorphic vector bundle $E$ over $\Sigma$ with a \emph{parabolic structure}, which is a point of marked points $\{p_1,...,p_n\}$ and for each point, a flag of subspaces in the fibre $E_{p_k}$. 
-	\end{definition}
-	In particular if $E$ has rank 2, then a parabolic structure on $E$ is a choice of points $\{p_k\}$ and a sheaf homomorphism $\alpha:E\to S$ where $S := \bigoplus_{k} \C_{p_k}$.
-	
-	There is an adapted notion of stability for parabolic vector bundles.
-	\begin{definition}
-		Let $\gamma_1,...,\gamma_n \in [0,1]$ be a set of weights. For a subbundle (not neccesarily proper) $F$ of $E$ we set $\mu_i(F) = 1$ if $F_{p_i} \subset \ker\alpha_i$, and $\mu_i = 0$ otherwise. Define $\sigma(F) = \frac{1}{rk(E)}$ if $F=E$ and $0$ otherwise. Then we say a pair $(E,\alpha)$ is \emph{stable} with respect to $\gamma$ if 
-		\begin{equation}
-		rk(E)\deg(F) < rk(F)\left(\deg(E) - \sum_{i=1}^n \gamma_i\right) 
-		+ rk(E)\sum_{i=1}^n(1 - \mu_i(F) + \sigma_i(F))\gamma_i.
-		\end{equation}
-		If the inequality is not strict, $(E,\alpha)$ is \emph{semi-stable}.
-	\end{definition}
-	
-	Just as we constructed the moduli space of vector bundles, let us now construct that of parabolic vector bundles.  
-	
+
+	Just as we constructed the moduli space of vector bundles over a Riemann surface, let us now construct that of parabolic vector bundles. Once again, let $\Sigma$ be a compact connected Riemann surface and fix a line bundle $L$ of sufficiently high degree so that for all $E\in N(k,d), E\otimes L$ is globally generated (and redefine $E$). Then for some large $N$ we can write $E$ as a quotient:
+	\begin{equation}
+		\phi: \OO^N \to E.
+	\end{equation}
+	As before, we have a mapping $\hat{\beta}$ taking $E$ to $V_1$. Now we add the parabolic data. At a point $p_i$, the map $\alpha_i:E\to \C_{p_i}$ pulls back to $\hat{\alpha}_i = \alpha_i\circ \phi$ in 
+	\begin{equation}
+		V_2 = H^0(\OO^N)^\ast.
+	\end{equation}
+	Since we are only interested in $\alpha_i$ up to (independent) scaling, the parabolic bundle $(E,\alpha)$ represents an equivalence class in
+	\begin{equation}
+		Z := \PP(V_1) \times \PP(V_2) \times ... \times \PP(V_2),
+	\end{equation}
+	where there are $n$ copies of $\PP(V_2)$, one for each puncture. Let $\MM(\gamma)$ denote the moduli space of parabolic bundles semi-stable w.r.t $\gamma$, and $\tilde{\iota}:\MM(\gamma)\to Z$ denote the map taking $(E,\alpha)$ to $(\hat{\beta},\hat{\alpha})$. Furthermore, let $X$ denote the image of $\MM(\gamma)$ in $Z$.
+	\begin{lemma}
+		The space $X$ is independent of the choice of $\gamma$.
+	\end{lemma}
+	\begin{proof}
+		this is claimed in Hurtubise and Jeffrey page 1256 and is nonobvious to me
+	\end{proof}
+	What varies with $\gamma$ is the choice of polarization of $X$, namely the choice of line bundles on which the action of $SL(N,\C)$ linearizes. 
 \end{document}

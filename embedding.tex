@@ -66,7 +66,7 @@
 
 	\subsection{Parabolic Vector Bundles}
 
-	Just as we constructed the moduli space of vector bundles over a Riemann surface, let us now construct that of parabolic vector bundles. Once again, let $\Sigma$ be a compact connected Riemann surface and fix a line bundle $L$ of sufficiently high degree so that for all $E\in N(k,d), E\otimes L$ is globally generated (and redefine $E$). Then for some large $N$ we can write $E$ as a quotient:
+	Just as we constructed the moduli space of vector bundles over a Riemann surface, let us now construct that of parabolic vector bundles. We base our work on that of Hurtubise and Jeffrey (cite). Again let $\Sigma$ be a compact connected Riemann surface and fix a line bundle $L$ of sufficiently high degree so that for all $E\in N(k,d), E\otimes L$ is globally generated (and redefine $E$). Then for some large $N$ we can write $E$ as a quotient:
 	\begin{equation}
 		\phi: \OO^N \to E.
 	\end{equation}
@@ -78,12 +78,39 @@
 	\begin{equation}
 		Z := \PP(V_1) \times \PP(V_2) \times ... \times \PP(V_2),
 	\end{equation}
-	where there are $n$ copies of $\PP(V_2)$, one for each puncture. Let $\MM(\gamma)$ denote the moduli space of parabolic bundles semi-stable w.r.t $\gamma$, and $\tilde{\iota}:\MM(\gamma)\to Z$ denote the map taking $(E,\alpha)$ to $(\hat{\beta},\hat{\alpha})$. Furthermore, let $X$ denote the image of $\MM(\gamma)$ in $Z$.
-	\begin{lemma}
-		The space $X$ is independent of the choice of $\gamma$.
-	\end{lemma}
-	\begin{proof}
-		this is claimed in Hurtubise and Jeffrey page 1256 and is nonobvious to me
-	\end{proof}
-	What varies with $\gamma$ is the choice of polarization of $X$, namely the choice of line bundles on which the action of $SL(N,\C)$ linearizes. 
+	where there are $n$ copies of $\PP(V_2)$, one for each puncture. Then letting $\tilde{\MM}$ denote the space of parabolic vector bundles, and $\tilde{\iota}:\tilde{\MM}\to Z$ denote the map taking $(E,\alpha)$ to $(\hat{\beta},\hat{\alpha})$, we get a closed subvariety $X = \tilde{\iota}\left(\tilde{\MM}\right)$ in $Z$. 
+
+	Now we also have weights $\gamma = (\gamma_1,...,\gamma_n)$ for the parabolic structure. These vary the choice of polarization of $X$, namely the choice of line bundles on which the action of $SL(N,\C)$ \textit{linearises}. Let us recall what this means:
+	\begin{definition}
+		Given a linear algebraic group $G$ and a $G$-variety $X$, a line bundle $p:L\to X$ \emph{linearises} if there is an action of $G$ on $L$ such that for all $l\in L$, $g\in G$,
+		\begin{equation}
+			p(g\cdot l) = g\cdot p(l),
+		\end{equation}
+		and which restricts to a linear isomorphism $L_x \cong L_{g\cdot x}$ on fibres.
+	\end{definition}
+	In this case $G\cong SL(N,\C)$ which acts on $V_1$ and each copy of $V_2$.
+	
+	
+Let $\pi_1:Z \to \PP(V_1)$ and $\pi_{2,i}:Z\to \PP(V_2)$ denote the projections to the first factor and to the i-th factor of $Z$ respectively. Let
+\begin{equation}
+	L_0 = \pi_1^\ast(\OO(N)),~ \text{ and } ~ L_{1,i} = \pi_1^\ast(\OO(N-1))\otimes \pi_{2,i}^\ast (\OO(2)).
+\end{equation}
+Then the linearisation corresponding to weights $\gamma = (\gamma_1,...,\gamma_n)$ is 
+\begin{equation}
+	L_\gamma = (L_0)^{s_0} \otimes \left(
+	\otimes_{i=1}^n (L_{1,i})^{s_{1,i}}
+	\right),
+\end{equation}
+where $s_0(\gamma_i) = s_{1,i}(1-\gamma_i)$.
+\begin{lemma}
+	$L_i$ is a linearisation of the action of $G$ on $X$.
+\end{lemma}
+\begin{proof}
+	????????????/
+\end{proof}
+In summary, what we have now are a collection of moduli spaces of parabolic bundles semi-stable with respect to weights $\gamma$, with $\gamma_i \neq 0,1$. We want to fit these spaces together, and in such a way that we can include $\gamma_i = 0,1$. To do this, we put a $(\PP^1)^n$-bundle over $X$,
+\begin{equation}
+	Y = \PP(L_0\oplus L_{1,1})\oplus \PP(L_0\oplus L_{1,2})\oplus ... \oplus \PP(L_0\oplus L_{1,n}).
+\end{equation}
+We endow $Y$ with the natural polarisation $\OO(1,1,...,1)$. 
 \end{document}

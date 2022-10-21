@@ -11,6 +11,7 @@
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
 
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Hom}{\text{Hom}}
@@ -45,5 +46,20 @@ There is an adapted notion of stability for parabolic vector bundles.
 	\end{equation}
 	If the inequality is not strict, $(E,\alpha)$ is \emph{semi-stable}.
 \end{definition}
-
+This lemma of Hurtubise and Jeffrey (cite) summarizes some important results about tweighted parabolic bundles.
+\begin{lemma}
+	If $(E,\alpha)$ is a parabolic bundle semi-stable with respect to weights $\gamma$, then:
+	\begin{enumerate}
+		\item The kernal of $\alpha$ is torsion free, and the torsion subsheaf of $E$ is non-zero only at the $p_i$, equalling $0$ or $\C$ at each $p_i$.
+		\item If $\gamma_i >0$, then $\alpha_i \neq 0$.
+		\item If $\gamma_i < 1$, then $E$ is torsion free at $p_i$.
+		\item If $\gamma_i \in (0,1)$, one has a parabolic structure at $p_i$, and if all the weights are in $(0,1)$, the stability condition is identical to that of parabolic bundles with weights $(1-\gamma_i)/2$ and $(1+\gamma_i)/2$.
+		\item If $(E,\alpha)$ is locally free at $p_i$ and $\alpha \neq 0$, then for $\gamma_i = 0$, there is a family $(E_t, \alpha_t)$, $t\in \C$, of semi-stable pairs such that $(E_t,\alpha_t)\cong (E,\alpha)$ for $t\neq 0$, and $\alpha_0 = 0$. 
+		\item If $(E,\alpha)$ is locally free at $p_i$ and $\alpha \neq 0$, then for $\gamma_i = 1$, there is a family $(E_t,\alpha_t)$, $t\in \C$, such that $(E_t, \alpha_t)\cong (E,\alpha)$, $t\neq 0$ and $E_0$ has torsion at $p_i$.
+	\end{enumerate}
+\end{lemma}
+\begin{proof}
+	Hurtubise and Jeffrey (cite) lemma 4.3
+\end{proof}
+In particular, this lemma tells us that when $\gamma_i\in (0,1)$, which will correspond to connections with holonomy in $(0,\pi)$, we get well-behaved parabolic structures without torsion. It also tells us there are two edge cases to consider. When $\gamma_i = 0$, the parabolic structure vanishes, and when $\gamma_i = 1$ we acquire torsion. Each of these cases will need to be dealt with to obtain a suitable moduli space.
 \end{document}

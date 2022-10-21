@@ -1,5 +1,10 @@
 \section{Moduli Space of Unitary Connections on a Riemann Surface}
 \label{s:vectorbundles}
+	The moduli space $\MM$ which we are interested in studying has three equivalent descriptions, thanks to the work of Narasimhan and Seshadri and Donaldson. The simplest to state is that for a compact oriented Riemann surface $\Sigma$ and unitary group $G$, $\MM$ is the GIT quotient $\Hom(\pi_1(\Sigma), G)\sslash G$. Namely, $\MM$ is the equivalence classes of representation of $\pi_1(\Sigma)$ into $G$. Another description is as the set of unitary connections on the trivial principal $G$ bundle $P$ over $\Sigma$, which makes the symplectic structure clear. The third description is as the space of complex structures on a smooth vector bundle $E$, which brings the complex behaviour into focus.
+	
+	In brief, the relationship between the pictures is as follows. Given a representation of $\pi_1(\Sigma)$ to $G$, one obtains a unitary connection by thinking of the representation as a map of principal bundles $\pi_1(\Sigma)\times \Sigma \to P = G\times \Sigma$, (elab required)
+	
+	Given a unitary connection, the holonomy of the connection gives a representation of $\pi_1(\Sigma)$ into $G$, and the $(0,1)$ part of the connection form gives a holomorphic structure for the vector bundle. 
 	\subsection{Symplectic Picture}
 	 Let $\Sigma$ be the compact connected Riemann surface of genus $g$. Consider the trivial principal $G=SU(2)$ bundle $P$, over $\Sigma$ and let $\cA$ denote the space of smooth prinicpal connections on $P$. In a fixed trivialization $P \cong G\times \Sigma$, a connection is determined by a form $A \in \Omega^1(\Sigma)\otimes \mathfrak{g}$. If we let $\cA_0$ denote the subspace of flat connections $(0 = F:=dA + A\wedge A)$, we can identify
 	\begin{equation}
@@ -143,4 +148,3 @@
 		\langle \alpha, \beta \rangle = \int\limits_\Sigma \Tr(A^\dagger B)~dz\wedge d\bar{z}.
 	\end{equation}
 The relationship between this space of connections and the space of holomorphic vector bundles is described by the Narasimhan-Seshadri theorem. In one direction, given a flat connection $A$ on $P$, inducing a connection on the associated bundle $E$, we can decompose $A = A^{0,1} + A^{1,0}$. This allows us to take $\dbar_E = A^{0,1}$ as a complex structure on $E$ corresponding to the flat connection $A$. The Narasimhan-Seshadri theorem guarantees that this structure will define a stable bundle, and also gives the converse direction; that flat stable structures $\dbar_E$ define flat unitary connections $A$. 
-\end{document}

@@ -20,6 +20,7 @@
 \newcommand{\OO}{\mathcal{O}}
 \newcommand{\LL}{\mathcal{L}}
 \newcommand{\MM}{\mathcal{M}}
+\newcommand{\cP}{\mathcal{P}}
 \newcommand{\End}{\text{End}~}
 \newcommand{\coker}{\text{coker}~}
 \newcommand{\dbar}{\overline{\partial}}
@@ -112,5 +113,68 @@ In summary, what we have now are a collection of moduli spaces of parabolic bund
 \begin{equation}
 	Y = \PP(L_0\oplus L_{1,1})\oplus \PP(L_0\oplus L_{1,2})\oplus ... \oplus \PP(L_0\oplus L_{1,n}).
 \end{equation}
-We endow $Y$ with the natural polarisation $\OO(1,1,...,1)$. 
+We endow $Y$ with the natural polarisation $\OO(1,1,...,1)$. Now $Y$ contains all the stable points for the various choice of weights, which correspond to the various possible holonomies of the unitary connections. We still need to account for gauge equivalence, which apriori suggests we take the $SL(N,\C)$ quotient. It will turn out that this is not quite correct, as we need to make an adjustment with $\gamma_i = 0,1$.
+
+Consider the space of weighted parabolic bundles as quadruples $(E, \alpha_i, A_i, \gamma)$, where $\alpha_i:E\to \C_{p_i}$ is the parabolic structure, $A_i$ is a subspace of $E_{p_i}$, with $A_i = \ker\alpha_i$ whenever $\alpha_i \neq 0$ (equiv. $\gamma \neq 0$), and $\gamma$ are the weights as usual. When $\gamma_i \neq 0$, we have not added any new information. When $\gamma_i = 0$ we are adding a projective class $A_i$ for the parabolic structure even as the map vanishes.
+
+On the other hand when $\gamma_1 = 1$, the sheaves can acquire torsion meaning they are no longer locally free. To handle this, we first need
+\begin{lemma}[H\& J Lemma 4.11]
+	Let $E_t$, $t\in\C$ be a family of coherent rank 2 sheaves over $\Sigma$, with $E_t$ locally free at $p$ for $t\neq 0$, and with $E_0$ having torsion subsheaf $\C_p$ near $p$. Let $\phi_t \in H^0(\Sigma, \wedge^2(E)^\ast)$ be a family of $SL(2,\C)$ structures on $E_t$. Then $\phi_0$ vanishes at $p$.
+	\label{t:sl2-lemma}
+\end{lemma}
+\begin{proof}
+	If $z$ is a local co-ordinate on $\Sigma$ on an open set containing $p$, such that $z(p)=0$, one can obtain $E_t$ locally (up to reparameterization) from the exact sequence 
+	\begin{equation}
+		\OO \xrightarrow{(0,t^k,z)} \OO \oplus \OO \oplus \OO \xrightarrow{~~~~~}E_t
+	\end{equation}
+	for some integer $k$. Then the $SL(2,\C)$ structures $\phi_t$ are multiples of $e_1^\ast \wedge (-ze^\ast_2 + t^k e^\ast_3)$, which vanishes when $z=t=0$.
+\end{proof}
+Since $Y$ is a projective bundle, we can freely tensor with line bundles and write $Y$ as the bundle
+\begin{equation}
+	Y = \bigoplus_{i=1}^n\PP\left(\pi_1^\ast\left(
+	\OO(-1)
+	\right)\oplus \pi_{2,i}^\ast\left(\OO(-2)\right)\right).
+\end{equation}
+In this form, when $\gamma \neq 1$ we have a natural lift of a parabolic bundle $(E,\alpha)\in X$ to $Y$, given by 
+\begin{equation}
+	\hat{E} = \left(
+	(\hat{\beta}, \hat{\alpha}_1^2),(\hat{\beta},\hat{\alpha}_2^2),...,(\hat{\beta},\hat{\alpha}^2)
+	\right),
+\end{equation}
+which we want to extend to the torsion case where $\gamma = 1$. When we have torsion at say $p_i$ ($\gamma_i = 1)$, we could rescale the torsion subsheaf of $E$, modifying $\hat{\alpha}_i^2$ to $c\hat{\alpha}_i^2$ for some $c$. This rescaling should remain in the same equivalence class, and if $\hat{\beta} \neq 0$ then since $\hat{\beta}$ is not rescaled this would not be the case. Therefore we want that the $i$-th component of the lift of $E$ in $Y$ should be $(0,\hat{\alpha}_i^2)$. This is achieved as follows; recall that $\hat{\beta}$ is defined by composing
+\begin{equation}
+	\wedge^2(\OO^N) \xrightarrow{\phi} H^0(\Sigma, \wedge^2 E) \xrightarrow{\xi} H^0(\Sigma, L^2)
+\end{equation}
+where $\phi:\OO^N \to E$ is a quotient defining $E$, and $\xi$ was its $SL(2,\C)$ structure. We have a commutative diagram:
+\begin{equation}
+	TBD
+\end{equation}
+Then for $\gamma \neq 1$ one has $\xi = \text{ev}_\OO^{-1}\circ \xi^{p_i} \circ \text{ev}_{\wedge^2(E)}$, and so for $\gamma_i=1$ we use this definition to define $\xi^{p_i}$ at the torsion points of $E$. Then, from lemma \ref{t:sl2-lemma}, one has that $\hat{\beta}_i$ vanishes when there is torsion at $p_i$. Using this definition we can define a lift for all $(E,\alpha)\in X$ to $Y$ by $
+\hat{E} = \left(
+(\hat{\beta}, \hat{\alpha}_1^2),(\hat{\beta},\hat{\alpha}_2^2),...,(\hat{\beta},\hat{\alpha}^2)
+\right).$
+
+Next Hurtubise and Jeffrey analyse which elements of $Y$ are stable or semistable as weighted parabolic bundles. In lemma (ref) we saw that torsion in the kernal of $\alpha_i$ destabilised $(E,\alpha) \in X$. The same is true in $Y$:
+\begin{lemma}[H\&J Lemma 4.13]
+	A semi-stable element $y\in Y$ corresponds to a bundle parabolic bundle $(E,\alpha)$ with no torsion in the kernal of $\alpha$.
+\end{lemma}
+To allow the the $\alpha_i$ to go to zero but still preserve the information of which projective class we have at $p_i$, we define a new map. Let $(E,\alpha)\in X$ with $SL(2,\C)$ structure $\phi$. Then we can map $(E,\alpha,\phi)\to Y$ by
+\begin{equation}
+	(E,\alpha,\phi) \to \bigoplus_{i=1}^n\left(
+	(\phi(p_i)^N, \phi(p_i)^{N-1}\alpha_i^2
+	\right),
+\end{equation}
+and we define $\hat{Y}$ to be the closure in $Y$ of the image of this map. In this closure, we can take $\alpha_i =0$, but since $\phi(p_i)\neq 0$ we preserve the information of a subspace of $E$ at $p_i$ (unsure?). Then since $\phi(p_i)\neq 0$, lemma \ref{t:sl2-lemma} guarantees $E$ is torsion free at $p_i$. Finally the proposition regarding stability is
+\begin{theorem}[H\&J Prop 4.14]
+	Let 
+	\begin{equation}
+		y = \left(
+		(b_1, a_1), (b_2, a_2),...,(b_n, a_n)
+		\right)
+	\end{equation}
+	be a point in $\hat{Y}$. Let $\Gamma(y)$ be the set of $\gamma_i \in [0,1]$ such that $\gamma_i =0$ if $a_i =0$ and $\gamma_i = 0$ if $b_i = 0$. Then $y$ is semi-stable if and only if for one element $\gamma \in \Gamma(y)$, $\pi(y)\in X$ is $\gamma$-semi-stable.
+\end{theorem}
+Therefore semi-stable elements in $\hat{Y}$ all project down to semi-stable elements of $X$ for some choice of weights, and the GIT quotient $\hat{Y}\sslash SL(N,\C)$ corresponds to equivalence classes of quadruples $(E,\alpha_i, \hat{\alpha}_i, \phi)$ where $(E,\alpha)$ is a parabolic bundle, $\hat{\alpha}_i$ is a subspace of $E|_{p_i}$ (which is the kernal of $\alpha_i$ when $\alpha_i \neq 0$) and $\phi$ is an $SL(2,\C)$ structure. However this is not quite the final moduli space we want to construct, as we have added the extra information of $\hat{\alpha}_i$ when $\alpha_i = 0$. At these points, $\hat{\alpha}_i \in \PP_1=\PP(E|_{p_i})$. We want to collapse these extra $\PP_1$s. (confusion here?) 
+
+	
 \end{document}

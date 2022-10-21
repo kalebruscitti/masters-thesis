@@ -1,0 +1,70 @@
+\documentclass[]{article}
+
+%opening
+\title{no title}
+\date{\today}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{tikz-cd}
+\usepackage{quiver}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\Ann}{\text{Ann}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\MM}{\mathcal{M}}
+\newcommand{\End}{\text{End }}
+\newcommand{\coker}{\text{coker}~}
+\newcommand{\dbar}{\overline{\partial}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\Tr}{\text{Tr }}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\XX}{\mathfrak{X}}
+\newcommand{\QQ}{\mathfrak{Q}}
+\newcommand{\sslash}{\mathbin{/\mkern-4mu/}}
+
+\begin{document}
+	In this section we summarize the work of Biswas and Hurtubise which constructs a degeneration of the moduli space $\MM$ to the moduli space of parabolic bundles.
+\subsection{Degeneration of the Curves}
+	The relationship between the moduli spaces $\MM$ and $X_0$ is given by degenerating the Riemann surface $\Sigma$ to a nodal curve by smoothly shrinking the boundary curves of the trinion decomposition. First we describe a local model for this shrinking process.
+	
+	Let $\Sigma$ be a compact connected Riemann surface of genus $g$ as before. Let $\Sigma_0$ denote the nodal curve obtained by trinion decomposition from $\Sigma$, replacing each boundary circle of the trinions with a single point and then gluing at those points. Let $x_0 \in X_0$ be a nodal point corresponding to a boundary circle $C_0$. Let $\tilde{\Sigma}_0$ denote the desingularization of $\Sigma_0$. Since we assumed $\Sigma$ is connected, $\Sigma_0$ will be an irreducible variety and hence $\tilde{\Sigma}_0$ will be connected and of genus $g-1$. (cite). Let $x_1$ and $x_2$ denote the two points of $\tilde{\Sigma}_0$ which map to $x_0 \in \Sigma$. 
+	
+	Let $B$ be the polydisk in $\C^2$ given by the product of two disks of radius 2 centred at the origin. Then define a family $\QQ$ of quadrics for $t\in U$ by 
+	\begin{equation}
+		Q_t = \{(x,y)\in B\ ~|~ xy = t, t\in U\}.
+	\end{equation}
+	For $t=0$ we get the axes in $\C^2$ which is a local model for $\Sigma_0$ around $x_0$, and for $t \neq 0$ we get a cylinder which is a local model for $\Sigma$ on a tubular neighbourhood of the boundary circle $C_0$. In fact, for $t\neq 0$, $Q_t$ is described by curves
+	\begin{align*}
+		(x(t,\theta), y(t, \theta)) &= \left(
+		2e^{i\theta}, \frac{t}{2}e^{-i\theta}
+		\right)\\
+		(x(t,\theta), y(t, \theta)) &= \left(
+		\frac{t}{2}e^{i\theta}, 2e^{-i\theta}
+		\right).
+	\end{align*}
+	There is a closed curve $c_t$ in $X_t$ given by
+	\begin{equation}
+		(x(t,\theta), y(t,\theta)) = \sqrt{t}(e^{i\theta}, e^{-i\theta}),
+	\end{equation}
+	which approaches $C_0$ at $t=1$ and $x_0$ at $t=0$. By gluing this local model to the boundaries of the disjoint union $(U\times S^1)\coprod (U\times S^1)$ to construct a family over $U$, with fibre $\Sigma_0$ at $t=0$, and $\Sigma \cong \Sigma_t$ at $t\neq 0$.
+\subsection{Degeneration of the Moduli Space}
+	On $\Sigma_t$ for $t\neq 0$, we simply have the moduli space of flat $SU(2)$ connections which corresponds to the moduli space of stable holomorphic vector bundles with $SL(2,\C)$ structure. Therefore it remains to understand the moduli space over $\Sigma_0$ and the desingularisation $\tilde{\Sigma}_0$. 
+	
+	Any connection on $X_0$ has holonomy about each puncture, and these holonomies live in the fundamental alcove of the gauge group, which for $SU(2)$ is $[0,2\pi]$. Letting $\{\gamma_1,...,\gamma_{3g-3}\}$ be the logarithms of the holonomies (in )
+	we have that this exponential map identifies $\cA \cong \Delta$ where $\Delta$ is the simplex 
+	\begin{equation}
+		\Delta = \{(\gamma_1,...,\gamma_n) ~|~ \gamma_1 \geq \gamma_2 \geq ... \geq \gamma_1 - 1, \sum_{i=1}^n \alpha_i =0\}.
+	\end{equation}
+	The logs of the holonomies, which are exactly the $\gamma_i$, will correspond to weights for a parabolic structure. If these are fixed and $\gamma_n > \gamma_1 -1$, then quotienting out the framings at the punctures we have, via Mehta and Seshadri (cite) a map from the space of connections with fixed holonomies to the holomorphic moduli space of parabolic $SL(2,\C)$ vector bundles $E$ with parabolic weights ${\gamma_i}$ attached to a 1D subspace of $E_{x_1}$ and opposite weights $\{-\gamma_i\}$ attached to a 1D subspace of $E_{x_2}$.
+	
+	When $\gamma_n = \gamma_1-1$, we instead get a sheaf corresponding to a closed semistable point in the GIT quotient, with a torsion component at $x_1$ and $x_2$. 
+	
+	To capture the entire moduli space, we need to let the weights vary, and so we obtain the entire space of framed parabolic sheaves of Hurtubise and Jeffrey which we described in the previous section. 
+\end{document}

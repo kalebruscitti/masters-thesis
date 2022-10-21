@@ -1,35 +1,5 @@
-\documentclass[]{article}
 
-%opening
-\title{no title}
-\date{\today}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{tikz-cd}
-\usepackage{quiver}
-
-\newtheorem{theorem}{Theorem}
-\newtheorem{definition}{Definition}
-
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\Hom}{\text{Hom}}
-\newcommand{\Ann}{\text{Ann}}
-\newcommand{\OO}{\mathcal{O}}
-\newcommand{\LL}{\mathcal{L}}
-\newcommand{\MM}{\mathcal{M}}
-\newcommand{\End}{\text{End}}
-\newcommand{\coker}{\text{coker}~}
-\newcommand{\dbar}{\overline{\partial}}
-\newcommand{\cA}{\mathcal{A}}
-\newcommand{\cG}{\mathcal{G}}
-\newcommand{\Tr}{\text{Tr }}
-\newcommand{\HH}{\mathbb{H}}
-\newcommand{\sslash}{\mathbin{/\mkern-4mu/}}
-
-
-\begin{document}
-\subsection{Geometric Quantization of the Moduli Space}	
+\subsection{Polarisation of the Moduli Space}	
 	Now we have a symplectic moduli space $(\MM,\omega)$, which contains an open smooth symplectic manifold, and over this space there exists a line bundle $\LL$ with curvature $2\pi i \omega$ (cite Quillen, Weitsman). This is exactly the data of a prequantum system to which we can apply geometric quantization. Jeffrey and Weitsman describe this quantization following an approach of (cite Weitsman), which is for a compact symplectic manifold $(M,\omega)$ and line bundle $\LL$, using a real polarization of $M$. A real polarization of $M$ is a map $\pi:M\to B$ onto a manifold of half dimension, such that $\omega|_{\pi^{-1}(b)} =0$ for all $b\in B$. Under some hypotheses, there will be a finite set of \textit{Bohr-Sommerfeld points} $b_i$ for which $\LL$ restricted to the fibers $L_{b_i}$ of $\pi$ possesses global covariant constant sections. Then the quantization of the system is naturally isomorphic to the space of all such sections (cite Sniatycki).
 	
 	If $(\MM,\omega)$ was smooth, then this quantization would carry through perfectly to this case, but instead we must restrict ourselves to the smooth locus of $\MM$, and come back to the general case.
@@ -62,6 +32,7 @@
 	which means $\theta$ is the moment map for the torus action. These functions $f_i$ also give us a real polarization of $\MM$. Let $B \subset \mathbb{R}^{3g-3}$ be the image of the $f_i$,
 	\begin{equation}
 		B = \{(f_i(E),...,f_{3g-3}(E))~|~ E \in \MM\},
+		\label{e:B-def}
 	\end{equation}
 	then the fibers of the map $\pi = (f_1,...,f_{3g-3})$ foliate the smooth locus of $\MM$, and the generic fibre is a Lagrangian subvariety (cite J\&W). 
 	
@@ -84,6 +55,7 @@
 	
 	We can describe the fibre $\pi^{-1}(b)$ using these subgroups. Suppose $A$ is a.t.d. and $[A] \in \pi^{-1}(b)$. Let $\tau_i \in H_i$ for each circle $C_i$, $i\in (1,2,...,3g-3)$. Then define the map
 	\begin{equation}
+		\label{e:psiA}
 		\psi_A : \prod_{i=1}^{3g-3} \to \pi^{-1}(b)
 	\end{equation}
 	as follows. Denote the trinions composing $\Sigma$ as $D_{\gamma}$, $\gamma\in{1,2,...,2g-2}$. For any circle $C_i$, let $D_{\gamma(i)}$, $D_{\gamma'(i)}$ be the trinions on either side. For $\tau=(\tau_1,\tau_2,...,\tau_{3g-3})$, choose a collection of maps $\zeta_\gamma : D_\gamma \to g$ such that for every $C_i$, $\zeta_{\gamma(i)}$ and $\zeta_{\gamma'(i)}$ are constant on a tubular neighbourhood of $C_i$, and such that
@@ -118,6 +90,50 @@
 	\end{proof}
 
 \subsection{Moduli of Connections on a Trinion}
-	For a more detailed description of the quantization, including how to find Bohr-Sommerfield points, and how to count the dimension of the quantization, one can read the original work of Jeffrey and Weitsman. Instead here we move to a description of the moduli space of $SU(2)$ connections on a single trinion.
-	
-\end{document}
+ 	Now we've seen that the space $\MM$ can be constructed by glueing together connections defined along a trinion decomposition, so the natural question is what the space of connections on a trinion $D$, denoted $\MM(D)$, looks like. The space $\MM(D)$, like $\MM$, can be described the quotient of representations of the fundamental group into $G$ under conjugation by $G$. For a trinion, 
+	\begin{equation}
+		\pi_1(D) = \left\{
+		[C_1], [C_2], [C_3] ~|~ [C_1][C_2][C_3]  =1
+		\right\},
+	\end{equation}
+	where $C_i$ are the three boundary curves of the trinion. We can again define the holonomy angle functions, first letting $\tilde{\theta_i}:\Hom(\pi_1(D),G) \to [0,\pi]$ be
+	\begin{equation}
+		\tilde{\theta_i}(\rho) = \cos^{-1}\left(\frac{1}{2}\Tr(\rho[C_i])\right),
+	\end{equation}
+	and these maps will descend under the quotient by $G$ to maps $\theta_i:\MM(D)\to [0,\pi]$. Then Jeffrey and Weitsman prove:
+	\begin{theorem}
+		The map $\theta = (\theta_1, \theta_2, \theta_3):\MM(D)\to[0,\pi]^3$ sends $\MM(D)$ bijectively to the set satifying the inequalities
+		\begin{equation}
+			|\theta_1 - \theta_2| \leq \theta_3 \leq \min(\theta_1 + \theta_2, 2\pi - (\theta_1 + \theta_2)).
+			\label{e:trinion-ineqs}
+		\end{equation}
+		Remark that this set is a 3D simplex (insert figure?)
+	\end{theorem}
+	\begin{proof}
+		J\&W prop 3.1
+	\end{proof}
+	Using this result, and the gluing process described in the last section, the image of $\MM$ under the holonomy angles $\theta_1,...,\theta_{3g-3}$ are the values satisfying the inequalities (\ref{e:trinion-ineqs}) on every trinion. Applying a theorem of Guillemin and Steinberg (cite) to this case, one obtains:
+	\begin{theorem}
+		Suppose $x\in \pi(\MM) \subset B$ (defined in eqn. \ref{e:B-def}) Then
+		\begin{itemize}
+			\item The Hamiltonian vector fields corresponding to the functions $\theta_i$ are linearly independent on the fibre $\pi^{-1}(x)$, if and only if $x$ is a point where all the inequalities (\ref{e:trinion-ineqs}) are strict.
+			\item In general, the number of linearly independent Hamiltonian vector fields on the fibre $\pi^{-1}(x)$ is equal to $3g-3-s$, where $s$ is the number of independent linear equations out of the following satisfied by $\theta(x)$:
+				\begin{align*}
+					\theta_{i_{\sigma(1)}(\gamma)}(x) + \theta_{i_{\sigma(2)}(\gamma)}(x)-\theta_{i{_\sigma(3)}(\gamma)}(x)&=0,\\
+					\theta_{i_1(\gamma)}(x) + \theta_{i_2(\gamma)}(x) + \theta_{i_3(\gamma)}(x) = 2\pi.
+					\label{e:theta-ineqs}
+				\end{align*}
+			where $\sigma:{1,2,3}\to{1,2,3}$ is any cyclic permutation. These inequalities correspond to $(\ref{e:trinion-ineqs})$.
+		\end{itemize}
+	\end{theorem}
+	Furthermore
+	\begin{lemma}
+		Let $x\in \MM(D)$ and let $\theta(x)$ be the holonomy angles of $x$ around the three boundary curves of $D$. Then $x$ corresponds to a conjugacy class of reducible representations of $\pi_1(D)$ if and only if at least one of the equations (\ref{e:theta-ineqs}) above is satisfied.
+	\end{lemma}
+	Motivated by this lemma, one defines \emph{interior triples} in $[0,\pi]^3$ to be those for which none of the equations is satisfied, i.e those on the interior of the simplex. These triples correspond to points in $\MM(D)$ which are conjugacy classes of irreducible representations of $\pi_1(D)$.
+	\begin{theorem}
+		Let $x\in B$ and let $A$ be a flat a.t.d. connection whose gauge equivalence class is in $\pi^{-1}(x)$. Further, assume that on every trinion the holonomy angles of $x$ is an interior triple. Then the fibre $\pi^{-1}(x)$ is identified with $T^{3g-3}/(\mathbb{Z}_2)^{2g-2}$ under the map $\psi_A$ defined in eqn. (\ref{e:psiA}).
+	\end{theorem}
+	Thus, the fibres corresponding to interior triples, which are the generic fibres, are tori of dimension $3g-3$. It is the non-generic fibres, who have holonomy angles on the boundary, which remain to be understood.
+
+	For a more detailed description of the quantization, including how to find Bohr-Sommerfield points, and how to count the dimension of the quantization, one can read the original work of Jeffrey and Weitsman. 

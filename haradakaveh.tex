@@ -8,16 +8,53 @@
 \usepackage{tikz-cd}
 \usepackage{quiver}
 
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Hom}{\text{Hom}}
 \newcommand{\Ann}{\text{Ann}}
 \newcommand{\OO}{\mathcal{O}}
 \newcommand{\LL}{\mathcal{L}}
 \newcommand{\MM}{\mathcal{M}}
-\newcommand{\End}{\text{End}}
+\newcommand{\End}{\text{End }}
 \newcommand{\coker}{\text{coker}~}
 \newcommand{\dbar}{\overline{\partial}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\Tr}{\text{Tr }}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\XX}{\mathfrak{X}}
+\newcommand{\sslash}{\mathbin{/\mkern-4mu/}}
+\newcommand{\cP}{\mathcal{P}}
+\begin{document}	
+	\subsection{Toric Degeneration}
+	Here we want to describe a result of Harada and Kaveh (cite), which constructs an integrable system from a \textit{toric degeneration} satisfying some additional hypotheses. 
+	\begin{definition}
+		\label{d:toricdegen}
+		Let $X$ be an $n$-dimensional projective variety. We call $\pi: \XX\to\C$ a \emph{toric degeneration} of $X$ if:
+		\begin{enumerate}
+			\item $\pi:\XX\to\C$ is a flat family of irreducible varieties. In particular, each fibre $X_t := \pi^{-1}(t)$ is a reduced scheme.
+			\item The family $\XX$ is trivial over $\C^\ast$, namely there exists a fibre-preserving isomorphism $\rho:X\times\C^\ast \to \XX - X_0$, such that for each $t\in \C^\ast$ $\rho_t:X\times\{t\} \to X_t$ is an isomorphism.
+			\item The fibre $X_0$ is a toric variety with respect to an action of $(\C^\ast)^n := \mathbb{T}$.
+		\end{enumerate}
+	\end{definition}
+	In this case, the moduli space $\MM$ of flat $SU(2)$ connections serve as our $n$-dimensional projective variety, and we want to degenerate to the moduli space of parabolic bundles which will serve as our toric variety $X_0$. Now let us describe the additional hypothesis that are required for Harada and Kaveh's result.
+	
+	Suppose $\pi:\XX\to\C$ is a toric degeneration of $X$, and $X$ has a Kahler form $\omega$. Let $\Omega$ denote a constant multiple of a Fubini-Study Kahler form on $\mathbb{P}^N$, and equip $\mathbb{P}^N\times\C$ with the Kahler structure $\Omega \times \omega_{std}$. Assume that:
+	\begin{enumerate}
+		\item The family $\XX$ is smooth away from the zero fibre $X_0$.
+		\item The family $\XX$ is embedded in $\mathbb{P}^N\times \C$ as an algebraic subvariety, for some projective space $\mathbb{P}^N$ such that:
+			\begin{itemize}
+				\item the map $\pi:\XX\to\C$ is the restriction of $\XX$ to the projection of $\mathbb{P}^N\times \C$ to $\C$;
+				\item the action of $\mathbb{T}$ on $X_0$ extends to a linear action on $\mathbb{P}^N$.
+			\end{itemize}
+		Let $\omega_t$ denote the restriction of $\Omega\times \omega_{std}$ to the fibre $X_t$ embedded in $\mathbb{P}^N \times {t}$. Then
+		\item The map $\rho_1 : X\to X_1$ is an isomorphism of Kahler manifolds; $\rho_1^\ast(\omega_1) = \omega$;
+		\item Let $T = (S^1)^n$ denote the compact subtorus of $\mathbb{T}$. The Kahler form $\Omega$ on $\mathbb{P}^N$ is $T$-invariant and in particular the restriction $\omega_0$ to the toric variety $X_0$ is a $T$-invariant Kahler form.
+	\end{enumerate}
 
-\begin{document}
+	\subsection{Embedding the Degeneration into $\mathbb{P}^n\times \C$}
 	
 \end{document}

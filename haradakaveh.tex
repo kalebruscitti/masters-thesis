@@ -5,6 +5,7 @@
 \date{\today}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{tikz-cd}
 \usepackage{quiver}
 
@@ -12,6 +13,7 @@
 \newtheorem{definition}{Definition}
 \newtheorem{lemma}{Lemma}
 
+\newcommand{\PP}{\mathbb{P}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Hom}{\text{Hom}}
 \newcommand{\Ann}{\text{Ann}}
@@ -56,5 +58,34 @@
 	\end{enumerate}
 
 	\subsection{Embedding the Degeneration into $\mathbb{P}^n\times \C$}
+	In previous section we saw that we can embed $\MM$ into a projective space by considering a twist by a fixed line bundle and taking the top exterior power. We will go over this embedding again in a way that makes the symplectic structure clear. Fix a line bundle $L$ over $\Sigma$ of sufficiently high degree that $E\otimes L$ is globally generated. Then, we can define a line bundle $\LL$ over $\MM$ as follows. Given $(E,\dbar_E)\in \MM$ we have a line $\wedge^2 (E\otimes L)$. (remains to show this is really a bundle)
 	
+	\begin{theorem}
+		Claim: $\Gamma(\LL, \MM) = V_1 := \Hom(H^0(\wedge^2 \OO^N), H^0(L^2))$.
+	\end{theorem}
+	\begin{proof}
+		Let $\tilde{\sigma} \in \Gamma(\LL, \MM)$. Then $\tilde{\sigma}$ induces a map $\sigma:\wedge^2 E \to L^2$ by $\sigma(e_1\wedge e_2) = \tilde{\sigma}(e_1)\tilde{\sigma}(e_2)$. Since $E\otimes L$ is globally generated, there is a projection $\pi:\OO^N \to E$, inducing a map $\pi:\wedge^2 \OO^N \to \wedge^2 E$. Then let
+		\begin{equation}
+			\beta := \sigma\circ \pi: \wedge^2 \OO^N \to L^2
+		\end{equation}
+		this gives an element $\beta \in V_1$. Suppose $\sigma \circ \pi = \tau \circ \pi$ for $\sigma,\tau \in \Gamma(L^2, \MM)$. Then $(\sigma - \tau) \circ \pi = 0$, meaning 
+		\begin{equation}
+		\pi(\wedge^2 \OO^N) = \wedge^2 E \subset \ker(\sigma-\tau)
+		\end{equation}
+		Since the domain of $\sigma-\tau$ is all of $\wedge^2 E$, this tells us that $\ker(\sigma-\tau) = \wedge^2 E$ and hence $\sigma - \tau$ is the zero section; $\sigma = \tau$. Thus we have $\Gamma(\LL, \MM) \hookrightarrow V_1$.
+		
+		On the other hand, given any section $\beta \in V_1$, we can define a map $\wedge^2 E \to L^2$ by simply picking any embedding $\pi^{-1}:E\hookrightarrow \OO^N$ and letting $\sigma = \beta\circ \pi^{-1}:\wedge^2 E \to L^2$. Then precomposing this with the map $E \to \wedge^2 E$ gives a section in $\Gamma(\LL, M)$, which will map to $\beta$.  
+		**some sketchy details about sections here**
+	\end{proof}
+	A non-zero global section $\sigma$ of $\LL$, which must exist since $\LL$ is high-degree, gives us local isomorphisms of $\LL$ with $\C$ and hence a natural hermitian metric $h$ on $\LL$. The Chern connection of this metric will have curvature (cite)
+	\begin{equation}
+		\Omega = \dbar\partial \log h.
+	\end{equation}
+	Since $\Gamma(\LL,\MM) = V_1$, this metric can be thought of as an inner product on $V_1$. In which case, $\Omega =\dbar\partial \log h$ is interpreted as the Fubini-Study metric on $\PP(V_1)$. unfounded claim: hence $\LL$ is a very ample line bundle, which shows again that we have embedding $\MM \hookrightarrow \PP(V_1)$.
+	
+	However, we want to embed the entire degeneration into the same projective space $\PP^N$. We have an embedding of $\MM$ into $\PP(V_1)$ and an embedding of $\cP$ into $\bigotimes_{i=1}^n \PP(W_1 \otimes W_2)$. We can further embed $\bigotimes_{i=1}^n \PP(W_1 \otimes W_2)$ into a very large $\PP^N$ using the Segre embedding, which has the important property that $\Omega_{fs} \PP^N = \sum \Omega_{fs} \PP(W_1\otimes W_2$. If we have $(E,\dbar_E)\in\MM$, we can keep track of what will become the parabolic data under the degeneration, and use that to fit $E$ into $\PP^N$.
+	
+	Let $(E,\dbar_E)\in \MM$ correspond to the flat $SU(2)$ connection $A$. Fix a trinion decomposition with boundary curves $C_i$ and suppose $A$ is adapted to trinion decomposition. Then at each curve, we have holonomy $Hol_{C_i}(A) \in SU(2)$. The holonomy has eigenvalues $\gamma_{i,1}$ and $\gamma_{i,2}$ and since the determinant must be 1, $\gamma_{i,1}\gamma_{i,2} = 1$. When $|\gamma_{i,1}|\neq 1$ (hence $\gamma_{i,1} \neq \gamma_{i,2}$) the eigenspaces are distinct, and we can define $\alpha_i:E|_{V_i} \to \C$ to be the projection to subspace of the largest eigenvalue. We can interpret this as a parabolic structure $(E,\alpha)$ at a choice of marked points $p_i$ on the boundary curves $C_i$, with weights $\gamma_i$ given by the largest eigenvalues.
+	
+	When the eigenvalues are both 1 $(\gamma_i = 1)$ the picture is more complicated, and corresponds to the parabolic sheaves from section (label) that acquire torsion. 
 \end{document}

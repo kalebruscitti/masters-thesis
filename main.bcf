@@ -2188,6 +2188,9 @@
     <bcf:citekey order="4">hurtubise_representations_2000</bcf:citekey>
     <bcf:citekey order="5">biswas_degenerations_2021</bcf:citekey>
     <bcf:citekey order="6">harada_integrable_2015</bcf:citekey>
+    <bcf:citekey order="7">atiyah_yang-mills_1983</bcf:citekey>
+    <bcf:citekey order="8">donaldson_new_1983</bcf:citekey>
+    <bcf:citekey order="9">thaddeus_geometric_1996</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

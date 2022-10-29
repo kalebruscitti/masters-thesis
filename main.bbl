@@ -112,6 +112,51 @@
       \endverb
       \keyw{14D20,Mathematics - Algebraic Geometry}
     \endentry
+    \entry{donaldson_new_1983}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3a65b03ccccf2b0ce95b575a638788e0}{%
+           family={Donaldson},
+           familyi={D\bibinitperiod},
+           given={S.\bibnamedelimi K.},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{3a65b03ccccf2b0ce95b575a638788e0}
+      \strng{fullhash}{3a65b03ccccf2b0ce95b575a638788e0}
+      \strng{bibnamehash}{3a65b03ccccf2b0ce95b575a638788e0}
+      \strng{authorbibnamehash}{3a65b03ccccf2b0ce95b575a638788e0}
+      \strng{authornamehash}{3a65b03ccccf2b0ce95b575a638788e0}
+      \strng{authorfullhash}{3a65b03ccccf2b0ce95b575a638788e0}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-040X}
+      \field{journaltitle}{Journal of Differential Geometry}
+      \field{month}{1}
+      \field{number}{2}
+      \field{title}{A new proof of a theorem of {Narasimhan} and {Seshadri}}
+      \field{urlday}{21}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{volume}{18}
+      \field{year}{1983}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.4310/jdg/1214437664
+      \endverb
+      \verb{file}
+      \verb Donaldson - 1983 - A new proof of a theorem of Narasimhan and Seshadr.pdf:/home/kaleb/Zotero/storage/RVXJFMW9/Donaldson - 1983 - A new proof of a theorem of Narasimhan and Seshadr.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://projecteuclid.org/journals/journal-of-differential-geometry/volume-18/issue-2/A-new-proof-of-a-theorem-of-Narasimhan-and-Seshadri/10.4310/jdg/1214437664.full
+      \endverb
+      \verb{url}
+      \verb https://projecteuclid.org/journals/journal-of-differential-geometry/volume-18/issue-2/A-new-proof-of-a-theorem-of-Narasimhan-and-Seshadri/10.4310/jdg/1214437664.full
+      \endverb
+    \endentry
     \entry{harada_integrable_2015}{article}{}
       \name{author}{2}{}{%
         {{hash=671df90f50f1a2bc9656e9678f8cf075}{%
@@ -321,6 +366,48 @@
       \endverb
       \verb{url}
       \verb http://link.springer.com/10.1007/BF02096964
+      \endverb
+    \endentry
+    \entry{thaddeus_geometric_1996}{article}{}
+      \name{author}{1}{}{%
+        {{hash=37fd632ee172b298c810cdfe20ab8eb0}{%
+           family={Thaddeus},
+           familyi={T\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{37fd632ee172b298c810cdfe20ab8eb0}
+      \strng{fullhash}{37fd632ee172b298c810cdfe20ab8eb0}
+      \strng{bibnamehash}{37fd632ee172b298c810cdfe20ab8eb0}
+      \strng{authorbibnamehash}{37fd632ee172b298c810cdfe20ab8eb0}
+      \strng{authornamehash}{37fd632ee172b298c810cdfe20ab8eb0}
+      \strng{authorfullhash}{37fd632ee172b298c810cdfe20ab8eb0}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We study the dependence of geometric invariant theory quotients on the choice of a linearization. We show that, in good cases, two such quotients are related by a flip in the sense of Mori, and explain the relationship with the minimal model program. Moreover, we express the flip as the blow-up and blow-down of specific ideal sheaves, leading, under certain hypotheses, to a quite explicit description of the flip. We apply these ideas to various familiar moduli problems, recovering results of Kirwan, Boden-Hu, Bertram-Daskalopoulos-Wentworth, and the author. Along the way we display a chamber structure, following Duistermaat-Heckman, on the space of all linearizations. We also give a new, easy proof of the Bialynicki-Birula decomposition theorem.}
+      \field{issn}{0894-0347}
+      \field{journaltitle}{Journal of the American Mathematical Society}
+      \field{note}{Publisher: American Mathematical Society}
+      \field{number}{3}
+      \field{title}{Geometric {Invariant} {Theory} and {Flips}}
+      \field{urlday}{3}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{9}
+      \field{year}{1996}
+      \field{urldateera}{ce}
+      \field{pages}{691\bibrangedash 723}
+      \range{pages}{33}
+      \verb{file}
+      \verb JSTOR Full Text PDF:/home/kaleb/Zotero/storage/P7LNKLPK/Thaddeus - 1996 - Geometric Invariant Theory and Flips.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/2152810
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/2152810
       \endverb
     \endentry
   \enddatalist

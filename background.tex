@@ -1,0 +1,202 @@
+\section{Moduli Space of Flat Unitary Connections on a Riemann Surface}
+\label{s:vectorbundles}
+	Given a Riemann surface $\Sigma$ and a unitary group $G=U(n)$ or $G=SU(n)$, we are interested in the moduli space $\MM$ of connections on a principal $G$ bundle over $\Sigma$, up to gauge equivalence. A detailed study of this moduli space was made by Atiyah and Bott \cite{atiyah_yang-mills_1983}, from which we take much of the following discussion.
+	
+	Thanks to the work of Narasimhan and Seshadri and Donaldson \cite{donaldson_new_1983}(cite NS) there are multiple ways in which one can view $\MM$. One equivalence is between flat unitary connections and irreducible representations of $\pi_1(\Sigma)$ into $G$. The gauge equivalence is then accounted for with a Geometric Invariant Theory quotient $\Hom(\pi_1(\Sigma), G)\sslash G$ \cite{thaddeus_geometric_1996}(section 7 for example). Another equivalence is with holomorphic $SL(n,\C)$ bundles, which we think of in terms of Doubeault operators $\dbar_E$ on a smooth complex vector bundle $E$. Different aspects of the geometry of $\MM$ become clear in different pictures. As connections, the symplectic structure is clear, whereas as holomorphic bundles the complex structure is clear.
+	\subsection{Representation Variety Picture}
+	First let us sketch the idea of the correspondence between flat connections and representations of the fundamental group. Given any $G$-connection $A$ on a manifold $\Sigma$, the holonomy of $A$ around a loop $\gamma$ based at $p\in \Sigma$ gives us a map $\text{Hol}_A(\gamma):\text{Loops}(p,\Sigma)\to G$. Generically, the holonomy is not invariant up to homotopy, so this map doesn't pass to a map on $\pi_1(\Sigma) \to G$. However, \emph{flat} connections are defined to be those for which the holonomy for any contractible loop is trivial. In this case, we can pass to the quotient to get a map $\text{Hol}_A(\gamma):\pi_1(p,\Sigma)\to G$. Picking a different basepoint $p'$ conjugates the resulting morphism in $G$, so that we can associate to any flat connection $A$ a map $\pi_1(\Sigma)\to G$ up to conjugation. It turns out that this map actually determines $A$ up to gauge equivalence.
+	
+	Let $\cA$ denote the space of flat connections on the trivial principal bundle $P=G\times \Sigma$, let $\cG = \C^\infty(P, G)^G$ be the gauge group, and let $\Phi:\cA \to \Hom(\pi_1(\Sigma),G)/G$ denote the map taking $A$ to $\text{Hol}_A$. 
+	\begin{lemma}
+		If $A,B\in \cA$ and $\Phi(A) = \Phi(B)$, then $A \cong B \mod \cG$.
+	\end{lemma}
+	\begin{proof}
+		Suppose $A,B\in \cA$ are both flat connections, for which $\Phi(A) = \Phi(B)$. Explicitly, given any loop $\gamma\in \pi_1(\Sigma)$ based at say $p\in \Sigma$, we have 
+		\begin{equation*}
+			\Hol_A(\gamma) = \Hol_B(\gamma), 
+		\end{equation*}
+		for some $h\in G$. We want to construct a gauge equivalence $f\in \cG$ between $A$ and $B$. Pick any other point $q\in \Sigma$ and a curve $\sigma:p\to q$. Then for any $g\in G$ denote by $\Pi_\sigma^Ag$ the parallel transport of $g$ along $\sigma$. I claim that $f(q) = \Pi_\sigma^B\left(\Pi_\sigma^A\right)^{-1}$ defined this way for all $q\in \Sigma$ gives a gauge equivalence between $A$ and $B$. First we must show $f$ is well defined; if $\tau$ is another curve from $p\to q$ then:
+		\begin{align*}
+			f(q)\Pi_\tau^A &= \Pi_\sigma^B\left(\Pi_\sigma^A\right)^{-1}\Pi_\tau^A\\
+			&= \Pi_\sigma^B\left(\Pi_\sigma^A\right)^{-1}\Pi_\sigma^A\Hol_A(\delta^{-1}\circ \tau)\\
+			&= \Pi_\sigma^B \Hol_B(\sigma^{-1}\circ \tau)\\
+			&= \Pi_\tau^B\\
+			f(q) &= \Pi_\tau^B (\Pi_\tau^A)^{-1}
+		\end{align*}
+		Therefore $f$ is well defined, and moreover this calculation shows it takes $A$-horizontal vectors to $B$-horizontal vectors. It is easy to see $f$ is smooth, and since it maps horizontal vectors to horizontal vectors, it must be an isomorphism of connections between $A$ and $B$. 
+	\end{proof}
+	This lemma tells us connections are determined up to gauge equivalence by their holonomy. Note that the proof did not use flatness of $A$ or $B$, so it is true of all connections. 
+	
+	To complete the correspondance between $\MM = \cA/\cG$ and $\Hom(\pi_1(G),G)/G$, one needs to show that given any map $\phi\in\Hom(\pi_1(G),G)$ we can find a connection whose holonomy matches $\phi$.
+	\begin{lemma}
+			$\Phi:\cA \to \Hom(\Pi_1(\Sigma),G)$ is surjective.
+	\end{lemma}
+	\begin{proof}
+		Let $\phi:\pi_1(\Sigma)\to G$ be a group homomorphism. We think of $\Sigma$'s universal cover $\tilde{\Sigma}$ as a $\pi_1(\Sigma)$ bundle $\pi:\pi_1(\Sigma)\times \Sigma \to \Sigma$. Then at a point $x\in \tilde{\Sigma}$, $\pi_1(\Sigma, \pi(x))$ acts on $\tilde{\Sigma}$ by monodromy, and $\pi_1(\Sigma)$ acts on $G$ by
+		\begin{equation}
+			\gamma \cdot g = \phi(\gamma) g.
+		\end{equation}
+		Then we can define a principal $G$-bundle over $\Sigma$ using an associated bundle type construction:
+		\begin{equation}
+			P = \tilde{\Sigma} \times G / \pi_1(\Sigma).
+		\end{equation}
+		The monodromy action is proper and free on the universal cover, and left multiplication in $G$ is proper and free, so this quotient is a well-defined smooth manifold. Finally, we can put a connection on $P$ with the correct holonomy. To do so, we define a connection on $\tilde{\Sigma}\times G$ by picking the horizontal bundle in $T(\tilde{\Sigma}\times G)$ to be all vectors of the form $(v, 0)$, i.e. with no $G$ component. Then $\pi_1(\Sigma)$ preserves this space and the image in the quotient is a horizontal bundle defining a connection $A$ on $P$. 
+		
+		Let $\gamma$ be a loop in $\Sigma$ starting at $x$. Then let $\gamma':[0,1]\to P$ be defined by
+		\begin{equation}
+			\gamma'(t) = (\psi(\gamma), \gamma(t))).
+		\end{equation}
+		If we can check this is horizontal, we will be done as then $\Hol_A(\gamma) = \gamma'(t) = \psi(\gamma)$. If we lift under the quotient of $\pi_1(\Sigma)$ we get $\tilde{\gamma} \in \tilde{\Sigma}\times G$ with
+		\begin{equation}
+			\tilde{\gamma}(t) = ((v(t),\gamma(x)), \psi(\gamma))
+		\end{equation}
+		and $d/dt(\tilde{\gamma}) = (v'(t), 0)$, meaning it is horizontal. Note finally that since $\psi$ is a group homomorphism, $\Hol_A(\gamma) = \Hol_A(e) = \mathds{1}$ for any contractible loop, so $A$ is flat.
+	\end{proof}
+	Combining the previous two lemmas we have:
+	\begin{theorem}
+		The map $\Phi:\MM \to \Hom(\pi_1(\Sigma), G)/G$ taking $A$ to $\Hol_A(-) \mod G$ is a bijection
+	\end{theorem}
+	Thus, at least set-wise, we can study the moduli space of flat connections by studying the \textit{representation variety} $\Hom(\pi_1(\Sigma),G)/G$. If $\pi_1(\Sigma)$ is finitely generated, then we can consider $\Hom(\pi_1(\Sigma),G)$ as a subset of $G^n$ by taking the generators to their images under any homomorphism. Then $\Hom(\pi_1(\Sigma),G)$ inherits a topology from the Lie group topology on $G$, and $\Hom(\pi_1(\Sigma),G)/G$ gets the quotient topology. We will see soon that in order to get a \emph{fine} moduli space, we will need to impose that $G$ is a unitary group and that our representations are irreducible.
+
+	\subsection{Holomorphic Bundles Picture}
+	When $\Sigma$ is a Riemann surface, we can use the complex structure to study $\MM$ in another way. Differential forms on a Riemann surface have a splitting, $\Omega^1(\Sigma) = \Omega^{1,0}(\Sigma)\oplus \Omega^{0,1}(\Sigma)$ which induces a splitting on the space $\cA$ of connections on complex vector bundles $E$ over $\Sigma$. As we will discuss, the $(0,1)$ part of a connection $A\in \Omega^1(\Sigma)\oplus \mathfrak{gl}(n,\C)$ defines a \emph{holomorphic structure} on $E$, and the space of such structures is exactly $\MM$ again.
+	
+	\begin{definition}
+		A \textit{holomorphic structure} on a complex vector bundle $E$ is a choice of trivializations $\{U_\alpha, \phi_\alpha\}$ for $E$, such that the transition functions
+		\begin{equation*}
+		T_{\alpha,\beta} = \phi_\alpha \circ \phi^{-1}_\beta: E|_{U_\alpha \cap U_\beta} \to E|_{U_\alpha \cap U_\beta},
+		\end{equation*}
+		are biholomorphic. 
+	\end{definition}
+	An equivalent and convenient characterization is as follows. Given a holomorphic structure, in every chart $\{U_\alpha\}$, with local frame $\{e_1,...,e_n\}$ for $E$, we can define a local operator taking a section $s = s^i e_i$ to
+	\begin{equation*}
+	\dbar_E(s) = \dbar(s^i)\otimes e_i,
+	\end{equation*}
+	where $\dbar$ is the usual Cauchy-Riemann operator on $\mathbb{C}$. Now, let us check this operator is well defined globally on $E$. On the intersection $U_\alpha \cap U_\beta$, with local frames $\{e_i\}$ and $\{f_i\}$, we have $s = s^i e_i = \tilde{s}^i f_i$, with $s^i = {T_{\alpha\beta}}^i_j\tilde{s}^j.$ Since $T_{\alpha\beta}$ is biholomorphic, we have:
+	\begin{align*}
+	\dbar_E(s) = \dbar(s^i)\otimes e_i &= \dbar({T_{\alpha\beta}}^i_j \tilde{s}^j)\otimes f_i\\
+	&= {T_{\alpha\beta}}^i_j \dbar(\tilde{s}^j)\otimes f_i.
+	\end{align*}
+	Hence $\dbar_E$ transforms with $T_{\alpha\beta}$ and it is globally well defined. We call $\dbar_E$ the \textit{Dolbeault Operator} corresponding to the holomorphic structure on $E$. Conversely, if we have a differential operator $\dbar_E:\Gamma(E) \to \Omega^{0,1}(\Sigma)\otimes \Gamma(E)$, we can define a holomorphic structure on $E$. (pf or citation needed)
+	
+	Therefore, in order to study the space of holomorphic structures on $E$, we can equivalently study the space of Dolbeault operators on $E$. In a smooth local trivialization of $E$, we can write 
+	\begin{equation*}
+	\dbar_E = \dbar + B,
+	\end{equation*}
+	where $\dbar$ is the usual Cauchy-Riemann operator and $B \in \Omega^{0,1}(M, \End(E))$. Since $\dim \Sigma = 1$ there is no constraints on $B$ (citation needed) and so our space is an affine complex space with translations $\Omega^{0,1}(M,\End(E))$. We have an action of $\text{Aut}(E)$ on this space by change of basis, whose orbits are (by definition of Aut) isomorphism classes of holomorphic bundles $E$ of rank $n$ and degree $k$, and it is the space of these orbits, $N(n,k)$, that we wish to describe. 
+	
+	However, in order to get a well-behaved moduli space, we must introduce a condition called stability. 
+	\begin{definition}
+		Let the \emph{slope} of a bundle $E$ be
+		$$\mu := c_1(E)/\text{rank}(E),$$
+		where $c_1(E)$ denotes the first Chern class. Then $E$ is said to be \textit{stable} if, for every proper subbundle $F$ of $E$, $\mu(F) < \mu(E)$. If the inequality is not strict, $E$ is \textit{semi-stable}.
+	\end{definition}
+	Restricting our moduli space to stable bundles is required to guarantee that once we quotient our space by $\text{Aut}(E)$, we end up with a space that is Hausdorff (Mumford,Fogarty GIT book). The proof is extensive, so instead we show only a motivating example of two isomorphism classes of holomorphic bundle which intersect at an unstable bundle. Let $\Sigma = \mathbb{P}^1$ and $E = \OO(1)\oplus \OO(-1)$. Then
+	\begin{equation}
+	c_1(E) = c_1(\OO(1))c_1(\OO(-1)) = -1,
+	\end{equation} 
+	therefore $\mu(E) = -1/2$. However $\OO(1)$ is a proper subbundle of $E$ and $\mu(\OO(1)) = 1$, so $E$ is unstable. Letting $U_0 = \mathbb{P}^1 - \{\infty\}$ and $U_1 = \mathbb{P}^1 - \{0\}$, $E$ has transition function $T$ on $U_0 \cap U_1$ given by
+	\begin{equation*}
+	T(z) = \begin{bmatrix}
+	z & 0\\
+	0 & \frac{1}{z}
+	\end{bmatrix}, z \neq 0, z\neq \infty.
+	\end{equation*}
+	Now consider conjugating $E$ by the following family in $Aut(E)$
+	\begin{align*}
+	\begin{bmatrix}
+	1 & b\\
+	c & 1\\
+	\end{bmatrix}
+	\begin{bmatrix}
+	z & 0\\
+	0 & \frac{1}{z}\\
+	\end{bmatrix}
+	\begin{bmatrix}
+	1 & -c\\
+	-b & 1\\
+	\end{bmatrix} = \begin{bmatrix}
+	z - \frac{b^2}{z} & \frac{b}{z}-cz\\
+	cz - \frac{b}{z} & \frac{1}{z}-c^2 z\\
+	\end{bmatrix}.
+	\end{align*}
+	If we let $c=0$ and $b=t$ we get a family $F(t)$ of vector bundles with transition matrices
+	\begin{equation*}
+	T_{F}(t) = \begin{bmatrix}
+	z-t^2/z & t/z\\
+	-t/z & 1/z
+	\end{bmatrix},
+	\end{equation*}
+	and if we let $c=t$ and $b=0$ we get a family $G(t)$ of vector bundles with transition matrices
+	\begin{equation*}
+	T_{G}(t) = \begin{bmatrix}
+	z & -tz\\
+	tz & \frac{1}{z}-t^2 z
+	\end{bmatrix}.
+	\end{equation*}
+	As $t\to 0$, both $F(t)$ and $G(t)$ go to $E$. Therefore, $E$ is in the orbit of both $F(1)$ and $G(1)$ under the action of Aut$(E)$. This means any open set containing $[F(1)]$ must contain $E$, and any open set containing $[G(1)]$ must contain $E$, so there are no disjoint open sets in $\Omega^{0,1}(M,\End E)/\text{Aut}(E)$ separating these families, contradicting Hausdorffness.
+	
+	For this reason, we will restrict our attention to only the subset of $N(n,k)$ consisting of semi-stable bundles. In particular, we will denote the space of degree $0$ semi-stable bundles as $\MM$. 
+	
+	Since stability is an open condition, we are safe to consider deformations. At a bundle $(E,\dbar_E)$ with holomorphic structure given by transition functions $T_{\alpha,\beta}$, we can consider deforming the holomorphic structure to 
+	\begin{equation}
+	T_{\alpha,\beta}(\epsilon) = T_{\alpha,\beta} + \epsilon t_{\alpha,\beta},
+	\end{equation}
+	where $t_{\alpha,\beta} \in \Omega^{0,1}(M,\End(E))$ and $\epsilon^2=0$. For this to remain a well-defined holomorphic structure, we require that $T_{\alpha,\beta}(\epsilon)$ satisfies the cocycle condition for all $\epsilon$. That is, on $U_{\alpha}\cap U_{\beta}\cap U_{\gamma}$,
+	\begin{align*}
+	T_{\alpha,\beta}(\epsilon)T_{\beta,\gamma}(\epsilon) &= T_{\alpha,\gamma}(\epsilon)\\
+	\left(T_{\alpha,\beta} + \epsilon t_{\alpha,\beta} \right)
+	\left(T_{\beta,\gamma} + \epsilon t_{\beta,\gamma} \right) &=
+	\left(T_{\alpha,\gamma} + \epsilon t_{\alpha,\gamma} \right)\\
+	T_{\alpha,\beta}T_{\beta,\gamma} + \epsilon(t_{\alpha,\beta}T_{\beta,\gamma} + T_{\alpha,\beta} t_{\beta,\gamma}) + \epsilon^2 t_{\alpha,\beta}t_{\beta,\gamma} &= T_{\alpha,\gamma} + \epsilon t_{\alpha,\gamma}
+	\end{align*}
+	using that $\epsilon^2 = 0$ and $T_{\alpha,\beta}$ satisfy the cocycle condition, we have
+	\begin{align*}
+	T_{\alpha,\gamma} + \epsilon(t_{\alpha,\beta} T_{\beta,\gamma} + T_{\alpha,\beta} t_{\beta,\gamma}) &= T_{\alpha,\gamma} + \epsilon t_{\alpha,\gamma}\\
+	t_{\alpha,\beta} T_{\beta,\gamma} + T_{\alpha,\beta} t_{\beta,\gamma} &= t_{\alpha,\gamma}.
+	\end{align*}
+	This condition tells us that $t_{\alpha,\beta}$ is a 1 cocycle in the sheaf $\End(E)$. When we quotient the action of of $\text{Aut}(E)$, we find that the tangent space to $N(n,k)$ is $H^1(\End(E))$. 
+	
+	When $E$ has a hermitian metric $h:E\otimes E \to \C$, the conjugate Hodge star $\bar{\star}:\Omega^{0,1}(\Sigma) \to \Omega^{1,0}(\Sigma)$ combined with $h$ allows us to define a hermitian inner product on $H^1(\End (E))$.  First $h$ defines a metric on $\End E$; if $A,B\in \End E$, let
+	\begin{equation}
+	g(A,B) = \Tr(A^\dagger B),
+	\end{equation}
+	where $\dagger$ is defined in terms of $h$, by $h(Ae,e) = h(e,A^\dagger e)$ for all $e\in E$. Then for any $\alpha = A \otimes a$, $A\in \End E$ and $a \in \Omega^{0,1}(\Sigma)$, we define:
+	\begin{align}
+	\bar{\ast}_E \alpha = g(A,-)\otimes \bar{\ast}a, 
+	\end{align}
+	and
+	\begin{equation}
+	\langle \alpha, \beta \rangle = \int\limits_\Sigma \alpha \wedge_g \bar{\ast}_E \beta =\int\limits_\Sigma g(A,B)~a\wedge \bar{\ast} b.
+	\end{equation}
+	This is just another form of Serre Duality (citation). In a local co-ordinate chart where $\alpha = Adz$ and $\beta = Bdz$, this takes the form
+	\begin{equation}
+	\langle \alpha, \beta \rangle = \int\limits_\Sigma \Tr(A^\dagger B)~dz\wedge d\bar{z}.
+	\end{equation}
+	The relationship between this space of connections and the space of holomorphic vector bundles is described by the Narasimhan-Seshadri theorem. In one direction, given a flat connection $A$ on $P$, inducing a connection on the associated bundle $E$, we can decompose $A = A^{0,1} + A^{1,0}$. This allows us to take $\dbar_E = A^{0,1}$ as a complex structure on $E$ corresponding to the flat connection $A$. The Narasimhan-Seshadri theorem guarantees that this structure will define a stable bundle, and also gives the converse direction; that flat stable structures $\dbar_E$ define flat unitary connections $A$. 
+
+	\subsection{Symplectic Picture}
+	 Let $\Sigma$ be the compact connected Riemann surface of genus $g$. Consider the trivial principal $G=SU(2)$ bundle $P$, over $\Sigma$ and let $\cA$ denote the space of smooth principal connections on $P$. In a fixed trivialization $P \cong G\times \Sigma$, a connection is determined by a form $A \in \Omega^1(\Sigma)\otimes \mathfrak{g}$. If we let $\cA_0$ denote the subspace of flat connections $(0 = F:=dA + A\wedge A)$, we can identify
+	\begin{equation}
+	\cA_0 = \{A \in \Omega^1(\Sigma)\otimes\mathfrak{g} (=\cA) ~|~ dA + A\wedge A = 0\}.
+	\end{equation}
+	Then the gauge group, $\cG = \Hom(\Sigma, G)$ acts on $\cA$ as follows: for $g\in \cG$,
+	\begin{equation}
+	g\circlearrowright A := g^{-1}Ag + g^{-1}dg.
+	\end{equation}
+	The vector space $\cA$ has a natural symplectic structure, which comes from the inner product (the Killing form) on the Lie Algebra $\mathfrak{g}$, $K:\mathfrak{g}\otimes\mathfrak{g}\to\mathbb{C}$. If $A = \alpha \otimes X$ and $B = \beta \otimes Y$ then we can define
+	\begin{equation}
+	\omega(A,B) = \int\limits_\Sigma K(X,Y)\alpha\wedge \beta.
+	\end{equation}
+	This symplectic stucture is preserved by the action of $\cG$; we have
+	\begin{align*}
+	(g^{-1} A g + g^{-1}dg) \wedge (g^{-1} B g + g^{-1}dg) &= g^{-1}A\wedge B g + g^{-1}(dg\wedge Bg) + g^{-1}A\wedge dg + g^{-1}dg \wedge g^{-1}dg \\
+	&= g^{-1} A\wedge B g + g^{-1}(d(gB) + d(Ag)g^{-1} - dA - gdB)g
+	\end{align*}
+	
+	Importantly, the curvature $F = dA + A\wedge A$ is actually a moment map for the action of $\cG$ (also to be shown here). This lets us acquire the moduli space of flat connections by symplectic reduction:
+	\begin{equation}
+	\MM = \cA\sslash\cG = F^{-1}(0)/ \cG= \cA_0/ \cG.
+	\end{equation} 
+	Symplectic reduction also gives us a symplectic structure on the quotient space $\MM$, such that under the pullback by the quotient map, $q:\cA_0 \to \MM$, we recover the symplectic form $\omega$ for $\cA$.
+

@@ -1,10 +1,20 @@
 
-\subsection{Polarisation of the Moduli Space}	
-	Now we have a symplectic moduli space $(\MM,\omega)$, which contains an open smooth symplectic manifold, and over this space there exists a line bundle $\LL$ with curvature $2\pi i \omega$ (cite Quillen, Weitsman). This is exactly the data of a prequantum system to which we can apply geometric quantization. Jeffrey and Weitsman describe this quantization following an approach of (cite Weitsman), which is for a compact symplectic manifold $(M,\omega)$ and line bundle $\LL$, using a real polarization of $M$. A real polarization of $M$ is a map $\pi:M\to B$ onto a manifold of half dimension, such that $\omega|_{\pi^{-1}(b)} =0$ for all $b\in B$. Under some hypotheses, there will be a finite set of \textit{Bohr-Sommerfeld points} $b_i$ for which $\LL$ restricted to the fibers $L_{b_i}$ of $\pi$ possesses global covariant constant sections. Then the quantization of the system is naturally isomorphic to the space of all such sections (cite Sniatycki).
+	Using any of the descriptions above, we have the space $\MM$ of flat $SU(2)$ connections on a compact connected Riemann surface $\Sigma$ of genus $g\geq 2$, which is a quasiprojective scheme with dimension $4g-3$. Furthermore, $\MM$ is equipped with the Atiyah-Bott symplectic form $\omega$, and there exists a line bundle $\LL$ over $\MM$ with curvature $2\pi i \omega$ \cite{quillen_determinants_1985}\cite{ramadas_comments_1989}. This is the data of a prequantum system to which we can apply geometric quantization.
 	
-	If $(\MM,\omega)$ was smooth, then this quantization would carry through perfectly to this case, but instead we must restrict ourselves to the smooth locus of $\MM$, and come back to the general case.
+	Jeffrey and Weitsman describe this quantization following an approach of \cite{weitsman_real_1992}, which is for a compact symplectic manifold $(M,\omega)$ and line bundle $\LL$, using a real polarization of $M$. A real polarization of $M$ is a map $\pi:M\to B$ onto a manifold of half dimension, such that $\omega|_{\pi^{-1}(b)} =0$ for all $b\in B$. Supposing $\pi:M\to B$ is also a fibration, there will be a finite set of \textit{Bohr-Sommerfeld points} $b_i$ for which $\LL$ restricted to the fibers $L_{b_i}$ of $\pi$ possesses global covariant constant sections. Denote $J_\pi$ denote the sheaf of sections of $\LL$ which are covariant constant along the fibres of $\pi$. Then the quantization of a prequantum system $(M,\omega,\LL)$ is the vector space
+	\begin{equation}
+		\mathcal{H} = \bigoplus_{i=0}^{\dim M} H^i(M,J_\pi).
+	\end{equation}
+	It is the dimension of $\mathcal{H}$ which we hope to compute. If $B_s$ is the set of all Bohr-Sommerfeld points, and for each $b\in B_s$ $S_b$ is the space of global covariant constant sections of $\LL|_{\pi^{-1}(b)}$, then Sniatycki (cite) proves that when there is a natural isomorphism:
+	\begin{equation}
+		\mathcal{H} \cong \bigoplus_{b\in B_s} S_b.
+	\end{equation}
+	Since each $S_b$ is one dimensional, counting $\dim \mathcal{H}$ boils down to counting the Bohr-Sommerfeld points. 
+	
+	In this case, the above theorem does not apply because $\MM$ is not a smooth manifold and the polarisation we will describe is not a fibration. Sniatycki's theorem simply provides inspiration for investigating the Bohr-Sommerfeld set in $\MM$, and Jeffrey and Weitsman show that Bohr-Sommerfeld fibres are associated to marked trivalent graphs satisfying the quantum Clebsch-Gordan conditions, and the number of such graphs is called the \emph{Verlinde dimension}, counted by the \emph{Verlinde formula} (J\&W theorem 8.1).
 
-	As before, let $\Sigma$ be a compact Riemann surface and $\MM$ the moduli space of flat $G=SU(2)$ connections on $\Sigma$, which here we consider in the symplectic picture. Following Jeffrey and Weitsman, we describe an action of $T^{3g-3}$ on $\MM$. Let $C$ be a closed oriented curve in $\Sigma$ and pick a basepoint $y\in C$. We can define a function $\tilde{f}_C:\cA \to \mathbb{R}$ by 
+\subsection{Polarisation of the Moduli Space}	
+	As before, let $\Sigma$ be a compact Riemann surface and $\MM$ the moduli space of flat $G=SU(2)$ connections on $\Sigma$. Following Jeffrey and Weitsman, we describe an action of $T^{3g-3}$ on $\MM$. Let $C$ be a closed oriented curve in $\Sigma$ and pick a basepoint $y\in C$. We can define a function $\tilde{f}_C:\cA \to \mathbb{R}$ by 
 	\begin{equation}
 		\tilde{f}_C(A) = \frac{1}{2}\text{hol}_C(A),
 	\end{equation}
@@ -114,6 +124,7 @@
 	\end{proof}
 	Using this result, and the gluing process described in the last section, the image of $\MM$ under the holonomy angles $\theta_1,...,\theta_{3g-3}$ are the values satisfying the inequalities (\ref{e:trinion-ineqs}) on every trinion. Applying a theorem of Guillemin and Steinberg (cite) to this case, one obtains:
 	\begin{theorem}
+		\label{t:torusfibres}
 		Suppose $x\in \pi(\MM) \subset B$ (defined in eqn. \ref{e:B-def}) Then
 		\begin{itemize}
 			\item The Hamiltonian vector fields corresponding to the functions $\theta_i$ are linearly independent on the fibre $\pi^{-1}(x)$, if and only if $x$ is a point where all the inequalities (\ref{e:trinion-ineqs}) are strict.
@@ -130,10 +141,14 @@
 	\begin{lemma}
 		Let $x\in \MM(D)$ and let $\theta(x)$ be the holonomy angles of $x$ around the three boundary curves of $D$. Then $x$ corresponds to a conjugacy class of reducible representations of $\pi_1(D)$ if and only if at least one of the equations (\ref{e:theta-ineqs}) above is satisfied.
 	\end{lemma}
-	Motivated by this lemma, one defines \emph{interior triples} in $[0,\pi]^3$ to be those for which none of the equations is satisfied, i.e those on the interior of the simplex. These triples correspond to points in $\MM(D)$ which are conjugacy classes of irreducible representations of $\pi_1(D)$.
+	Motivated by this lemma, one defines \emph{interior triples} in $[0,\pi]^3$ to be those for which none of the equations is satisfied, i.e those on the interior of the simplex. These triples correspond to points in $\MM(D)$ which are conjugacy classes of irreducible representations of $\pi_1(D)$. Theorem \ref{t:torusfibres} tells us that the fibre $\pi^{-1}(x)$ is a torus if and only if $\theta(x)$ is an interior triple.
 	\begin{theorem}
 		Let $x\in B$ and let $A$ be a flat a.t.d. connection whose gauge equivalence class is in $\pi^{-1}(x)$. Further, assume that on every trinion the holonomy angles of $x$ is an interior triple. Then the fibre $\pi^{-1}(x)$ is identified with $T^{3g-3}/(\mathbb{Z}_2)^{2g-2}$ under the map $\psi_A$ defined in eqn. (\ref{e:psiA}).
 	\end{theorem}
 	Thus, the fibres corresponding to interior triples, which are the generic fibres, are tori of dimension $3g-3$. It is the non-generic fibres, who have holonomy angles on the boundary, which remain to be understood.
 
 	For a more detailed description of the quantization, including how to find Bohr-Sommerfield points, and how to count the dimension of the quantization, one can read the original work of Jeffrey and Weitsman. 
+	
+	\subsection{something about P here?}
+	
+	

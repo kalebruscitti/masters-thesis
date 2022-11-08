@@ -368,6 +368,157 @@
       \verb http://link.springer.com/10.1007/BF02096964
       \endverb
     \endentry
+    \entry{narasimhan_stable_1965}{article}{}
+      \name{author}{2}{}{%
+        {{hash=09e178a67132d6dcf6aa637c8f1fb3f9}{%
+           family={Narasimhan},
+           familyi={N\bibinitperiod},
+           given={M.\bibnamedelimi S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=2e343700a354bd9f9e6e0ead08e49df8}{%
+           family={Seshadri},
+           familyi={S\bibinitperiod},
+           given={C.\bibnamedelimi S.},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{aaedd938b4a700737ad3134f74cf35ec}
+      \strng{fullhash}{aaedd938b4a700737ad3134f74cf35ec}
+      \strng{bibnamehash}{aaedd938b4a700737ad3134f74cf35ec}
+      \strng{authorbibnamehash}{aaedd938b4a700737ad3134f74cf35ec}
+      \strng{authornamehash}{aaedd938b4a700737ad3134f74cf35ec}
+      \strng{authorfullhash}{aaedd938b4a700737ad3134f74cf35ec}
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0003-486X}
+      \field{journaltitle}{Annals of Mathematics}
+      \field{note}{Publisher: Annals of Mathematics}
+      \field{number}{3}
+      \field{title}{Stable and {Unitary} {Vector} {Bundles} on a {Compact} {Riemann} {Surface}}
+      \field{urlday}{25}
+      \field{urlmonth}{10}
+      \field{urlyear}{2022}
+      \field{volume}{82}
+      \field{year}{1965}
+      \field{urldateera}{ce}
+      \field{pages}{540\bibrangedash 567}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.2307/1970710
+      \endverb
+      \verb{file}
+      \verb JSTOR Full Text PDF:/home/kaleb/Zotero/storage/XNBC665D/Narasimhan and Seshadri - 1965 - Stable and Unitary Vector Bundles on a Compact Rie.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/1970710
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/1970710
+      \endverb
+    \endentry
+    \entry{quillen_determinants_1985}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e12a679e0498b1d4773d54dcfa27e817}{%
+           family={Quillen},
+           familyi={Q\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{e12a679e0498b1d4773d54dcfa27e817}
+      \strng{fullhash}{e12a679e0498b1d4773d54dcfa27e817}
+      \strng{bibnamehash}{e12a679e0498b1d4773d54dcfa27e817}
+      \strng{authorbibnamehash}{e12a679e0498b1d4773d54dcfa27e817}
+      \strng{authornamehash}{e12a679e0498b1d4773d54dcfa27e817}
+      \strng{authorfullhash}{e12a679e0498b1d4773d54dcfa27e817}
+      \field{sortinit}{Q}
+      \field{sortinithash}{c54e16deb53fc904a621fa8fd8703b5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1573-8485}
+      \field{journaltitle}{Functional Analysis and Its Applications}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Determinants of {Cauchy}-{Riemann} operators over a {Riemann} surface}
+      \field{urlday}{23}
+      \field{urlmonth}{6}
+      \field{urlyear}{2022}
+      \field{volume}{19}
+      \field{year}{1985}
+      \field{urldateera}{ce}
+      \field{pages}{31\bibrangedash 34}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1007/BF01086022
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/kaleb/Zotero/storage/8X4HZZ3V/Quillen - 1985 - Determinants of Cauchy-Riemann operators over a Ri.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01086022
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01086022
+      \endverb
+      \keyw{Functional Analysis,Riemann Surface}
+    \endentry
+    \entry{ramadas_comments_1989}{article}{}
+      \name{author}{3}{}{%
+        {{hash=83af118e35da3c11b7d8ffb90f2f0a3c}{%
+           family={Ramadas},
+           familyi={R\bibinitperiod},
+           given={T.\bibnamedelimi R.},
+           giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=876038e84cb3257667a2fb42c783d694}{%
+           family={Singer},
+           familyi={S\bibinitperiod},
+           given={I.\bibnamedelimi M.},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=f5f8db6767c2bfb4a579a8e2a41a599f}{%
+           family={Weitsman},
+           familyi={W\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{9dae114e426c18eeda12c58651393d25}
+      \strng{fullhash}{9dae114e426c18eeda12c58651393d25}
+      \strng{bibnamehash}{9dae114e426c18eeda12c58651393d25}
+      \strng{authorbibnamehash}{9dae114e426c18eeda12c58651393d25}
+      \strng{authornamehash}{9dae114e426c18eeda12c58651393d25}
+      \strng{authorfullhash}{9dae114e426c18eeda12c58651393d25}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Communications in Mathematical Physics}
+      \field{issn}{0010-3616, 1432-0916}
+      \field{journaltitle}{Communications in Mathematical Physics}
+      \field{month}{1}
+      \field{note}{Publisher: Springer}
+      \field{number}{2}
+      \field{title}{Some comments on {Chern}-{Simons} gauge theory}
+      \field{urlday}{1}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{volume}{126}
+      \field{year}{1989}
+      \field{urldateera}{ce}
+      \field{pages}{409\bibrangedash 420}
+      \range{pages}{12}
+      \verb{file}
+      \verb Full Text PDF:/home/kaleb/Zotero/storage/5JGH88PV/Ramadas et al. - 1989 - Some comments on Chern-Simons gauge theory.pdf:application/pdf;Snapshot:/home/kaleb/Zotero/storage/RDRDQU89/1104179858.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-126/issue-2/Some-comments-on-Chern-Simons-gauge-theory/cmp/1104179858.full
+      \endverb
+      \verb{url}
+      \verb https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-126/issue-2/Some-comments-on-Chern-Simons-gauge-theory/cmp/1104179858.full
+      \endverb
+      \keyw{14D20,32G13,32L05,53C80,58G25,81E13}
+    \endentry
     \entry{thaddeus_geometric_1996}{article}{}
       \name{author}{1}{}{%
         {{hash=37fd632ee172b298c810cdfe20ab8eb0}{%
@@ -409,6 +560,50 @@
       \verb{url}
       \verb https://www.jstor.org/stable/2152810
       \endverb
+    \endentry
+    \entry{weitsman_real_1992}{article}{}
+      \name{author}{1}{}{%
+        {{hash=0b963c4b8dd4aeedc1be83e9ee871fe1}{%
+           family={Weitsman},
+           familyi={W\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{0b963c4b8dd4aeedc1be83e9ee871fe1}
+      \strng{fullhash}{0b963c4b8dd4aeedc1be83e9ee871fe1}
+      \strng{bibnamehash}{0b963c4b8dd4aeedc1be83e9ee871fe1}
+      \strng{authorbibnamehash}{0b963c4b8dd4aeedc1be83e9ee871fe1}
+      \strng{authornamehash}{0b963c4b8dd4aeedc1be83e9ee871fe1}
+      \strng{authorfullhash}{0b963c4b8dd4aeedc1be83e9ee871fe1}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Communications in Mathematical Physics}
+      \field{issn}{0010-3616, 1432-0916}
+      \field{journaltitle}{Communications in Mathematical Physics}
+      \field{month}{1}
+      \field{note}{Publisher: Springer}
+      \field{number}{3}
+      \field{title}{Real polarization of the moduli space of flat connections on a {Riemann} surface}
+      \field{urlday}{1}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{volume}{145}
+      \field{year}{1992}
+      \field{urldateera}{ce}
+      \field{pages}{425\bibrangedash 433}
+      \range{pages}{9}
+      \verb{file}
+      \verb Full Text PDF:/home/kaleb/Zotero/storage/HIZBKZTW/Weitsman - 1992 - Real polarization of the moduli space of flat conn.pdf:application/pdf;Snapshot:/home/kaleb/Zotero/storage/EYPV6T48/1104249807.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-145/issue-3/Real-polarization-of-the-moduli-space-of-flat-connections-on/cmp/1104249807.full
+      \endverb
+      \verb{url}
+      \verb https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-145/issue-3/Real-polarization-of-the-moduli-space-of-flat-connections-on/cmp/1104249807.full
+      \endverb
+      \keyw{32G13,58D27,58F06}
     \endentry
   \enddatalist
 \endrefsection

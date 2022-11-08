@@ -30,7 +30,11 @@
 \newcommand{\sslash}{\mathbin{/\mkern-4mu/}}
 
 \begin{document}
+	Now associated to the compact Riemann surface $\Sigma$ we have a symplectic variety $P$ of representations with weighted frames, which is toric for $G=SU(2)$ and has a prequantum line bundle $\LL_P$ corresponding to $\LL$ on $\MM$. Now we will go in detail on the other half of Jeffrey and Hurtubise's construction, building the complex variety $\cP$ of \emph{framed parabolic bundles} over a singular curve $\tilde{\Sigma}$ corresponding to contracting the loops in a trinion decomposition of $\Sigma$. We will see that $P$ and $\cP$ are diffeomorphic, meaning that we can compute sections of prequantum line bundles over $\cP$ using the structure of $P$.
+	
+	First we will see how to embed $\MM$ into projective space, as this construction will have us transform the data of $\MM$ from holomorphic bundles over $\Sigma$ to sheaves, and will lay the groundwork for the embedding we will require later as a hypothesis of the theorem of Harada and Kaveh. Then we will describe the construction of $\cP$ and the diffeomorphism with $P$.
 	\subsection{Projective Embedding of $\MM$}
+	\label{s:m-embedding}
 	The moduli $\MM$ of flat $SL(n,\C)$ bundles can be embedded into projective space, as we will now describe following the work of Thaddeus and Giesker (cite). First, fix a line bundle $L$ of sufficiently high degree so that for all $E\in N(k,d)$ $E\otimes L$  is globally generated (and redefine $E$). Then, for some large $N$ we can write $E$ as a quotient:
 	\begin{equation}
 	\phi:\OO^N \to E.
@@ -66,12 +70,46 @@
 	\end{proof}
 
 	\subsection{Parabolic Vector Bundles}
-
-	Just as we constructed the moduli space of vector bundles over a Riemann surface, let us now construct that of parabolic vector bundles. We base our work on that of Hurtubise and Jeffrey (cite). Again let $\Sigma$ be a compact connected Riemann surface and fix a line bundle $L$ of sufficiently high degree so that for all $E\in N(k,d), E\otimes L$ is globally generated (and redefine $E$). Then for some large $N$ we can write $E$ as a quotient:
+	Given a trinion decomposition of the Riemann surface $\Sigma$, let us fix the holonomies around each boundary loop. If we think of each trinion as a thrice-punctured sphere and consider the space of connections with fixed holonomies on the trinion, then due to Mehta and Seshadri (cite) there is a correspondence between the moduli of $\pi_1(\Sigma)$ representations into $SU(n)$ and that of rank-$n$ holomorphic bundles with an $SL(n,\C)$ structure and a parabolic structure at the punctures of $\Sigma$, which we call a parabolic bundle. Under this correspondence, the eigenvalues of the holonomy get translated into a set of weights for the parabolic structure. 
+	
+	We want to consider the moduli space of connections with all possible holonomies, and therefore we will want to fit all these moduli of parabolic bundles together, and in such a way that we can even include the $\theta_i = 0,\pi$ cases, which will correspond to weights $0$ and $1$. This is the construction of Hurtubise and Jeffrey which we will describe in the next subsection. First we lay out the basic definitions and results about parabolic bundles.
+	\begin{definition}
+		A \emph{parabolic bundle} over a complex manifold $\Sigma$ is a holomorphic vector bundle $E$ over $\Sigma$ with a \emph{parabolic structure}, which is a point of marked points $\{p_1,...,p_n\}$ and for each point, a flag of subspaces in the fibre $E_{p_k}$. 
+	\end{definition}
+	In particular if $E$ has rank 2, then a parabolic structure on $E$ is a choice of points $\{p_k\}$ and a sheaf homomorphism $\alpha:E\to S$ where $S := \bigoplus_{k} \C_{p_k}$.
+	
+	There is an adapted notion of stability for parabolic vector bundles.
+	\begin{definition}
+		Let $\gamma_1,...,\gamma_n \in [0,1]$ be a set of weights. For a subbundle (not neccesarily proper) $F$ of $E$ we set $\mu_i(F) = 1$ if $F_{p_i} \subset \ker\alpha_i$, and $\mu_i = 0$ otherwise. Define $\sigma(F) = \frac{1}{rk(E)}$ if $F=E$ and $0$ otherwise. Then we say a pair $(E,\alpha)$ is \emph{stable} with respect to $\gamma$ if 
+		\begin{equation}
+		rk(E)\deg(F) < rk(F)\left(\deg(E) - \sum_{i=1}^n \gamma_i\right) 
+		+ rk(E)\sum_{i=1}^n(1 - \mu_i(F) + \sigma_i(F))\gamma_i.
+		\end{equation}
+		If the inequality is not strict, $(E,\alpha)$ is \emph{semi-stable}.
+	\end{definition}
+	This lemma of Hurtubise and Jeffrey (cite) summarizes some important results about tweighted parabolic bundles.
+	\begin{lemma}
+		If $(E,\alpha)$ is a parabolic bundle semi-stable with respect to weights $\gamma$, then:
+		\begin{enumerate}
+			\item The kernal of $\alpha$ is torsion free, and the torsion subsheaf of $E$ is non-zero only at the $p_i$, equalling $0$ or $\C$ at each $p_i$.
+			\item If $\gamma_i >0$, then $\alpha_i \neq 0$.
+			\item If $\gamma_i < 1$, then $E$ is torsion free at $p_i$.
+			\item If $\gamma_i \in (0,1)$, one has a parabolic structure at $p_i$, and if all the weights are in $(0,1)$, the stability condition is identical to that of parabolic bundles with weights $(1-\gamma_i)/2$ and $(1+\gamma_i)/2$.
+			\item If $(E,\alpha)$ is locally free at $p_i$ and $\alpha \neq 0$, then for $\gamma_i = 0$, there is a family $(E_t, \alpha_t)$, $t\in \C$, of semi-stable pairs such that $(E_t,\alpha_t)\cong (E,\alpha)$ for $t\neq 0$, and $\alpha_0 = 0$. 
+			\item If $(E,\alpha)$ is locally free at $p_i$ and $\alpha \neq 0$, then for $\gamma_i = 1$, there is a family $(E_t,\alpha_t)$, $t\in \C$, such that $(E_t, \alpha_t)\cong (E,\alpha)$, $t\neq 0$ and $E_0$ has torsion at $p_i$.
+		\end{enumerate}
+	\end{lemma}
+	\begin{proof}
+		Hurtubise and Jeffrey (cite) lemma 4.3
+	\end{proof}
+	In particular, this lemma tells us that when $\gamma_i\in (0,1)$, which will correspond to connections with holonomy in $(0,\pi)$, we get well-behaved parabolic structures without torsion. It also tells us there are two edge cases to consider. When $\gamma_i = 0$, the parabolic structure vanishes, and when $\gamma_i = 1$ we acquire torsion. To fit all possible holonomies into a moduli space, each of these cases will need to be dealt with.
+	
+	\subsection{Moduli of Framed Parabolic Bundles}
+	Just as we constructed the moduli space of vector bundles over a Riemann surface, let us now construct that of parabolic vector bundles. This subsection closely follows section 4 of Hurtubise and Jeffrey (cite). From now on, we restrict our attention to $G=SU(2)$. As always, let $\Sigma$ be a compact connected Riemann surface. Fix a line bundle $L$ of sufficiently high degree so that for all $E\in N(k,d), E\otimes L$ is a globally generated sheaf (and redefine $E = E\otimes L$). Then for some large $N$ we can write $E$ as a quotient of the trivial sheaf on $\Sigma$:
 	\begin{equation}
 		\phi: \OO^N \to E.
 	\end{equation}
-	As before, we have a mapping $\hat{\beta}$ taking $E$ to $V_1$. Now we add the parabolic data. At a point $p_i$, the map $\alpha_i:E\to \C_{p_i}$ pulls back to $\hat{\alpha}_i = \alpha_i\circ \phi$ in 
+	Just as in section \ref{s:m-embedding} we have a mapping $\hat{\beta}$ taking $E$ to $V_1$. Now we add the parabolic data. At a point $p_i$, the map $\alpha_i:E\to \C_{p_i}$ pulls back to $\hat{\alpha}_i = \alpha_i\circ \phi$ in 
 	\begin{equation}
 		V_2 = H^0(\OO^N)^\ast.
 	\end{equation}
@@ -92,90 +130,93 @@
 	In this case $G\cong SL(N,\C)$ which acts on $V_1$ and each copy of $V_2$.
 	
 	
-Let $\pi_1:Z \to \PP(V_1)$ and $\pi_{2,i}:Z\to \PP(V_2)$ denote the projections to the first factor and to the i-th factor of $Z$ respectively. Let
-\begin{equation}
-	L_0 = \pi_1^\ast(\OO(N)),~ \text{ and } ~ L_{1,i} = \pi_1^\ast(\OO(N-1))\otimes \pi_{2,i}^\ast (\OO(2)).
-\end{equation}
-Then the linearisation corresponding to weights $\gamma = (\gamma_1,...,\gamma_n)$ is 
-\begin{equation}
-	L_\gamma = (L_0)^{s_0} \otimes \left(
-	\otimes_{i=1}^n (L_{1,i})^{s_{1,i}}
-	\right),
-\end{equation}
-where $s_0(\gamma_i) = s_{1,i}(1-\gamma_i)$.
-\begin{lemma}
-	$L_i$ is a linearisation of the action of $G$ on $X$.
-\end{lemma}
-\begin{proof}
-	????????????/
-\end{proof}
-In summary, what we have now are a collection of moduli spaces of parabolic bundles semi-stable with respect to weights $\gamma$, with $\gamma_i \neq 0,1$. We want to fit these spaces together, and in such a way that we can include $\gamma_i = 0,1$. To do this, we put a $(\PP^1)^n$-bundle over $X$,
-\begin{equation}
-	Y = \PP(L_0\oplus L_{1,1})\oplus \PP(L_0\oplus L_{1,2})\oplus ... \oplus \PP(L_0\oplus L_{1,n}).
-\end{equation}
-We endow $Y$ with the natural polarisation $\OO(1,1,...,1)$. Now $Y$ contains all the stable points for the various choice of weights, which correspond to the various possible holonomies of the unitary connections. We still need to account for gauge equivalence, which apriori suggests we take the $SL(N,\C)$ quotient. It will turn out that this is not quite correct, as we need to make an adjustment with $\gamma_i = 0,1$.
-
-Consider the space of weighted parabolic bundles as quadruples $(E, \alpha_i, A_i, \gamma)$, where $\alpha_i:E\to \C_{p_i}$ is the parabolic structure, $A_i$ is a subspace of $E_{p_i}$, with $A_i = \ker\alpha_i$ whenever $\alpha_i \neq 0$ (equiv. $\gamma \neq 0$), and $\gamma$ are the weights as usual. When $\gamma_i \neq 0$, we have not added any new information. When $\gamma_i = 0$ we are adding a projective class $A_i$ for the parabolic structure even as the map vanishes.
-
-On the other hand when $\gamma_1 = 1$, the sheaves can acquire torsion meaning they are no longer locally free. To handle this, we first need
-\begin{lemma}[H\& J Lemma 4.11]
-	Let $E_t$, $t\in\C$ be a family of coherent rank 2 sheaves over $\Sigma$, with $E_t$ locally free at $p$ for $t\neq 0$, and with $E_0$ having torsion subsheaf $\C_p$ near $p$. Let $\phi_t \in H^0(\Sigma, \wedge^2(E)^\ast)$ be a family of $SL(2,\C)$ structures on $E_t$. Then $\phi_0$ vanishes at $p$.
-	\label{t:sl2-lemma}
-\end{lemma}
-\begin{proof}
-	If $z$ is a local co-ordinate on $\Sigma$ on an open set containing $p$, such that $z(p)=0$, one can obtain $E_t$ locally (up to reparameterization) from the exact sequence 
+	Let $\pi_1:Z \to \PP(V_1)$ and $\pi_{2,i}:Z\to \PP(V_2)$ denote the projections to the first factor and to the i-th factor of $Z$ respectively. Let
 	\begin{equation}
-		\OO \xrightarrow{(0,t^k,z)} \OO \oplus \OO \oplus \OO \xrightarrow{~~~~~}E_t
+		L_0 = \pi_1^\ast(\OO(N)),~ \text{ and } ~ L_{1,i} = \pi_1^\ast(\OO(N-1))\otimes \pi_{2,i}^\ast (\OO(2)).
 	\end{equation}
-	for some integer $k$. Then the $SL(2,\C)$ structures $\phi_t$ are multiples of $e_1^\ast \wedge (-ze^\ast_2 + t^k e^\ast_3)$, which vanishes when $z=t=0$.
-\end{proof}
-Since $Y$ is a projective bundle, we can freely tensor with line bundles and write $Y$ as the bundle
-\begin{equation}
-	Y = \bigoplus_{i=1}^n\PP\left(\pi_1^\ast\left(
-	\OO(-1)
-	\right)\oplus \pi_{2,i}^\ast\left(\OO(-2)\right)\right).
-\end{equation}
-In this form, when $\gamma \neq 1$ we have a natural lift of a parabolic bundle $(E,\alpha)\in X$ to $Y$, given by 
-\begin{equation}
+	Then the linearisation corresponding to weights $\gamma = (\gamma_1,...,\gamma_n)$ is 
+	\begin{equation}
+		L_\gamma = (L_0)^{s_0} \otimes \left(
+		\otimes_{i=1}^n (L_{1,i})^{s_{1,i}}
+		\right),
+	\end{equation}
+	where $s_0(\gamma_i) = s_{1,i}(1-\gamma_i)$.
+	\begin{lemma}
+		$L_i$ is a linearisation of the action of $G$ on $X$.
+	\end{lemma}
+	\begin{proof}
+		????????????/
+	\end{proof}
+	In summary, what we have now are a collection of moduli spaces of parabolic bundles semi-stable with respect to weights $\gamma$, with $\gamma_i \neq 0,1$. We want to fit these spaces together, and in such a way that we can include $\gamma_i = 0,1$. To do this, we put a $(\PP^1)^n$-bundle over $X$,
+	\begin{equation}
+		Y = \PP(L_0\oplus L_{1,1})\oplus \PP(L_0\oplus L_{1,2})\oplus ... \oplus \PP(L_0\oplus L_{1,n}).
+	\end{equation}
+	We endow $Y$ with the natural polarisation $\OO(1,1,...,1)$. Now $Y$ contains all the stable points for the various choice of weights, which correspond to the various possible holonomies of the unitary connections. We still need to account for gauge equivalence, which apriori suggests we take the $SL(N,\C)$ quotient. It will turn out that this is not quite correct, as we need to make an adjustment with $\gamma_i = 0,1$.
+	
+	Consider the space of weighted parabolic bundles as quadruples $(E, \alpha_i, A_i, \gamma)$, where $\alpha_i:E\to \C_{p_i}$ is the parabolic structure, $A_i$ is a subspace of $E_{p_i}$, with $A_i = \ker\alpha_i$ whenever $\alpha_i \neq 0$ (equiv. $\gamma \neq 0$), and $\gamma$ are the weights as usual. When $\gamma_i \neq 0$, we have not added any new information. When $\gamma_i = 0$ we are adding a projective class $A_i$ for the parabolic structure even as the map vanishes.
+	
+	On the other hand when $\gamma_1 = 1$, the sheaves can acquire torsion meaning they are no longer locally free. To handle this, we first need
+	\begin{lemma}[H\& J Lemma 4.11]
+		Let $E_t$, $t\in\C$ be a family of coherent rank 2 sheaves over $\Sigma$, with $E_t$ locally free at $p$ for $t\neq 0$, and with $E_0$ having torsion subsheaf $\C_p$ near $p$. Let $\phi_t \in H^0(\Sigma, \wedge^2(E)^\ast)$ be a family of $SL(2,\C)$ structures on $E_t$. Then $\phi_0$ vanishes at $p$.
+		\label{t:sl2-lemma}
+	\end{lemma}
+	\begin{proof}
+		If $z$ is a local co-ordinate on $\Sigma$ on an open set containing $p$, such that $z(p)=0$, one can obtain $E_t$ locally (up to reparameterization) from the exact sequence 
+		\begin{equation}
+			\OO \xrightarrow{(0,t^k,z)} \OO \oplus \OO \oplus \OO \xrightarrow{~~~~~}E_t
+		\end{equation}
+		for some integer $k$. Then the $SL(2,\C)$ structures $\phi_t$ are multiples of $e_1^\ast \wedge (-ze^\ast_2 + t^k e^\ast_3)$, which vanishes when $z=t=0$.
+	\end{proof}
+	Since $Y$ is a projective bundle, we can freely tensor with line bundles and write $Y$ as the bundle
+	\begin{equation}
+		Y = \bigoplus_{i=1}^n\PP\left(\pi_1^\ast\left(
+		\OO(-1)
+		\right)\oplus \pi_{2,i}^\ast\left(\OO(-2)\right)\right).
+	\end{equation}
+	In this form, when $\gamma \neq 1$ we have a natural lift of a parabolic bundle $(E,\alpha)\in X$ to $Y$, given by 
+	\begin{equation}
+		\hat{E} = \left(
+		(\hat{\beta}, \hat{\alpha}_1^2),(\hat{\beta},\hat{\alpha}_2^2),...,(\hat{\beta},\hat{\alpha}^2)
+		\right),
+	\end{equation}
+	which we want to extend to the torsion case where $\gamma = 1$. When we have torsion at say $p_i$ ($\gamma_i = 1)$, we could rescale the torsion subsheaf of $E$, modifying $\hat{\alpha}_i^2$ to $c\hat{\alpha}_i^2$ for some $c$. This rescaling should remain in the same equivalence class, and if $\hat{\beta} \neq 0$ then since $\hat{\beta}$ is not rescaled this would not be the case. Therefore we want that the $i$-th component of the lift of $E$ in $Y$ should be $(0,\hat{\alpha}_i^2)$. This is achieved as follows; recall that $\hat{\beta}$ is defined by composing
+	\begin{equation}
+		\wedge^2(\OO^N) \xrightarrow{\phi} H^0(\Sigma, \wedge^2 E) \xrightarrow{\xi} H^0(\Sigma, L^2)
+	\end{equation}
+	where $\phi:\OO^N \to E$ is a quotient defining $E$, and $\xi$ was its $SL(2,\C)$ structure. We have a commutative diagram:
+	\begin{equation}
+		TBD
+	\end{equation}
+	Then for $\gamma \neq 1$ one has $\xi = \text{ev}_\OO^{-1}\circ \xi^{p_i} \circ \text{ev}_{\wedge^2(E)}$, and so for $\gamma_i=1$ we use this definition to define $\xi^{p_i}$ at the torsion points of $E$. Then, from lemma \ref{t:sl2-lemma}, one has that $\hat{\beta}_i$ vanishes when there is torsion at $p_i$. Using this definition we can define a lift for all $(E,\alpha)\in X$ to $Y$ by $
 	\hat{E} = \left(
 	(\hat{\beta}, \hat{\alpha}_1^2),(\hat{\beta},\hat{\alpha}_2^2),...,(\hat{\beta},\hat{\alpha}^2)
-	\right),
-\end{equation}
-which we want to extend to the torsion case where $\gamma = 1$. When we have torsion at say $p_i$ ($\gamma_i = 1)$, we could rescale the torsion subsheaf of $E$, modifying $\hat{\alpha}_i^2$ to $c\hat{\alpha}_i^2$ for some $c$. This rescaling should remain in the same equivalence class, and if $\hat{\beta} \neq 0$ then since $\hat{\beta}$ is not rescaled this would not be the case. Therefore we want that the $i$-th component of the lift of $E$ in $Y$ should be $(0,\hat{\alpha}_i^2)$. This is achieved as follows; recall that $\hat{\beta}$ is defined by composing
-\begin{equation}
-	\wedge^2(\OO^N) \xrightarrow{\phi} H^0(\Sigma, \wedge^2 E) \xrightarrow{\xi} H^0(\Sigma, L^2)
-\end{equation}
-where $\phi:\OO^N \to E$ is a quotient defining $E$, and $\xi$ was its $SL(2,\C)$ structure. We have a commutative diagram:
-\begin{equation}
-	TBD
-\end{equation}
-Then for $\gamma \neq 1$ one has $\xi = \text{ev}_\OO^{-1}\circ \xi^{p_i} \circ \text{ev}_{\wedge^2(E)}$, and so for $\gamma_i=1$ we use this definition to define $\xi^{p_i}$ at the torsion points of $E$. Then, from lemma \ref{t:sl2-lemma}, one has that $\hat{\beta}_i$ vanishes when there is torsion at $p_i$. Using this definition we can define a lift for all $(E,\alpha)\in X$ to $Y$ by $
-\hat{E} = \left(
-(\hat{\beta}, \hat{\alpha}_1^2),(\hat{\beta},\hat{\alpha}_2^2),...,(\hat{\beta},\hat{\alpha}^2)
-\right).$
-
-Next Hurtubise and Jeffrey analyse which elements of $Y$ are stable or semistable as weighted parabolic bundles. In lemma (ref) we saw that torsion in the kernal of $\alpha_i$ destabilised $(E,\alpha) \in X$. The same is true in $Y$:
-\begin{lemma}[H\&J Lemma 4.13]
-	A semi-stable element $y\in Y$ corresponds to a bundle parabolic bundle $(E,\alpha)$ with no torsion in the kernal of $\alpha$.
-\end{lemma}
-To allow the the $\alpha_i$ to go to zero but still preserve the information of which projective class we have at $p_i$, we define a new map. Let $(E,\alpha)\in X$ with $SL(2,\C)$ structure $\phi$. Then we can map $(E,\alpha,\phi)\to Y$ by
-\begin{equation}
-	(E,\alpha,\phi) \to \bigoplus_{i=1}^n\left(
-	(\phi(p_i)^N, \phi(p_i)^{N-1}\alpha_i^2
-	\right),
-\end{equation}
-and we define $\hat{Y}$ to be the closure in $Y$ of the image of this map. In this closure, we can take $\alpha_i =0$, but since $\phi(p_i)\neq 0$ we preserve the information of a subspace of $E$ at $p_i$ (unsure?). Then since $\phi(p_i)\neq 0$, lemma \ref{t:sl2-lemma} guarantees $E$ is torsion free at $p_i$. Finally the proposition regarding stability is
-\begin{theorem}[H\&J Prop 4.14]
-	Let 
+	\right).$
+	
+	Next Hurtubise and Jeffrey analyse which elements of $Y$ are stable or semistable as weighted parabolic bundles. In lemma (ref) we saw that torsion in the kernal of $\alpha_i$ destabilised $(E,\alpha) \in X$. The same is true in $Y$:
+	\begin{lemma}[H\&J Lemma 4.13]
+		A semi-stable element $y\in Y$ corresponds to a bundle parabolic bundle $(E,\alpha)$ with no torsion in the kernal of $\alpha$.
+	\end{lemma}
+	To allow the the $\alpha_i$ to go to zero but still preserve the information of which projective class we have at $p_i$, we define a new map. Let $(E,\alpha)\in X$ with $SL(2,\C)$ structure $\phi$. Then we can map $(E,\alpha,\phi)\to Y$ by
 	\begin{equation}
-		y = \left(
-		(b_1, a_1), (b_2, a_2),...,(b_n, a_n)
-		\right)
+		(E,\alpha,\phi) \to \bigoplus_{i=1}^n\left(
+		(\phi(p_i)^N, \phi(p_i)^{N-1}\alpha_i^2
+		\right),
 	\end{equation}
-	be a point in $\hat{Y}$. Let $\Gamma(y)$ be the set of $\gamma_i \in [0,1]$ such that $\gamma_i =0$ if $a_i =0$ and $\gamma_i = 0$ if $b_i = 0$. Then $y$ is semi-stable if and only if for one element $\gamma \in \Gamma(y)$, $\pi(y)\in X$ is $\gamma$-semi-stable.
-\end{theorem}
-Therefore semi-stable elements in $\hat{Y}$ all project down to semi-stable elements of $X$ for some choice of weights, and the GIT quotient $\hat{Y}\sslash SL(N,\C)$ corresponds to equivalence classes of quadruples $(E,\alpha_i, \hat{\alpha}_i, \phi)$ where $(E,\alpha)$ is a parabolic bundle, $\hat{\alpha}_i$ is a subspace of $E|_{p_i}$ (which is the kernal of $\alpha_i$ when $\alpha_i \neq 0$) and $\phi$ is an $SL(2,\C)$ structure. However this is not quite the final moduli space we want to construct, as we have added the extra information of $\hat{\alpha}_i$ when $\alpha_i = 0$. At these points, $\hat{\alpha}_i \in \PP_1=\PP(E|_{p_i})$. We want to collapse these extra $\PP_1$s. To do this, embed $V_1$ into $W_1 = V_1^{\otimes N}$ so that a non-zero element $l$ in $L_{0} = \pi_1^\ast(\OO(N))$ can be thought of as an element in $W_1^\ast$ by taking $v_1\otimes...\otimes v_n$ to $l(v_1)l(v_2)...l(v_n)$. Similarly, embedding $V_2$ into $W_2 = V_1^{\otimes N-1}\otimes V_2\otimes V_2$ allows us to think of non-zero elements in $L_{1,i}$ as elements of $W_2^\ast$. Then this maps $\hat{Y}$ to a subvariety $\tilde{Y}$ in $\bigotimes_{i=1}^n \PP(W_1\otimes W_2)$, and the map collapses the unwanted $\PP_1$s while being an embedding otherwise. 
-
-Finally, we let $\cP = \tilde{Y}\sslash SL(N,\C)$ be the geometric quotient, and we call it the \emph{moduli space of framed parabolic bundles}.
+	and we define $\hat{Y}$ to be the closure in $Y$ of the image of this map. In this closure, we can take $\alpha_i =0$, but since $\phi(p_i)\neq 0$ we preserve the information of a subspace of $E$ at $p_i$ (unsure?). Then since $\phi(p_i)\neq 0$, lemma \ref{t:sl2-lemma} guarantees $E$ is torsion free at $p_i$. Finally the proposition regarding stability is
+	\begin{theorem}[H\&J Prop 4.14]
+		Let 
+		\begin{equation}
+			y = \left(
+			(b_1, a_1), (b_2, a_2),...,(b_n, a_n)
+			\right)
+		\end{equation}
+		be a point in $\hat{Y}$. Let $\Gamma(y)$ be the set of $\gamma_i \in [0,1]$ such that $\gamma_i =0$ if $a_i =0$ and $\gamma_i = 0$ if $b_i = 0$. Then $y$ is semi-stable if and only if for one element $\gamma \in \Gamma(y)$, $\pi(y)\in X$ is $\gamma$-semi-stable.
+	\end{theorem}
+	Therefore semi-stable elements in $\hat{Y}$ all project down to semi-stable elements of $X$ for some choice of weights, and the GIT quotient $\hat{Y}\sslash SL(N,\C)$ corresponds to equivalence classes of quadruples $(E,\alpha_i, \hat{\alpha}_i, \phi)$ where $(E,\alpha)$ is a parabolic bundle, $\hat{\alpha}_i$ is a subspace of $E|_{p_i}$ (which is the kernal of $\alpha_i$ when $\alpha_i \neq 0$) and $\phi$ is an $SL(2,\C)$ structure. However this is not quite the final moduli space we want to construct, as we have added the extra information of $\hat{\alpha}_i$ when $\alpha_i = 0$. At these points, $\hat{\alpha}_i \in \PP_1=\PP(E|_{p_i})$. We want to collapse these extra $\PP_1$s. To do this, embed $V_1$ into $W_1 = V_1^{\otimes N}$ so that a non-zero element $l$ in $L_{0} = \pi_1^\ast(\OO(N))$ can be thought of as an element in $W_1^\ast$ by taking $v_1\otimes...\otimes v_n$ to $l(v_1)l(v_2)...l(v_n)$. Similarly, embedding $V_2$ into $W_2 = V_1^{\otimes N-1}\otimes V_2\otimes V_2$ allows us to think of non-zero elements in $L_{1,i}$ as elements of $W_2^\ast$. Then this maps $\hat{Y}$ to a subvariety $\tilde{Y}$ in $\bigotimes_{i=1}^n \PP(W_1\otimes W_2)$, and the map collapses the unwanted $\PP_1$s while being an embedding otherwise. 
+	
+	Finally, we let $\cP = \tilde{Y}\sslash SL(N,\C)$ be the geometric quotient, and we call it the \emph{moduli space of framed parabolic bundles}.
+	
+	\subsection{Diffeomorphism Between $P$ and $\cP$}
+	Let $\Sigma_0 = \Sigma - \{p_1,...,p_n\}$ for some choice of points $\{p_i\} \in \Sigma$. Then we will define a map from $P(\Sigma_0)$ to $\cP(\Sigma)$ with parabolic structure at the points $\{p_i\}$. 
 	
 \end{document}

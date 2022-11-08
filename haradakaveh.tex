@@ -30,7 +30,7 @@
 \newcommand{\XX}{\mathfrak{X}}
 \newcommand{\sslash}{\mathbin{/\mkern-4mu/}}
 \newcommand{\cP}{\mathcal{P}}
-\begin{document}	
+\begin{document}		
 	\subsection{Toric Degeneration}
 	Here we want to describe a result of Harada and Kaveh (cite), which constructs an integrable system from a \textit{toric degeneration} satisfying some additional hypotheses. 
 	\begin{definition}
@@ -83,9 +83,13 @@
 	\end{equation}
 	Since $\Gamma(\LL,\MM) = V_1$, this metric can be thought of as an inner product on $V_1$. In which case, $\Omega =\dbar\partial \log h$ is interpreted as the Fubini-Study metric on $\PP(V_1)$. unfounded claim: hence $\LL$ is a very ample line bundle, which shows again that we have embedding $\MM \hookrightarrow \PP(V_1)$.
 	
-	However, we want to embed the entire degeneration into the same projective space $\PP^N$. We have an embedding of $\MM$ into $\PP(V_1)$ and an embedding of $\cP$ into $\bigotimes_{i=1}^n \PP(W_1 \otimes W_2)$. We can further embed $\bigotimes_{i=1}^n \PP(W_1 \otimes W_2)$ into a very large $\PP^N$ using the Segre embedding, which has the important property that $\Omega_{fs} \PP^N = \sum \Omega_{fs} \PP(W_1\otimes W_2$. If we have $(E,\dbar_E)\in\MM$, we can keep track of what will become the parabolic data under the degeneration, and use that to fit $E$ into $\PP^N$.
+	However, we want to embed the entire degeneration into the same projective space $\PP^N$. We have an embedding of $\MM$ into $\PP(V_1)$ and an embedding of $\cP$ into $\bigotimes_{i=1}^n \PP(W_1 \otimes W_2)$. We can further embed $\bigotimes_{i=1}^n \PP(W_1 \otimes W_2)$ into a very large $\PP^N$ using the Segre embedding, which has the important property that $\Omega_{fs} \PP^N = \sum \Omega_{fs} \PP(W_1\otimes W_2)$. If we have $(E,\dbar_E)\in\MM$, we can keep track of what will become the parabolic data under the degeneration, and use that to fit $E$ into $\PP^N$.
 	
 	Let $(E,\dbar_E)\in \MM$ correspond to the flat $SU(2)$ connection $A$. Fix a trinion decomposition with boundary curves $C_i$ and suppose $A$ is adapted to trinion decomposition. Then at each curve, we have holonomy $Hol_{C_i}(A) \in SU(2)$. The holonomy has eigenvalues $\gamma_{i,1}$ and $\gamma_{i,2}$ and since the determinant must be 1, $\gamma_{i,1}\gamma_{i,2} = 1$. When $|\gamma_{i,1}|\neq 1$ (hence $\gamma_{i,1} \neq \gamma_{i,2}$) the eigenspaces are distinct, and we can define $\alpha_i:E|_{V_i} \to \C$ to be the projection to subspace of the largest eigenvalue. We can interpret this as a parabolic structure $(E,\alpha)$ at a choice of marked points $p_i$ on the boundary curves $C_i$, with weights $\gamma_i$ given by the largest eigenvalues.
 	
-	When the eigenvalues are both 1 $(\gamma_i = 1)$ the picture is more complicated, and corresponds to the parabolic sheaves from section (label) that acquire torsion. 
+	Using this parabolic structure, we can define a map $\Phi:\MM \to X \subset \PP(V_1)\times\PP(V_2)...\times\PP(V_2)$ by
+	\begin{equation}
+		\tilde{\Phi}(E,\dbar_E) = (\hat{\beta},\hat{\alpha}_1,...,\hat{\alpha}_n)
+	\end{equation}
+	which lifts to the space $\hat{Y}$ as described in previous section, and passes to $\cP$; let $\Phi:\MM\to\cP$ denote this map. 
 \end{document}

@@ -62,7 +62,7 @@
 	\end{equation}
 	then we can consider $\Hom(\pi_1(\Sigma),G)$ as a subset of $G^N$ by taking the generators to their images under any homomorphism. Then $\Hom(\pi_1(\Sigma),G)$ inherits a topology from the Lie group topology on $G$, and $\Hom(\pi_1(\Sigma),G)/G$ gets the quotient topology. 
 	
-	Geometrically, $\Hom(\pi_1(\Sigma),G)$ corresponds to $G[a_1,...,a_n]/\langle R_1,...,R_N\rangle$, so when $G$ is an algebraic group, $\Hom(\pi_1(\Sigma),G)$ is a variety. Then $\MM = \Hom(\pi_1(\Sigma),G)\sslash G$ via GIT quotient.
+	Geometrically, $\Hom(\pi_1(\Sigma),G)$ corresponds to $G[a_1,...,a_n]/\langle R_1,...,R_N\rangle$, so when $G$ is an algebraic group, $\Hom(\pi_1(\Sigma),G)$ is a variety. Then $\MM = \Hom(\pi_1(\Sigma),G)/ G$ is a quotient variety.
 	
 	
 	
@@ -132,14 +132,7 @@
 	\end{proof}
 	Now that we have some understanding of the moduli space $\MM$, we will pass to a holomorphic description of $\MM$ in terms of semi-stable holomorphic vector bundles over $\Sigma$.
 	\subsection{Semi-stable Holomorphic Bundles}
-	To prove Lemma (2?), we used a representation $\rho\in\Hom(\pi_1(\Sigma), U(n))$ to construct a principal $G$-bundle over $\Sigma$ whose holonomy is $\rho$. Following very similar steps, we can construct a holomorphic vector bundle over $\Sigma$ from $\rho$. As before, let $\tilde{\Sigma}$ be the universal cover of $\Sigma$, and consider the diagonal action
-	\begin{align*}
-	\pi_1(\Sigma)&\circlearrowright \tilde{\Sigma}\times \C^n\\
-	[\gamma] & (x, v) \to ([\gamma]x, \rho([\gamma])v).
-	\end{align*}
-	The quotient $E_\rho := (\tilde{\Sigma}\times \C^n)/\pi_1(\Sigma)$ is a rank-$n$ vector bundle over $\Sigma$. Its transition functions are given by $\rho$ of the transition functions of $\tilde{\Sigma}$ as a $\pi_1(X)$-principal bundle over $\Sigma$, which are locally constant. Thus in particular, the transition functions are holomorphic, so $E_\rho$ is a holomorphic vector bundle. 
-	
-	When $\Sigma$ is a Riemann surface, we can use the complex structure to study $\MM$ in another way. Differential forms on a Riemann surface have a splitting, $\Omega^1(\Sigma) = \Omega^{1,0}(\Sigma)\oplus \Omega^{0,1}(\Sigma)$ which induces a splitting on the space $\cA$ of connections on complex vector bundles $E$ over $\Sigma$. As we will discuss, the $(0,1)$ part of a connection $A\in \Omega^1(\Sigma)\oplus \mathfrak{gl}(n,\C)$ defines a \emph{holomorphic structure} on $E$, and the space of such structures is exactly $\MM$ again.
+	When $\Sigma$ is a Riemann surface, we can use the complex structure to study $\MM$ in another way. Differential forms on a Riemann surface have a splitting, $\Omega^1(\Sigma) = \Omega^{1,0}(\Sigma)\oplus \Omega^{0,1}(\Sigma)$ which induces a splitting on the space $\cA$ of connections on complex vector bundles $E$ over $\Sigma$. As we will discuss, the $(0,1)$ part of a connection $A\in \Omega^1(\Sigma)\otimes \mathfrak{gl}(n,\C)$ defines a \emph{holomorphic structure} on $E$, and we can discuss moduli spaces of connections in terms of holomorphic structures.
 	
 	\begin{definition}
 		A \textit{holomorphic structure} on a complex vector bundle $E$ is a choice of trivializations $\{U_\alpha, \phi_\alpha\}$ for $E$, such that the transition functions
@@ -163,80 +156,50 @@
 	\begin{equation*}
 	\dbar_E = \dbar + B,
 	\end{equation*}
-	where $\dbar$ is the usual Cauchy-Riemann operator and $B \in \Omega^{0,1}(M, \End(E))$. Since $\dim \Sigma = 1$ there is no constraints on $B$ (citation needed) and so our space is an affine complex space with translations $\Omega^{0,1}(M,\End(E))$. We have an action of $\text{Aut}(E)$ on this space by change of basis, whose orbits are (by definition of Aut) isomorphism classes of holomorphic bundles $E$ of rank $n$ and degree $k$, and it is the space of these orbits, $N(n,k)$, that we wish to describe. 
+	where $\dbar$ is the usual Cauchy-Riemann operator and $B \in \Omega^{0,1}(E, \End E)$.
 	
-	However, in order to get a well-behaved moduli space, we must introduce a condition called stability. 
+	Since $\dim \Sigma = 1$ there is no constraints on $B$ (citation needed) and so our space is an affine complex space with translations $\Omega^{0,1}(M,\End E)$. We want to consider only equivalence classes of hermitian vector bundles, so we want to quotient out the action of $\text{Aut}(E) = \C^\infty(\Sigma, GL_n\C)$ by change of basis. It is the space of such isomorphism classes, $N(n,k)$, that we wish to describe. 
+	
+	In order to put geometric structure on this space, we need to add an additional constraint.
 	\begin{definition}
 		Let the \emph{slope} of a bundle $E$ be
-		$$\mu := c_1(E)/\text{rank}(E),$$
-		where $c_1(E)$ denotes the first Chern class. Then $E$ is said to be \textit{stable} if, for every proper subbundle $F$ of $E$, $\mu(F) < \mu(E)$. If the inequality is not strict, $E$ is \textit{semi-stable}.
+		$$\mu := \deg(E)/\text{rank}(E),$$
+		where $\deg(E)$ denotes the first Chern class of the line bundle $\det E$. Then $E$ is said to be \textit{stable} if, for every proper subbundle $F$ of $E$, $\mu(F) < \mu(E)$. If the inequality is not strict, $E$ is \textit{semi-stable}.
 	\end{definition}
-	Restricting our moduli space to stable bundles is required to guarantee that once we quotient our space by $\text{Aut}(E)$, we end up with a space that is Hausdorff (Mumford,Fogarty GIT book). The proof is extensive, so instead we show only a motivating example of two isomorphism classes of holomorphic bundle which intersect at an unstable bundle. Let $\Sigma = \mathbb{P}^1$ and $E = \OO(1)\oplus \OO(-1)$. Then
-	\begin{equation}
-	c_1(E) = c_1(\OO(1))c_1(\OO(-1)) = -1,
-	\end{equation} 
-	therefore $\mu(E) = -1/2$. However $\OO(1)$ is a proper subbundle of $E$ and $\mu(\OO(1)) = 1$, so $E$ is unstable. Letting $U_0 = \mathbb{P}^1 - \{\infty\}$ and $U_1 = \mathbb{P}^1 - \{0\}$, $E$ has transition function $T$ on $U_0 \cap U_1$ given by
-	\begin{equation*}
-	T(z) = \begin{bmatrix}
-	z & 0\\
-	0 & \frac{1}{z}
-	\end{bmatrix}, z \neq 0, z\neq \infty.
-	\end{equation*}
-	Now consider conjugating $E$ by the following family in $Aut(E)$
-	\begin{align*}
-	\begin{bmatrix}
-	1 & b\\
-	c & 1\\
-	\end{bmatrix}
-	\begin{bmatrix}
-	z & 0\\
-	0 & \frac{1}{z}\\
-	\end{bmatrix}
-	\begin{bmatrix}
-	1 & -c\\
-	-b & 1\\
-	\end{bmatrix} = \begin{bmatrix}
-	z - \frac{b^2}{z} & \frac{b}{z}-cz\\
-	cz - \frac{b}{z} & \frac{1}{z}-c^2 z\\
-	\end{bmatrix}.
-	\end{align*}
-	If we let $c=0$ and $b=t$ we get a family $F(t)$ of vector bundles with transition matrices
-	\begin{equation*}
-	T_{F}(t) = \begin{bmatrix}
-	z-t^2/z & t/z\\
-	-t/z & 1/z
-	\end{bmatrix},
-	\end{equation*}
-	and if we let $c=t$ and $b=0$ we get a family $G(t)$ of vector bundles with transition matrices
-	\begin{equation*}
-	T_{G}(t) = \begin{bmatrix}
-	z & -tz\\
-	tz & \frac{1}{z}-t^2 z
-	\end{bmatrix}.
-	\end{equation*}
-	As $t\to 0$, both $F(t)$ and $G(t)$ go to $E$. Therefore, $E$ is in the orbit of both $F(1)$ and $G(1)$ under the action of Aut$(E)$. This means any open set containing $[F(1)]$ must contain $E$, and any open set containing $[G(1)]$ must contain $E$, so there are no disjoint open sets in $\Omega^{0,1}(M,\End E)/\text{Aut}(E)$ separating these families, contradicting Hausdorffness.
+	Luckily, the following result allows us to safely restrict our focus to the better-behaved space of semi-stable bundles.
+	\begin{theorem}[Narasimhan-Seshadri]
+		\label{t:n-s}
+		Let $\Sigma$ be a compact connected Riemann surface with $g\geq 2$ and $G=U(n)$. Then 
+		\begin{enumerate}
+			\item There is a correspondence between representations $\rho$ up to conjugation and semi-stable holomorphic bundles $E$ of degree zero up to Gauge equivalence.
+			\item $E$ is stable if and only if $\rho$ is irreducible.
+		\end{enumerate}
+	\end{theorem}
+	\begin{proof}
+		The original proof of Narasimhan and Seshadri \cite{narasimhan_stable_1965} is algebraic, and there is more recent proof of Donaldson \cite{donaldson_new_1983} using the Yang-Mills functional on connections.
+	\end{proof}
+	This theorem tells us that we have a three-way correspondence that gives us different perspectives on the moduli space. It consists of flat unitary connections, representations of the fundamental group, or semi-stable holomorphic vector bundles.
 	
-	For this reason, we will restrict our attention to only the subset of $N(n,k)$ consisting of semi-stable bundles. In particular, we will denote the space of degree $0$ semi-stable bundles as $\MM$. The following result tells us we have a real moduli space:
-	
+	For this reason, we will restrict our attention to only the subset of $N(n,k)$ consisting of semi-stable bundles. In particular, motivated by Theorem \ref{t:n-s}, we will denote the space of degree $0$ semi-stable bundles as $\MM$. The next result tells us that $N_{ss}(n,k)$ has a well-defined geometric structure. 
 	\begin{theorem}
-		For a compact connected Riemann surface $\Sigma$ of genus $g$, there exists a connected complex projective variety $N(n,k)$. When $n$ and $k$ are co-prime, $N(n,k)$ is a smooth manifold. 
+		For a compact connected Riemann surface $\Sigma$ of genus $g$, there exists a connected complex projective variety $N_{ss}(n,k)$ of semi-stable  holomorphic bundles. When $n$ and $k$ are co-prime, $N_{ss}(n,k)$ is a smooth manifold. 
 	\end{theorem}
 	\begin{proof}
 		Thaddeus odense page 4
 	\end{proof}
 
-	One lemma used in the proof of that theorem, and which we will use is the following:
+	Now let us focus only on $\MM$, the degree 0 semi-stable bundles. Just as in the representation picture, we will write $\MM_0$ to denote the stable bundles. $\MM_0$ is a smooth manifold (cite), and we can talk about its geometry. Being degree 0 means that the line bundle $\det E$ is trivial, and a choice of global trivialization gives us an $SL(n,\C)$ structure on $E$. To preserve this trivialization, we will restrict $\text{Aut}(E)$ and $\End E$ to their intersections in $SL(n,\C)$ and $\mathfrak{sl}(n,\C)$ respectively.
+	
+	An important property of stable bundles which we will make use of is the \emph{stable implies simple lemma}:
 	\begin{lemma}[Stable implies simple lemma]
-		If $E$ is stable, then $H^0(\End E) = 0$.
+		If $E$ is stable, then $H^0(\End E) = \C$, and $H^0(\mathfrak{sl}(n,\C)) = 0$.
 		\label{l:stablesimple}
 	\end{lemma}
 	\begin{proof}
 		Suppose $f\in H^0(\End(E))$, $\lambda \in \mathbb{C}$. Then $\ker(f)$ and im$(f)$ are subbundles of $E$ and $\ker(f)\oplus\text{im}(f) = E$, therefore $c_1(\ker(f))c_1(\text{im})(f) = c_1(E)$ and $\text{rank}(\ker(f)) + \text{rank im}(f) = n$. This forces that either $\mu(\ker(f))$ or $\mu(\text{im}(f))$ must be greater than or equal to $\mu(E)$, and hence either $\ker(f) = E$ or $\text{im}(f)=E$ since $E$ is stable.
 		
-		Now if $g\in H^0(\End(E))$, the argument above applied to $f-\lambda g$, $\lambda \in \mathbb{C}$ shows that $f = \lambda g$ and therefore $H^0(\End(E)) =0$.
+		Now for $\mathds{1}\in H^0(\End(E))$, the argument above applied to $f-\lambda \mathds{1}$, $\lambda \in \mathbb{C}$ shows that $f = \lambda \mathds{1}$ and therefore $H^0(\End(E)) =\C$. Since $\mathds{1}$ is not traceless, it is not in $\mathfrak{sl}(n,\C)$, and hence $H^0(\mathfrak{sl}(n,\C)) =0$.
 	\end{proof}
-
-	
 	Since stability is an open condition, we are safe to consider deformations to compute the tangent space. At a bundle $(E,\dbar_E)$ with holomorphic structure given by transition functions $T_{\alpha,\beta}$, we can consider deforming the holomorphic structure to 
 	\begin{equation}
 	T_{\alpha,\beta}(\epsilon) = T_{\alpha,\beta} + \epsilon t_{\alpha,\beta},
@@ -254,32 +217,36 @@
 	T_{\alpha,\gamma} + \epsilon(t_{\alpha,\beta} T_{\beta,\gamma} + T_{\alpha,\beta} t_{\beta,\gamma}) &= T_{\alpha,\gamma} + \epsilon t_{\alpha,\gamma}\\
 	t_{\alpha,\beta} T_{\beta,\gamma} + T_{\alpha,\beta} t_{\beta,\gamma} &= t_{\alpha,\gamma}.
 	\end{align*}
-	This condition tells us that $t_{\alpha,\beta}$ is a 1 cocycle in the sheaf $\End(E)$. When we quotient the action of of $\text{Aut}(E)$, we find that the tangent space to $N(n,k)$ is $H^1(\End(E))$. 
+	This condition tells us that $t_{\alpha,\beta}$ is a 1 cocycle in the sheaf $\End(E)$. When we quotient the action of of $\text{Aut}(E)$, we find that the tangent space to $N(n,k)$ is $H^1(\End(E))$. Similarly, if we include an $SL(n,\C)$ structure, we get a tangent space of $H^1(\mathfrak{sl}(n,\C))$.
 	
-	\begin{lemma}
-		If $\Sigma$ has genus $g\geq 2$ and $E$ is stable, then $\dim H^1(\End E) = n^2(g-1)+1$.
-	\end{lemma}
+	\begin{theorem}
+		If $\Sigma$ has genus $g\geq 2$ and $E$ is stable, then $\dim H^1(\End E) = n^2(g-1)+1$, and $\dim H^1(\mathfrak{sl}(n,\C)) = (n^2-1)(g-1)$.
+	\end{theorem}
 	\begin{proof}
 		We can compute the dimension of $H^1(\End(E))$ via Hirzebruch-Riemann-Roch. 
 		\begin{equation}
 			\label{e:hirz-rr}
 			\dim H^0(\End(E)) - \dim H^1(\End(E)) = \int_\Sigma ch(L)\text{Td}(\Sigma),
 		\end{equation}
-		where $ch(V)$ is the Chern character and $\text{Td}(\Sigma)$ is the Todd class of $T\Sigma$. We know from the stable implies simple lemma (\ref{l:stablesimple}) that $H^0(\End E)=0$. For a compact Riemann surface, the Todd class is $1+c_1(T\Sigma)/2 = 1+(1-g) = 2-g$ (cite forster), and for a vector bundle $V$ the Chern character is $\text{rank}(V) + c_1(V)$ (citation needed). Here $\text{rank}(\End(E)) = n^2$ and for stable bundles I claim $c_1(\End E) =0$.
+		where $ch(V)$ is the Chern character and $\text{Td}(\Sigma)$ is the Todd class of $T\Sigma$. We know from the stable implies simple lemma (\ref{l:stablesimple}) that $H^0(\End E)=\C$. For a compact Riemann surface, the Todd class is $1+c_1(T\Sigma)/2 = 1+(1-g) = 2-g$ (cite forster), and for a vector bundle $V$ the Chern character is $\text{rank}(V) + c_1(V)$ (citation needed). 
 		
-		To see this, we use that by definition, $c_1 = \deg(\wedge^{n^2} \End E)$ which is a line bundle on $\Sigma$. We know (lemma \ref{l:stablesimple}) $H^0(\End E) \cong \mathbb{C}$ so $H^0(\wedge^{n_2} \End E) \cong \mathbb{C}$. Furthermore, picking any non-zero section $f$ of $\wedge^{n^2} \End E$ identifies $\wedge^{n^2}\End E \otimes T^\ast \cong T^\ast\Sigma$ by sending say $\alpha \in T^\ast \Sigma$ to $f\otimes \alpha$. Therefore we can use Riemann-Roch for line bundles on a compact Riemann surface to compute
-		\begin{equation}
-			\deg(\wedge^{n^2} \End E) = 1 + g - H^0(\wedge^{n^2}\End E) - \dim H^0(T^\ast \Sigma) = 1+g-1-g = 0.
-		\end{equation}
-		
+		Since $\End E = E\otimes E^\ast$, its rank is $n^2$ and its Chern class is
+		\begin{align*}
+			c_1(\End E) &= (\text{rank} E) c_1(E) + (\text{rank} E^\ast)\\
+			&= n c_1(E) - nc_1(E)\\
+			&= 0
+		\end{align*}
 		Using these computations, equation \ref{e:hirz-rr} becomes 
 		\begin{align*}
 			c_1(\End(E)) + \text{rank}(\End(E))(1-g) &= \dim H^0(\End(E)) - \dim H^1(\End(E))\\
 			\dim H^1(\End(E)) &= 1 - n^2(1-g) = n^2(g-1) + 1.
 		\end{align*}
+		For $H^1(\mathfrak{sl}(n,\C))$, we instead have from lemma \ref{l:stablesimple} that the dimension of $H^0 = 0$ and $\text{rank}\mathfrak{sl}(n,\C) = (n^2-1)$ so we obtain:
+		\begin{align*}
+			\dim H^1(\mathfrak{sl}(n,\C)) &=  0-(n-1)^2(1-g) = (n-1)^2(g-1).
+		\end{align*}
 	\end{proof}
-	Remark: For $g=0$ and $g=1$, there are no stable holomorphic bundles (cite thaddeus pg 5). For example, when $g=0$ it is well known (cite Grothendieck) that any holomorphic bundle $E$ over $\mathbb{P}^1$ can be written $E \cong \oplus_{i}\OO(n_i)$ and is hence unstable.
-	
+	Remark: For $g=0$ there are no stable holomorphic bundles. For example when $g=0$, it is well known (cite Grothendieck) that any holomorphic bundle $E$ over $\mathbb{P}$ can be written as $E \cong \oplus_{i=1}^{\text{rank} E} \OO(n_i)$, which lets us verify that $E$ is at best semi-stable. For $g=1$, there are no stable holomorphic bundles (cite Thaddeus pg5) either, only semi-stable. We will discuss the $g=1$ case further later.
 	
 	When $E$ has a hermitian metric $h:E\otimes E \to \C$, the conjugate Hodge star $\bar{\star}:\Omega^{0,1}(\Sigma) \to \Omega^{1,0}(\Sigma)$ combined with $h$ allows us to define a hermitian inner product on $H^1(\End (E))$.  First $h$ defines a metric on $\End E$; if $A,B\in \End E$, let
 	\begin{equation}
@@ -319,7 +286,7 @@
 		The symplectic structure $\omega$ defined above is invariant under the action of $\cG$ on $\cA$. Furthermore, the curvature $F_A$ is a moment map for this action.
 	\end{theorem}
 	\begin{proof}
-	still needed
+	to be done
 	\end{proof}
 	Then we consider the moduli space of flat connections by symplectic reduction:
 	\begin{equation}

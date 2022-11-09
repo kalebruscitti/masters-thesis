@@ -1,17 +1,17 @@
 
-	Using any of the descriptions above, we have the space $\MM$ of flat $SU(2)$ connections on a compact connected Riemann surface $\Sigma$ of genus $g\geq 2$, which is a quasiprojective scheme with dimension $4g-3$. Furthermore, $\MM$ is equipped with the Atiyah-Bott symplectic form $\omega$, and there exists a line bundle $\LL$ over $\MM$ with curvature $2\pi i \omega$ \cite{quillen_determinants_1985}\cite{ramadas_comments_1989}. This is the data of a prequantum system to which we can apply geometric quantization.
+	Using any of the descriptions above, we have the space $\MM$ of flat $SU(2)$ connections on a compact connected Riemann surface $\Sigma$ of genus $g\geq 2$, which is a quasiprojective scheme with dimension $3g-3$. Furthermore, $\MM$ is equipped with the Atiyah-Bott symplectic form $\omega$, and there exists a line bundle $\LL$ over $\MM$ with curvature $2\pi i \omega$ \cite{quillen_determinants_1985}\cite{ramadas_comments_1989}. This is the data of a prequantum system to which we can apply geometric quantization.
 	
 	Jeffrey and Weitsman describe this quantization following an approach of \cite{weitsman_real_1992}, which is for a compact symplectic manifold $(M,\omega)$ and line bundle $\LL$, using a real polarization of $M$. A real polarization of $M$ is a map $\pi:M\to B$ onto a manifold of half dimension, such that $\omega|_{\pi^{-1}(b)} =0$ for all $b\in B$. Supposing $\pi:M\to B$ is also a fibration, there will be a finite set of \textit{Bohr-Sommerfeld points} $b_i$ for which $\LL$ restricted to the fibers $L_{b_i}$ of $\pi$ possesses global covariant constant sections. Denote $J_\pi$ denote the sheaf of sections of $\LL$ which are covariant constant along the fibres of $\pi$. Then the quantization of a prequantum system $(M,\omega,\LL)$ is the vector space
 	\begin{equation}
 		\mathcal{H} = \bigoplus_{i=0}^{\dim M} H^i(M,J_\pi).
 	\end{equation}
-	It is the dimension of $\mathcal{H}$ which we hope to compute. If $B_s$ is the set of all Bohr-Sommerfeld points, and for each $b\in B_s$ $S_b$ is the space of global covariant constant sections of $\LL|_{\pi^{-1}(b)}$, then Sniatycki (cite) proves that when there is a natural isomorphism:
+	It is the dimension of $\mathcal{H}$ which we hope to compute. If $B_s$ is the set of all Bohr-Sommerfeld points, and for each $b\in B_s$ $S_b$ is the space of global covariant constant sections of $\LL|_{\pi^{-1}(b)}$, then Sniatycki (cite) proves that there is a natural isomorphism:
 	\begin{equation}
 		\mathcal{H} \cong \bigoplus_{b\in B_s} S_b.
 	\end{equation}
 	Since each $S_b$ is one dimensional, counting $\dim \mathcal{H}$ boils down to counting the Bohr-Sommerfeld points. 
 	
-	In this case, the above theorem does not apply because $\MM$ is not a smooth manifold and the polarisation we will describe is not a fibration. Sniatycki's theorem simply provides inspiration for investigating the Bohr-Sommerfeld set in $\MM$, and Jeffrey and Weitsman show that Bohr-Sommerfeld fibres are associated to marked trivalent graphs satisfying the quantum Clebsch-Gordan conditions, and the number of such graphs is called the \emph{Verlinde dimension}, counted by the \emph{Verlinde formula} (J\&W theorem 8.1).
+	In this case, the above theorem does not apply because $\MM$ is not a smooth manifold and the polarisation we will describe is not a fibration. Sniatycki's theorem simply provides inspiration for investigating the Bohr-Sommerfeld set in $\MM$, and Jeffrey and Weitsman show that Bohr-Sommerfeld fibres are associated to marked trivalent graphs satisfying the quantum Clebsch-Gordan conditions, and the number of such graphs is called the \emph{Verlinde dimension}, counted by the \emph{Verlinde formula} \cite[Thm. 8.1]{jeffrey_bohr-sommerfeld_1992}.
 
 \subsection{Polarisation of the Moduli Space}	
 	As before, let $\Sigma$ be a compact Riemann surface and $\MM$ the moduli space of flat $G=SU(2)$ connections on $\Sigma$. Following Jeffrey and Weitsman, we describe an action of $T^{3g-3}$ on $\MM$. Let $C$ be a closed oriented curve in $\Sigma$ and pick a basepoint $y\in C$. We can define a function $\tilde{f}_C:\cA \to \mathbb{R}$ by 
@@ -76,7 +76,7 @@
 	
 	Now we define a connection $A_\tau$ on $\Sigma$ by defining $A_\tau$ on each trinion: $A_\tau|_{D_\gamma} := \zeta_\gamma \circlearrowright A|_{D_\gamma}$. Finally define $\psi_A(\tau) = [A_\tau]$. Next we ask, for $\tau,\tau' \in \prod_{i=1}^{3g-3} H_i$, when are $A_\tau$ and $A_{\tau'}$ gauge equivalent? 
 	
-	Let $J_\gamma$ be the stabilizer of $A|_{D_\gamma}$ under $\cG|_{D_\gamma} = \Hom(D_\gamma,G)$. Since $A$ is a.t.d., this also consists of constant maps. $J_\gamma = Z(G) = \{\pm \text{Id}\}$ if $A$ corresponds to an irrep of $SU(2)$ under Narasimhan-Seshadri, and otherwise $J_\gamma =T$ (resp $G$) if it reduces to $T$ (resp $Z(G)$).  
+	Let $J_\gamma$ be the stabilizer of $A|_{D_\gamma}$ under $\cG|_{D_\gamma} = \Hom(D_\gamma,G)$. Since $A$ is a.t.d., this also consists of constant maps. $J_\gamma = Z(G) = \{\pm \text{Id}\}$ if the holonomy is an irreducible representation of $SU(2)$, and otherwise $J_\gamma =T$ (resp $G$) if the holonomy reduces to $T$ (resp $Z(G)$).  
 	
 	Jeffrey and Weitsmasn give us the following lemma and theorem:
 	\begin{theorem}
@@ -145,10 +145,6 @@
 	\begin{theorem}
 		Let $x\in B$ and let $A$ be a flat a.t.d. connection whose gauge equivalence class is in $\pi^{-1}(x)$. Further, assume that on every trinion the holonomy angles of $x$ is an interior triple. Then the fibre $\pi^{-1}(x)$ is identified with $T^{3g-3}/(\mathbb{Z}_2)^{2g-2}$ under the map $\psi_A$ defined in eqn. (\ref{e:psiA}).
 	\end{theorem}
-	Thus, the fibres corresponding to interior triples, which are the generic fibres, are tori of dimension $3g-3$. It is the non-generic fibres, who have holonomy angles on the boundary, which remain to be understood.
-
-	For a more detailed description of the quantization, including how to find Bohr-Sommerfield points, and how to count the dimension of the quantization, one can read the original work of Jeffrey and Weitsman. 
-	
-	\subsection{something about P here?}
+	Thus, the fibres corresponding to interior triples, which are the generic fibres, are tori of dimension $3g-3$. It is the non-generic fibres, corresponding to reducible points, which cause the result of Sniatycki to fail here.
 	
 	

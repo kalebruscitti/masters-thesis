@@ -2192,9 +2192,12 @@
     <bcf:citekey order="8">donaldson_new_1983</bcf:citekey>
     <bcf:citekey order="9">narasimhan_stable_1965</bcf:citekey>
     <bcf:citekey order="10">thaddeus_geometric_1996</bcf:citekey>
-    <bcf:citekey order="11">quillen_determinants_1985</bcf:citekey>
-    <bcf:citekey order="12">ramadas_comments_1989</bcf:citekey>
-    <bcf:citekey order="13">weitsman_real_1992</bcf:citekey>
+    <bcf:citekey order="11">narasimhan_stable_1965</bcf:citekey>
+    <bcf:citekey order="12">donaldson_new_1983</bcf:citekey>
+    <bcf:citekey order="13">quillen_determinants_1985</bcf:citekey>
+    <bcf:citekey order="14">ramadas_comments_1989</bcf:citekey>
+    <bcf:citekey order="15">weitsman_real_1992</bcf:citekey>
+    <bcf:citekey order="16">jeffrey_bohr-sommerfeld_1992</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

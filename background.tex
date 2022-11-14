@@ -180,15 +180,16 @@
 	\end{proof}
 	This theorem tells us that we have a three-way correspondence that gives us different perspectives on the moduli space. It consists of flat unitary connections, representations of the fundamental group, or semi-stable holomorphic vector bundles.
 	
-	For this reason, we will restrict our attention to only the subset of $N(n,k)$ consisting of semi-stable bundles. In particular, motivated by Theorem \ref{t:n-s}, we will denote the space of degree $0$ semi-stable bundles as $\MM$. The next result tells us that $N_{ss}(n,k)$ has a well-defined geometric structure. 
+	For this reason, we will restrict our attention to only the subset of $N(n,k)$ consisting of semi-stable bundles; $N_{ss}(n,k)$. In particular, motivated by Theorem \ref{t:n-s}, we will denote the space of degree $0$ semi-stable $SL(n,\C)$ bundles as $\MM$. The next result tells us that $N_{ss}(n,k)$ has a well-defined geometric structure. 
 	\begin{theorem}
 		For a compact connected Riemann surface $\Sigma$ of genus $g$, there exists a connected complex projective variety $N_{ss}(n,k)$ of semi-stable  holomorphic bundles. When $n$ and $k$ are co-prime, $N_{ss}(n,k)$ is a smooth manifold. 
 	\end{theorem}
 	\begin{proof}
 		Thaddeus odense page 4
 	\end{proof}
+	Remark: For $g=0$ there are no stable holomorphic bundles. For example when $g=0$, it is well known (cite Grothendieck) that any holomorphic bundle $E$ over $\mathbb{P}$ can be written as $E \cong \oplus_{i=1}^{\text{rank} E} \OO(n_i)$, which lets us verify that $E$ is at best semi-stable. For $g=1$, there are no stable holomorphic bundles (cite Thaddeus pg5) either, only semi-stable. We will discuss the $g=1$ case further later.
 
-	Now let us focus only on $\MM$, the degree 0 semi-stable bundles. Just as in the representation picture, we will write $\MM_0$ to denote the stable bundles. $\MM_0$ is a smooth manifold (cite), and we can talk about its geometry. Being degree 0 means that the line bundle $\det E$ is trivial, and a choice of global trivialization gives us an $SL(n,\C)$ structure on $E$. To preserve this trivialization, we will restrict $\text{Aut}(E)$ and $\End E$ to their intersections in $SL(n,\C)$ and $\mathfrak{sl}(n,\C)$ respectively.
+	Now let us focus only on $\MM$. Just as in the representation picture, we will write $\MM_0$ to denote the stable bundles. $\MM_0$ is a smooth manifold (cite), and we can talk about its geometry. Being degree 0 means that the line bundle $\det E$ is trivial, and a choice of global trivialization gives us an $SL(n,\C)$ structure on $E$. To preserve this trivialization, we will restrict $\text{Aut}(E)$ and $\End E$ to their intersections in $SL(n,\C)$ and $\mathfrak{sl}(n,\C)$ respectively.
 	
 	An important property of stable bundles which we will make use of is the \emph{stable implies simple lemma}:
 	\begin{lemma}[Stable implies simple lemma]
@@ -217,7 +218,7 @@
 	T_{\alpha,\gamma} + \epsilon(t_{\alpha,\beta} T_{\beta,\gamma} + T_{\alpha,\beta} t_{\beta,\gamma}) &= T_{\alpha,\gamma} + \epsilon t_{\alpha,\gamma}\\
 	t_{\alpha,\beta} T_{\beta,\gamma} + T_{\alpha,\beta} t_{\beta,\gamma} &= t_{\alpha,\gamma}.
 	\end{align*}
-	This condition tells us that $t_{\alpha,\beta}$ is a 1 cocycle in the sheaf $\End(E)$. When we quotient the action of of $\text{Aut}(E)$, we find that the tangent space to $N(n,k)$ is $H^1(\End(E))$. Similarly, if we include an $SL(n,\C)$ structure, we get a tangent space of $H^1(\mathfrak{sl}(n,\C))$.
+	This condition tells us that $t_{\alpha,\beta}$ is a 1 cocycle in the sheaf $\End(E)$. When we quotient the action of of $\text{Aut}(E)$, we find that the tangent space to $N(n,k)$ is $H^1(\End(E))$. Similarly, if we include an $SL(n,\C)$ structure, we get the tangent space of $\MM$, $T_E\MM = H^1(\mathfrak{sl}(n,\C))$.
 	
 	\begin{theorem}
 		If $\Sigma$ has genus $g\geq 2$ and $E$ is stable, then $\dim H^1(\End E) = n^2(g-1)+1$, and $\dim H^1(\mathfrak{sl}(n,\C)) = (n^2-1)(g-1)$.
@@ -246,7 +247,7 @@
 			\dim H^1(\mathfrak{sl}(n,\C)) &=  0-(n-1)^2(1-g) = (n-1)^2(g-1).
 		\end{align*}
 	\end{proof}
-	Remark: For $g=0$ there are no stable holomorphic bundles. For example when $g=0$, it is well known (cite Grothendieck) that any holomorphic bundle $E$ over $\mathbb{P}$ can be written as $E \cong \oplus_{i=1}^{\text{rank} E} \OO(n_i)$, which lets us verify that $E$ is at best semi-stable. For $g=1$, there are no stable holomorphic bundles (cite Thaddeus pg5) either, only semi-stable. We will discuss the $g=1$ case further later.
+
 	
 	When $E$ has a hermitian metric $h:E\otimes E \to \C$, the conjugate Hodge star $\bar{\star}:\Omega^{0,1}(\Sigma) \to \Omega^{1,0}(\Sigma)$ combined with $h$ allows us to define a hermitian inner product on $H^1(\End (E))$.  First $h$ defines a metric on $\End E$; if $A,B\in \End E$, let
 	\begin{equation}

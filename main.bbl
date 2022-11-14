@@ -519,6 +519,63 @@
       \endverb
       \keyw{14D20,32G13,32L05,53C80,58G25,81E13}
     \endentry
+    \entry{sniatycki_cohomology_1977}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=395bb263e408b9bce12144e976e6fd99}{%
+           family={Śniatycki},
+           familyi={Ś\bibinitperiod},
+           given={Jedrzej},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=9efd5bb6412830c79ad2895e847d26c7}{%
+           family={Bleuler},
+           familyi={B\bibinitperiod},
+           given={Konrad},
+           giveni={K\bibinitperiod}}}%
+        {{hash=acf8541a60fb29fbac65345364e4d8a4}{%
+           family={Reetz},
+           familyi={R\bibinitperiod},
+           given={Axel},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{395bb263e408b9bce12144e976e6fd99}
+      \strng{fullhash}{395bb263e408b9bce12144e976e6fd99}
+      \strng{bibnamehash}{395bb263e408b9bce12144e976e6fd99}
+      \strng{authorbibnamehash}{395bb263e408b9bce12144e976e6fd99}
+      \strng{authornamehash}{395bb263e408b9bce12144e976e6fd99}
+      \strng{authorfullhash}{395bb263e408b9bce12144e976e6fd99}
+      \strng{editorbibnamehash}{7a39c5aefe993fd37c0bd6c3b9af60e1}
+      \strng{editornamehash}{7a39c5aefe993fd37c0bd6c3b9af60e1}
+      \strng{editorfullhash}{7a39c5aefe993fd37c0bd6c3b9af60e1}
+      \field{sortinit}{Ś}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Differential {Geometrical} {Methods} in {Mathematical} {Physics}}
+      \field{isbn}{978-3-540-37498-5}
+      \field{series}{Lecture {Notes} in {Mathematics}}
+      \field{title}{On cohomology groups appearing in geometric quantization}
+      \field{year}{1977}
+      \field{pages}{46\bibrangedash 66}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1007/BFb0087781
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/kaleb/Zotero/storage/RYDEQRE2/Śniatycki - 1977 - On cohomology groups appearing in geometric quanti.pdf:application/pdf
+      \endverb
+      \keyw{Cohomology Group,Geometric Quantization,Homogeneous Polynomial,Integral Manifold,Symplectic Manifold}
+    \endentry
     \entry{thaddeus_geometric_1996}{article}{}
       \name{author}{1}{}{%
         {{hash=37fd632ee172b298c810cdfe20ab8eb0}{%

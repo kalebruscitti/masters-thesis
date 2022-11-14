@@ -108,6 +108,7 @@
 	\end{equation}
 	where $C_i$ are the three boundary curves of the trinion. We can again define the holonomy angle functions, first letting $\tilde{\theta_i}:\Hom(\pi_1(D),G) \to [0,\pi]$ be
 	\begin{equation}
+		\label{e:thetacoords}
 		\tilde{\theta_i}(\rho) = \cos^{-1}\left(\frac{1}{2}\Tr(\rho[C_i])\right),
 	\end{equation}
 	and these maps will descend under the quotient by $G$ to maps $\theta_i:\MM(D)\to [0,\pi]$. Then Jeffrey and Weitsman prove:
@@ -132,7 +133,6 @@
 				\begin{align*}
 					\theta_{i_{\sigma(1)}(\gamma)}(x) + \theta_{i_{\sigma(2)}(\gamma)}(x)-\theta_{i{_\sigma(3)}(\gamma)}(x)&=0,\\
 					\theta_{i_1(\gamma)}(x) + \theta_{i_2(\gamma)}(x) + \theta_{i_3(\gamma)}(x) = 2\pi.
-					\label{e:theta-ineqs}
 				\end{align*}
 			where $\sigma:{1,2,3}\to{1,2,3}$ is any cyclic permutation. These inequalities correspond to $(\ref{e:trinion-ineqs})$.
 		\end{itemize}
@@ -146,5 +146,29 @@
 		Let $x\in B$ and let $A$ be a flat a.t.d. connection whose gauge equivalence class is in $\pi^{-1}(x)$. Further, assume that on every trinion the holonomy angles of $x$ is an interior triple. Then the fibre $\pi^{-1}(x)$ is identified with $T^{3g-3}/(\mathbb{Z}_2)^{2g-2}$ under the map $\psi_A$ defined in eqn. (\ref{e:psiA}).
 	\end{theorem}
 	Thus, the fibres corresponding to interior triples, which are the generic fibres, are tori of dimension $3g-3$. It is the non-generic fibres, corresponding to reducible points, which cause the result of Sniatycki to fail here.
+	
+	\subsection{Counting Bohr-Sommerfeld Points}
+	With this real polarization of the moduli space, Jeffrey and Weitsman proceed to count the number of Bohr-Sommerfeld points \cite{jeffrey_bohr-sommerfeld_1992}. In this section we will lay out the results that we want to use going forward.
+	
+	\begin{definition}
+		Let $(\MM,\omega)$ be a symplectic manifold with prequantum line bundle $\LL$ and polarisation $\pi:\MM\to B$. A point $b\in B$ is called a \emph{Bohr-Sommerfeld} point if $\LL|_{\pi^{-1}(b)}$ possess a one-dimensional family of global covariant constant sections.
+	\end{definition}
+	The quantization of a prequantum system is $\mathcal{H} = \bigoplus_{i=1}^{\dim M} H^i(M, \mathcal{J}_\pi)$, where $\mathcal{J}_\pi$ is the sheaf of sections of $\LL$ covariant constant along the fibres of $\pi$. Sniatycki's theorem \cite{sniatycki_cohomology_1977} proves that when the polarisation is a fibration, the dimension of $\mathcal{H}$ is given by the number of Bohr-Sommerfeld points. Although this result does not apply here, it still provides motivation for counting the Bohr-Sommerfeld points.
+	
+	For $\Sigma$ a connected compact Riemann surface of genus $g$, fix a trinion decomposition $\{D_\gamma\}$, and label the boundary loops of $D_\gamma$ as $C_{i_1(\gamma)}$, $C_{i_2(\gamma)}$ and $C_{i_3(\gamma)}$. We call a boundary loop $C_i$ \emph{separating} if removing it disconnects $\Sigma$. Recall the co-ordinates $\theta_i$ for the points $x\in \MM$ defined in equation $\ref{e:thetacoords}$. 
+	\begin{theorem}[J\&W Thm 8.1]
+		\label{t:bs-count}
+		The set $P^{bs}$ of Bohr-Sommerfeld points in $B$ is given by the points $x\in B$ satisfying the conditions:
+		\begin{enumerate}
+			\item For each boundary circle $C_i$, $\theta_i(x) = \frac{\pi l_i}{k}$ for some $l_i \in \mathbb{Z}_k$, with $l_i$ even if $C_i$ is separating.
+			\item For each trinion $D_\gamma$, $l_{i_1(\gamma)} + l_{i_2(\gamma)} + l_{i_3(\gamma)} \in 2\mathbb{Z}$.
+		\end{enumerate}
+	(what is $k$?)
+	\end{theorem}
+	From theorem \ref{t:torusfibres}, we know that $(\theta_1,...,\theta_{3g-3})$ is the image of a point $x\in B$ if and only if the conditions (\ref{e:trinion-ineqs}) are satisfied for the triple $(\theta_{i_1(\gamma)}, \theta_{i_2(\gamma)}, \theta_{i_3(\gamma)})$ corresponding to each trinion $D_\gamma$. We can represent a trinion decomposition as a trivalent graph, with a vertex for each trinion and an edge for each boundary circle. Therefore, a Bohr-Sommerfeld point gives a labelled trivalent graphs, where the integer $l_i$ is assigned the edge corresponding to boundary circle $C_i$. The set of Bohr-Sommerfeld points is bijective with labelled trivalent graphs whose labelling satisfy certain conditions. This picture gives the final result of Jeffrey and Weitsman:
+	\begin{theorem}[J\& W Thm 8.3]
+		Consider a fixed trinion decomposition of a compact connected Riemann surface $\Sigma$ of genus $g$. It gives rise to a trivalent graph, and a real polarisation of the moduli space $\MM$ of flat $SU(2)$ connections on $\Sigma$. There is one-to-one correspondence between the Bohr-Sommerfeld points of the polarisation and the set of integer labellings of the edges of the graph satisfying the conditions 1,2 in \ref{t:bs-count} and equation \ref{e:trinion-ineqs}.
+	\end{theorem}
+	Importantly, this theorem tells us that the Bohr-Sommerfeld points are counted inside the moment polytope defined by equation \ref{e:trinion-ineqs}. In the next section, we discuss the construction of a larger moduli space which is a smooth toric variety, allowing us to apply Sniatycki's theorem, but whose moment polytope agrees that that of $\MM$. This means the quantization of the larger moduli space has dimension given by this point-count; it will remain to show that the quantization of the larger moduli space agrees with that of $\MM$. 
 	
 	

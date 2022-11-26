@@ -1,19 +1,19 @@
 [1] Config.pm:304> INFO - This is Biber 2.14 (beta)
-[1] Config.pm:307> INFO - Logfile is 'main.blg'
-[119] biber:322> INFO - === Thu Nov 10, 2022, 14:20:17
-[149] Biber.pm:415> INFO - Reading 'main.bcf'
-[238] Biber.pm:943> INFO - Found 13 citekeys in bib section 0
-[257] Biber.pm:4256> INFO - Processing section 0
-[258] Utils.pm:75> INFO - Globbing data source 'citations.bib'
-[258] Utils.pm:91> INFO - Globbed data source 'citations.bib' to citations.bib
-[280] Biber.pm:4455> INFO - Looking for bibtex format file 'citations.bib' for section 0
-[284] bibtex.pm:1653> INFO - LaTeX decoding ...
-[362] bibtex.pm:1471> INFO - Found BibTeX data source 'citations.bib'
-[510] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_4dfs/citations.bib_257454.utf8, line 100, warning: possible runaway string started at line 77
-[539] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[539] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[539] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[539] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[571] bbl.pm:652> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[580] bbl.pm:755> INFO - Output to main.bbl
-[581] Biber.pm:128> INFO - WARNINGS: 1
+[2] Config.pm:307> INFO - Logfile is 'main.blg'
+[110] biber:322> INFO - === Mon Nov 21, 2022, 15:58:10
+[130] Biber.pm:415> INFO - Reading 'main.bcf'
+[216] Biber.pm:943> INFO - Found 14 citekeys in bib section 0
+[235] Biber.pm:4256> INFO - Processing section 0
+[235] Utils.pm:75> INFO - Globbing data source 'citations.bib'
+[235] Utils.pm:91> INFO - Globbed data source 'citations.bib' to citations.bib
+[259] Biber.pm:4455> INFO - Looking for bibtex format file 'citations.bib' for section 0
+[262] bibtex.pm:1653> INFO - LaTeX decoding ...
+[338] bibtex.pm:1471> INFO - Found BibTeX data source 'citations.bib'
+[485] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_qdsM/citations.bib_25869.utf8, line 100, warning: possible runaway string started at line 77
+[514] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[514] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[515] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[515] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[541] bbl.pm:652> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[551] bbl.pm:755> INFO - Output to main.bbl
+[551] Biber.pm:128> INFO - WARNINGS: 1

@@ -368,6 +368,34 @@
       \verb http://link.springer.com/10.1007/BF02096964
       \endverb
     \endentry
+    \entry{michiels_moduli_nodate}{article}{}
+      \name{author}{1}{}{%
+        {{hash=bf753c4a8a1973cbfc48554f115a5310}{%
+           family={Michiels},
+           familyi={M\bibinitperiod},
+           given={Daan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{bf753c4a8a1973cbfc48554f115a5310}
+      \strng{fullhash}{bf753c4a8a1973cbfc48554f115a5310}
+      \strng{bibnamehash}{bf753c4a8a1973cbfc48554f115a5310}
+      \strng{authorbibnamehash}{bf753c4a8a1973cbfc48554f115a5310}
+      \strng{authornamehash}{bf753c4a8a1973cbfc48554f115a5310}
+      \strng{authorfullhash}{bf753c4a8a1973cbfc48554f115a5310}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Moduli {Spaces} of {Flat} {Connections}}
+      \field{pages}{99}
+      \range{pages}{1}
+      \verb{file}
+      \verb Michiels - Moduli Spaces of Flat Connections.pdf:/home/kaleb/Zotero/storage/7849SJBW/Michiels - Moduli Spaces of Flat Connections.pdf:application/pdf
+      \endverb
+    \endentry
     \entry{narasimhan_stable_1965}{article}{}
       \name{author}{2}{}{%
         {{hash=09e178a67132d6dcf6aa637c8f1fb3f9}{%

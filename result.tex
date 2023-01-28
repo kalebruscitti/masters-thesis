@@ -1,0 +1,133 @@
+\documentclass[]{article}
+
+%opening
+\title{blah}
+\date{\today}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{tikz-cd}
+\usepackage{quiver}
+\usepackage{dsfont}
+\usepackage{biblatex}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{quiver}
+\addbibresource{citations.bib}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+
+\newcommand{\bg}{\mathbf{g}}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\CS}{\text{CS}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Hom}{\text{Hom}}
+\newcommand{\Hol}{\text{Hol}}
+\newcommand{\Ann}{\text{Ann}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\MM}{\mathcal{M}}
+\newcommand{\End}{\text{End }}
+\newcommand{\coker}{\text{coker}~}
+\newcommand{\dbar}{\overline{\partial}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\Tr}{\text{Tr }}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\ad}{\text{ad}}
+\newcommand{\Ad}{\text{Ad}}
+\newcommand{\sslash}{\mathbin{/\mkern-4mu/}}
+\begin{document}
+
+\subsection{Invariance of $\LL$ under Degeneration.}
+	At present we have a Riemann surface $\Sigma$, with a trinion decomposition given by boundary circles $\{C_i\}_{i=1}^{3g-3}$. We have a moduli space $\MM$ of flat connections over $\Sigma$, with prequantum line bundle $\LL$. We also have a degeneration of $\Sigma$ to a nodal curve $\Sigma_0$, and a corresponding degeneration of moduli spaces, $\phi:\MM\to \cP$. Moreover, $\phi$ is a symplectomorphism on a dense open subset of $\MM$. There is also a prequantum line bundle $\LL_0$ on $\cP$, and I claim that $\LL$ and $\LL_0$ agree on the dense set in $\MM$, and that their spaces of sections are the same.
+	
+	To show that $\LL$ and $\LL_0$ agree, it would suffice to show that for every pair $(A,g)\in \cA\times \cG$, the function $\Theta$ is invariant under the degeneration; namely $\Theta(A,g) = \Theta(D(A), D(g))$, as then the equivalence relations defining $\LL$ and $\LL_0$ are the same.
+	
+	\begin{lemma}
+		Let $V_i$ be a tubular neighbourhood of $C_i$ in $\Sigma$. Let $V_{0}$ denote the (disconnected) image of $V_i$ under the surface degeneration. Then for every pair $(A,g)$ on $\Sigma$ which degenerates to a pair $(A_0, g_0)$ on $\Sigma_0$, there exists liftings $(\bA,\bg)$ and $(\bA_0,\bg_0)$ such that
+		\begin{equation}
+			\int\limits_{V_i} \Tr(\bg^{-1}d\bg\wedge \bA) = \int\limits_{V_0} \Tr(\bg_0^{-1}d\bg_0\wedge \bA_0).
+		\end{equation}
+		\label{l:main-lemma}
+	\end{lemma}
+	\begin{proof}
+		Recall that $V_i=Q_1 = \{(x,y)\in \mathbb{C}^2~|~ xy=1\}$, and it degenerates to $V_0 = Q_0 = \{(x,y)\in\mathbb{C}^2~|~xy=0\} = Q_{0,x} \cup Q_{0,y}$, where $Q_{0,x},Q_{0,y}$ are the locus with $x\neq0$ and $y\neq 0$ respectively. The curve $Q_1$ has a loop $\gamma_1$, and cutting $Q_1$ along $\gamma_1$ disconnects it into the components with $x>y$ and $y>x$. Let $Q_x$ denote where $x>y$, and $Q_y$ where $y>x$.
+		
+		Let $N=\{Q_t\}_{t\neq 0}\cong V_i\times(0,1]$. Then one possible lifting of $A$ from $V_i$ to $N$ is:
+		\begin{equation}
+			\bA = \frac{\alpha}{2}\left(\frac{dx}{x}-\frac{dy}{y} + \frac{dt}{t}\right)
+		\end{equation}
+		Now, since $t=xy$ we have $dt =ydx+xdy$ and therefore
+		\begin{align*}
+			\bA_x &= \frac{\alpha}{2}\left(\frac{dx}{x}-\frac{dy}{y} + \frac{ydx+xdy}{xy}\right)\\
+			&= \alpha~ \frac{dx}{x}.
+		\end{align*}
+		Another possible lifting is 
+		\begin{equation}
+			\bA_y = \frac{\alpha}{2}\left(\frac{dx}{x}-\frac{dy}{y} -  \frac{dt}{t}\right) = -\alpha~\frac{dy}{y}.
+		\end{equation}
+		These liftings are equal on the curve $\gamma_1$. We define the lifting we will use, $\bA$ to be $\bA_x$ on $Q_x$ and $\bA_y$ on $Q_y$.
+		
+		For the gauge transformation $g(x,y)$ we can do a similar lifting process;
+		\begin{equation}
+			\bg(x,y,t) =\begin{cases}
+			g\left(x,t/x\right), & x>y\\
+			g\left(t/y,y\right), & y>x\\
+			\end{cases}.
+		\end{equation}
+		Then the integral over $V_i$ becomes:
+		\begin{align*}
+			\int\limits_{V_i} \Tr(\bg^{-1}d\bg\wedge d\bA) = \int\limits_{Q_x} \Tr(g^{-1}(x,1/x)dg(x,1/x)\wedge \alpha~ \frac{dx}{x}) - \int\limits_{Q_y} \Tr(g^{-1}(1/y,y)dg(1/y,y)\wedge \alpha~ \frac{dy}{y})
+		\end{align*}
+		On the other hand, recall that $A_0$ is given by:
+		\begin{equation}
+			A_0 = \begin{cases}
+			\alpha \frac{dx}{x}, & x\neq 0\\
+			-\alpha \frac{dy}{y}, & y\neq 0\\
+			\end{cases}
+		\end{equation}
+		which can be lifted to any three manifold $N'$ in a horizontal manner, i.e. by not adding any tangential part. Similarly, our gauge transformation $g_0$ coming from $g$ was defined by 
+		\begin{equation}
+		g_0(x,y) =\begin{cases}
+		g\left(x,0\right), & x\neq 0\\
+		g\left(0,y\right), & y \neq 0 \\
+		\end{cases}.
+		\end{equation}
+		Therefore the integral over $V_0$ becomes
+		\begin{align*}
+		\int\limits_{V_0} \Tr(\bg_0^{-1}d\bg_0\wedge d\bA_0) = \int\limits_{Q_{x,0}} \Tr(g^{-1}(x,0)dg(x,0)\wedge \alpha~ \frac{dx}{x}) - \int\limits_{Q_{y,0}} \Tr(g^{-1}(0,y)dg(0,y)\wedge \alpha~ \frac{dy}{y}).
+		\end{align*}
+		Finally, all four of $Q_x,Q_y, Q_{x,0}$ and $Q_{y,0}$ are diffeomorphic to $S^2$ with two points removed, and a diffeomorphism between $Q_x$ and $Q_{x,0}$ is given by our local model for the curves. This diffeomorphism pulls back $g(x,0)$ to $g(x,x^{-1})$. The analogous equality holds for $Q_y$ and $Q_{y,0}$. Thus these two integrals are equal.
+	\end{proof}
+	\begin{theorem}
+		Given a pair $(A,g) \in \mathcal{A}\times\mathcal{G}$ over $\Sigma$, which degenerates to the pair $(A_0, g_0)$ over $\Sigma_0$, we have
+		\begin{equation}
+			\Theta(A,g) = \Theta(A_0, g_0).
+		\end{equation}
+		In particular, this implies that $\LL = \LL_0$ on the dense open set in $\MM$ symplectomorphic to $\cP$.
+	\end{theorem}
+	\begin{proof}
+		From Equation (\ref{e:cs-gauge}) we know
+		\begin{equation}
+			\Theta(A,g) = \exp\left[-ik\int\limits_\Sigma \Tr(dg g^{-1}\wedge A)\right].
+		\end{equation}
+		
+		Let $\{C_i\}_{i=1}^{3g-3}$ be any trinion decomposition of $\Sigma$. Let $V_i$ be a tubular neighbourhood in $\Sigma$ of each $C_i$. Then on $U:= \Sigma - \bigcup_{i=1}^{3g-3}V_i$, the degeneration does nothing, and we have $(A,g)|_U = (A_0,g_0)|_U$. Therefore, we have
+		\begin{align*}
+				\Theta(A,g) &= \exp\left[-ik\int\limits_\Sigma \Tr(dg~ g^{-1}\wedge A)\right]\\
+				&= \exp\left[-ik\int\limits_U \Tr(dg~g^{-1}\wedge A)
+				-ik \sum_{i=1}^{3g-3}\int\limits_{V_i} \Tr(dg~g^{-1}\wedge A)\right]\\
+				&= \exp\left[-ik\int\limits_U \Tr(dg_0~g_0^{-1}\wedge A_0)
+				-ik \sum_{i=1}^{3g-3}\int\limits_{V_{0,i}} \Tr(dg_0~g_0^{-1}\wedge A_0)\right],~ (\text{Lemma } \ref{l:main-lemma})\\
+				&= \exp\left[-ik\int\limits_{\Sigma_0} \Tr(dg_0~ g_0^{-1}\wedge A_0)\right]\\
+				&= \Theta(A_0,g_0).
+		\end{align*}
+	\end{proof}
+\end{document}

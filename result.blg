@@ -1,0 +1,9 @@
+[1] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[1] Config.pm:307> INFO - Logfile is 'result.blg'
+[110] biber:322> INFO - === Mon Jan  9, 2023, 10:24:54
+[126] Biber.pm:415> INFO - Reading 'result.bcf'
+[220] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[229] Utils.pm:293> WARN - The file 'result.bcf' does not contain any citations!
+[238] bbl.pm:652> INFO - Writing 'result.bbl' with encoding 'UTF-8'
+[238] bbl.pm:755> INFO - Output to result.bbl
+[239] Biber.pm:128> INFO - WARNINGS: 1

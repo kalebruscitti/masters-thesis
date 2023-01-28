@@ -15,6 +15,7 @@
 
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Hom}{\text{Hom}}
+\newcommand{\Hol}{\text{Hol}}
 \newcommand{\Ann}{\text{Ann}}
 \newcommand{\OO}{\mathcal{O}}
 \newcommand{\LL}{\mathcal{L}}
@@ -63,6 +64,38 @@
 		(x(t,\theta), y(t,\theta)) = \sqrt{t}(e^{i\theta}, e^{-i\theta}),
 	\end{equation}
 	which approaches $C_0$ at $t=1$ and $x_0$ at $t=0$. By gluing this local model to the boundaries of the disjoint union $(U\times S^1)\coprod (U\times S^1)$ to construct a family over $U$, with fibre $\Sigma_0$ at $t=0$, and $\Sigma \cong \Sigma_t$ at $t\neq 0$.
+
+\subsection{Local Model for the Connections}
+	On our local model for the degeneration of the curve $\Sigma$, we can also give a local model for the degeneration of a unitary connection $\nabla$ on a vector bundle $E$ over $\Sigma$. Let
+	\begin{equation}
+		A = \Hol_{c_1}(\nabla),
+	\end{equation}
+	and let $\alpha = \text{diag}(\alpha_1,...,\alpha_{\text{rank } E}))$, where $\alpha_i$ are the eigenvalues of $A$. Up to gauge equivalence, we can assume $\nabla$ is A.T.D (thm 8) and therefore locally
+	\begin{equation}
+		\nabla = d + i\frac{\alpha}{2}(d\theta_x - d\theta_y) = \partial + \frac{\alpha}{4}\left(\frac{dx}{x}-\frac{dy}{y}\right) + \dbar+ \frac{\alpha}{4}\left(\frac{d\bar{x}}{\bar{x}}-\frac{d\bar{y}}{\bar{y}}\right),
+	\end{equation} 
+	where $\theta_x$ and $\theta_y$ are the arguments of the complex co-ordinates $x$ and $y$. The connection is isomonodromic, meaning that for all $t\neq 0$, 
+	\begin{equation}
+		\Hol_{c_t}(\nabla) = \Hol_{c_1}(\nabla)=A.
+	\end{equation}
+	On our family $Q_t$, this connection is well defined for all $t\neq 0$, and so it remains to describe the connection in the limit $t=0$. We can change co-ordinates on $Q_t$ from $(x,y)$ to $(x,t)$, and the connection becomes
+	\begin{equation}
+		\nabla = d + i\frac{\alpha}{2}(2d\theta_x - d\theta_t).
+	\end{equation}
+	Similarly in co-ordinates $(y,t)$ we have
+	\begin{equation}
+		\nabla = d + i\frac{\alpha}{2}(-2d\theta_y + d\theta_t).
+	\end{equation}
+	Since $Q_t$ is defined by the equation $xy=t$, $d\theta_t$ is a normal component and we will project it out to obtain a partial connection $\nabla^p$ on $Q_t$. On the patch $x\neq 0$, using $x$ co-ordinate:
+	\begin{equation}
+		\nabla^p = d + i\alpha d\theta_x.
+	\end{equation}
+	This extends well to the limit $y\to 0$, despite the original connection $\nabla$ having a singularity. On the patch $y\neq 0$ with $y$ co-ordinate:
+	\begin{equation}
+		\nabla^p = d - i\alpha d\theta_y,
+	\end{equation}
+	which passes well to the limit $x\to 0$. Therefore we obtain a partial connection $\nabla^p$ defined everywhere on $Q_0$ except the nodal point $x_0$.
+ 	
 \subsection{Degeneration of the Moduli Space}
 	On $\Sigma_t$ for $t\neq 0$, we simply have the moduli space $\MM$ of flat $SU(2)$ connections which corresponds to the moduli space of stable holomorphic vector bundles with $SL(2,\C)$ structure. Therefore it remains to understand the moduli space over $\Sigma_0$ and the desingularisation $\tilde{\Sigma}_0$. 
 	

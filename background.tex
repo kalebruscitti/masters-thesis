@@ -13,7 +13,7 @@
 	\begin{proof}
 		Suppose $A,B\in \cA$ are both flat connections, for which $\Phi(A) = \Phi(B)$. Explicitly, given any loop $\gamma\in \pi_1(\Sigma)$ based at say $p\in \Sigma$, we have 
 		\begin{equation*}
-			\Hol_A(\gamma) = \Hol_B(\gamma), 
+			h^{-1}\Hol_A(\gamma)h = \Hol_B(\gamma), 
 		\end{equation*}
 		for some $h\in G$. We want to construct a gauge equivalence $f\in \cG$ between $A$ and $B$. Pick any other point $q\in \Sigma$ and a curve $\sigma:p\to q$. Then for any $g\in G$ denote by $\Pi_\sigma^Ag$ the parallel transport of $g$ along $\sigma$. I claim that $f(q) = \Pi_\sigma^B\left(\Pi_\sigma^A\right)^{-1}$ defined this way for all $q\in \Sigma$ gives a gauge equivalence between $A$ and $B$. First we must show $f$ is well defined; if $\tau$ is another curve from $p\to q$ then:
 		\begin{align*}
@@ -310,3 +310,15 @@
 	\end{equation} 
 	Symplectic reduction also gives us a symplectic structure on the quotient space $\MM$, such that under the pullback by the quotient map, $q:\cA_0 \to \MM$, we recover the symplectic form $\omega$ for $\cA$. We will refer to this symplectic structure on $\MM$ as the 'Atiyah-Bott symplectic form' throughout this thesis.
 
+		
+	\subsection{The Determinant Line Bundle}
+	In the beginning of section 3 we mentioned that there is a line bundle $\LL$ over $\MM$ whose curvature is $2\pi i \omega$, which we called the prequantum line bundle. In this subsection we will summarize one construction of this bundle due to Quillen \cite{quillen_determinants_1985}. His construction motivates the name \textit{determinant line bundle}, as it comes from generalizing the determinant of a linear map between finite dimensional vector spaces.
+	
+	Consider a linear map $T:V\to W$ between finite dimensional vector spaces $V,W$ of the same dimension. It induces a map from $\wedge(V)$ to $\wedge(W)$, where $\wedge(V)$ denotes the top exterior power of $V$. This map can be considered an element of the line $\wedge(V)^\ast \otimes\wedge(W)$, and if we fix a choice of basis for $V$ and $W$, which fixes a generator for the line, then we can identify the map with a number $\det T$. 
+	
+	For infinite dimensional spaces, given an operator $D:V\to W$, the above line is replaced with $\LL_D = \wedge(\ker D)^\ast \otimes \wedge(\text{coker} D)$. The condition that $\dim V = \dim W$ gets replaced with the condition that $D$ is a Fredholm operator with index $0$. For $\MM$ in the holomorphic picture, we want to construct the determinant of a given $\dbar_E \in \MM$. 
+	
+	Given a $\dbar_E:\Gamma(E)\to \Gamma(E)\otimes T^\ast \Sigma$ over $\Sigma$, we associate to it the induced Fredholm operator between Sobolev spaces 
+	\begin{equation}
+		D:L^{2}(\Gamma(E)) \to L^{2,1}\left(\Gamma(E)\otimes T^\ast \Sigma\right).
+ 	\end{equation}

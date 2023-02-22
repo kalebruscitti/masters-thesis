@@ -132,7 +132,7 @@
 		\begin{equation}
 			\dim \MM_0 = \dim(\xi^{-1}(e)) - \dim(SU(2)) = (2g-1)\dim(SU(2)) - \dim(SU(2)) = 6g-6.
 		\end{equation} 
-		Proving $\xi:SU(2)^{2g} \to SU(2)$ is submersive means proving the rank of $\xi$ is 3 at all irreducible points. Let $(A_i(t),...,B_g(t)) = (A_1 + ta_1,..., B_g + tb_g)$ for some $(A_1,...B_g) \in SU^{2g}$ and some $(a_1,...,b_g) \in \mathfrak{su}(2)^{2g}$. Then composing with $\xi$ gives the curve
+		Proving $\xi:SU(2)^{2g} \to SU(2)$ is submersive means proving the rank of $\xi$ is 3 at all irreducible points. Let $(A_1(t),...,B_g(t)) = (A_1 + ta_1,..., B_g + tb_g)$ for some $(A_1,...B_g) \in SU^{2g}$ and some $(a_1,...,b_g) \in \mathfrak{su}(2)^{2g}$. Then composing with $\xi$ gives the curve
 		\begin{equation}
 			t\to \gamma(t):= \prod_{i=1}^g A_i(t)B_i(t)A_i(t)^{-1}B_i(t)^{-1}.
 		\end{equation}
@@ -143,7 +143,29 @@
 			(\Ad_{B_i^{-1}}-1)a_i + (1-\Ad_{A_i^{-1}})b_i
 			\right)
 		\end{align*}
+		Then the derivative of the entire product is given by the product rule:
+		\begin{equation}
+			\frac{d}{dt}|_{t=0} \gamma(t) = \sum_{i=1}^g \left[
+			\Ad_{\left(\prod_{j>i} A_jB_jA_j^{-1}B_j^{-1}\right)^{-1}B_iA_i} \left((\Ad_{B_i^{-1}}-1)a_i + (1-\Ad_{A_i^{-1}})b_i\right)
+			\right].
+		\end{equation}
+		Fixing one value of $i\in {1,...,g}$, we can take $a_j = b_j =0$ for $i\neq j$, to obtain
+		\begin{equation}
+			d\xi(a_1,...,b_g) = \Ad_{\left(\prod_{j>i} A_jB_jA_j^{-1}B_j^{-1}\right)^{-1}B_iA_i} \left((\Ad_{B_i^{-1}}-1)a_i + (1-\Ad_{A_i^{-1}})b_i\right).
+		\end{equation}
+		If for any $i$ the map $\mathfrak{g}^2\to\mathfrak{g}$:
+		\begin{equation}
+			(a,b) \to (\Ad_{B_i^{-1}} - 1)a + (1-\Ad_{A_i^{-1}})b
+		\end{equation}
+		is surjective, then by varying $a_i$ and $b_i$ we obtain all of $\mathfrak{g}$ and thus $\xi$ would be  surjective. Therefore, if one supposes that $\xi$ does not have full rank at an irreducible point $(A_1,...,B_g)$, then for all $i$ the above map $\mathfrak{g}^2\to\mathfrak{g}$ is not surjective.
 		
+		For $G=SU(2)$, the non-surjectivity of this map implies that $A_i$ and $B_i$ commute. If either is $\pm\mathds{1}$ then they commute. Otherwise, $(\Ad_{B_i}^{-1}-1)$ and $(1-\Ad_{A_i}^{-1})$ have images given by the two planes perpendicular to the rotation axes of $\Ad_{B_i}$ and $\Ad_{A_i}$. Since their sum is not surjective and $\dim\mathfrak{g}=3$, their sum is dimension $2$, meaning these planes coincide. Hence $\Ad_{A_i}$ and $\Ad_{B_i}$ share the same axis of rotation, implying $A_i$ and $B_i$ commute.
+		
+		Since we can repeat this argument for each $i$, we conclude that if $\xi$ is not full rank at $(A_1,...,B_g)$ then $[A_i,B_i]=0$ for all $i$ and hence $(A_1,...,B_g)$ is reducible. By the contrapositive, $\xi:G^{2g}\to G$ is a submersion on the irreducible points. 
+		
+		The action of $SU(2)$ on $\xi^{-1}(e)$ by conjugation is not free since $-\mathds{1}$ acts trivially. Thus we define an action of $SU(2)/{\pm \mathds{1}}$ by conjugation, which does act freely. Suppose $[C]\in SU(2)/{\pm \mathds{1}}$ acts trivially on $(A_1,...,B_g)\in \xi^{-1}(e)$. Then $C$ commutes with all $A_i$ and $B_i$, and since the point is irreducible, there is some pair in $(A_1,...,B_g)$ that does not commute; call that pair $(X,Y)$. Then $C$ commutes with $X$ and $Y$, which do not commute with eachother, so $\Ad_X$ and $\Ad_Y$ have different rotation axes, and $\Ad_C$ cannot have both; $C$ must be $\pm 1$. Thus the action of $SU(2)/{\pm \mathds{1}}$ on $\xi^{-1}(e)$ is free.
+		
+		Finally, the quotient $SU(2)/{\pm \mathds{1}} \cong SO(3)$ is compact, and $\MM_0 = \xi^{-1}(e)/SO(3)$. Since $\xi$ is a submersion and $SO(3)$ is a compact group acting freely on it, the quotient $\MM_0$ is a smooth manifold, with dimension $6g-6$ as computed at the beginning of the proof.
 	\end{proof}
 	Now that we have some understanding of the moduli space $\MM$, we will pass to a holomorphic description of $\MM$ in terms of semi-stable holomorphic vector bundles over $\Sigma$.
 	\subsection{Semi-stable Holomorphic Bundles}
@@ -311,14 +333,60 @@
 	Symplectic reduction also gives us a symplectic structure on the quotient space $\MM$, such that under the pullback by the quotient map, $q:\cA_0 \to \MM$, we recover the symplectic form $\omega$ for $\cA$. We will refer to this symplectic structure on $\MM$ as the 'Atiyah-Bott symplectic form' throughout this thesis.
 
 		
-	\subsection{The Determinant Line Bundle}
-	In the beginning of section 3 we mentioned that there is a line bundle $\LL$ over $\MM$ whose curvature is $2\pi i \omega$, which we called the prequantum line bundle. In this subsection we will summarize one construction of this bundle due to Quillen \cite{quillen_determinants_1985}. His construction motivates the name \textit{determinant line bundle}, as it comes from generalizing the determinant of a linear map between finite dimensional vector spaces.
-	
-	Consider a linear map $T:V\to W$ between finite dimensional vector spaces $V,W$ of the same dimension. It induces a map from $\wedge(V)$ to $\wedge(W)$, where $\wedge(V)$ denotes the top exterior power of $V$. This map can be considered an element of the line $\wedge(V)^\ast \otimes\wedge(W)$, and if we fix a choice of basis for $V$ and $W$, which fixes a generator for the line, then we can identify the map with a number $\det T$. 
-	
-	For infinite dimensional spaces, given an operator $D:V\to W$, the above line is replaced with $\LL_D = \wedge(\ker D)^\ast \otimes \wedge(\text{coker} D)$. The condition that $\dim V = \dim W$ gets replaced with the condition that $D$ is a Fredholm operator with index $0$. For $\MM$ in the holomorphic picture, we want to construct the determinant of a given $\dbar_E \in \MM$. 
-	
-	Given a $\dbar_E:\Gamma(E)\to \Gamma(E)\otimes T^\ast \Sigma$ over $\Sigma$, we associate to it the induced Fredholm operator between Sobolev spaces 
+	\subsection{Prequantum Line Bundle on the Moduli Space}
+	One key part of our prequantum system is the prequantum line bundle $\LL$ with curvature $2\pi i \omega$. Let us build such a bundle over our moduli space $\MM$, following RSW \cite{ramadas_comments_1989}. Given a connection 1-form $A$ on a 3-manifold $M$, we can define the \textit{Chern-Simons action}:
 	\begin{equation}
-		D:L^{2}(\Gamma(E)) \to L^{2,1}\left(\Gamma(E)\otimes T^\ast \Sigma\right).
- 	\end{equation}
+	\CS(A) = \frac{k}{2\pi}\int\limits_N A\wedge dA + \frac{2}{3}A\wedge A \wedge A,~ k\in\mathbb{Z}.
+	\end{equation}
+	Under a change of gauge $g\cdot A = g^{-1}Ag + g^{-1}dg$, the Chern-Simons action transforms as 
+	\begin{equation}
+	\CS(g\cdot A) = \CS(A) - k \int\limits_N d\Tr\left((dg)g^{-1}\wedge A\right) - \frac{k}{3}\int\limits_N \Tr((g^{-1}dg)\wedge (g^{-1}dg)\wedge (g^{-1}dg)).
+	\label{e:cs-gauge}
+	\end{equation}\\
+	The third term on the right side will always be in $2\pi \mathbb{Z}$, and the second term is a total derivative which we can integrate using Stokes theorem over the boundary.
+	
+	Using this action, we will define a function $\Theta:\cA\times \cG \to \mathbb{C}$. Pick any 3-manifold $N$ for which $\partial N \cong \Sigma$. Given a pair $(A,g) \in \cA\times\cG$, we can always lift it to a choice of $(\tilde{A}, \tilde{g})$ over $N$, since $\pi_1(SU(2)) = \pi_2(SU(2)) = 0$. We define $\Theta$ as
+	\begin{equation}
+	\Theta(A,g) = \exp\left[i\CS(\tilde{A}) - i\CS(\tilde{g}\cdot A)\right].
+	\end{equation}
+	Equation (\ref{e:cs-gauge}) lets us simplify this;
+	\begin{align*}
+	\Theta(A,g) &= \exp(i \CS(\tilde{g}\cdot \tilde{A}) - \CS(\tilde{A}))\\
+	&= \exp\left[-ik \int\limits_N d\Tr\left((d\tilde{g})\tilde{g}^{-1}\wedge \tilde{A}\right) - 2\pi \kappa\right], \kappa \in \mathbb{Z}\\
+	&= \exp\left[-ik \int\limits_{\Sigma} \Tr(dg~ g^{-1}\wedge A)\right].
+	\end{align*}
+	Note that in the last equality, we use that the lifted pair $(\tilde{A},\tilde{g})$ restricts to $(A,g)$ on $\partial N = \Sigma$ by definition. This computation shows us in particular that $\Theta(A,g)$ is well defined, as it does not depend on our choice of $N$ or the lifting. One can further check that $\Theta$ is a cocycle:
+	\begin{equation}
+	\Theta(A,g)\Theta(g\cdot A, h) = \Theta(A,gh).
+	\end{equation}
+	Thus we are ready to define $\LL$.
+	\begin{definition}[Chern-Simons Prequantum Line Bundle]
+		\label{d:cs-bundle}
+		For $(A,z)\in \cA\times \C$, let $(A,z)\sim (g\cdot A, \Theta(A,g)z)$ under any $g\in \cG$. Then define
+		\begin{equation}
+		\LL = \cA\times \C / \sim,
+		\end{equation}
+		which is a complex line bundle on $\MM = \cA/\cG$. Since $\Theta$ is $U(1)$ valued, it is a hermitian line bundle.
+	\end{definition}
+	Recall the Atiyah-Bott form, before quotienting out gauge transformations, is the form 
+	\begin{equation}
+	\omega(\alpha,\beta) = \frac{i}{2\pi}\int\limits_M \Tr(\alpha\wedge \beta)
+	\end{equation}
+	on $\cA_0$. We can write it as $\omega = d\sigma$, where $\sigma$ is the one-form
+	\begin{equation}
+	\sigma(\alpha) = \frac{i}{4\pi}\int\limits_M \Tr(A\wedge \alpha).
+	\end{equation}
+	Identifying $\mathfrak{u}(1)=\C$ allows the form $\sigma\in \Omega^1(\cA_0,\C)$ to define a connection one-form on $\cA_0 \times U(1)$. To pass this to a connection $\omega_\LL$ for $\LL$, we verify that $\sigma$ is invariant under the action of $\cG$ on $\cA_0 \times U(1)$. For $g\in \cG$, $\alpha\in T\cA_0$, we need
+	\begin{align*}
+	\Theta \sigma(g\cdot \alpha) &= \Theta\sigma(\alpha).
+	\end{align*}
+	If this is the case, then we'll have the following diagram,
+	\[\begin{tikzcd}[ampersand replacement=\&]
+	{\cA_0} \& {\cA_0\times U(1)} \\
+	\MM \& \LL
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-1, to=2-1]
+	\end{tikzcd}\]
+	and the connection $\sigma_LL$ pulls back to $\cA_0$ to give $\sigma$
+	

@@ -2195,14 +2195,13 @@
     <bcf:citekey order="11">michiels_moduli_nodate</bcf:citekey>
     <bcf:citekey order="12">narasimhan_stable_1965</bcf:citekey>
     <bcf:citekey order="13">donaldson_new_1983</bcf:citekey>
-    <bcf:citekey order="14">quillen_determinants_1985</bcf:citekey>
+    <bcf:citekey order="14">ramadas_comments_1989</bcf:citekey>
     <bcf:citekey order="15">quillen_determinants_1985</bcf:citekey>
     <bcf:citekey order="16">ramadas_comments_1989</bcf:citekey>
     <bcf:citekey order="17">weitsman_real_1992</bcf:citekey>
     <bcf:citekey order="18">jeffrey_bohr-sommerfeld_1992</bcf:citekey>
-    <bcf:citekey order="19">ramadas_comments_1989</bcf:citekey>
-    <bcf:citekey order="20">jeffrey_bohr-sommerfeld_1992</bcf:citekey>
-    <bcf:citekey order="21">sniatycki_cohomology_1977</bcf:citekey>
+    <bcf:citekey order="19">jeffrey_bohr-sommerfeld_1992</bcf:citekey>
+    <bcf:citekey order="20">sniatycki_cohomology_1977</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

@@ -13,41 +13,6 @@
 	
 	In this case, the above theorem does not apply because $\MM$ is not a smooth manifold and the polarisation we will describe is not a fibration. Sniatycki's theorem simply provides inspiration for investigating the Bohr-Sommerfeld set in $\MM$, and Jeffrey and Weitsman show that Bohr-Sommerfeld fibres are associated to marked trivalent graphs satisfying the quantum Clebsch-Gordan conditions, and the number of such graphs is called the \emph{Verlinde dimension}, counted by the \emph{Verlinde formula} \cite[Thm. 8.1]{jeffrey_bohr-sommerfeld_1992}.
 	
-\subsection{Prequantum Line Bundle on the Moduli Space}
-	One key part of our prequantum system is the prequantum line bundle $\LL$ with curvature $2\pi i \omega$. Let us build such a bundle over our moduli space $\MM$, following RSW \cite{ramadas_comments_1989}. Given a connection 1-form $A$ on a 3-manifold $M$, we can define the \textit{Chern-Simons action}:
-	\begin{equation}
-	\CS(A) = \frac{k}{2\pi}\int\limits_N A\wedge dA + \frac{2}{3}A\wedge A \wedge A,~ k\in\mathbb{Z}.
-	\end{equation}
-	Under a change of gauge $g\cdot A = g^{-1}Ag + g^{-1}dg$, the Chern-Simons action transforms as 
-	\begin{equation}
-	\CS(g\cdot A) = \CS(A) - k \int\limits_N d\Tr\left((dg)g^{-1}\wedge A\right) - \frac{k}{3}\int\limits_N \Tr((g^{-1}dg)\wedge (g^{-1}dg)\wedge (g^{-1}dg)).
-	\label{e:cs-gauge}
-	\end{equation}\\
-	The third term on the right side will always be in $2\pi \mathbb{Z}$, and the second term is a total derivative which we can integrate using Stokes theorem over the boundary.
-	
-	Using this action, we will define a function $\Theta:\cA\times \cG \to \mathbb{C}$. Pick any 3-manifold $N$ for which $\partial N \cong \Sigma$. Given a pair $(A,g) \in \cA\times\cG$, we can always lift it to a choice of $(\tilde{A}, \tilde{g})$ over $N$, since $\pi_1(SU(2)) = \pi_2(SU(2)) = 0$. We define $\Theta$ as
-	\begin{equation}
-	\Theta(A,g) = \exp\left[i\CS(\tilde{A}) - i\CS(\tilde{g}\cdot A)\right].
-	\end{equation}
-	Equation (\ref{e:cs-gauge}) lets us simplify this;
-	\begin{align*}
-	\Theta(A,g) &= \exp(i \CS(\tilde{g}\cdot \tilde{A}) - \CS(\tilde{A}))\\
-	&= \exp\left[-ik \int\limits_N d\Tr\left((d\tilde{g})\tilde{g}^{-1}\wedge \tilde{A}\right) - 2\pi \kappa\right], \kappa \in \mathbb{Z}\\
-	&= \exp\left[-ik \int\limits_{\Sigma} \Tr(dg~ g^{-1}\wedge A)\right].
-	\end{align*}
-	Note that in the last equality, we use that the lifted pair $(\tilde{A},\tilde{g})$ restricts to $(A,g)$ on $\partial N = \Sigma$ by definition. This computation shows us in particular that $\Theta(A,g)$ is well defined, as it does not depend on our choice of $N$ or the lifting. One can further check that $\Theta$ is a cocycle:
-	\begin{equation}
-	\Theta(A,g)\Theta(g\cdot A, h) = \Theta(A,gh).
-	\end{equation}
-	Thus we are ready to define $\LL$.
-	\begin{definition}[Chern-Simons Prequantum Line Bundle]
-		For $(A,z)\in \cA\times \C$, let $(A,z)\sim (g\cdot A, \Theta(A,g)z)$ under any $g\in \cG$. Then define
-		\begin{equation}
-		\LL = \cA\times \C / \sim,
-		\end{equation}
-		which is a complex line bundle on $\MM = \cA/\cG$. Since $\Theta$ is $U(1)$ valued, it is a hermitian line bundle.
-	\end{definition}
-	Next, we want to verify that the curvature of $\LL$ gives the Atiyah-Bott form $\omega$ as claimed.
 \subsection{Polarisation of the Moduli Space}	
 	As before, let $\Sigma$ be a compact Riemann surface and $\MM$ the moduli space of flat $G=SU(2)$ connections on $\Sigma$. Following Jeffrey and Weitsman, we describe an action of $T^{3g-3}$ on $\MM$. Let $C$ be a closed oriented curve in $\Sigma$ and pick a basepoint $y\in C$. We can define a function $\tilde{f}_C:\cA \to \mathbb{R}$ by 
 	\begin{equation}

@@ -19,7 +19,9 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{definition}{Definition}
 \newtheorem{lemma}{Lemma}
-
+\newtheorem{corollary}{Corollary}
+\newcommand{\Ap}{x}
+\newcommand{\JJ}{\mathcal{J}}
 \newcommand{\bg}{\mathbf{g}}
 \newcommand{\bA}{\mathbf{A}}
 \newcommand{\CS}{\text{CS}}
@@ -39,16 +41,16 @@
 \newcommand{\Tr}{\text{Tr }}
 \newcommand{\cR}{\mathcal{R}}
 \newcommand{\PP}{\mathbb{P}}
-\newcommand{\HH}{\mathbb{H}}
+\newcommand{\HH}{\mathcal{H}}
 \newcommand{\ad}{\text{ad}}
 \newcommand{\Ad}{\text{Ad}}
 \newcommand{\sslash}{\mathbin{/\mkern-4mu/}}
 \begin{document}
 
 \subsection{Invariance of $\LL$ under Degeneration.}
-	At present we have a Riemann surface $\Sigma$, with a trinion decomposition given by boundary circles $\{C_i\}_{i=1}^{3g-3}$. We have a moduli space $\MM$ of flat connections over $\Sigma$, with prequantum line bundle $\LL$. We also have a degeneration of $\Sigma$ to a nodal curve $\Sigma_0$, and a corresponding degeneration of moduli spaces, $\phi:\MM\to \cP$. Moreover, $\phi$ is a symplectomorphism on a dense open subset of $\MM$. There is also a prequantum line bundle $\LL_0$ on $\cP$, and I claim that $\LL$ and $\LL_0$ agree on the dense set in $\MM$, and that their spaces of sections are the same.
+	At present we have a Riemann surface $\Sigma$, with a trinion decomposition given by boundary circles $\{C_i\}_{i=1}^{3g-3}$. We have a moduli space $\MM$ of flat connections over $\Sigma$, with an open dense subset $\MM^\circ$ equipped with the data of a prequantum system: $(\MM^\circ, \omega, \pi, \LL)$. We also have a degeneration of $\Sigma$ to a nodal curve $\Sigma_0$, and a corresponding degeneration of moduli spaces, $\phi:\MM\to \cP$. Moreover, $\phi$ is a symplectomorphism on the dense open subset $\MM^\circ$. The space $\cP$ is also equipped with the data of a prequantum system, $(\cP, \omega_\cP, \pi_\cP, \LL_0)$, with $\phi^\ast \omega_\cP = \omega$ and $\pi_{\cP}\circ\phi = \pi$. 
 	
-	To show that $\LL$ and $\LL_0$ agree, it would suffice to show that for every pair $(A,g)\in \cA\times \cG$, the function $\Theta$ is invariant under the degeneration; namely $\Theta(A,g) = \Theta(D(A), D(g))$, as then the equivalence relations defining $\LL$ and $\LL_0$ are the same.
+	We want to compute the dimension of the quantization for $\MM$ in terms of that for $\cP$ using $\phi$, which requires us to check that the spaces of sections of $\LL$ over $\MM^\circ$ and $\LL_0$ over $\cP$ are the same. To show that $\LL$ and $\LL_0$ agree, it would suffice to show that for every pair $(A,g)\in \cA\times \cG$, the function $\Theta$ is invariant under the degeneration; namely $\Theta(A,g) = \Theta(D(A), D(g))$, as then the equivalence relations defining $\LL$ and $\LL_0$ are the same.
 	
 	\begin{lemma}
 		Let $V_i$ be a tubular neighbourhood of $C_i$ in $\Sigma$. Let $V_{0}$ denote the (disconnected) image of $V_i$ under the surface degeneration. Then for every pair $(A,g)$ on $\Sigma$ which degenerates to a pair $(A_0, g_0)$ on $\Sigma_0$, there exists liftings $(\bA,\bg)$ and $(\bA_0,\bg_0)$ such that
@@ -112,6 +114,7 @@
 			\Theta(A,g) = \Theta(A_0, g_0).
 		\end{equation}
 		In particular, this implies that $\LL = \LL_0$ on the dense open set in $\MM$ symplectomorphic to $\cP$.
+		\label{t:l=l0}
 	\end{theorem}
 	\begin{proof}
 		From Equation (\ref{e:cs-gauge}) we know
@@ -130,4 +133,46 @@
 				&= \Theta(A_0,g_0).
 		\end{align*}
 	\end{proof}
+	\begin{theorem}
+		For the prequantum systems $(M,\pi,\LL)$ and $(\cP,\pi_{\cP}, \LL_0)$, let $\JJ_\pi ~(\JJ_{\pi,0})$ be the sheaf of sections of $\LL ~(\LL_0)$ which are covariant constant on the fibres of $\pi ~(\pi_\cP)$. Then
+		\begin{equation}
+			H^0(\JJ_\pi, \MM) = H^0(\JJ_{\pi,0}, \cP).
+		\end{equation}
+	\end{theorem}
+	\begin{proof}
+		The degeneration $\phi:\MM\to\cP$ is surjective, and thus $\phi^\ast:H^0(\JJ_{\pi,0},\cP) \to H^0(\JJ_\pi,\MM)$ is injective. Hence it remains to show that $\phi^\ast$ is surjective. Let $U \subset \MM$ be the open dense subset which is symplectomorphic to $\cP$. We will identify $\phi(U)=U$ and identify $H^0(\JJ_{\pi,0}, U) = H^0(\JJ_\pi, U)$ to simplify notation.
+		\smallskip
+		
+		Let $s\in H^0(\JJ_\pi, M)$ be any section, which we can restrict to obtain a section $s|_U\in H^0(\JJ_{\pi,0}, U)$. Let $\Ap \in \cP - U$, and let $V = U\cap \pi_{\cP}^{-1}(\pi_{\cP}(\Ap)) \subset \cP$. (Could this be empty?) Pick any $x_0\in V$, and any path $\gamma:x_0\to\Ap$ in $V$. Let $\Pi^\gamma:(\LL_0)_{x_0}\to(\LL_0)_{\Ap}$ denote the parallel transport along $\gamma$. Then define:
+		\begin{equation}
+			s'(\Ap):= \Pi^\gamma s(x_0).
+		\end{equation}
+		Let us verify this is well defined. First suppose we had two paths $\gamma:x_0\to \Ap$ and $\gamma':x_0\to \Ap$ in $\cP$. Since $\phi$ is not injective, there are multiple choices of lifts $\tilde{\gamma}$ of $\gamma$, which may have different endpoints. However, we can fix any $y \in \phi^{-1}(\Ap)$, and lift $\gamma$ and $\gamma'$ to paths $\tilde{\gamma},\tilde{\gamma'}:x_0\to y$. Note that because $\pi \circ \phi = \pi_{\cP}$, these lifts will be in $\pi^{-1}\pi(\phi(\Ap))$. Our initial section $s\in H^0(\JJ_\pi, \MM)$ has a well defined value $s(y)$, and since it is covariant constant on the fibres of $\pi$, we have:
+		\begin{equation}
+		\Pi^{\tilde{\gamma}\circ \tilde{\gamma}'^{-1}} s(y) = s(y). 
+		\end{equation}
+		Finally, since $\phi^\ast$ maps the connection on $\LL_0$ to that of $\LL$, we have that it preserves parallel transport:
+		\begin{equation}
+		\phi^\ast \Pi^{\phi\circ\tilde{\gamma}} s = \Pi^{\tilde{\gamma}} \phi^\ast s.
+		\end{equation}
+		In particular, 
+		\begin{equation}
+		\phi^\ast \Pi^{\gamma}s(x_0) = \phi^\ast\Pi^{\gamma\circ\gamma'^{-1}}\Pi^{\gamma'}s(x_0) = \Pi^{\tilde{\gamma}\circ \tilde{\gamma}'^{-1}} \Pi^{\tilde{\gamma}'}\phi^\ast s(x_0) =  \Pi^{\tilde{\gamma}'}\phi^\ast s(x_0) = \phi^\ast\Pi^{\gamma'}s(x_0).
+		\end{equation}
+		Injectivity of $\phi^\ast$ thus implies $s'$ is independent of the choice of path. 
+		\smallskip
+		
+		Now suppose we took a different point $x_1$. Let $\rho:x_1\to x_0$ be another path. Since $x_1,x_0 \in V$, where we know $s$ is covariant constant, if $\rho:x_1\to x_0$ is any path then,
+		\begin{equation}
+		\Pi^{\gamma}s(x_0) = \Pi^{\gamma}\Pi^{\rho}s(x_1),
+		\end{equation}
+		which tells us $s'$ is also independent of the choice of point, and is hence well defined. 
+		\smallskip
+		
+		Finally, for all $y\in \MM$, we have:
+		\begin{equation}
+			\phi^\ast (s') (y) = s'(\phi(y)) = \phi^\ast \Pi^{\gamma} s(x_0) =  \Pi^{\tilde{\gamma}} \phi^\ast s(x_0) = s(y) ~ \in H^0(\JJ_\pi,\MM).
+		\end{equation}
+		Therefore, $\phi^\ast$ is surjective.
+		\end{proof}
 \end{document}

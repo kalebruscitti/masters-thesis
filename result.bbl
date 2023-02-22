@@ -16,5 +16,122 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{hurtubise_representations_2000}{article}{}
+      \name{author}{2}{}{%
+        {{hash=11e9ad5d759e1641557c260d8d9bce08}{%
+           family={Hurtubise},
+           familyi={H\bibinitperiod},
+           given={J.\bibnamedelimi C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=a9deb7fba0884a4c18058fce5713bfa5}{%
+           family={Jeffrey},
+           familyi={J\bibinitperiod},
+           given={L.\bibnamedelimi C.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{568ccf5a2a97beedf6408e73c1ad083d}
+      \strng{fullhash}{568ccf5a2a97beedf6408e73c1ad083d}
+      \strng{bibnamehash}{568ccf5a2a97beedf6408e73c1ad083d}
+      \strng{authorbibnamehash}{568ccf5a2a97beedf6408e73c1ad083d}
+      \strng{authornamehash}{568ccf5a2a97beedf6408e73c1ad083d}
+      \strng{authorfullhash}{568ccf5a2a97beedf6408e73c1ad083d}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{There is a well-known correspondence (due to Mehta and Seshadri in the unitary case, and extended by Bhosle and Ramanathan to other groups), between the symplectic variety MhMh\{\{M\}\_\{h\}\} of representations of the fundamental group of a punctured Riemann surface into a compact connected Lie group GGG , with fixed conjugacy classes hhh at the punctures, and a complex variety MhMh\{\{{\textbackslash}mathcal\{M\}\}\_\{h\}\} of holomorphic bundles on the unpunctured surface with a parabolic structure at the puncture points. For G=SU(2)G=SU(2)G{\textbackslash},={\textbackslash},{\textbackslash}text\{SU\}{\textbackslash}left( 2 {\textbackslash}right) , we build a symplectic variety PPP of pairs (representations of the fundamental group into GGG , “weighted frame” at the puncture points), and a corresponding complex variety PP{\textbackslash}mathcal\{P\} of moduli of “framed parabolic bundles”, which encompass respectively all of the spaces MhMh\{\{M\}\_\{h\}\} , MhMh\{\{{\textbackslash}mathcal\{M\}\}\_\{h\}\} , in the sense that one can obtain MhMh\{\{M\}\_\{h\}\} from PPP by symplectic reduction, and MhMh\{\{{\textbackslash}mathcal\{M\}\}\_\{h\}\} from PP{\textbackslash}mathcal\{P\} by a complex quotient. This allows us to explain certain features of the toric geometry of the SU(2)SU(2){\textbackslash}text\{SU(2)\} moduli spaces discussed by Jeffrey and Weitsman, by giving the actual toric variety associated with their integrable system.}
+      \field{issn}{0008-414X, 1496-4279}
+      \field{journaltitle}{Canadian Journal of Mathematics}
+      \field{month}{12}
+      \field{note}{Publisher: Cambridge University Press}
+      \field{number}{6}
+      \field{title}{Representations with {Weighted} {Frames} and {Framed} {Parabolic} {Bundles}}
+      \field{urlday}{31}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{volume}{52}
+      \field{year}{2000}
+      \field{urldateera}{ce}
+      \field{pages}{1235\bibrangedash 1268}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.4153/CJM-2000-052-4
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/kaleb/Zotero/storage/ALNYVFYM/Hurtubise and Jeffrey - 2000 - Representations with Weighted Frames and Framed Pa.pdf:application/pdf;Snapshot:/home/kaleb/Zotero/storage/RYN8AEVU/D88FA00E4F17CAFCE97A9A5F0AC35547.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/journals/canadian-journal-of-mathematics/article/representations-with-weighted-frames-and-framed-parabolic-bundles/D88FA00E4F17CAFCE97A9A5F0AC35547
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/journals/canadian-journal-of-mathematics/article/representations-with-weighted-frames-and-framed-parabolic-bundles/D88FA00E4F17CAFCE97A9A5F0AC35547
+      \endverb
+      \keyw{14D20,58F05}
+    \endentry
+    \entry{sniatycki_cohomology_1977}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=395bb263e408b9bce12144e976e6fd99}{%
+           family={Śniatycki},
+           familyi={Ś\bibinitperiod},
+           given={Jedrzej},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=9efd5bb6412830c79ad2895e847d26c7}{%
+           family={Bleuler},
+           familyi={B\bibinitperiod},
+           given={Konrad},
+           giveni={K\bibinitperiod}}}%
+        {{hash=acf8541a60fb29fbac65345364e4d8a4}{%
+           family={Reetz},
+           familyi={R\bibinitperiod},
+           given={Axel},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{395bb263e408b9bce12144e976e6fd99}
+      \strng{fullhash}{395bb263e408b9bce12144e976e6fd99}
+      \strng{bibnamehash}{395bb263e408b9bce12144e976e6fd99}
+      \strng{authorbibnamehash}{395bb263e408b9bce12144e976e6fd99}
+      \strng{authornamehash}{395bb263e408b9bce12144e976e6fd99}
+      \strng{authorfullhash}{395bb263e408b9bce12144e976e6fd99}
+      \strng{editorbibnamehash}{7a39c5aefe993fd37c0bd6c3b9af60e1}
+      \strng{editornamehash}{7a39c5aefe993fd37c0bd6c3b9af60e1}
+      \strng{editorfullhash}{7a39c5aefe993fd37c0bd6c3b9af60e1}
+      \field{sortinit}{Ś}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Differential {Geometrical} {Methods} in {Mathematical} {Physics}}
+      \field{isbn}{978-3-540-37498-5}
+      \field{series}{Lecture {Notes} in {Mathematics}}
+      \field{title}{On cohomology groups appearing in geometric quantization}
+      \field{year}{1977}
+      \field{pages}{46\bibrangedash 66}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1007/BFb0087781
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/kaleb/Zotero/storage/RYDEQRE2/Śniatycki - 1977 - On cohomology groups appearing in geometric quanti.pdf:application/pdf
+      \endverb
+      \keyw{Cohomology Group,Geometric Quantization,Homogeneous Polynomial,Integral Manifold,Symplectic Manifold}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

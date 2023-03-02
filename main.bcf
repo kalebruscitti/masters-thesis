@@ -2187,21 +2187,23 @@
     <bcf:citekey order="3">hurtubise_moduli_2005</bcf:citekey>
     <bcf:citekey order="4">hurtubise_representations_2000</bcf:citekey>
     <bcf:citekey order="5">biswas_degenerations_2021</bcf:citekey>
-    <bcf:citekey order="6">harada_integrable_2015</bcf:citekey>
-    <bcf:citekey order="7">atiyah_yang-mills_1983</bcf:citekey>
-    <bcf:citekey order="8">donaldson_new_1983</bcf:citekey>
-    <bcf:citekey order="9">narasimhan_stable_1965</bcf:citekey>
-    <bcf:citekey order="10">thaddeus_geometric_1996</bcf:citekey>
-    <bcf:citekey order="11">michiels_moduli_nodate</bcf:citekey>
-    <bcf:citekey order="12">narasimhan_stable_1965</bcf:citekey>
-    <bcf:citekey order="13">donaldson_new_1983</bcf:citekey>
-    <bcf:citekey order="14">ramadas_comments_1989</bcf:citekey>
-    <bcf:citekey order="15">quillen_determinants_1985</bcf:citekey>
-    <bcf:citekey order="16">ramadas_comments_1989</bcf:citekey>
-    <bcf:citekey order="17">weitsman_real_1992</bcf:citekey>
+    <bcf:citekey order="6">atiyah_yang-mills_1983</bcf:citekey>
+    <bcf:citekey order="7">donaldson_new_1983</bcf:citekey>
+    <bcf:citekey order="8">narasimhan_stable_1965</bcf:citekey>
+    <bcf:citekey order="9">thaddeus_geometric_1996</bcf:citekey>
+    <bcf:citekey order="10">michiels_moduli_nodate</bcf:citekey>
+    <bcf:citekey order="11">narasimhan_stable_1965</bcf:citekey>
+    <bcf:citekey order="12">donaldson_new_1983</bcf:citekey>
+    <bcf:citekey order="13">ramadas_comments_1989</bcf:citekey>
+    <bcf:citekey order="14">quillen_determinants_1985</bcf:citekey>
+    <bcf:citekey order="15">ramadas_comments_1989</bcf:citekey>
+    <bcf:citekey order="16">weitsman_real_1992</bcf:citekey>
+    <bcf:citekey order="17">jeffrey_bohr-sommerfeld_1992</bcf:citekey>
     <bcf:citekey order="18">jeffrey_bohr-sommerfeld_1992</bcf:citekey>
-    <bcf:citekey order="19">jeffrey_bohr-sommerfeld_1992</bcf:citekey>
-    <bcf:citekey order="20">sniatycki_cohomology_1977</bcf:citekey>
+    <bcf:citekey order="19">sniatycki_cohomology_1977</bcf:citekey>
+    <bcf:citekey order="20">hurtubise_representations_2000</bcf:citekey>
+    <bcf:citekey order="21">biswas_degenerations_2021</bcf:citekey>
+    <bcf:citekey order="22">hurtubise_representations_2000</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
@@ -2233,4 +2235,13 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="nty/global//global/global"
+                type="entry"
+                sortingtemplatename="nty"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
 </bcf:controlfile>

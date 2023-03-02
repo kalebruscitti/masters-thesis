@@ -1,53 +1,7 @@
-\documentclass[]{article}
+\section{Polarization and Prequantum Line Bundle on $P$}
+	From section \ref{s:mastermoduli}, $P$ has a symplectic form $\omega$, and the degeneration $\phi:\MM\to P$ is symplectomorphic on an open dense subset $U$ of $\MM$. Thus, it remains to equip $P$ with a real polarisation $\pi_P$ and a line bundle $\LL_0$ with curvature $2\pi i \omega$. In both cases, we mirror the construction of the corresponding object for $\MM$.
 
-%opening
-\title{blah}
-\date{\today}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{tikz-cd}
-\usepackage{quiver}
-\usepackage{dsfont}
-\usepackage{biblatex}
-\usepackage{fullpage}
-\usepackage{graphicx}
-\usepackage{subfig}
-\usepackage{quiver}
-\addbibresource{citations.bib}
-
-\newtheorem{theorem}{Theorem}
-\newtheorem{definition}{Definition}
-\newtheorem{lemma}{Lemma}
-\newtheorem{corollary}{Corollary}
-\newcommand{\Ap}{x}
-\newcommand{\JJ}{\mathcal{J}}
-\newcommand{\bg}{\mathbf{g}}
-\newcommand{\bA}{\mathbf{A}}
-\newcommand{\CS}{\text{CS}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\Hom}{\text{Hom}}
-\newcommand{\Hol}{\text{Hol}}
-\newcommand{\Ann}{\text{Ann}}
-\newcommand{\OO}{\mathcal{O}}
-\newcommand{\LL}{\mathcal{L}}
-\newcommand{\MM}{\mathcal{M}}
-\newcommand{\End}{\text{End }}
-\newcommand{\coker}{\text{coker}~}
-\newcommand{\dbar}{\overline{\partial}}
-\newcommand{\cA}{\mathcal{A}}
-\newcommand{\cG}{\mathcal{G}}
-\newcommand{\cP}{\mathcal{P}}
-\newcommand{\Tr}{\text{Tr }}
-\newcommand{\cR}{\mathcal{R}}
-\newcommand{\PP}{\mathbb{P}}
-\newcommand{\HH}{\mathcal{H}}
-\newcommand{\ad}{\text{ad}}
-\newcommand{\Ad}{\text{Ad}}
-\newcommand{\sslash}{\mathbin{/\mkern-4mu/}}
-\begin{document}
-
-\subsection{Invariance of $\LL$ under Degeneration.}
+\section{Invariance of $\LL$ under Degeneration.}
 	At present we have a Riemann surface $\Sigma$, with a trinion decomposition given by boundary circles $\{C_i\}_{i=1}^{3g-3}$. We have a moduli space $\MM$ of flat connections over $\Sigma$, with an open dense subset $\MM^\circ$ equipped with the data of a prequantum system: $(\MM^\circ, \omega, \pi, \LL)$. We also have a degeneration of $\Sigma$ to a nodal curve $\Sigma_0$, and a corresponding degeneration of moduli spaces, $\phi:\MM\to \cP$. Moreover, $\phi$ is a symplectomorphism on the dense open subset $\MM^\circ$. The space $\cP$ is also equipped with the data of a prequantum system, $(\cP, \omega_\cP, \pi_\cP, \LL_0)$, with $\phi^\ast \omega_\cP = \omega$ and $\pi_{\cP}\circ\phi = \pi$. 
 	
 	We want to compute the dimension of the quantization for $\MM$ in terms of that for $\cP$ using $\phi$, which requires us to check that the spaces of sections of $\LL$ over $\MM^\circ$ and $\LL_0$ over $\cP$ are the same. To show that $\LL$ and $\LL_0$ agree, it would suffice to show that for every pair $(A,g)\in \cA\times \cG$, the function $\Theta$ is invariant under the degeneration; namely $\Theta(A,g) = \Theta(D(A), D(g))$, as then the equivalence relations defining $\LL$ and $\LL_0$ are the same.
@@ -175,4 +129,3 @@
 		\end{equation}
 		Therefore, $\phi^\ast$ is surjective.
 		\end{proof}
-\end{document}

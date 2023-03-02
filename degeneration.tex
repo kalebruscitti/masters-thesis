@@ -1,40 +1,6 @@
-\documentclass[]{article}
 
-%opening
-\title{no title}
-\date{\today}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{tikz-cd}
-\usepackage{quiver}
-\usepackage{graphicx}
-
-\newtheorem{theorem}{Theorem}
-\newtheorem{definition}{Definition}
-\newtheorem{lemma}{Lemma}
-
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\Hom}{\text{Hom}}
-\newcommand{\Hol}{\text{Hol}}
-\newcommand{\Ann}{\text{Ann}}
-\newcommand{\OO}{\mathcal{O}}
-\newcommand{\LL}{\mathcal{L}}
-\newcommand{\MM}{\mathcal{M}}
-\newcommand{\End}{\text{End }}
-\newcommand{\coker}{\text{coker}~}
-\newcommand{\dbar}{\overline{\partial}}
-\newcommand{\cA}{\mathcal{A}}
-\newcommand{\cG}{\mathcal{G}}
-\newcommand{\cP}{\mathcal{P}}
-\newcommand{\Tr}{\text{Tr }}
-\newcommand{\HH}{\mathbb{H}}
-\newcommand{\XX}{\mathfrak{X}}
-\newcommand{\QQ}{\mathfrak{Q}}
-\newcommand{\sslash}{\mathbin{/\mkern-4mu/}}
-
-\begin{document}
-	In sections 2, 3 and 4, we have described the moduli space $\MM$ of flat $SU(2)$ connections on a compact Riemann surface $\Sigma$, and the corresponding spaces $P$ and $\cP$ of representations with weighted frames on $\Sigma$ and framed parabolic sheaves on $\tilde{\Sigma}$, a singular curve corresponding to $\Sigma$ via degeneration. Now in this section we will describe how this degeneration of $\Sigma$ to $\tilde{\Sigma}$ induces a degeneration of $\MM$ to $\cP$. This degeneration of moduli spaces is due to the work of Biswas and Hurtubise (cite). Furthermore, we will describe a recent result of Harada and Kaveh (cite) which tells us that under certain hypotheses, the integrable system on $\MM$ described in section 3 yields an integrable system on $\cP$.
-\subsection{Degeneration of the Curves}
+	In sections 2, 3 and 4, we have described the moduli space $\MM$ of flat $SU(2)$ connections on a compact Riemann surface $\Sigma$, and the corresponding spaces $P$ and $\cP$ of representations with weighted frames on $\Sigma$ and framed parabolic sheaves on $\tilde{\Sigma}$, a singular curve corresponding to $\Sigma$ via degeneration. Now in this section we will describe how this degeneration of $\Sigma$ to $\tilde{\Sigma}$ induces a degeneration of $\MM$ to $\cP$. This degeneration of moduli spaces is due to Biswas and Hurtubise \cite{biswas_degenerations_2021}. 
+\section{Degeneration of the Curves}
 	The relationship between the moduli spaces $\MM$ and $\cP$ is given by degenerating the Riemann surface $\Sigma$ to a nodal curve by smoothly shrinking the boundary curves of the trinion decomposition. First we describe a local model for this shrinking process.
 	
 	\begin{figure}[h]
@@ -65,7 +31,8 @@
 	\end{equation}
 	which approaches $C_0$ at $t=1$ and $x_0$ at $t=0$. By gluing this local model to the boundaries of the disjoint union $(U\times S^1)\coprod (U\times S^1)$ to construct a family over $U$, with fibre $\Sigma_0$ at $t=0$, and $\Sigma \cong \Sigma_t$ at $t\neq 0$.
 
-\subsection{Local Model for the Connections}
+\section{Local Model for the Connections}
+	\label{s:local-model-conns}
 	On our local model for the degeneration of the curve $\Sigma$, we can also give a local model for the degeneration of a unitary connection $\nabla$ on a vector bundle $E$ over $\Sigma$. Let
 	\begin{equation}
 		A = \Hol_{c_1}(\nabla),
@@ -96,7 +63,7 @@
 	\end{equation}
 	which passes well to the limit $x\to 0$. Therefore we obtain a partial connection $\nabla^p$ defined everywhere on $Q_0$ except the nodal point $x_0$.
  	
-\subsection{Degeneration of the Moduli Space}
+\section{Degeneration of the Moduli Space}
 	On $\Sigma_t$ for $t\neq 0$, we simply have the moduli space $\MM$ of flat $SU(2)$ connections which corresponds to the moduli space of stable holomorphic vector bundles with $SL(2,\C)$ structure. Therefore it remains to understand the moduli space over $\Sigma_0$ and the desingularisation $\tilde{\Sigma}_0$. 
 	
 	Let $p$ be a nodal point in $\Sigma_0$ and $x_1,x_2$ the two points in $\tilde{\Sigma}_0$ which correspond to $p$. Any connection on $\Sigma_0$ has holonomy $A_i\in SU(2)$ around each nodal point which lives in the fundamental alcove of $SU(2)$. We can write the alcove as
@@ -120,9 +87,13 @@
 		\end{itemize}
 		We refer to this bundle as the \emph{degeneration of $\MM$ to $\cP$}, or simply \emph{the degeneration}.
 	\end{theorem}
-
+	We can rephrase this degeneration as a surjective map $\phi:\MM\to P$, given by taking an element $A\in X_1 \cong \MM$ to its corresponding degenerated element $A_0 \in X_0 \cong P$, given locally by the model in section \ref{s:local-model-conns}. In terms of the extended moduli spaces of section $\ref{s:mastermoduli}$, $\phi$ is the composition of the inclusion and quotient maps:
+	\begin{equation}
+		\MM = \MM^T \hookrightarrow \MM^G \twoheadrightarrow P,
+	\end{equation}
+	described by Hurtubise and Jeffrey \cite{hurtubise_representations_2000}[prop 2.37]. TODO: argue this is true carefully
 	
-	\subsection{Toric Degenerations}
+	\section{Toric Degenerations}
 	Here we want to describe a result of Harada and Kaveh (cite), which constructs an integrable system from a \textit{toric degeneration} satisfying some additional hypotheses. 
 	\begin{definition}
 		\label{d:toricdegen}
@@ -157,4 +128,4 @@
 			\item Let $U\subset X$ be the open dense subset of $X$ from item 1. Then the integrable system of item 2 generates a Hamiltonian torus action on $U$, and the inverse image $\mu^{-1}(\Delta^\circ)$ of the interior of $\Delta$ under the moment map lies in the open subset $U$.
 		\end{enumerate}
 	\end{theorem}
-\end{document}
+

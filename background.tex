@@ -3,7 +3,7 @@
 	Given a Riemann surface $\Sigma$ and a unitary group $G=U(n)$ or $G=SU(n)$, we are interested in the moduli space $\MM$ of connections on a principal $G$ bundle over $\Sigma$, up to gauge equivalence. A detailed study of this moduli space was made by Atiyah and Bott \cite{atiyah_yang-mills_1983}, from which we take much of the following discussion.
 	
 	Thanks to the work of Narasimhan and Seshadri and Donaldson \cite{donaldson_new_1983}\cite{narasimhan_stable_1965} there are multiple ways in which one can view $\MM$. One equivalence is between flat unitary connections and irreducible representations of $\pi_1(\Sigma)$ into $G$. The gauge equivalence is then accounted for with a Geometric Invariant Theory quotient $\Hom(\pi_1(\Sigma), G)\sslash G$ \cite{thaddeus_geometric_1996}(section 7 for example). Another equivalence is with holomorphic $SL(n,\C)$ bundles, which we think of in terms of Doubeault operators $\dbar_E$ on a smooth complex vector bundle $E$. Different aspects of the geometry of $\MM$ become clear in different pictures. As connections, the symplectic structure is clear, whereas as holomorphic bundles the complex structure is clear.
-	\subsection{Flat Connections as Representations of the Fundamental Group}
+	\section{Flat Connections as Representations of the Fundamental Group}
 	First let us sketch the idea of the correspondence between flat connections and representations of the fundamental group. Given any $G$-connection $A$ on a manifold $\Sigma$, the holonomy of $A$ around a loop $\gamma$ based at $p\in \Sigma$ gives us a map $\text{Hol}_A(\gamma):\text{Loops}(p,\Sigma)\to G$. Generically, the holonomy is not invariant up to homotopy, so this map doesn't pass to a map on $\pi_1(\Sigma) \to G$. However, \emph{flat} connections are defined to be those for which the holonomy for any contractible loop is trivial. In this case, we can pass to the quotient to get a map $\text{Hol}_A(\gamma):\pi_1(p,\Sigma)\to G$. Picking a different basepoint $p'$ conjugates the resulting morphism in $G$, so that we can associate to any flat connection $A$ a map $\pi_1(\Sigma)\to G$ up to conjugation. It turns out that this map actually determines $A$ up to gauge equivalence.
 	
 	Let $\cA$ denote the space of flat connections on the trivial principal bundle $P=G\times \Sigma$, let $\cG = \C^\infty(P, G)^G$ be the gauge group, and let $\Phi:\cA \to \Hom(\pi_1(\Sigma),G)/G$ denote the map taking $A$ to $\text{Hol}_A$. 
@@ -66,7 +66,7 @@
 	
 	
 	
-	\subsection{Unitary Representations on a Riemann Surface}
+	\section{Unitary Representations on a Riemann Surface}
 	Here we specialize to a compact connected Riemann surface $\Sigma$ of genus $g$, and $G=U(n)$. Then as we learned in our undergraduate topology classes,
 	\begin{equation}
 		\pi_1(\Sigma) = \{a_1, b_1,...,a_g, b_g ~|~ \Pi_{i=1}^g a_ib_ia_i^{-1}b_i^{-1} = e
@@ -168,7 +168,7 @@
 		Finally, the quotient $SU(2)/{\pm \mathds{1}} \cong SO(3)$ is compact, and $\MM_0 = \xi^{-1}(e)/SO(3)$. Since $\xi$ is a submersion and $SO(3)$ is a compact group acting freely on it, the quotient $\MM_0$ is a smooth manifold, with dimension $6g-6$ as computed at the beginning of the proof.
 	\end{proof}
 	Now that we have some understanding of the moduli space $\MM$, we will pass to a holomorphic description of $\MM$ in terms of semi-stable holomorphic vector bundles over $\Sigma$.
-	\subsection{Semi-stable Holomorphic Bundles}
+	\section{Semi-stable Holomorphic Bundles}
 	When $\Sigma$ is a Riemann surface, we can use the complex structure to study $\MM$ in another way. Differential forms on a Riemann surface have a splitting, $\Omega^1(\Sigma) = \Omega^{1,0}(\Sigma)\oplus \Omega^{0,1}(\Sigma)$ which induces a splitting on the space $\cA$ of connections on complex vector bundles $E$ over $\Sigma$. As we will discuss, the $(0,1)$ part of a connection $A\in \Omega^1(\Sigma)\otimes \mathfrak{gl}(n,\C)$ defines a \emph{holomorphic structure} on $E$, and we can discuss moduli spaces of connections in terms of holomorphic structures.
 	
 	\begin{definition}
@@ -304,7 +304,7 @@
 	\end{equation}
 	The relationship between this space of connections and the space of holomorphic vector bundles is described by the Narasimhan-Seshadri theorem. In one direction, given a flat connection $A$ on $P$, inducing a connection on the associated bundle $E$, we can decompose $A = A^{0,1} + A^{1,0}$. This allows us to take $\dbar_E = A^{0,1}$ as a complex structure on $E$ corresponding to the flat connection $A$. The Narasimhan-Seshadri theorem guarantees that this structure will define a stable bundle, and also gives the converse direction; that flat stable structures $\dbar_E$ define flat unitary connections $A$. 
 
-	\subsection{Symplectic Picture}
+	\section{Symplectic Picture}
 	Another description of the moduli space $\MM$ is in terms of a symplectic reduction, which makes the symplectic structure more clear. Although this description is illuminating, our treatment here is on shaky ground, as we will be considering an infinite dimensional symplectic manifold and taking its symplectic quotient, which requires more careful consideration then we provide here. Rigourous details of this picture can be read in (citations, Atiyah-Bott and maybe another?).
 	
 	 Again let $\Sigma$ be the compact connected Riemann surface of genus $g$. Consider the trivial principal $G=SU(2)$ bundle $P$, over $\Sigma$ and let $\cA$ denote the space of smooth principal connections on $P$. In a fixed trivialization $P \cong G\times \Sigma$, a connection is determined by a form $A \in \Omega^1(\Sigma)\otimes \mathfrak{g}$. A connection is flat if and only if it has zero curvature, $0 = F_A:= dA + A \wedge A$. 
@@ -333,7 +333,7 @@
 	Symplectic reduction also gives us a symplectic structure on the quotient space $\MM$, such that under the pullback by the quotient map, $q:\cA_0 \to \MM$, we recover the symplectic form $\omega$ for $\cA$. We will refer to this symplectic structure on $\MM$ as the 'Atiyah-Bott symplectic form' throughout this thesis.
 
 		
-	\subsection{Prequantum Line Bundle on the Moduli Space}
+	\section{Prequantum Line Bundle on the Moduli Space}
 	One key part of our prequantum system is the prequantum line bundle $\LL$ with curvature $2\pi i \omega$. Let us build such a bundle over our moduli space $\MM$, following RSW \cite{ramadas_comments_1989}. Given a connection 1-form $A$ on a 3-manifold $M$, we can define the \textit{Chern-Simons action}:
 	\begin{equation}
 	\CS(A) = \frac{k}{2\pi}\int\limits_N A\wedge dA + \frac{2}{3}A\wedge A \wedge A,~ k\in\mathbb{Z}.

@@ -1,40 +1,58 @@
-\documentclass[]{article}
+	
+	
+	\section{Extended Moduli Spaces of Connections}
+	As always, let $\Sigma$ be a compact connected genus $g$ Riemann surface. Recall that one construction of our moduli space $\MM$ was as the representations $\Hom(\pi_1(\Sigma),G)/G$, which has its subset topology as $\xi^{-1}(e)/G \subset G^{2g}/G$, where 
+	\begin{equation}
+		\xi(A_1,B_1,...,A_g,B_g) = \prod_{i=1}^g A_iB_iA_i^{-1}B_i^{-1}.
+	\end{equation} 
+	Now let us generalize to the case where $\Sigma$ is permitted to have $n$ punctures, $\{p_i\}_{i=1}^n$. Let $c_i$ be a loop around $p_i$, and let $\{d_i\}_{i=2}^n$ be curves $d_i:p_1\to p_i$ in $\Sigma$. Then the fundamental group of $\Sigma$ can be written \cite{hurtubise_representations_2000}[2.2]:
+	\begin{equation}
+		\pi_1(\Sigma) = \langle a_i, b_i, c_1, d_jc_jd_j^{-1} ~|~ \prod_{i=1}^{g}a_ib_ia_i^{-1}b_i^{-1}c_1\prod_{j=2}^{n}d_jc_jd_j^{-1}=e\rangle.
+	\end{equation}
+	Thus, we will redefine $\xi:G^{2g+2n-1}\to G$ as
+	\begin{equation}
+		\xi(a_1,b_1,...,a_g,b_g,c_1,...,c_n,d_2,...,d_n) = \prod_{i=1}^{g}a_ib_ia_i^{-1}b_i^{-1}c_1\prod_{j=2}^{n}d_jc_jd_j^{-1}.
+	\end{equation}
+	Suppose $\{C_i\}_{i=1}^{2g-g}$ is a trinion decomposition for an unpunctured surface $\tilde{\Sigma}$. Let $\Sigma_i$ be the (singular) surface obtained by shrinking $C_i$ to a point $p_i$ (needs clarification). Then proposition \ref{t:atd-thm} tells us that any element $A$ in $\MM$ can be represented by an A.T.D. connection, meaning that $A$'s holonomy around the curve $c_i$ corresponding to the point $p_i$ is in the fundamental alcove $\Delta\subset \mathfrak{t}$. Repeating this for each $C_i$ tells us that our moduli space corresponds to the $T$-extended moduli space:
+	\begin{equation}
+		\MM = \MM^T := \{(A_i,B_i,D_j,C_j)\in G^{2g+n-1}\times \exp(\Delta)^n ~|~ \xi(A_i,B_i,D_j,C_j) = \mathds{1}\}.
+	\end{equation}
+	We can also define the $G$-extended moduli space:
+	\begin{equation}
+	\MM^G := \{(A_i,B_i,D_j,C_j)\in G^{2g+n-1}\times G^n ~|~ \xi(A_i,B_i,D_j,C_j) = \mathds{1}\},
+	\end{equation}
+	and it is clear that $\MM^T \subset \MM^G$ by including $\exp(\Delta)\subset G$. There is an action of $G^n$ on these spaces. For $(A_i,B_i,D_j,C_j)\in \MM^G$, an element $\sigma$ in the first copy of $G$ acts by:
+	\begin{align*}
+		A_j &\to \sigma A_j \sigma^{-1},& 	B_j&\to \sigma B_j\sigma^{-1}
+	\end{align*}
+	\begin{align*}
+		D_j&\to \sigma D_j, & C_1 &\to \sigma C_1\sigma^{-1}
+	\end{align*}
+	and an element $\sigma$ in the $l$th copy $(l=2,...,n)$ of $G$ acts by
+	\begin{align*}
+	D_l&\to D_l\sigma^{-1}, & C_l &\to \sigma C_l\sigma^{-1}.
+	\end{align*}
+	This action restricts to give an action of $G^n$ on $\MM^T$. 
+	
+	\section{Symplectic Implosion}
+	To proceed, we will state some definitions and results of (citations here):
+	
+	
+	\begin{definition}
+		For $\MM^G$ defined above, with fundamental alcove $\Delta\subset G$, we define the imploded cross section 
+		\begin{equation}
+			P := \prod_{\sigma} \frac{\Phi^{-1}(\sigma)}{[G_\sigma, G_\sigma]},
+		\end{equation}
+		where $\sigma$ ranges over the faces of $\Delta$, and $G_\sigma$ is the stabilizer of $\sigma$ under the action of $G$ by conjugation at a point in the interior of $\sigma$.
+	\end{definition}
+	TODO: all of this section \pagebreak
+	
 
-%opening
-\title{no title}
-\date{\today}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{tikz-cd}
-\usepackage{quiver}
-\usepackage{mathtools}
-\usepackage{dsfont}
-
-\newtheorem{lemma}{Lemma}
-\newtheorem{theorem}{Theorem}
-\newtheorem{definition}{Definition}
-
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\Hom}{\text{Hom}}
-\newcommand{\Ann}{\text{Ann}}
-\newcommand{\OO}{\mathcal{O}}
-\newcommand{\LL}{\mathcal{L}}
-\newcommand{\MM}{\mathcal{M}}
-\newcommand{\cP}{\mathcal{P}}
-\newcommand{\End}{\text{End}~}
-\newcommand{\coker}{\text{coker}~}
-\newcommand{\dbar}{\overline{\partial}}
-\newcommand{\PP}{\mathbb{P}}
-\newcommand{\Tr}{\text{Tr }}
-\newcommand{\HH}{\mathbb{H}}
-\newcommand{\sslash}{\mathbin{/\mkern-4mu/}}
-
-\begin{document}
+	
 	Now associated to the compact Riemann surface $\Sigma$ we have a symplectic variety $P$ of representations with weighted frames, which is toric for $G=SU(2)$ and has a prequantum line bundle $\LL_P$ corresponding to $\LL$ on $\MM$. Now we will go in detail on the other half of Jeffrey and Hurtubise's construction, building the complex variety $\cP$ of \emph{framed parabolic bundles} over a singular curve $\tilde{\Sigma}$ corresponding to contracting the loops in a trinion decomposition of $\Sigma$. We will see that $P$ and $\cP$ are diffeomorphic, meaning that we can compute sections of prequantum line bundles over $\cP$ using the structure of $P$.
 	
 	First we will see how to embed $\MM$ into projective space, as this construction will have us transform the data of $\MM$ from holomorphic bundles over $\Sigma$ to sheaves, and will lay the groundwork for the embedding we will require later as a hypothesis of the theorem of Harada and Kaveh. Then we will describe the construction of $\cP$ and the diffeomorphism with $P$.
-	\subsection{Projective Embedding of $\MM$}
+	\section{Projective Embedding of $\MM$}
 	\label{s:m-embedding}
 	The moduli $\MM$ of flat $SL(n,\C)$ bundles can be embedded into projective space, as we will now describe following the work of Thaddeus and Giesker (cite). First, fix a line bundle $L$ of sufficiently high degree so that for all $E\in N(k,d)$ $E\otimes L$  is globally generated (and redefine $E$). Then, for some large $N$ we can write $E$ as a quotient:
 	\begin{equation}
@@ -70,10 +88,10 @@
 		Since the lemma shows it is injective, it remains to show its derivative is everywhere injective. We give a proof following Thaddeus (GIT and flips page 717).
 	\end{proof}
 
-	\subsection{Parabolic Vector Bundles}
+	\section{Parabolic Vector Bundles}
 	Given a trinion decomposition of the Riemann surface $\Sigma$, let us fix the holonomies around each boundary loop. If we think of each trinion as a thrice-punctured sphere and consider the space of connections with fixed holonomies on the trinion, then due to Mehta and Seshadri (cite) there is a correspondence between the moduli of $\pi_1(\Sigma)$ representations into $SU(n)$ and that of rank-$n$ holomorphic bundles with an $SL(n,\C)$ structure and a parabolic structure at the punctures of $\Sigma$, which we call a parabolic bundle. Under this correspondence, the eigenvalues of the holonomy get translated into a set of weights for the parabolic structure. 
 	
-	We want to consider the moduli space of connections with all possible holonomies, and therefore we will want to fit all these moduli of parabolic bundles together, and in such a way that we can even include the $\theta_i = 0,\pi$ cases, which will correspond to weights $0$ and $1$. This is the construction of Hurtubise and Jeffrey which we will describe in the next subsection. First we lay out the basic definitions and results about parabolic bundles.
+	We want to consider the moduli space of connections with all possible holonomies, and therefore we will want to fit all these moduli of parabolic bundles together, and in such a way that we can even include the $\theta_i = 0,\pi$ cases, which will correspond to weights $0$ and $1$. This is the construction of Hurtubise and Jeffrey which we will describe in the next section. First we lay out the basic definitions and results about parabolic bundles.
 	\begin{definition}
 		A \emph{parabolic bundle} over a complex manifold $\Sigma$ is a holomorphic vector bundle $E$ over $\Sigma$ with a \emph{parabolic structure}, which is a point of marked points $\{p_1,...,p_n\}$ and for each point, a flag of subspaces in the fibre $E_{p_k}$. 
 	\end{definition}
@@ -106,8 +124,8 @@
 	\end{proof}
 	In particular, this lemma tells us that when $\gamma_i\in (0,1)$, which will correspond to connections with holonomy in $(0,\pi)$, we get well-behaved parabolic structures without torsion. It also tells us there are two edge cases to consider. When $\gamma_i = 0$, the parabolic structure vanishes, and when $\gamma_i = 1$ we acquire torsion. To fit all possible holonomies into a moduli space, each of these cases will need to be dealt with.
 	
-	\subsection{Moduli of Framed Parabolic Bundles}
-	Just as we constructed the moduli space of vector bundles over a Riemann surface, let us now construct that of parabolic vector bundles. This subsection closely follows section 4 of Hurtubise and Jeffrey (cite). From now on, we restrict our attention to $G=SU(2)$. As always, let $\Sigma$ be a compact connected Riemann surface. Fix a line bundle $L$ of sufficiently high degree so that for all $E\in N(k,d), E\otimes L$ is a globally generated sheaf (and redefine $E = E\otimes L$). Then for some large $N$ we can write $E$ as a quotient of the trivial sheaf on $\Sigma$:
+	\section{Moduli of Framed Parabolic Bundles}
+	Just as we constructed the moduli space of vector bundles over a Riemann surface, let us now construct that of parabolic vector bundles. This section closely follows section 4 of Hurtubise and Jeffrey (cite). From now on, we restrict our attention to $G=SU(2)$. As always, let $\Sigma$ be a compact connected Riemann surface. Fix a line bundle $L$ of sufficiently high degree so that for all $E\in N(k,d), E\otimes L$ is a globally generated sheaf (and redefine $E = E\otimes L$). Then for some large $N$ we can write $E$ as a quotient of the trivial sheaf on $\Sigma$:
 	\begin{equation}
 		\phi: \OO^N \to E.
 	\end{equation}
@@ -218,7 +236,7 @@
 	
 	Finally, we let $\cP = \tilde{Y}\sslash SL(N,\C)$ be the geometric quotient, and we call it the \emph{moduli space of framed parabolic bundles}.
 	
-	\subsection{Framed Parabolic Bundles on a Trinion}
+	\section{Framed Parabolic Bundles on a Trinion}
 	To understand the moduli space of framed parabolic bundles on our entire Riemann surface, it is insightful to mirror the construction of section 3 and decompose the Riemann surface into trinions. Towards this end, let us compute $\cP$ for one trinion $D$, a copy of $\PP^1$ with three marked points. Without loss of generality, let the three marked points be $z=0,1,\infty$. 
 	
 	\begin{lemma}
@@ -374,14 +392,14 @@
 	(\lambda_1, \lambda_2,\lambda_3) \cdot (ax+by+cz+dw) = ax +b\lambda_1\lambda_2 y + c\lambda_1\lambda_3 z + d\lambda_2\lambda_3 w. 
 	\end{equation}
 	
-	\subsection{Gluing $\cP$ over Trinions }
+	\section{Gluing $\cP$ over Trinions }
 	Given two Riemann surfaces $\Sigma_1$, $\Sigma_2$ with marked points $p_1$ and $p_2$, we can glue them together by identifying $p_1$ and $p_2$ to form $\Sigma = \Sigma_1 \coprod \Sigma_2 / (p_1 \sim p_2)$. This will be a nodal complex curve. If $\cP_1$ and $\cP_2$ denote the moduli space of parabolic sheaves corresponding to $\Sigma_1$ and $\Sigma_2$, we can also consider gluing them together. For framed parabolic sheaves $(E_i,\alpha_i)$, with $E_i$ over $\Sigma_i$ and $\alpha_i:(E_i)|_{p_i}\to \C$, we can combine the two into a diagram:
 	\begin{equation}
 		(E_1)|_{p_1} \to \C \rightarrow (E_2)|_{p_2}.
 	\end{equation}
 	We consider two such diagrams to be equivalent if the framed parabolic bundles on each surface are isomorphic, and if the induced maps $(E_1)|_{p_1}/\ker(\alpha_1) \to (E_1)_{p_1}/\ker(\alpha_1)$ are the same. Then taking equivalence classes under this equivalence amounts to quotienting out the anti-diagonal action of $\C^\ast$ on the framing at $p_0$ and $p_1$, and we have $\cP_{\Sigma} = \cP_0 \times \cP_1 \sslash \C^\ast$. 
 	
-	In particular, given a compact Riemann surface $\Sigma$ with trinion decomposition $\{D_\gamma\}_{\gamma=1}^{2g-2}$, we can pinch the boundary circles ${C_i}_{i=1}^{3g-3}$ down to points to obtain a singular surface $\tilde{\Sigma}$, consisting of $2g-2$ copies of $\PP^1$ with three marked points glued along those $3g-3$ total marked points. Then we can obtain the moduli space $\cP$ for $\tilde{\Sigma}$ by gluing the moduli spaces $\cP_\gamma$ for each trinion $D_\gamma$. From the previous subsection we know each $\cP_\gamma$ is isomorphic to $\PP^3$. Heuristically, this lets us estimate the dimension of $\cP$ as follows. We have a total of $3(2g-2)$ dimensions for the $\PP^3$ over each trinion, and we have to quotient an action of $\C^\ast$ along $3g-3$ curves. Therefore, we expect that $\cP$ has dimension $3(2g-2)-3g-3 = 3g-3$, which agrees with our dimension calculation for the moduli space $\MM$ from section 2 and 3. \vspace{1em}
+	In particular, given a compact Riemann surface $\Sigma$ with trinion decomposition $\{D_\gamma\}_{\gamma=1}^{2g-2}$, we can pinch the boundary circles ${C_i}_{i=1}^{3g-3}$ down to points to obtain a singular surface $\tilde{\Sigma}$, consisting of $2g-2$ copies of $\PP^1$ with three marked points glued along those $3g-3$ total marked points. Then we can obtain the moduli space $\cP$ for $\tilde{\Sigma}$ by gluing the moduli spaces $\cP_\gamma$ for each trinion $D_\gamma$. From the previous section we know each $\cP_\gamma$ is isomorphic to $\PP^3$. Heuristically, this lets us estimate the dimension of $\cP$ as follows. We have a total of $3(2g-2)$ dimensions for the $\PP^3$ over each trinion, and we have to quotient an action of $\C^\ast$ along $3g-3$ curves. Therefore, we expect that $\cP$ has dimension $3(2g-2)-3g-3 = 3g-3$, which agrees with our dimension calculation for the moduli space $\MM$ from section 2 and 3. \vspace{1em}
 	
 	Given two trinions $D_1$, $D_2$ with moduli spaces $\cP_1 \cong \cP_2 \cong \PP^3$, each of which has their own twisting sheaf $\OO(1)$, we can ask if we get a twisting sheaf exhibiting $\cP_1 \times \cP_2 \sslash \C^\ast$ as a quasi-projective scheme. The Segre embedding lets us embed $\PP^3 \times \PP^3$ into $\PP^{15}$, which has its own twisting sheaf $\OO(1)_{\PP^{15}}$. To recall, if $[x:y:z:w]$ and $[x':y':z':w']$ are co-ordinates for each copy of $\PP^3$, then the Segre embedding is the map
 	\begin{equation}
@@ -406,4 +424,3 @@
 	\end{equation}
 	
 	In the full-trinion decomposition setting, repeating this process at each point gives us the moduli space $\cP$ with a very ample line bundle $\LL$ embedding $\cP$ into a large projective space. Any Fubini-Study metric on that projective space gives $\LL$ a Chern connection $\theta \in \Omega^{1,1}(T^\ast \cP)$ such that $i\theta$ is a metric for $\cP$. The complex structure and metric also yield a symplectic form $\omega$ for $\cP$. Later, we will want to check that when a point in $\cP$ is a stable point in $\MM$, this symplectic form agrees with the Atiyah-Bott form on $\MM$.
-\end{document}

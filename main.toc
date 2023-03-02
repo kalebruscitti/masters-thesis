@@ -1,0 +1,57 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Moduli Spaces of Flat Connections}{5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Moduli Space of Flat Unitary Connections on a Riemann Surface}{5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Flat Connections as Representations of the Fundamental Group}{5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Unitary Representations on a Riemann Surface}{8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Semi-stable Holomorphic Bundles}{11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}Symplectic Picture}{15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.6}Prequantum Line Bundle on the Moduli Space}{16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Geometric Quantization when $G=SU(2)$}{19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Polarisation of the Moduli Space}{20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Moduli of Connections on a Trinion}{23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Counting Bohr-Sommerfeld Points}{24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Moduli Spaces of Parabolic Bundles}{27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Extended Moduli Spaces of Connections}{27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Symplectic Implosion}{28}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Projective Embedding of $\mathcal {M}$}{29}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Parabolic Vector Bundles}{30}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Moduli of Framed Parabolic Bundles}{31}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}Framed Parabolic Bundles on a Trinion}{35}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.7}Gluing $\mathcal {P}$ over Trinions }{39}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Degenerating the Moduli Space}{42}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Degeneration of the Curves}{42}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Local Model for the Connections}{44}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Degeneration of the Moduli Space}{44}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Toric Degenerations}{46}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Counting the Dimension of the Real Quantization}{48}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Polarization and Prequantum Line Bundle on $P$}{48}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Invariance of $\mathcal {L}$ under Degeneration.}{48}%

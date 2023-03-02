@@ -1,8 +1,11 @@
-\documentclass[]{article}
+\documentclass[]{report}
 \parskip = \baselineskip
+\fontsize{12}{1}
+\linespread{1.5}
+
 
 %opening
-\title{no title}
+\title{lorem ipsum dolor sit amet}
 \date{\today}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -15,11 +18,14 @@
 \usepackage{graphicx}
 \usepackage{subfig}
 \usepackage{quiver}
+\usepackage{geometry}
+\geometry{margin=1in}
 \addbibresource{citations.bib}
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{definition}{Definition}
 \newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
 \newcommand{\JJ}{\mathcal{J}}
 \newcommand{\bg}{\mathbf{g}}
 \newcommand{\bA}{\mathbf{A}}
@@ -44,12 +50,35 @@
 \newcommand{\ad}{\text{ad}}
 \newcommand{\Ad}{\text{Ad}}
 \newcommand{\sslash}{\mathbin{/\mkern-4mu/}}
+\newcommand{\XX}{\mathfrak{X}}
+\newcommand{\QQ}{\mathfrak{Q}}
+\newcommand{\Ap}{x}
+
+\author{Kaleb D. Ruscitti}
+
 
 \begin{document}
+\maketitle
+\tableofcontents
+\chapter{Introduction}
+\label{s:intro}
 \input{introduction}
+\chapter{Moduli Spaces of Flat Connections}
+\label{s:background}
 \input{background.tex}
-\section{Geometric Quantization when $G=SU(2)$}
+\chapter{Geometric Quantization when $G=SU(2)$}
+\label{s:jeffreyweitsman}
 \input{jeffreyweitsman.tex}
-%\input{masterspaces.tex}
-%\printbibliography
+\chapter{Moduli Spaces of Parabolic Bundles}
+\label{s:mastermoduli}
+\input{masterspaces.tex}
+\chapter{Degenerating the Moduli Space}
+\label{s:degeneration}
+\input{degeneration.tex}
+\chapter{Counting the Dimension of the Real Quantization}
+\label{s:result}
+\input{result.tex}
+
+\pagebreak
+\printbibliography
 \end{document}

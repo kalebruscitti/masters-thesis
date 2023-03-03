@@ -22,7 +22,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Moduli of Connections on a Trinion}{23}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Counting Bohr-Sommerfeld Points}{24}%
+\contentsline {section}{\numberline {3.3}Counting Bohr-Sommerfeld Points}{25}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Moduli Spaces of Parabolic Bundles}{27}%
 \defcounter {refsection}{0}\relax 

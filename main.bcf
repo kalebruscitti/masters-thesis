@@ -2195,15 +2195,14 @@
     <bcf:citekey order="11">narasimhan_stable_1965</bcf:citekey>
     <bcf:citekey order="12">donaldson_new_1983</bcf:citekey>
     <bcf:citekey order="13">ramadas_comments_1989</bcf:citekey>
-    <bcf:citekey order="14">quillen_determinants_1985</bcf:citekey>
-    <bcf:citekey order="15">ramadas_comments_1989</bcf:citekey>
-    <bcf:citekey order="16">weitsman_real_1992</bcf:citekey>
-    <bcf:citekey order="17">jeffrey_bohr-sommerfeld_1992</bcf:citekey>
-    <bcf:citekey order="18">jeffrey_bohr-sommerfeld_1992</bcf:citekey>
-    <bcf:citekey order="19">sniatycki_cohomology_1977</bcf:citekey>
+    <bcf:citekey order="14">weitsman_real_1992</bcf:citekey>
+    <bcf:citekey order="15">jeffrey_bohr-sommerfeld_1992</bcf:citekey>
+    <bcf:citekey order="16">jeffrey_bohr-sommerfeld_1992</bcf:citekey>
+    <bcf:citekey order="17">sniatycki_cohomology_1977</bcf:citekey>
+    <bcf:citekey order="18">hurtubise_representations_2000</bcf:citekey>
+    <bcf:citekey order="19">biswas_degenerations_2021</bcf:citekey>
     <bcf:citekey order="20">hurtubise_representations_2000</bcf:citekey>
-    <bcf:citekey order="21">biswas_degenerations_2021</bcf:citekey>
-    <bcf:citekey order="22">hurtubise_representations_2000</bcf:citekey>
+    <bcf:citekey order="21">jeffrey_bohr-sommerfeld_1992</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

@@ -1,5 +1,11 @@
 \section{Polarization and Prequantum Line Bundle on $P$}
 	From section \ref{s:mastermoduli}, $P$ has a symplectic form $\omega$, and the degeneration $\phi:\MM\to P$ is symplectomorphic on an open dense subset $U$ of $\MM$. Thus, it remains to equip $P$ with a real polarisation $\pi_P$ and a line bundle $\LL_0$ with curvature $2\pi i \omega$. In both cases, we mirror the construction of the corresponding object for $\MM$.
+	
+	For $\MM$ we defined functions $f_i:\MM\to \mathbb{R}$ by taking the cosines of the holonomies of a connection around each loop in a given trinion decomposition. For an element $x=(A_i,B_i,D_j,C_j)$ in $\MM^G$, it is the elements $\{C_j\}$ which correspond to these holonomies, and so we want to define functions $f_k:\MM^G \to \mathbb{R}$ by 
+	\begin{equation}
+		\tilde{f}_k(A_i,B_i,D_j,C_j) = \frac{1}{\pi}\cos^{-1} \left(\Tr C_k\right)
+	\end{equation}
+	To get functions on $P$, one must check that these $\tilde{f}_k$ pass to the symplectic implosion. -- 
 
 \section{Invariance of $\LL$ under Degeneration.}
 	At present we have a Riemann surface $\Sigma$, with a trinion decomposition given by boundary circles $\{C_i\}_{i=1}^{3g-3}$. We have a moduli space $\MM$ of flat connections over $\Sigma$, with an open dense subset $\MM^\circ$ equipped with the data of a prequantum system: $(\MM^\circ, \omega, \pi, \LL)$. We also have a degeneration of $\Sigma$ to a nodal curve $\Sigma_0$, and a corresponding degeneration of moduli spaces, $\phi:\MM\to \cP$. Moreover, $\phi$ is a symplectomorphism on the dense open subset $\MM^\circ$. The space $\cP$ is also equipped with the data of a prequantum system, $(\cP, \omega_\cP, \pi_\cP, \LL_0)$, with $\phi^\ast \omega_\cP = \omega$ and $\pi_{\cP}\circ\phi = \pi$. 
@@ -67,7 +73,7 @@
 		\begin{equation}
 			\Theta(A,g) = \Theta(A_0, g_0).
 		\end{equation}
-		In particular, this implies that $\LL = \LL_0$ on the dense open set in $\MM$ symplectomorphic to $\cP$.
+		In particular, this implies that $\LL = \phi^\ast \LL_0 =$.
 		\label{t:l=l0}
 	\end{theorem}
 	\begin{proof}
@@ -94,38 +100,19 @@
 		\end{equation}
 	\end{theorem}
 	\begin{proof}
-		The degeneration $\phi:\MM\to\cP$ is surjective, and thus $\phi^\ast:H^0(\JJ_{\pi,0},\cP) \to H^0(\JJ_\pi,\MM)$ is injective. Hence it remains to show that $\phi^\ast$ is surjective. Let $U \subset \MM$ be the open dense subset which is symplectomorphic to $\cP$. We will identify $\phi(U)=U$ and identify $H^0(\JJ_{\pi,0}, U) = H^0(\JJ_\pi, U)$ to simplify notation.
+		The degeneration $\phi:\MM\to\cP$ is surjective, and thus $\phi^\ast:H^0(\JJ_{\pi,0},\cP) \to H^0(\JJ_\pi,\MM)$ is injective. Hence it remains to show that $\phi^\ast$ is surjective.
 		\smallskip
 		
-		Let $s\in H^0(\JJ_\pi, M)$ be any section, which we can restrict to obtain a section $s|_U\in H^0(\JJ_{\pi,0}, U)$. Let $\Ap \in \cP - U$, and let $V = U\cap \pi_{\cP}^{-1}(\pi_{\cP}(\Ap)) \subset \cP$. (Could this be empty?) Pick any $x_0\in V$, and any path $\gamma:x_0\to\Ap$ in $V$. Let $\Pi^\gamma:(\LL_0)_{x_0}\to(\LL_0)_{\Ap}$ denote the parallel transport along $\gamma$. Then define:
+		From theorem \ref{t:l=l0}, we have that $\LL=\phi^\ast \LL_0$ and $\phi^\ast \omega_\cP = \omega$. Suppose $s\in H^0(\JJ_{\pi},\MM)$ and suppose $x \in P$. Let $y_1,y_2 \in \phi^{-1}(x)$; it is permitted that $y_1=y_2$. Then $\pi(y_1) = \pi_P\circ \phi(x) = \pi(y_2)$ so $y_1$ and $y_2$ are in the same fibre of $\pi$. Stalkwise we have
 		\begin{equation}
-			s'(\Ap):= \Pi^\gamma s(x_0).
-		\end{equation}
-		Let us verify this is well defined. First suppose we had two paths $\gamma:x_0\to \Ap$ and $\gamma':x_0\to \Ap$ in $\cP$. Since $\phi$ is not injective, there are multiple choices of lifts $\tilde{\gamma}$ of $\gamma$, which may have different endpoints. However, we can fix any $y \in \phi^{-1}(\Ap)$, and lift $\gamma$ and $\gamma'$ to paths $\tilde{\gamma},\tilde{\gamma'}:x_0\to y$. Note that because $\pi \circ \phi = \pi_{\cP}$, these lifts will be in $\pi^{-1}\pi(\phi(\Ap))$. Our initial section $s\in H^0(\JJ_\pi, \MM)$ has a well defined value $s(y)$, and since it is covariant constant on the fibres of $\pi$, we have:
+			\LL_{y_1} \cong \LL_{0,x} \cong \LL_{y_2},
+		\end{equation} 
+		so it makes sense to ask if $s(y_1) = s(y_2)$. Since $s$ is covariant constant on the fibres of $\pi$, and the fibres of $\pi$ are (path?) connected \cite{jeffrey_bohr-sommerfeld_1992}[thm 2.5], we must have $s(y_1)=s(y_2)$, and so it is well defined to let $s'\in H^0(\JJ_{\pi,0},P)$ be given by $s'(x) = s\left(\phi^{-1}(x)\right)$. Then
 		\begin{equation}
-		\Pi^{\tilde{\gamma}\circ \tilde{\gamma}'^{-1}} s(y) = s(y). 
+			\phi^\ast s'(y) = s'(\phi(x)) = s(y),
 		\end{equation}
-		Finally, since $\phi^\ast$ maps the connection on $\LL_0$ to that of $\LL$, we have that it preserves parallel transport:
-		\begin{equation}
-		\phi^\ast \Pi^{\phi\circ\tilde{\gamma}} s = \Pi^{\tilde{\gamma}} \phi^\ast s.
-		\end{equation}
-		In particular, 
-		\begin{equation}
-		\phi^\ast \Pi^{\gamma}s(x_0) = \phi^\ast\Pi^{\gamma\circ\gamma'^{-1}}\Pi^{\gamma'}s(x_0) = \Pi^{\tilde{\gamma}\circ \tilde{\gamma}'^{-1}} \Pi^{\tilde{\gamma}'}\phi^\ast s(x_0) =  \Pi^{\tilde{\gamma}'}\phi^\ast s(x_0) = \phi^\ast\Pi^{\gamma'}s(x_0).
-		\end{equation}
-		Injectivity of $\phi^\ast$ thus implies $s'$ is independent of the choice of path. 
-		\smallskip
-		
-		Now suppose we took a different point $x_1$. Let $\rho:x_1\to x_0$ be another path. Since $x_1,x_0 \in V$, where we know $s$ is covariant constant, if $\rho:x_1\to x_0$ is any path then,
-		\begin{equation}
-		\Pi^{\gamma}s(x_0) = \Pi^{\gamma}\Pi^{\rho}s(x_1),
-		\end{equation}
-		which tells us $s'$ is also independent of the choice of point, and is hence well defined. 
-		\smallskip
-		
-		Finally, for all $y\in \MM$, we have:
-		\begin{equation}
-			\phi^\ast (s') (y) = s'(\phi(y)) = \phi^\ast \Pi^{\gamma} s(x_0) =  \Pi^{\tilde{\gamma}} \phi^\ast s(x_0) = s(y) ~ \in H^0(\JJ_\pi,\MM).
-		\end{equation}
-		Therefore, $\phi^\ast$ is surjective.
+		so $\phi^\ast$ is surjective.
 		\end{proof}
+		not sure about this yet
+		
+	

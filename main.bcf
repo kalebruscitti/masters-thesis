@@ -2200,9 +2200,13 @@
     <bcf:citekey order="16">jeffrey_bohr-sommerfeld_1992</bcf:citekey>
     <bcf:citekey order="17">sniatycki_cohomology_1977</bcf:citekey>
     <bcf:citekey order="18">hurtubise_representations_2000</bcf:citekey>
-    <bcf:citekey order="19">biswas_degenerations_2021</bcf:citekey>
+    <bcf:citekey order="19">hurtubise_representations_2000</bcf:citekey>
     <bcf:citekey order="20">hurtubise_representations_2000</bcf:citekey>
-    <bcf:citekey order="21">jeffrey_bohr-sommerfeld_1992</bcf:citekey>
+    <bcf:citekey order="21">hurtubise_representations_2000</bcf:citekey>
+    <bcf:citekey order="22">hurtubise_representations_2000</bcf:citekey>
+    <bcf:citekey order="23">biswas_degenerations_2021</bcf:citekey>
+    <bcf:citekey order="24">hurtubise_representations_2000</bcf:citekey>
+    <bcf:citekey order="25">jeffrey_bohr-sommerfeld_1992</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

@@ -28,30 +28,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Extended Moduli Spaces of Connections}{27}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Symplectic Implosion}{28}%
+\contentsline {section}{\numberline {4.2}Imploded Cross-Sections}{28}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Projective Embedding of $\mathcal {M}$}{29}%
+\contentsline {section}{\numberline {4.3}Projective Embedding of $\mathcal {M}$}{31}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Parabolic Vector Bundles}{30}%
+\contentsline {section}{\numberline {4.4}Parabolic Vector Bundles}{32}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Moduli of Framed Parabolic Bundles}{31}%
+\contentsline {section}{\numberline {4.5}Moduli of Framed Parabolic Bundles}{33}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Framed Parabolic Bundles on a Trinion}{35}%
+\contentsline {section}{\numberline {4.6}Framed Parabolic Bundles on a Trinion}{37}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.7}Gluing $\mathcal {P}$ over Trinions }{39}%
+\contentsline {section}{\numberline {4.7}Gluing $\mathcal {P}$ over Trinions }{41}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Degenerating the Moduli Space}{42}%
+\contentsline {chapter}{\numberline {5}Degenerating the Moduli Space}{44}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Degeneration of the Curves}{42}%
+\contentsline {section}{\numberline {5.1}Degeneration of the Curves}{44}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Local Model for the Connections}{44}%
+\contentsline {section}{\numberline {5.2}Local Model for the Connections}{46}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Degeneration of the Moduli Space}{44}%
+\contentsline {section}{\numberline {5.3}Degeneration of the Moduli Space}{47}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Toric Degenerations}{46}%
+\contentsline {section}{\numberline {5.4}Toric Degenerations}{49}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Counting the Dimension of the Real Quantization}{48}%
+\contentsline {chapter}{\numberline {6}Counting the Dimension of the Real Quantization}{51}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Polarization and Prequantum Line Bundle on $P$}{48}%
+\contentsline {section}{\numberline {6.1}Polarization and Prequantum Line Bundle on $P$}{51}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Invariance of $\mathcal {L}$ under Degeneration.}{48}%
+\contentsline {section}{\numberline {6.2}Invariance of $\mathcal {L}$ under Degeneration.}{54}%

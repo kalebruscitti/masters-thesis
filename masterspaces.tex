@@ -29,26 +29,96 @@
 		D_j&\to \sigma D_j, & C_1 &\to \sigma C_1\sigma^{-1}
 	\end{align*}
 	and an element $\sigma$ in the $l$th copy $(l=2,...,n)$ of $G$ acts by
-	\begin{align*}
+	\begin{align}
+	\label{e:impl-action}
 	D_l&\to D_l\sigma^{-1}, & C_l &\to \sigma C_l\sigma^{-1}.
-	\end{align*}
-	This action restricts to give an action of $G^n$ on $\MM^T$. Next we would hope to give $\MM^G$ some symplectic structure. It turns out, the appropriate structure is that of a \textit{quasi-Hamiltonian} $G$ \textit{space}. It is known that (cite AMM) $\MM^G$ has a 2-form $\omega$ invariant under the $G^k$ action, and an equivariant \textit{moment map} $\MM^G\to G$, given by $(A_i,B_i,D_j,C_j)\to C_k^{-1}$. 
+	\end{align}
+	This action restricts to give an action of $G^n$ on $\MM^T$. Next we would hope to give $\MM^G$ some symplectic structure. It turns out, the appropriate structure is that of a \textit{quasi-Hamiltonian} $G$ \textit{space}. It is known that (cite AMM) $\MM^G$ has a 2-form $\omega$ invariant under the $G^k$ action, and an equivariant \textit{moment map} $\Phi:\MM^G\to G$, given by $(A_i,B_i,D_j,C_j)\to C_k^{-1}$. 
 	
-	\section{Symplectic Implosion}
+	\section{Imploded Cross-Sections}
 	To proceed, we will state some definitions and results of (citations here):
-	
-	
 	\begin{definition}
-		For $\MM^G$ defined above, with fundamental alcove $\Delta\subset G$, we define the imploded cross section 
+		For a quasi-Hamiltonian $G$-space $M$ with moment map $\Phi$, with fundamental alcove $\Delta$, we define the imploded cross section 
 		\begin{equation}
-			P := \prod_{\sigma} \frac{\Phi^{-1}(\sigma)}{[G_\sigma, G_\sigma]},
+			M_{impl} := \prod_{\sigma} \frac{\Phi^{-1}(\sigma)}{[G_\sigma, G_\sigma]},
 		\end{equation}
 		where $\sigma$ ranges over the faces of $\Delta$, and $G_\sigma$ is the stabilizer of $\sigma$ under the action of $G$ by conjugation at a point in the interior of $\sigma$.
 	\end{definition}
-	TODO: all of this section \pagebreak
+	For example, consider the double $D(G):=G\times G$, which is a quasi-Hamiltonian $G\times G$ space with the action
+	\begin{equation}
+		(g_1,g_2)\cdot (a,b) = (g_1 a g_2^{-1}, g_2bg_1^{-1}),
+	\end{equation}
+	and moment-map $\Phi:D(G)\to G\times G$ given by $\Phi(a,b)\to(ab,a^{-1}b^{-1})$. Let us introduce new co-ordinates $u=a$ and $v=ba$ for $D(G)$, in which the action becomes
+	\begin{equation}
+		(g_1,g_2)\cdot(u,v) = (g_1ug_2^{-1}, \Ad_{g_2} v),
+	\end{equation}
+	and the moment map becomes
+	\begin{equation}
+		\Phi(u,v) = (\Ad_u v, v^{-1}).
+	\end{equation}
+	\begin{theorem}
+		For $G=SU(2)$, $T=S^1$, the implosion $D(G)_{impl}$ is smooth, isomorphic to $S^4$, and is a quasi-Hamiltonian $G\times T$-space.
+	\end{theorem}
+	\begin{proof}
+		Sketch: see \cite[prop 2.29]{hurtubise_representations_2000}. For $SU(2)$, the fundamental alcove is $\Delta = [0,1]$, which has three faces, $\sigma_0 = (0,1)$, and $\sigma_{\pm} = \pm1$. For $\sigma_0$, we have $G_{\sigma_0} = T$ and hence $[G_{\sigma_0}, G_{\sigma_0}]$ is trivial. For $\sigma_\pm$, $G_\sigma = G = [G_\sigma,G_\sigma]$. For each face $\sigma$ of $\Delta$, the imploded cross-section has a stratum that is a quasi-Hamiltonian $G\times T$-space (AMM thm 5.1).
+		
+		For the interior $\sigma_0$, we have $\Phi^{-1}(\sigma_0) = \{(u,v)\in D(G)~|~ v^{-1}\in \sigma^0\} = G \times \sigma^0$, and hence $\Phi^{-1}(\sigma_0)/[G_{\sigma_0},G_{\sigma_0}] = G\times \sigma^0$. For the other faces $\sigma_{\pm}$, $\Phi^{-1}(\sigma_\pm) = \{(u,v)\in D(G)~|~ v^{-1} = \pm 1\} = G$, hence $\Phi^{-1}(\sigma_\pm)/[G_{\sigma_\pm},G_{\sigma_\pm}] = G/G = 1$. Therefore the imploded cross section is
+		\begin{equation}
+			D(G)_{impl} = (G\times \sigma^0) \coprod {1} \coprod {1}.
+		\end{equation}
+		One can identify this with $S^4$ by projecting the cylinder $(G\times \sigma^0) \cong S^3\times (-1,1)$ to $S^4$ without the north and south poles, and then identifying the two points with the poles. 
+		
+		The interior stratum $(G\times \sigma^0)$'s quasi-Hamiltonian structure is inherited from that of $D(G)$, and one must check explicitly that it extends to the other two points. The residual $G\times T$ action on $G\times \sigma^0$ is given by
+		\begin{equation}
+			(g,t)\cdot (u,v) = (gut^{-1},v),
+		\end{equation}
+		with moment maps $\Phi_G(u,v) = (uvu^{-1})$ and $\Phi_T(u,v) = v^{-1}$.
+	\end{proof}
+	To compute the imploded cross-section of our extended moduli spaces, we will use the following result \cite[Prop 2.32]{hurtubise_representations_2000}:
+	\begin{theorem}
+		Let $M$ be a quasi-Hamiltonian $H\times G$-space, where $G=SU(2)$, and let $D(G)_{impl}$ be the imploded cross-section of $D(G)$. Then
+		\begin{equation}
+			M_{impl} = M\times D(G)_{impl}\sslash G = {(m,\xi)\in M\times D(G)_{impl}~|~\Phi(m)=\Phi_G(\xi)}/G.
+		\end{equation}
+		The space $M_{impl}$ is a quasi-Hamiltonian $H\times T$ space, and it is smooth over the locus of points $(m,\xi)\in M\times D(G)_{impl}$ where the stabiliser of the $G$-action is trivial.
+	\end{theorem}
+	We want to apply this construction to the space $\MM^G$ which is a quasi-Hamiltonian $G^n$-space. There is an action of $G$ associated to each curve in our trinion decomposition for $\Sigma$, with moment map $\Phi_i$ given by just $C_i^{-1}$. Performing the implosion once for each puncture, the resulting space $\MM^G_{impl}$ will be denoted $P$, and it is a Hamiltonian $T^n$ space.
+	
+	After imploding the first $n-1$ punctures $(j=2,...,n)$, we obtain the set
+	\begin{equation}
+		\left\{
+		(A_i,B_i,C_1,W_2,...,W_n)~|~ A_k,B_k,C_1 \in G, W_j \in D(G)_{impl},~ \prod_{j=1}^{g}[A_j,B_j]C_1\prod_{j=2}^{n} \Phi_G(W_j) = 1 
+		\right\}.
+	\end{equation}
+	To finish the imploded cross-section, it remains to implode the cross-section for the action of the first copy of $G$ appropriately. Let $W_1 = (D_1,C_1)$ in $G$ and define an action of $G$ by
+	\begin{equation}
+		(A_k,B_k,W_j=(u_j,v_j)) \to (gA_kg^{-1}, gB_kg^{-1}, (gu_j,v_j)).
+	\end{equation}
+	Then the final imploded cross-section $P$ becomes \cite{hurtubise_representations_2000}
+	\begin{equation}
+		\label{e:P-def}
+		P = \left\{(A_k,B_k,W_1,...,W_n)~|~ \coprod_{j=1}^g[A_j,B_j]\coprod_{j=1}^n \Phi_G(W_j)=1\right\}.
+	\end{equation}
+	There is a natural map from $\MM$ to $P$:
+	\begin{lemma}
+		There is a surjective map $\phi:\MM\to P$ which is a bijection over the interior $(\Delta^0)^n$ of the moment polytope. 
+	\end{lemma}
+	\begin{proof}
+		For each puncture $p_k$, the corresponding imploded cross-section is given by the strata
+		\begin{equation}
+			\Phi_k^{-1}(\sigma)/[G_\sigma, G_\sigma]
+		\end{equation}
+		for each face $\sigma \in \Delta$ in the fundamental chamber of the $k$-th copy of $G$. The inverse image $\Phi_k^{-1}(\Delta)$ are those elements with $C_k^{-1} \in T$, and therefore the elements in $\bigcap_k \Phi_k^{-1} (\Delta)$ is exactly $\MM$. Then the quotient map on each strata defines a surjection $\phi:\MM\to P$. Over the interior $\Delta^0$ of each implosion, the quotient is trivial so $\phi$ is the identity map, which is bijective. 
+	\end{proof}
+	\begin{theorem}
+		Over $(\Delta^0)^n$, $\phi:\MM \to P$ is a symplectomorphism.
+	\end{theorem}
+	\begin{proof}
+		Hurtubise and Jeffrey \cite[Proposition 2.37]{hurtubise_representations_2000}.
+	\end{proof}
 	
 
-	
+	\pagebreak
 	Now associated to the compact Riemann surface $\Sigma$ we have a symplectic variety $P$ of representations with weighted frames, which is toric for $G=SU(2)$ and has a prequantum line bundle $\LL_P$ corresponding to $\LL$ on $\MM$. Now we will go in detail on the other half of Jeffrey and Hurtubise's construction, building the complex variety $\cP$ of \emph{framed parabolic bundles} over a singular curve $\tilde{\Sigma}$ corresponding to contracting the loops in a trinion decomposition of $\Sigma$. We will see that $P$ and $\cP$ are diffeomorphic, meaning that we can compute sections of prequantum line bundles over $\cP$ using the structure of $P$.
 	
 	First we will see how to embed $\MM$ into projective space, as this construction will have us transform the data of $\MM$ from holomorphic bundles over $\Sigma$ to sheaves, and will lay the groundwork for the embedding we will require later as a hypothesis of the theorem of Harada and Kaveh. Then we will describe the construction of $\cP$ and the diffeomorphism with $P$.

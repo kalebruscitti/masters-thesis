@@ -35,15 +35,15 @@
 	\label{s:local-model-conns}
 	On our local model for the degeneration of the curve $\Sigma$, we can also give a local model for the degeneration of a unitary connection $\nabla$ on a vector bundle $E$ over $\Sigma$. Let
 	\begin{equation}
-		A = \Hol_{c_1}(\nabla),
+		C = \Hol_{c_1}(\nabla),
 	\end{equation}
-	and let $\alpha = \text{diag}(\alpha_1,...,\alpha_{\text{rank } E}))$, where $\alpha_i$ are the eigenvalues of $A$. Up to gauge equivalence, we can assume $\nabla$ is A.T.D (thm 8) and therefore locally
+	and let $\alpha = \text{diag}(\alpha_1,...,\alpha_{\text{rank } E}))$, where $\alpha_i$ are the eigenvalues of $C$. Up to gauge equivalence, we can assume $\nabla$ is a.t.d. (thm \ref{t:atd-thm}) and therefore locally
 	\begin{equation}
 		\nabla = d + i\frac{\alpha}{2}(d\theta_x - d\theta_y) = \partial + \frac{\alpha}{4}\left(\frac{dx}{x}-\frac{dy}{y}\right) + \dbar+ \frac{\alpha}{4}\left(\frac{d\bar{x}}{\bar{x}}-\frac{d\bar{y}}{\bar{y}}\right),
 	\end{equation} 
 	where $\theta_x$ and $\theta_y$ are the arguments of the complex co-ordinates $x$ and $y$. The connection is isomonodromic, meaning that for all $t\neq 0$, 
 	\begin{equation}
-		\Hol_{c_t}(\nabla) = \Hol_{c_1}(\nabla)=A.
+		\Hol_{c_t}(\nabla) = \Hol_{c_1}(\nabla)=C.
 	\end{equation}
 	On our family $Q_t$, this connection is well defined for all $t\neq 0$, and so it remains to describe the connection in the limit $t=0$. We can change co-ordinates on $Q_t$ from $(x,y)$ to $(x,t)$, and the connection becomes
 	\begin{equation}
@@ -62,6 +62,23 @@
 		\nabla^p = d - i\alpha d\theta_y,
 	\end{equation}
 	which passes well to the limit $x\to 0$. Therefore we obtain a partial connection $\nabla^p$ defined everywhere on $Q_0$ except the nodal point $x_0$.
+	
+	This local model can also be described in terms of the holonomy of the connection. Suppose first that $\Sigma - c_1$ is not disconnected, and denote by $\tilde{\Sigma}_0$ the desingularized degenerated curve. Let $p_1, p_2$ denote the punctures in $\tilde{\Sigma}$ corresponding to $c_0 = x_0$. Then $\tilde{\Sigma}$ is a twice punctured curve for which we have the extended moduli space $\MM^G$ from section \ref{s:mastermoduli}:
+	\begin{equation}
+		M = \left\{\left((A_i,B_i)_{i=1}^{g-1}, (C_1,C_2,D_1,D_2)\right), ~|~ \prod_{i=1}^{g-1}[A_i,B_i]D_1C_1D_1^{-1}D_2C_2D_2^{-1} = 1\right\} / SU(n)
+	\end{equation}
+	If we begin with a connection on $\Sigma$ with holonomy $C$ around the curve $c_1$, and degenerate the curve $c_1$, the degenerated connection has holonomy $C$ around the puncture $p_1$ and $R(C)^{-1}$ around the puncture $p_2$, where $R$ reverses the order of $\alpha$. After gluing the puncture, the fundamental group of $\Sigma$ has the relation
+	\begin{equation}
+	 D_1^{-1}CD_1D_2^{-1}C^{-1}D_2 = 1, \implies D_2D_1^{-1}CD_1D_2^{-1} = C.
+	\end{equation}
+	Therefore, $D_1D_2^{-1} \in \Stab(C)$, or $D_1\mu = D_2$ for some $\mu\in \Stab(C)$. Our degeneration thus sends the connection $\nabla = (A_i,B_i,C_j,D_j)$ to the orbit
+	\begin{equation}
+		\label{e:degen-action}
+		(A_i,B_i,C_j,D_j) \to \left(
+		(A_i,B_i,C_j,D_j)_{j\neq k}, (\mu C_k \mu^{-1}, D_k, D_k \mu)\right), ~\mu \in \Stab(C_k)
+		= \text{Orb}_{\Stab (C_k)} (\nabla)
+	\end{equation}
+	If $C_k$ is in $\exp \Delta^0$, then $\Stab(C_k) = \{e\}$ and the degeneration is bijective. Otherwise, when $C_k = \pm 1$, then $\Stab(C_k) = SU(2)$. Notice that the action of equation \ref{e:degen-action} matches the action of the $k$-th copy of $G$ on $\MM^G$ in equation \ref{e:impl-action}. Therefore, these orbits are points in the strata of the imploded cross-section of $M$. When we perform this local degeneration for each curve in the trinion decomposition, which corresponds to imploding $\MM^G$ for each puncture, we will obtain an element in the imploded cross-section $P$. 
  	
 \section{Degeneration of the Moduli Space}
 	On $\Sigma_t$ for $t\neq 0$, we simply have the moduli space $\MM$ of flat $SU(2)$ connections which corresponds to the moduli space of stable holomorphic vector bundles with $SL(2,\C)$ structure. Therefore it remains to understand the moduli space over $\Sigma_0$ and the desingularisation $\tilde{\Sigma}_0$. 
@@ -91,7 +108,46 @@
 	\begin{equation}
 		\MM = \MM^T \hookrightarrow \MM^G \twoheadrightarrow P,
 	\end{equation}
-	described by Hurtubise and Jeffrey \cite{hurtubise_representations_2000}[prop 2.37]. TODO: argue this is true carefully
+	described by Hurtubise and Jeffrey \cite[prop 2.37]{hurtubise_representations_2000}. 
+	\begin{lemma}
+		Given an element $A\in \MM$, let $D(A)$ denote the element in $P$ obtained by performing the local degeneration of section \ref{s:local-model-conns} at each curve in a trinion decomposition for $\Sigma$. Then $D(A) = \phi(A)$, where $\phi(A)$ is the composition of maps 
+		\begin{equation}
+			\MM = \MM^T \hookrightarrow \MM^G \twoheadrightarrow P,
+		\end{equation}
+		where the surjection is the quotient map of the imploded cross-section.
+	\end{lemma}
+	\begin{proof}
+		Fix one closed curve $\gamma_k$ in the trinion decomposition. Then an element $A\in \MM$ defines a holonomy $C_k\in T\subset SU(2)$ around $\gamma_k$, and we also have the local model for the degeneration $D(A)$ on a tubular neighbourhood around $\gamma_k$. First let us compute $\phi(A)$. Suppose $A = (A_i,B_i,C_j,D_j)$. Then to compute the quotient for the imploded cross-section, we have three faces $\{\sigma_0, \sigma_+, \sigma_-\}$ of $\Delta = [0,1]$ to consider. If $C_j^{-1} \in \exp \sigma_0$ then it is quotiented by the stabiliser $[G_\sigma,G_\sigma] = \{e\}$ as discussed in section \ref{s:mastermoduli}. If $C_j^{-1} = \pm 1$, then it is quotiented by the stabiliser $[G_\sigma, G_\sigma] = G$, under the action
+		\begin{equation}
+			D_k \to D_k g^{-1},~ C_l \to g C_l g^{-1}.
+		\end{equation}
+		In summary:
+		\begin{equation}
+			\phi(\nabla) = \begin{cases}
+				(A_i,B_i,C_j,D_j), & C_k \in \sigma_0\\
+				\text{Orb}_{SU(2)}(\nabla) , & C_k \in \sigma_\pm
+			\end{cases}
+		\end{equation}
+		On the other hand, the degeneration $D(A)$ takes $(A_i,B_i,C_j,D_j)$ to the set
+		\begin{equation}
+			D(A) = \left\{
+			\left(
+			(A_i,B_i,C_j,D_j)_{j\neq k} (C_k, D_k, D_k\mu) ~|~ \mu \in \Stab(C_k)
+			\right)
+			\right\}
+		\end{equation}
+		For $C_k$ in $\sigma_0$, the stabilizer is $\{e\}$ and we have
+		\begin{equation}
+			D(A_i,B_i,C_j,D_k) = (A_i,B_i,C_j,D_k) = \phi(A).
+		\end{equation}
+		If $C_k$ is in $\sigma_\pm$, then the stabilizer is $SU(2)$ and we have
+		\begin{equation}
+			D(A_i,B_i,C_j,D_k) = \text{Orb}_{SU(2)}(\nabla),
+		\end{equation}
+		under the action ref. which is the same as that defined for the imploded cross-section. Hence on each stratum, $\phi(\nabla) = D(\nabla)$.
+		
+		For each curve in the trinion decomposition, we can repeat this process, until it remains to perform the final quotient by the first copy of $G$. (todo)
+	\end{proof}
 	
 	\section{Toric Degenerations}
 	Here we want to describe a result of Harada and Kaveh (cite), which constructs an integrable system from a \textit{toric degeneration} satisfying some additional hypotheses. 
@@ -127,5 +183,7 @@
 			\item There exists a completely integrable system $\mu = (F_1,...,F_n)$ on $(X,\omega)$ whose moment polytope $\Delta$ coincides with the moment polytope of $(X_0, \omega_0)$.
 			\item Let $U\subset X$ be the open dense subset of $X$ from item 1. Then the integrable system of item 2 generates a Hamiltonian torus action on $U$, and the inverse image $\mu^{-1}(\Delta^\circ)$ of the interior of $\Delta$ under the moment map lies in the open subset $U$.
 		\end{enumerate}
+		
+		
 	\end{theorem}
 

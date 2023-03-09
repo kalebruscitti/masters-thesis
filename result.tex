@@ -5,15 +5,17 @@
 	\begin{equation}
 		\tilde{f}_k(A_i,B_i,D_j,C_j) = \frac{1}{\pi}\cos^{-1} \left(\Tr C_k\right)
 	\end{equation}
-	To get functions on $P$, one must check that these $\tilde{f}_k$ pass to the symplectic implosion. -- 
-
-\section{Invariance of $\LL$ under Degeneration.}
-	At present we have a Riemann surface $\Sigma$, with a trinion decomposition given by boundary circles $\{C_i\}_{i=1}^{3g-3}$. We have a moduli space $\MM$ of flat connections over $\Sigma$, with an open dense subset $\MM^\circ$ equipped with the data of a prequantum system: $(\MM^\circ, \omega, \pi, \LL)$. We also have a degeneration of $\Sigma$ to a nodal curve $\Sigma_0$, and a corresponding degeneration of moduli spaces, $\phi:\MM\to \cP$. Moreover, $\phi$ is a symplectomorphism on the dense open subset $\MM^\circ$. The space $\cP$ is also equipped with the data of a prequantum system, $(\cP, \omega_\cP, \pi_\cP, \LL_0)$, with $\phi^\ast \omega_\cP = \omega$ and $\pi_{\cP}\circ\phi = \pi$. 
+	To get functions on $P$, one must check that these $\tilde{f}_k$ pass to the symplectic implosion. For the action of $G_k$ on $\MM^G$, with moment map $\Phi_k(A_i,B_i,D_j,C_j) = C_j^{-1}$, and a given face $\sigma$ of $\Delta$ we have
+	\begin{equation}
+		\Phi_k^{-1}(\sigma_0) = \{
+		(A_i,B_i,D_j,C_j) \in \MM^G ~|~ C_k^{-1} \in \sigma
+		\}
+	\end{equation}
+	Hence $\tilde{f}_k$ is constant on on $\Phi_k^{-1}(\sigma)$ and passes to the quotient by $[G_\sigma,G_\sigma]$. For $l != k$, the value of $\tilde{f}_l$ depends only on $C_l$, which is not acted on by $G_k$ and therefore $\tilde{f}_l$ also passes to the quotient. It remains to check that these functions pass under the quotient by the first copy of $G$ (TODO).
 	
-	We want to compute the dimension of the quantization for $\MM$ in terms of that for $\cP$ using $\phi$, which requires us to check that the spaces of sections of $\LL$ over $\MM^\circ$ and $\LL_0$ over $\cP$ are the same. To show that $\LL$ and $\LL_0$ agree, it would suffice to show that for every pair $(A,g)\in \cA\times \cG$, the function $\Theta$ is invariant under the degeneration; namely $\Theta(A,g) = \Theta(D(A), D(g))$, as then the equivalence relations defining $\LL$ and $\LL_0$ are the same.
-	
+	Next we build a prequantum line bundle on $P$. On the locus where $\phi:\MM\to P$ is a symplectomorphism, we can simply define $\LL_P = \LL$, but we must discuss the extension to the rest of $P$. Recall that we defined a function $\Theta:\cA\times\cG\to U(1)$ for connections over $\Sigma$. For the singular curve $\Sigma_0$, we can define $\Theta$ exactly the same way, which would allow us to define an equivalence relation on $\cA_0\times \mathbb{C}$ by $(A,z)\sim (g\cdot A, \Theta(A,g)z)$. Then we can define a line bundle $\tilde{\LL} = \cA_0 \times \mathbb{C}/\sim$ over $\MM^T$. To get a bundle on $P$, we want to check that $\Theta$ passes well under the quotient map to each strata of the imploded cross-section $P$. On the generic locus where $\phi$ is a symplectomorphism, there is nothing to check, so we're left only with the subset where $\phi$ is merely surjective. 
 	\begin{lemma}
-		Let $V_i$ be a tubular neighbourhood of $C_i$ in $\Sigma$. Let $V_{0}$ denote the (disconnected) image of $V_i$ under the surface degeneration. Then for every pair $(A,g)$ on $\Sigma$ which degenerates to a pair $(A_0, g_0)$ on $\Sigma_0$, there exists liftings $(\bA,\bg)$ and $(\bA_0,\bg_0)$ such that
+		Let $V_i$ be a tubular neighbourhood of $C_i$ in $\Sigma$. Let $V_{0}$ denote the (disconnected) image of $V_i$ under the surface degeneration. Then for every pair $(A,g)\in\cA\times \cG$ on $\Sigma$ which degenerates to a pair $(A_0, g_0)$ on $\Sigma_0$, there exists liftings $(\bA,\bg)$ and $(\bA_0,\bg_0)$ such that
 		\begin{equation}
 			\int\limits_{V_i} \Tr(\bg^{-1}d\bg\wedge \bA) = \int\limits_{V_0} \Tr(\bg_0^{-1}d\bg_0\wedge \bA_0).
 		\end{equation}
@@ -73,7 +75,8 @@
 		\begin{equation}
 			\Theta(A,g) = \Theta(A_0, g_0).
 		\end{equation}
-		In particular, this implies that $\LL = \phi^\ast \LL_0 =$.
+		In particular, this implies that if $(A,g)$ and $(B,h)$ both degenerate to $(A_0,g_0)$, then $\Theta(A,g)=\Theta(B,g)$
+		 $\LL = \phi^\ast \LL_0 =$.
 		\label{t:l=l0}
 	\end{theorem}
 	\begin{proof}
@@ -93,26 +96,32 @@
 				&= \Theta(A_0,g_0).
 		\end{align*}
 	\end{proof}
+	This theorem allows us to define the line bundle $\LL_P$ over $P$ by taking the quotient of $\LL$ under the relation $(x,z)\sim (y,z') \iff (\phi(x)=\phi(y), z=z')$. In particular, we have (???)
+	\begin{equation}
+		\phi^\ast \LL_P = \{(x,(y,z))\in \MM\times \LL_P ~|~ \phi(x) = y\} = \LL
+	\end{equation}
+
+\section{Invariance of $\LL$ under Degeneration.}
 	\begin{theorem}
-		For the prequantum systems $(M,\pi,\LL)$ and $(\cP,\pi_{\cP}, \LL_0)$, let $\JJ_\pi ~(\JJ_{\pi,0})$ be the sheaf of sections of $\LL ~(\LL_0)$ which are covariant constant on the fibres of $\pi ~(\pi_\cP)$. Then
+		For the prequantum systems $(M,\pi,\LL)$ and $(P,\pi_{P}, \LL_P)$, let $\JJ_\pi ~(\JJ_{\pi,P})$ be the sheaf of sections of $\LL ~(\LL_P)$ which are covariant constant on the fibres of $\pi ~(\pi_P)$. Then
 		\begin{equation}
-			H^0(\JJ_\pi, \MM) = H^0(\JJ_{\pi,0}, \cP).
+			H^0(\JJ_\pi, \MM) = H^0(\JJ_{\pi,P}, P).
 		\end{equation}
 	\end{theorem}
 	\begin{proof}
-		The degeneration $\phi:\MM\to\cP$ is surjective, and thus $\phi^\ast:H^0(\JJ_{\pi,0},\cP) \to H^0(\JJ_\pi,\MM)$ is injective. Hence it remains to show that $\phi^\ast$ is surjective.
+		The degeneration $\phi:\MM\to\cP$ is surjective, and thus $\phi^\ast:H^0(\JJ_{\pi,0},P) \to H^0(\JJ_\pi,\MM)$ is injective. Hence it remains to show that $\phi^\ast$ is surjective.
 		\smallskip
 		
-		From theorem \ref{t:l=l0}, we have that $\LL=\phi^\ast \LL_0$ and $\phi^\ast \omega_\cP = \omega$. Suppose $s\in H^0(\JJ_{\pi},\MM)$ and suppose $x \in P$. Let $y_1,y_2 \in \phi^{-1}(x)$; it is permitted that $y_1=y_2$. Then $\pi(y_1) = \pi_P\circ \phi(x) = \pi(y_2)$ so $y_1$ and $y_2$ are in the same fibre of $\pi$. Stalkwise we have
+		From theorem \ref{t:l=l0}, we have that $\LL=\phi^\ast \LL_P$ and $\phi^\ast \omega_P = \omega$. Suppose $s\in H^0(\JJ_{\pi},\MM)$ and suppose $x \in P$. Let $y_1,y_2 \in \phi^{-1}(x)$; it is permitted that $y_1=y_2$. Then $\pi(y_1) = \pi_P\circ \phi(x) = \pi(y_2)$ so $y_1$ and $y_2$ are in the same fibre of $\pi$. Stalkwise we have
 		\begin{equation}
-			\LL_{y_1} \cong \LL_{0,x} \cong \LL_{y_2},
+			\LL_{y_1} \cong \LL_{P,x} \cong \LL_{y_2},
 		\end{equation} 
-		so it makes sense to ask if $s(y_1) = s(y_2)$. Since $s$ is covariant constant on the fibres of $\pi$, and the fibres of $\pi$ are (path?) connected \cite{jeffrey_bohr-sommerfeld_1992}[thm 2.5], we must have $s(y_1)=s(y_2)$, and so it is well defined to let $s'\in H^0(\JJ_{\pi,0},P)$ be given by $s'(x) = s\left(\phi^{-1}(x)\right)$. Then
+		so it makes sense to ask if $s(y_1) = s(y_2)$. Since $s$ is covariant constant on the fibres of $\pi$, and the fibres of $\pi$ are (path?) connected \cite{jeffrey_bohr-sommerfeld_1992}[thm 2.5], we must have $s(y_1)=s(y_2)$, and so it is well defined to let $s'\in H^0(\JJ_{\pi,P},P)$ be given by $s'(x) = s\left(\phi^{-1}(x)\right)$. Then
 		\begin{equation}
 			\phi^\ast s'(y) = s'(\phi(x)) = s(y),
 		\end{equation}
 		so $\phi^\ast$ is surjective.
 		\end{proof}
-		not sure about this yet
+	
 		
 	

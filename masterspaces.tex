@@ -21,7 +21,16 @@
 	\begin{equation}
 	\MM^G := \{(A_i,B_i,D_j,C_j)\in G^{2g+n-1}\times G^n ~|~ \xi(A_i,B_i,D_j,C_j) = \mathds{1}\},
 	\end{equation}
-	and it is clear that $\MM^T \subset \MM^G$ by including $\exp(\Delta)\subset G$. There is an action of $G^n$ on these spaces. For $(A_i,B_i,D_j,C_j)\in \MM^G$, an element $\sigma$ in the first copy of $G$ acts by:
+	and it is clear that $\MM^T \subset \MM^G$ by including $\exp(\Delta)\subset G$.
+	\begin{theorem}
+		The space $\MM^G$ is a smooth manifold, isomorphic to $G^{2(g+n-1)}$.
+	\end{theorem}
+	\begin{proof}
+		The relation $\xi = 1$ allows us to write $C_1$ as a function of the other variables, which exhibits $\MM^G$ as the graph of a smooth function $G^{2(g+n-1)}\to G$.
+	\end{proof}
+	
+	
+	 There is an action of $G^n$ on these spaces. For $(A_i,B_i,D_j,C_j)\in \MM^G$, an element $\sigma$ in the first copy of $G$ acts by:
 	\begin{align*}
 		A_j &\to \sigma A_j \sigma^{-1},& 	B_j&\to \sigma B_j\sigma^{-1}
 	\end{align*}

@@ -1,27 +1,29 @@
 	
 	
 	\section{Extended Moduli Spaces of Connections}
-	As always, let $\Sigma$ be a compact connected genus $g$ Riemann surface. Recall that one construction of our moduli space $\MM$ was as the representations $\Hom(\pi_1(\Sigma),G)/G$, which has its subset topology as $\xi^{-1}(e)/G \subset G^{2g}/G$, where 
+	Let $G$ be a unitary Lie group and let $\Sigma$ be a compact connected genus $g$ Riemann surface. Recall (Section \ref{s:moduli-as-reps}) that the moduli space of flat connections $\MM$ can be constructed as representations $\Hom(\pi_1(\Sigma),G)/G$, which has its subset topology as $\xi^{-1}(e)/G \subset G^{2g}/G$, where 
 	\begin{equation}
 		\xi(A_1,B_1,...,A_g,B_g) = \prod_{i=1}^g A_iB_iA_i^{-1}B_i^{-1}.
 	\end{equation} 
-	Now let us generalize to the case where $\Sigma$ is permitted to have $n$ punctures, $\{p_i\}_{i=1}^n$. Let $c_i$ be a loop around $p_i$, and let $\{d_i\}_{i=2}^n$ be curves $d_i:p_1\to p_i$ in $\Sigma$. Then the fundamental group of $\Sigma$ can be written \cite{hurtubise_representations_2000}[2.2]:
+	Now let us generalize to the case where $\Sigma$ is permitted to have $n$ punctures, $\{p_i\}_{i=1}^n$. Fix a point $p$ in a neighbourhood of $p_1$, and let $c_1$ be a loop around $p_1$ based at $p$. For each $i\neq 1$, let $c_i$ be a loop around $p_i$ in $\Sigma$, based at a point $q_i$ in a neighbourhood of $p_i$, and let $\{d_i\}_{i=2}^n$ be curves $d_i:p\to q_i$ in $\Sigma$. Then the fundamental group of $\Sigma$ can be written \cite[Eqn. 2.2]{hurtubise_representations_2000}:
 	\begin{equation}
-		\pi_1(\Sigma) = \langle a_i, b_i, c_1, d_jc_jd_j^{-1} ~|~ \prod_{i=1}^{g}a_ib_ia_i^{-1}b_i^{-1}c_1\prod_{j=2}^{n}d_jc_jd_j^{-1}=e\rangle.
+		\pi_1(\Sigma) = \left\langle a_i, b_i, c_1, d_jc_jd_j^{-1} ~\bigg|~ \prod_{i=1}^{g}(a_ib_ia_i^{-1}b_i^{-1})c_1\prod_{j=2}^{n}d_jc_jd_j^{-1}=e\right\rangle.
 	\end{equation}
-	Thus, we will redefine $\xi:G^{2g+2n-1}\to G$ as
+	Thus, we will redefine $\xi:G^{2g+2n-1}\to G$ to be
 	\begin{equation}
-		\xi(a_1,b_1,...,a_g,b_g,c_1,...,c_n,d_2,...,d_n) = \prod_{i=1}^{g}a_ib_ia_i^{-1}b_i^{-1}c_1\prod_{j=2}^{n}d_jc_jd_j^{-1}.
+		\xi(a_1,b_1,...,a_g,b_g,c_1,...,c_n,d_2,...,d_n) = \prod_{i=1}^{g}(a_ib_ia_i^{-1}b_i^{-1})c_1\prod_{j=2}^{n}d_jc_jd_j^{-1},
 	\end{equation}
-	Suppose $\{C_i\}_{i=1}^{2g-g}$ is a trinion decomposition for an unpunctured surface $\tilde{\Sigma}$. Let $\Sigma_i$ be the (singular) surface obtained by shrinking $C_i$ to a point $p_i$ (needs clarification). Then proposition \ref{t:atd-thm} tells us that any element $A$ in $\MM$ can be represented by an A.T.D. connection, meaning that $A$'s holonomy around the curve $c_i$ corresponding to the point $p_i$ is in the fundamental alcove $\Delta\subset \mathfrak{t}$. Repeating this for each $C_i$ tells us that our moduli space corresponds to the $T$-extended moduli space:
+	and consider the set $\Hom(\pi_1(\Sigma),G)/G$, equipped with the subset topology $\xi^{-1}(e)/G\subset G^{2(g+n)-1}/G$.
+	
+	Suppose $\{C_i\}_{i=1}^{2g-g}$ is a trinion decomposition for an unpunctured surface $\tilde{\Sigma}$. Then, if we collapse a curve $C_j$ down to a single point $p_j$, we obtain a new surface $\Sigma$ with one puncture. From Proposition \ref{t:atd-thm}, any element $A$ in $\MM$ can be represented by an adapted to trinion decomposition (a.t.d.) connection (Def. \ref{d:atd-conn}), meaning that $A$'s holonomy around the curve $c_i$ corresponding to the point $p_i$ is in the fundamental alcove $\Delta\subset \mathfrak{t}$. If we repeat this for some $n$ curves in the trinion decomposition, the moduli space $\MM$ becomes the \emph{$T$-extended} moduli space
 	\begin{equation}
-		\MM = \MM^T := \{(A_i,B_i,D_j,C_j)\in G^{2g+n-1}\times \exp(\Delta)^n ~|~ \xi(A_i,B_i,D_j,C_j) = \mathds{1}\}.
+		\MM^T := \{\left[(A_i,B_i)_{i=1}^{g},C_1,(D_j,C_j)_{j=2}^n\right]\in G^{2g+n-1}\times \exp(\Delta)^n ~|~ \xi(A_i,B_i,D_j,C_j) = \mathds{1}\}.
 	\end{equation}
-	We can also define the $G$-extended moduli space:
+	We can also define the \emph{$G$-extended} moduli space:
 	\begin{equation}
-	\MM^G := \{(A_i,B_i,D_j,C_j)\in G^{2g+n-1}\times G^n ~|~ \xi(A_i,B_i,D_j,C_j) = \mathds{1}\},
+	\MM^G := \{\left[(A_i,B_i)_{i=1}^{g},C_1,(D_j,C_j)_{j=2^n}\right]\in G^{2g+n-1}\times G^n ~|~ \xi(A_i,B_i,D_j,C_j) = \mathds{1}\},
 	\end{equation}
-	and it is clear that $\MM^T \subset \MM^G$ by including $\exp(\Delta)\subset G$.
+	and the map $\exp:\Delta\to\exp(\Delta)$ induces an inclusion $\MM^T \subset \MM^G$.
 	\begin{theorem}
 		The space $\MM^G$ is a smooth manifold, isomorphic to $G^{2(g+n-1)}$.
 	\end{theorem}
@@ -29,31 +31,30 @@
 		The relation $\xi = 1$ allows us to write $C_1$ as a function of the other variables, which exhibits $\MM^G$ as the graph of a smooth function $G^{2(g+n-1)}\to G$.
 	\end{proof}
 	
-	
-	 There is an action of $G^n$ on these spaces. For $(A_i,B_i,D_j,C_j)\in \MM^G$, an element $\sigma$ in the first copy of $G$ acts by:
+	The conjugation action of $G$ gives an action on $\MM^G$, where an element $\sigma \in G$ acts by
 	\begin{align*}
 		A_j &\to \sigma A_j \sigma^{-1},& 	B_j&\to \sigma B_j\sigma^{-1}
 	\end{align*}
 	\begin{align*}
 		D_j&\to \sigma D_j, & C_1 &\to \sigma C_1\sigma^{-1}
 	\end{align*}
-	and an element $\sigma$ in the $l$th copy $(l=2,...,n)$ of $G$ acts by
+	For the punctures $l=2,...,n$, there is also an action of $G$ corresponding to changing the trivialization of the underlying bundle near the punctures. An element $\sigma$ in the $l$th copy $(l=2,...,n)$ of $G$ acts by
 	\begin{align}
 	\label{e:impl-action}
 	D_l&\to D_l\sigma^{-1}, & C_l &\to \sigma C_l\sigma^{-1}.
 	\end{align}
-	This action restricts to give an action of $G^n$ on $\MM^T$. Next we would hope to give $\MM^G$ some symplectic structure. It turns out, the appropriate structure is that of a \textit{quasi-Hamiltonian} $G$ \textit{space}. It is known that (cite AMM) $\MM^G$ has a 2-form $\omega$ invariant under the $G^k$ action, and an equivariant \textit{moment map} $\Phi:\MM^G\to G$, given by $(A_i,B_i,D_j,C_j)\to C_k^{-1}$. 
+	This action of $G^n$ on $\MM^G$ restricts to give an action on $\MM^T$. Next we would hope to give $\MM^G$ some symplectic structure. It turns out, the appropriate structure is that of a \textit{quasi-Hamiltonian} $G$ \textit{space}. It is known that $\MM^G$ has a 2-form $\omega$ invariant under the $G^k$ action, and an equivariant \textit{moment map} $\Phi:\MM^G\to G$, given by $(A_i,B_i,D_j,C_j)\to C_k^{-1}$ \cite{alekseev_lie_1998}. 
 	
-	\section{Imploded Cross-Sections}
-	To proceed, we will state some definitions and results of (citations here):
+	\section{Imploded Cross-Sections} 
+	To proceed, we will state some definitions and results about \emph{imploded cross sections}, from e.g.\cite{alekseev_lie_1998} and \cite{jeffrey_imploded_2020}:
 	\begin{definition}
-		For a quasi-Hamiltonian $G$-space $M$ with moment map $\Phi$, with fundamental alcove $\Delta$, we define the imploded cross section 
+		For a quasi-Hamiltonian $G\times H$-space $M$ with moment map $\Phi$, and fundamental alcove $\Delta\subset \mathfrak{g}$, we define the imploded cross section 
 		\begin{equation}
 			M_{impl} := \prod_{\sigma} \frac{\Phi^{-1}(\sigma)}{[G_\sigma, G_\sigma]},
 		\end{equation}
 		where $\sigma$ ranges over the faces of $\Delta$, and $G_\sigma$ is the stabilizer of $\sigma$ under the action of $G$ by conjugation at a point in the interior of $\sigma$.
 	\end{definition}
-	For example, consider the double $D(G):=G\times G$, which is a quasi-Hamiltonian $G\times G$ space with the action
+	The implosion should be thought of as collapsing one factor of $G$ into a factor of $T$. For example, consider the double $D(G):=G\times G$, which is a quasi-Hamiltonian $G\times G$ space with the action
 	\begin{equation}
 		(g_1,g_2)\cdot (a,b) = (g_1 a g_2^{-1}, g_2bg_1^{-1}),
 	\end{equation}
@@ -69,7 +70,7 @@
 		For $G=SU(2)$, $T=S^1$, the implosion $D(G)_{impl}$ is smooth, isomorphic to $S^4$, and is a quasi-Hamiltonian $G\times T$-space.
 	\end{theorem}
 	\begin{proof}
-		Sketch: see \cite[prop 2.29]{hurtubise_representations_2000}. For $SU(2)$, the fundamental alcove is $\Delta = [0,1]$, which has three faces, $\sigma_0 = (0,1)$, and $\sigma_{\pm} = \pm1$. For $\sigma_0$, we have $G_{\sigma_0} = T$ and hence $[G_{\sigma_0}, G_{\sigma_0}]$ is trivial. For $\sigma_\pm$, $G_\sigma = G = [G_\sigma,G_\sigma]$. For each face $\sigma$ of $\Delta$, the imploded cross-section has a stratum that is a quasi-Hamiltonian $G\times T$-space (AMM thm 5.1).
+		We only give a sketch here, the details can be found in \cite[Prop 2.29]{hurtubise_representations_2000}. For $SU(2)$, the fundamental alcove is $\Delta = [0,1]$, which has three faces, $\sigma_0 = (0,1)$, and $\sigma_{\pm} = \pm1$. For $\sigma_0$, we have $G_{\sigma_0} = T$ and hence $[G_{\sigma_0}, G_{\sigma_0}]$ is trivial. For $\sigma_\pm$, $G_\sigma = G = [G_\sigma,G_\sigma]$. For each face $\sigma$ of $\Delta$, the imploded cross-section has a stratum that is a quasi-Hamiltonian $G\times T$-space \cite[Theorem 5.1]{alekseev_lie_1998}.
 		
 		For the interior $\sigma_0$, we have $\Phi^{-1}(\sigma_0) = \{(u,v)\in D(G)~|~ v^{-1}\in \sigma^0\} = G \times \sigma^0$, and hence $\Phi^{-1}(\sigma_0)/[G_{\sigma_0},G_{\sigma_0}] = G\times \sigma^0$. For the other faces $\sigma_{\pm}$, $\Phi^{-1}(\sigma_\pm) = \{(u,v)\in D(G)~|~ v^{-1} = \pm 1\} = G$, hence $\Phi^{-1}(\sigma_\pm)/[G_{\sigma_\pm},G_{\sigma_\pm}] = G/G = 1$. Therefore the imploded cross section is
 		\begin{equation}
@@ -91,7 +92,7 @@
 		\end{equation}
 		The space $M_{impl}$ is a quasi-Hamiltonian $H\times T$ space, and it is smooth over the locus of points $(m,\xi)\in M\times D(G)_{impl}$ where the stabiliser of the $G$-action is trivial.
 	\end{theorem}
-	We want to apply this construction to the space $\MM^G$ which is a quasi-Hamiltonian $G^n$-space. There is an action of $G$ associated to each curve in our trinion decomposition for $\Sigma$, with moment map $\Phi_i$ given by just $C_i^{-1}$. Performing the implosion once for each puncture, the resulting space $\MM^G_{impl}$ will be denoted $P$, and it is a Hamiltonian $T^n$ space.
+	Next we will construct the symplectic implosion of the space $\MM^G$ which is a quasi-Hamiltonian $G^n$-space. There is an action of $G$ associated to each curve in our trinion decomposition for $\Sigma$, with moment map $\Phi_i$ given by just $C_i^{-1}$. Performing the implosion once for each puncture, the resulting space $\MM^G_{impl}$ will be denoted $P$, and it is a Hamiltonian $T^n$ space.
 	
 	After imploding the first $n-1$ punctures $(j=2,...,n)$, we obtain the set
 	\begin{equation}
@@ -99,9 +100,10 @@
 		(A_i,B_i,C_1,W_2,...,W_n)~|~ A_k,B_k,C_1 \in G, W_j \in D(G)_{impl},~ \prod_{j=1}^{g}[A_j,B_j]C_1\prod_{j=2}^{n} \Phi_G(W_j) = 1 
 		\right\}.
 	\end{equation}
-	To finish the imploded cross-section, it remains to implode the cross-section for the action of the first copy of $G$ appropriately. Let $W_1 = (D_1,C_1)$ in $G$ and define an action of $G$ by
+	To finish the imploded cross-section, it remains to implode the cross-section for the action of the first copy of $G$ appropriately. Let $W_1 = (D_1,C_1)$ in $G\times G$ and define an action of $G$ by
 	\begin{equation}
-		(A_k,B_k,W_j=(u_j,v_j)) \to (gA_kg^{-1}, gB_kg^{-1}, (gu_j,v_j)).
+		\label{e:first-action}
+		\left(A_k,B_k,W_j=(u_j,v_j)\right) \to (gA_kg^{-1}, gB_kg^{-1}, (gu_j,v_j)).
 	\end{equation}
 	Then the final imploded cross-section $P$ becomes \cite{hurtubise_representations_2000}
 	\begin{equation}
@@ -130,10 +132,12 @@
 	\pagebreak
 	Now associated to the compact Riemann surface $\Sigma$ we have a symplectic variety $P$ of representations with weighted frames, which is toric for $G=SU(2)$ and has a prequantum line bundle $\LL_P$ corresponding to $\LL$ on $\MM$. Now we will go in detail on the other half of Jeffrey and Hurtubise's construction, building the complex variety $\cP$ of \emph{framed parabolic bundles} over a singular curve $\tilde{\Sigma}$ corresponding to contracting the loops in a trinion decomposition of $\Sigma$. We will see that $P$ and $\cP$ are diffeomorphic, meaning that we can compute sections of prequantum line bundles over $\cP$ using the structure of $P$.
 	
-	First we will see how to embed $\MM$ into projective space, as this construction will have us transform the data of $\MM$ from holomorphic bundles over $\Sigma$ to sheaves, and will lay the groundwork for the embedding we will require later as a hypothesis of the theorem of Harada and Kaveh. Then we will describe the construction of $\cP$ and the diffeomorphism with $P$.
+	First we see how to embed $\MM$ into projective space using determinants, as this construction will have us transform the data of $\MM$ from holomorphic bundles over $\Sigma$ to sheaves, which is the perspective we will use to construct $\cP$.
 	\section{Projective Embedding of $\MM$}
 	\label{s:m-embedding}
-	The moduli $\MM$ of flat $SL(n,\C)$ bundles can be embedded into projective space, as we will now describe following the work of Thaddeus and Giesker (cite). First, fix a line bundle $L$ of sufficiently high degree so that for all $E\in N(k,d)$ $E\otimes L$  is globally generated (and redefine $E$). Then, for some large $N$ we can write $E$ as a quotient:
+	The moduli $\MM$ of flat $SL(n,\C)$ bundles can be embedded into projective space using the sections of the determinant bundle over $\MM$. There is a construction of this embedding due to Bhosle \cite{bhosle_parabolic_1989}, which we describe following Thaddeus and Gieseker \cite[\S 7]{thaddeus_geometric_1996}\cite{gieseker_moduli_1977}. 
+	
+	First, fix a line bundle $L$ of sufficiently high degree so that for all $E\in N(k,d)$, $E\otimes L$  is globally generated, and redefine $E$ as $E\otimes L$. Then, for some large $N$ we can write $E$ as a quotient:
 	\begin{equation}
 	\phi:\OO^N \to E.
 	\end{equation}
@@ -161,10 +165,13 @@
 		Since $\{e_i\}$ was a local frame, the LHS is non-zero, and thus the RHS is non-zero. Therefore $\{\phi_2(s_i)\}$ is a local frame trivializing $E_2$ on $U$. This map $e_i \to \phi_2(s_2)$ gives an isomorphism of $E_1$ with $E_2$. Note that this isomorphism is not unique as we could have picked other sections $\tilde{s}_i$ with $\phi_1(\tilde{s}_i) = e_i$.
 	\end{proof}
 	\begin{theorem}
+		\label{t:det-embed}
 		The map $\iota:\MM \to \PP(V_1)$ is an embedding.
 	\end{theorem}
 	\begin{proof}
-		Since the lemma shows it is injective, it remains to show its derivative is everywhere injective. We give a proof following Thaddeus (GIT and flips page 717).
+		From the lemma, we know $\iota$ is injective, and thus it remains to show that $d\iota$ is injective. We give a proof following Thaddeus \cite[Prop 7.1]{thaddeus_geometric_1996}.
+		
+		Recall that $T_{E}\MM = H^1(\End E)$ (Section \ref{s:ss-bundles}). An element $\hat{\alpha} \in V_1$ defines an element of $H^1(\End E)$ by 
 	\end{proof}
 
 	\section{Parabolic Vector Bundles}
@@ -178,19 +185,19 @@
 	
 	There is an adapted notion of stability for parabolic vector bundles.
 	\begin{definition}
-		Let $\gamma_1,...,\gamma_n \in [0,1]$ be a set of weights. For a subbundle (not neccesarily proper) $F$ of $E$ we set $\mu_i(F) = 1$ if $F_{p_i} \subset \ker\alpha_i$, and $\mu_i = 0$ otherwise. Define $\sigma(F) = \frac{1}{rk(E)}$ if $F=E$ and $0$ otherwise. Then we say a pair $(E,\alpha)$ is \emph{stable} with respect to $\gamma$ if 
+		Let $\gamma_1,...,\gamma_n \in [0,1]$ be a set of weights. For a subbundle (not necessarily proper) $F$ of $E$ we set $\mu_i(F) = 1$ if $F_{p_i} \subset \ker\alpha_i$, and $\mu_i = 0$ otherwise. Define $\sigma(F) = \frac{1}{rk(E)}$ if $F=E$ and $0$ otherwise. Then we say a pair $(E,\alpha)$ is \emph{stable} with respect to $\gamma$ if 
 		\begin{equation}
 		rk(E)\deg(F) < rk(F)\left(\deg(E) - \sum_{i=1}^n \gamma_i\right) 
 		+ rk(E)\sum_{i=1}^n(1 - \mu_i(F) + \sigma_i(F))\gamma_i.
 		\end{equation}
 		If the inequality is not strict, $(E,\alpha)$ is \emph{semi-stable}.
 	\end{definition}
-	This lemma of Hurtubise and Jeffrey (cite) summarizes some important results about tweighted parabolic bundles.
+	This lemma of Hurtubise and Jeffrey (cite) summarizes some important results about weighted parabolic bundles.
 	\begin{lemma}
 		\label{l:ss-lemma}
 		If $(E,\alpha)$ is a parabolic bundle semi-stable with respect to weights $\gamma$, then:
 		\begin{enumerate}
-			\item The kernal of $\alpha$ is torsion free, and the torsion subsheaf of $E$ is non-zero only at the $p_i$, equalling $0$ or $\C$ at each $p_i$.
+			\item The kernel of $\alpha$ is torsion free, and the torsion subsheaf of $E$ is non-zero only at the $p_i$, equalling $0$ or $\C$ at each $p_i$.
 			\item If $\gamma_i >0$, then $\alpha_i \neq 0$.
 			\item If $\gamma_i < 1$, then $E$ is torsion free at $p_i$.
 			\item If $\gamma_i \in (0,1)$, one has a parabolic structure at $p_i$, and if all the weights are in $(0,1)$, the stability condition is identical to that of parabolic bundles with weights $(1-\gamma_i)/2$ and $(1+\gamma_i)/2$.
@@ -245,7 +252,7 @@
 	\begin{equation}
 		Y = \PP(L_0\oplus L_{1,1})\oplus \PP(L_0\oplus L_{1,2})\oplus ... \oplus \PP(L_0\oplus L_{1,n}).
 	\end{equation}
-	We endow $Y$ with the natural polarisation $\OO(1,1,...,1)$. Now $Y$ contains all the stable points for the various choice of weights, which correspond to the various possible holonomies of the unitary connections. We still need to account for gauge equivalence, which apriori suggests we take the $SL(N,\C)$ quotient. It will turn out that this is not quite correct, as we need to make an adjustment with $\gamma_i = 0,1$.
+	We endow $Y$ with the natural polarisation $\OO(1,1,...,1)$. Now $Y$ contains all the stable points for the various choice of weights, which correspond to the various possible holonomies of the unitary connections. We still need to account for gauge equivalence, which a priori suggests we take the $SL(N,\C)$ quotient. It will turn out that this is not quite correct, as we need to make an adjustment with $\gamma_i = 0,1$.
 	
 	Consider the space of weighted parabolic bundles as quadruples $(E, \alpha_i, A_i, \gamma)$, where $\alpha_i:E\to \C_{p_i}$ is the parabolic structure, $A_i$ is a subspace of $E_{p_i}$, with $A_i = \ker\alpha_i$ whenever $\alpha_i \neq 0$ (equiv. $\gamma \neq 0$), and $\gamma$ are the weights as usual. When $\gamma_i \neq 0$, we have not added any new information. When $\gamma_i = 0$ we are adding a projective class $A_i$ for the parabolic structure even as the map vanishes.
 	
@@ -467,6 +474,7 @@
 	\end{equation}
 	
 	\section{Gluing $\cP$ over Trinions }
+	\label{s:p-gluing}
 	Given two Riemann surfaces $\Sigma_1$, $\Sigma_2$ with marked points $p_1$ and $p_2$, we can glue them together by identifying $p_1$ and $p_2$ to form $\Sigma = \Sigma_1 \coprod \Sigma_2 / (p_1 \sim p_2)$. This will be a nodal complex curve. If $\cP_1$ and $\cP_2$ denote the moduli space of parabolic sheaves corresponding to $\Sigma_1$ and $\Sigma_2$, we can also consider gluing them together. For framed parabolic sheaves $(E_i,\alpha_i)$, with $E_i$ over $\Sigma_i$ and $\alpha_i:(E_i)|_{p_i}\to \C$, we can combine the two into a diagram:
 	\begin{equation}
 		(E_1)|_{p_1} \to \C \rightarrow (E_2)|_{p_2}.
@@ -477,6 +485,7 @@
 	
 	Given two trinions $D_1$, $D_2$ with moduli spaces $\cP_1 \cong \cP_2 \cong \PP^3$, each of which has their own twisting sheaf $\OO(1)$, we can ask if we get a twisting sheaf exhibiting $\cP_1 \times \cP_2 \sslash \C^\ast$ as a quasi-projective scheme. The Segre embedding lets us embed $\PP^3 \times \PP^3$ into $\PP^{15}$, which has its own twisting sheaf $\OO(1)_{\PP^{15}}$. To recall, if $[x:y:z:w]$ and $[x':y':z':w']$ are co-ordinates for each copy of $\PP^3$, then the Segre embedding is the map
 	\begin{equation}
+		\label{e:segre}
 		([x:y:z:w], [x':y':z':w']) \to [xx':xy':xz':xw':yx':...:ww'],
 	\end{equation}
 	where the right-hand side is ordered lexicographically. Let $X$ denote the image of $\PP^3\times \PP^3$ in $\PP^{15}$ and let $p:X\to \PP^3$ denote the projection onto one factor. The Segre embedding has the property that (cite)

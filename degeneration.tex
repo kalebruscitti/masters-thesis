@@ -55,10 +55,12 @@
 	\end{equation}
 	Since $Q_t$ is defined by the equation $xy=t$, $d\theta_t$ is a normal component and we will project it out to obtain a partial connection $\nabla^p$ on $Q_t$. On the patch $x\neq 0$, using $x$ co-ordinate:
 	\begin{equation}
+		\label{e:dtx}
 		\nabla^p = d + i\alpha d\theta_x.
 	\end{equation}
 	This extends well to the limit $y\to 0$, despite the original connection $\nabla$ having a singularity. On the patch $y\neq 0$ with $y$ co-ordinate:
 	\begin{equation}
+		\label{e:dty}
 		\nabla^p = d - i\alpha d\theta_y,
 	\end{equation}
 	which passes well to the limit $x\to 0$. Therefore we obtain a partial connection $\nabla^p$ defined everywhere on $Q_0$ except the nodal point $x_0$.
@@ -183,7 +185,27 @@
 			\item There exists a completely integrable system $\mu = (F_1,...,F_n)$ on $(X,\omega)$ whose moment polytope $\Delta$ coincides with the moment polytope of $(X_0, \omega_0)$.
 			\item Let $U\subset X$ be the open dense subset of $X$ from item 1. Then the integrable system of item 2 generates a Hamiltonian torus action on $U$, and the inverse image $\mu^{-1}(\Delta^\circ)$ of the interior of $\Delta$ under the moment map lies in the open subset $U$.
 		\end{enumerate}
-		
-		
 	\end{theorem}
 
+	\section{Degeneration of the Moduli Space over one Trinion}
+	The local model for our degeneration gives us a description of the degeneration of the moduli space $\MM(D) \to P(D)$ for a single trinion $D = S^2 - {p_1,p_3,p_3}$. Let $B$ be the polydisk in $\C^2$ given by the product of two disks of radius 2 centred at the origin, and $U$ the unit disk in $\C$. As before, we can define a family for $t\in U$ by
+	\begin{equation}
+		Q_t = \{(x,y)\in B ~|~ xy = t, x\geq y, t\in U\}.
+	\end{equation}
+	By requiring $x\geq y$, we are taking only half of the local model for the curve that we had before. For $t=0$, the space $Q_0$ becomes a punctured disk, which is a local model for $D$ in a neighbourhood of one of the punctures $p_i$. Now, restricting all the discussion of our local connections in section $\ref{s:local-model-conns}$ to $Q_t$, we get that a connection
+	\begin{equation}
+		\nabla = d + i\frac{\alpha}{2}(d\theta_x - d\theta_y)
+	\end{equation}
+	on $Q_1$ degenerates to a connection
+	\begin{equation}
+		\nabla' = d + i\alpha d\theta_x
+	\end{equation}
+	on $Q_0$. Given two trinions $D_1$ and $D_2$ which we wish to glue together at the punctures $p_1$ and $q_1$, let $Q_{0,1}$ and $Q_{0,2}$ be local models around $p_1$ in $D_1$ and $q_1$ in $D_2$ respectively. If we let $Q_{0,1}$'s co-ordinate be $x$ and $Q_{0,2}$'s co-ordinate be $y$, we see that $Q_{0,1}\cup Q_{0,2}$ agrees with our local model for the desingularized degenerated curve $\tilde{\Sigma}$ around the glued points. That is:
+	\begin{equation}
+		Q_{0,1}\cup Q_{0,2} = \{(x,0)\in B~|~ x\neq 0 \}\cup {(0,y)\in B~|~ y\neq 0} = \{(x,y)\in B~|~ xy=0\} 
+	\end{equation}
+	Given connections
+	\begin{align*}
+		\nabla_1 &= d + i\alpha d\theta_{x_1}, & \nabla_2 &= d + i\beta d\theta_{x_2}
+	\end{align*} 
+	on $Q_{0,1}$ and $Q_{0,2}$, equations (\ref{e:dtx}) and (\ref{e:dty}) tell us that $\nabla_1$ and $\nabla_2$ are in the image of the degeneration if $\alpha = -\beta$. 

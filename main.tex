@@ -5,7 +5,7 @@
 
 
 %opening
-\title{lorem ipsum dolor sit amet}
+\title{The Verlinde Formula for the Moduli of Flat $SU(2)$ Connections in a Real Polarization, via a Toric Degeneration}
 \date{\today}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -23,9 +23,10 @@
 \addbibresource{citations.bib}
 
 \newtheorem{theorem}{Theorem}
-\newtheorem{definition}{Definition}
-\newtheorem{lemma}{Lemma}
-\newtheorem{corollary}{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\numberwithin{theorem}{chapter}
 \newcommand{\JJ}{\mathcal{J}}
 \newcommand{\bg}{\mathbf{g}}
 \newcommand{\bA}{\mathbf{A}}
@@ -59,8 +60,34 @@
 
 
 \begin{document}
-\maketitle
+\begin{titlepage}
+	\begin{center}
+		\vspace*{1cm}
+		
+		{\Large The Verlinde Formula for the Moduli of Flat $SU(2)$ Connections in a Real Polarization, via a Toric Degeneration}
+		
+		\vspace{2cm}
+		\textbf{Kaleb D. Ruscitti}
+		
+		\vspace{0.5 cm}
+		Dept. of Mathematics and Statistics, McGill University, Montréal.
+		
+		\vfill
+		
+		\includegraphics{mcgill_sig_red.png}
+	
+		
+		A thesis submitted to McGill University in partial fulfillment \\
+		 of the requirements of the degree of Master of Science.
+		
+		\vspace{0.5 cm}
+		{\footnotesize © Kaleb D. Ruscitti, 2023}
+	\end{center}
+\end{titlepage}
 \tableofcontents
+
+\input{contributions.tex}
+
 \chapter{Introduction}
 \label{s:intro}
 \input{introduction}

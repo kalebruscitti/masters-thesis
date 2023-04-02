@@ -2228,11 +2228,12 @@
     <bcf:citekey order="44">thaddeus_geometric_1996</bcf:citekey>
     <bcf:citekey order="45">gieseker_moduli_1977</bcf:citekey>
     <bcf:citekey order="46">thaddeus_geometric_1996</bcf:citekey>
-    <bcf:citekey order="47">biswas_degenerations_2021</bcf:citekey>
-    <bcf:citekey order="48">hurtubise_representations_2000</bcf:citekey>
-    <bcf:citekey order="49">ramadas_comments_1989</bcf:citekey>
-    <bcf:citekey order="50">jeffrey_bohr-sommerfeld_1992</bcf:citekey>
-    <bcf:citekey order="51">hurtubise_representations_2000</bcf:citekey>
+    <bcf:citekey order="47">hurtubise_representations_2000</bcf:citekey>
+    <bcf:citekey order="48">biswas_degenerations_2021</bcf:citekey>
+    <bcf:citekey order="49">hurtubise_representations_2000</bcf:citekey>
+    <bcf:citekey order="50">ramadas_comments_1989</bcf:citekey>
+    <bcf:citekey order="51">jeffrey_bohr-sommerfeld_1992</bcf:citekey>
+    <bcf:citekey order="52">hurtubise_representations_2000</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

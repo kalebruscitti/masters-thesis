@@ -200,7 +200,7 @@
 			\item The kernel of $\alpha$ is torsion free, and the torsion subsheaf of $E$ is non-zero only at the $p_i$, equalling $0$ or $\C$ at each $p_i$.
 			\item If $\gamma_i >0$, then $\alpha_i \neq 0$.
 			\item If $\gamma_i < 1$, then $E$ is torsion free at $p_i$.
-			\item If $\gamma_i \in (0,1)$, one has a parabolic structure at $p_i$, and if all the weights are in $(0,1)$, the stability condition is identical to that of parabolic bundles with weights $(1-\gamma_i)/2$ and $(1+\gamma_i)/2$.
+			\item If $\gamma_i \in (0,1)$, one has a parabolic structure at $p_i$, and if all the weights are in $(0,1)$, then $(E,\alpha)$ is stable with respect to $\gamma$, if and only if it is stable with respect to weights $(1-\gamma_i)/2$ and $(1+\gamma_i)/2$.
 			\item If $(E,\alpha)$ is locally free at $p_i$ and $\alpha \neq 0$, then for $\gamma_i = 0$, there is a family $(E_t, \alpha_t)$, $t\in \C$, of semi-stable pairs such that $(E_t,\alpha_t)\cong (E,\alpha)$ for $t\neq 0$, and $\alpha_0 = 0$. 
 			\item If $(E,\alpha)$ is locally free at $p_i$ and $\alpha \neq 0$, then for $\gamma_i = 1$, there is a family $(E_t,\alpha_t)$, $t\in \C$, such that $(E_t, \alpha_t)\cong (E,\alpha)$, $t\neq 0$ and $E_0$ has torsion at $p_i$.
 		\end{enumerate}
@@ -208,22 +208,18 @@
 	\begin{proof}
 		Hurtubise and Jeffrey (cite) lemma 4.3
 	\end{proof}
-	In particular, this lemma tells us that when $\gamma_i\in (0,1)$, which will correspond to connections with holonomy in $(0,\pi)$, we get well-behaved parabolic structures without torsion. It also tells us there are two edge cases to consider. When $\gamma_i = 0$, the parabolic structure vanishes, and when $\gamma_i = 1$ we acquire torsion. To fit all possible holonomies into a moduli space, each of these cases will need to be dealt with.
+	One consequence of this lemma is that when $\gamma_i\in (0,1)$, the set of semi-stable parabolic bundles is torsion-free. The weights $\gamma_i$ will correspond to holonomy angles of flat $SU(2)$ connections around curves in a trinion decomposition, and so weights in $(0,1)$ correspond to non-central holonomies. There are two edge cases to consider: when $\gamma_i = 0$, the parabolic structure vanishes, and when $\gamma_i = 1$ we acquire torsion. To fit all connections with all possible holonomies into a moduli space, each of these cases will need to be dealt with.
 	
 	\section{Moduli of Framed Parabolic Bundles}
-	Just as we constructed the moduli space of vector bundles over a Riemann surface, let us now construct that of parabolic vector bundles. This section closely follows section 4 of Hurtubise and Jeffrey (cite). From now on, we restrict our attention to $G=SU(2)$. As always, let $\Sigma$ be a compact connected Riemann surface. Fix a line bundle $L$ of sufficiently high degree so that for all $E\in N(k,d), E\otimes L$ is a globally generated sheaf (and redefine $E = E\otimes L$). Then for some large $N$ we can write $E$ as a quotient of the trivial sheaf on $\Sigma$:
+	Here we construct a moduli space of parabolic vector bundles. This section closely follows Hurtubise and Jeffrey \cite[\S 4]{hurtubise_representations_2000}. From now on, we restrict our attention to $G=SU(2)$. Let $\Sigma$ be a compact connected Riemann surface with $n$ punctures $\{p_i\}_{i=1}^n$. Fix a line bundle $L$ of sufficiently high degree so that for all $E\in N(k,d), E\otimes L$ is a globally generated sheaf (and redefine $E = E\otimes L$). Then for some large $N$ we can write $E$ as a quotient of the trivial sheaf on $\Sigma$:
 	\begin{equation}
 		\phi: \OO^N \to E.
 	\end{equation}
-	Just as in section \ref{s:m-embedding} we have a mapping $\hat{\beta}$ taking $E$ to $V_1$. Now we add the parabolic data. At a point $p_i$, the map $\alpha_i:E\to \C_{p_i}$ pulls back to $\hat{\alpha}_i = \alpha_i\circ \phi$ in 
-	\begin{equation}
-		V_2 = H^0(\OO^N)^\ast.
-	\end{equation}
-	Since we are only interested in $\alpha_i$ up to (independent) scaling, the parabolic bundle $(E,\alpha)$ represents an equivalence class in
+	Just as in section \ref{s:m-embedding} we have a mapping $\hat{\beta}$ taking $E$ to the vector space $V_1 := \Hom(H^0(\wedge^k(\OO^N)), H^0(L^2))$. Now we add the parabolic data. At a point $p_i$, the map $\alpha_i:E\to \C_{p_i}$ pulls back to $\hat{\alpha}_i = \alpha_i\circ \phi$ in $V_2 := H^0(\OO^N)^\ast$. Since we are only interested in $\alpha_i$ up to (independent) scaling, the parabolic bundle $(E,\alpha)$ represents an equivalence class in
 	\begin{equation}
 		Z := \PP(V_1) \times \PP(V_2) \times ... \times \PP(V_2),
 	\end{equation}
-	where there are $n$ copies of $\PP(V_2)$, one for each puncture. Then letting $\tilde{\MM}$ denote the space of parabolic vector bundles, and $\tilde{\iota}:\tilde{\MM}\to Z$ denote the map taking $(E,\alpha)$ to $(\hat{\beta},\hat{\alpha})$, we get a closed subvariety $X = \tilde{\iota}\left(\tilde{\MM}\right)$ in $Z$. 
+	where there are $n$ copies of $\PP(V_2)$, one for each puncture. Then letting $\tilde{\MM}$ denote the set of parabolic vector bundles on $\Sigma$, and $\tilde{\iota}:\tilde{\MM}\to Z$ denote the map taking $(E,\alpha)$ to $(\hat{\beta},\hat{\alpha})$, we get a closed subvariety $X = \tilde{\iota}\left(\tilde{\MM}\right)$ in $Z$. 
 
 	Now we also have weights $\gamma = (\gamma_1,...,\gamma_n)$ for the parabolic structure. These vary the choice of polarization of $X$, namely the choice of line bundles on which the action of $SL(N,\C)$ \textit{linearises}. Let us recall what this means:
 	\begin{definition}

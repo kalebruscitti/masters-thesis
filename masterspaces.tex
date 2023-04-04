@@ -185,6 +185,7 @@
 	
 	There is an adapted notion of stability for parabolic vector bundles.
 	\begin{definition}
+		\label{d:para-stable}
 		Let $\gamma_1,...,\gamma_n \in [0,1]$ be a set of weights. For a subbundle (not necessarily proper) $F$ of $E$ we set $\mu_i(F) = 1$ if $F_{p_i} \subset \ker\alpha_i$, and $\mu_i = 0$ otherwise. Define $\sigma(F) = \frac{1}{rk(E)}$ if $F=E$ and $0$ otherwise. Then we say a pair $(E,\alpha)$ is \emph{stable} with respect to $\gamma$ if 
 		\begin{equation}
 		rk(E)\deg(F) < rk(F)\left(\deg(E) - \sum_{i=1}^n \gamma_i\right) 
@@ -315,14 +316,18 @@
 		\end{equation}
 		be a point in $\hat{Y}$. Let $\Gamma(y)$ be the set of $\gamma_i \in [0,1]$ such that $\gamma_i =0$ if $a_i =0$ and $\gamma_i = 0$ if $b_i = 0$. Then $y$ is semi-stable if and only if for one element $\gamma \in \Gamma(y)$, $\pi(y)\in X$ is $\gamma$-semi-stable.
 	\end{theorem}
-	Therefore semi-stable elements in $\hat{Y}$ all project down to semi-stable elements of $X$ for some choice of weights, and the GIT quotient $\hat{Y}\sslash SL(N,\C)$ corresponds to equivalence classes of quadruples $(E,\alpha_i, \hat{\alpha}_i, \phi)$ where $(E,\alpha)$ is a parabolic bundle, $\hat{\alpha}_i$ is a subspace of $E|_{p_i}$ (which is the kernal of $\alpha_i$ when $\alpha_i \neq 0$) and $\phi$ is an $SL(2,\C)$ structure. However this is not quite the final moduli space we want to construct, as we have added the extra information of $\hat{\alpha}_i$ when $\alpha_i = 0$. At these points, $\hat{\alpha}_i \in \PP_1=\PP(E|_{p_i})$. We want to collapse these extra $\PP_1$s. To do this, embed $V_1$ into $W_1 = V_1^{\otimes N}$ so that a non-zero element $l$ in $L_{0} = \pi_1^\ast(\OO(N))$ can be thought of as an element in $W_1^\ast$ by taking $v_1\otimes...\otimes v_n$ to $l(v_1)l(v_2)...l(v_n)$. Similarly, embedding $V_2$ into $W_2 = V_1^{\otimes N-1}\otimes V_2\otimes V_2$ allows us to think of non-zero elements in $L_{1,i}$ as elements of $W_2^\ast$. Then this maps $\hat{Y}$ to a subvariety $\tilde{Y}$ in $\bigotimes_{i=1}^n \PP(W_1\otimes W_2)$, and the map collapses the unwanted $\PP_1$s while being an embedding otherwise. 
+	Therefore semi-stable elements in $\hat{Y}$ all project down to semi-stable elements of $X$ for some choice of weights, and the GIT quotient $\hat{Y}\sslash SL(N,\C)$ corresponds to equivalence classes of quadruples $(E,\alpha_i, \hat{\alpha}_i, \phi)$ where $(E,\alpha)$ is a parabolic bundle, $\hat{\alpha}_i$ is a subspace of $E|_{p_i}$ (which is the kernal of $\alpha_i$ when $\alpha_i \neq 0$) and $\phi$ is an $SL(2,\C)$ structure. However this is not quite the final moduli space we want to construct, as we have added the extra information of $\hat{\alpha}_i$ when $\alpha_i = 0$. At these points, $\hat{\alpha}_i \in \PP_1=\PP(E|_{p_i})$. We want to collapse these extra $\PP_1$s. To do this, embed $V_1$ into $W_1 = V_1^{\otimes N}$ so that a non-zero element $l$ in $L_{0} = \pi_1^\ast(\OO(N))$ can be thought of as an element in $W_1^\ast$ by taking $v_1\otimes...\otimes v_n$ to $l(v_1)l(v_2)...l(v_n)$. Similarly, embedding $V_2$ into $W_2 = V_1^{\otimes N-1}\otimes V_2\otimes V_2$ allows us to think of non-zero elements in $L_{1,i}$ as elements of $W_2^\ast$. Then this maps $\hat{Y}$ to a subvariety $\tilde{Y}$ in $\prod_{i=1}^n \PP(W_1\otimes W_2)$, and the map collapses the unwanted $\PP_1$s while being an embedding otherwise. 
 	
 	Finally, we let $\cP = \tilde{Y}\sslash SL(N,\C)$ be the geometric quotient, and we call it the \emph{moduli space of framed parabolic bundles}.
 	
+	Remark: Here the quotient is meant to be taken in the sense of Geometric Invariant Theory; the resulting space consists of the stable and semi-stable orbits of the $SL(N,\C)$ action on $\tilde{Y}$, where stable means the orbit is closed and the stabiliser is finite, semi-stable means $0$ is not in the closure of the orbit, and unstable means $0$ is in the closure. These definitions agree with Definitions \ref{d:stable} and \ref{d:para-stable} for vector bundles and parabolic sheaves.
+	
+	
 	\section{Framed Parabolic Bundles on a Trinion}
-	To understand the moduli space of framed parabolic bundles on our entire Riemann surface, it is insightful to mirror the construction of section 3 and decompose the Riemann surface into trinions. Towards this end, let us compute $\cP$ for one trinion $D$, a copy of $\PP^1$ with three marked points. Without loss of generality, let the three marked points be $z=0,1,\infty$. 
+	To understand the moduli space of framed parabolic bundles on a (punctured) Riemann surface, one can mirror the construction of section 3 and decompose the punctured Riemann surface into trinions. Towards this end, let us compute $\cP$ for one trinion $D$, a copy of $\PP^1$ with three marked points. Up to a birational map, let the three marked points be $z=0,1,\infty$. 
 	
 	\begin{lemma}
+		\label{t:four-seqs}
 		A degree-0 framed parabolic sheaf $(E,\alpha)$ on $D$ which is semi-stable must fall into one of four cases:
 		\begin{enumerate}
 			\item $E$ is trivial; $E\cong \OO\oplus \OO$.
@@ -367,28 +372,28 @@
 		\end{equation}
 		Hence there are no semi-stable sheaves $E$ with torsion at three points.
 	\end{proof}
-	The lemma gives us the following corollary.
 	\begin{theorem}
+		\label{t:exactseq}
 		For all degree-0 semi-stable parabolic sheaves $(E,\alpha)$ over $D$, $E\otimes \OO(1)$ is generated by four global sections. In particular, there is an exact sequence:
 		\begin{equation}
 		\OO(-2)\oplus \OO(-2) \xrightarrow{Az+Bz^{-1}} \OO(-1)^{\oplus 4} \xrightarrow{} E \to 0.
 		\end{equation}
-		With $A,B$ represented by 4x2 matrices. The map $\OO(-2)\oplus \OO(-2) \xrightarrow{Az+Bz^{-1}} \OO(-1)^{\oplus 4}$ is injective as a map of bundles away from the torsion points of $E$.
+		With $A,B$ represented by $4\times 2$ matrices. The map $\OO(-2)\oplus \OO(-2) \xrightarrow{Az+Bz^{-1}} \OO(-1)^{\oplus 4}$ is injective as a map of bundles away from the torsion points of $E$.
 	\end{theorem}
 	\begin{proof}
-		From the lemma, $E\otimes \OO(1)$ falls into one of four cases, each of which is a subsheaf of $\OO^{\oplus 4}$. Each case gives us an exact sequence:
+		From the lemma, $E\otimes \OO(1)$ falls into one of four cases, each of which is a quotient of $\OO^{\oplus 4}$. In each case, $E\otimes \OO(1)$ can be written as a direct sum of two of the following exact sequences:
 		\begin{enumerate}
-			\item $\OO\oplus \OO\to \OO^{\oplus 4}\xrightarrow{} E\otimes\OO(1) \to 0$
-			\item $\OO\oplus\OO(-1) \to \OO^{\oplus 4}\xrightarrow{} E\otimes\OO(1)  \to 0$
-			\item $\OO\oplus\OO(-1) \to \OO^{\oplus 4}\xrightarrow{} E\otimes\OO(1) \to 0$
-			\item $\OO(-1)\oplus (-1)\to \OO^{\oplus 4}\xrightarrow{} E\otimes\OO(1) \to 0$
+			\item $\OO \hookrightarrow \OO^{\oplus 2} \twoheadrightarrow \OO$
+			\item $\OO(-1) \hookrightarrow \OO^{\oplus 2}\twoheadrightarrow \OO(-1) $
+			\item $\OO(-1)\hookrightarrow \OO^{\oplus 2}\twoheadrightarrow \OO(-1)\oplus \C_p$
 		\end{enumerate}
-		However since $\OO \hookrightarrow \OO(-1)$, we always have the fourth sequence. Tensoring it with $\OO(-1)$ we obtain the sequence in the theorem.
+		However since $\OO \hookrightarrow \OO(-1)$, sequence 1 is a subcase of sequence 2. Therefore, $E = E\otimes \OO(1)\otimes \OO(-1)$ is always a direct sum of sequences 2 and 3 tensored with $\OO(-1)$, giving the claimed exact sequence.
 		
 		Since $E$ is rank 2 away from torsion, and $E = \OO(-1)^{\oplus 4}/\text{im}(Az+Bz^{-1})$ by exactness, at every point $p$ without torsion $\text{im}(Az+Bz^{-1})|_p = \text{im}(Ap+Bp^{-1})$ has dimension 2. The domain $\OO(-2)\oplus\OO(-2)|_p$ has dimension 2, and so by rank-nullity theorem the kernal of $Ap+Bp^{-1}$ has dimension $2-2=0$ and is hence injective. 
 	\end{proof}
-	The 4x2 matrices $A,B$ depend on $E$ and in fact determine $E$. The parabolic structure $\alpha = (\alpha_0,\alpha_1,\alpha_\infty)$ is realized as maps $\OO(-1)^{\oplus 4}\to \C_{p_i}$ for which $\text{im}\left(\OO(-2)\oplus\OO(-2)\right) \subset \ker\alpha_{p_i}$. These maps are represented by row vectors $V_0,V_1,V_\infty$ in $\C^4$ satisfying the conditions:
+	The $4\times2$ matrices $A,B$ depend on $E$ and in fact determine $E$. The parabolic structure $\alpha = (\alpha_0,\alpha_1,\alpha_\infty)$ is realized as maps $\OO(-1)^{\oplus 4}\to \C_{p_i}$ for which $\text{im}\left(\OO(-2)\oplus\OO(-2)\right) \subset \ker\alpha_{p_i}$. These maps are represented by row vectors $V_0,V_1,V_\infty$ in $\C^4$ satisfying the conditions:
 	\begin{align}
+		\label{e:p3-conds}
 		V_0 A &=0, & V_1(A+B) &= 0, & V_\infty B &=0.
 	\end{align}
 	
@@ -400,21 +405,21 @@
 	
 	There is an action of $GL(2,\C)\times GL(4,\C)$ on this data, by
 	\begin{equation}
-		\label{e:p3-conds}
+		\label{e:p3-action}
 		(g,G)\cdot (A,B,V_0,V_1,V_\infty) = (GAg^{-1}, GBg^{-1}, V_0G^{-1}, V_1G^{-1}, V_\infty G^{-1}),
 	\end{equation}
 	and the orbits of this action are the isomorphism classes of framed parabolic bundles we are interested in. We define four functions which are projectively invariant under this action:
 	\begin{align}
 		\label{e:p3-coords}
 		x&=\det(A,B),& y&=\det\begin{pmatrix}
-		V_0 A\\
-		V_1 B\\
+		V_0 B\\
+		V_1 A\\
 		\end{pmatrix}, & z&= \det\begin{pmatrix}
 		V_0 B\\
 		V_\infty A\\
 		\end{pmatrix}, & w&= \det\begin{pmatrix}
-		V_1 A\\
-		V_\infty B\\
+		V_1 B\\
+		V_\infty A\\
 		\end{pmatrix}.
 	\end{align}
 	The action of $(g,G)$ on these functions pulls out the determinants of $g$ and $G$, so we can instead consider just the orbits of equivalence classes of $(x,y,z,w) \mod \C^\ast$ under the action of $SL(2,\C)\times SL(4,\C)$. 
@@ -426,12 +431,10 @@
 		A point in $\cP|_D$ defined by $(A,B,V_0,V_1,V_\infty)$ is semi-stable if and only if one of the co-ordinates $x,y,z$ or $w$ is non-zero. This tells us $\Phi$ is well defined.
 	\end{lemma}
 	\begin{proof}
-		In this proof we will use another characterization of stability, which is that $E$ is semi-stable if the closure of $\text{Orb}_G(E)$ does not contain zero, and $E$ is stable if the stabilizer is finite. 
-		
+
 		If $(A,B,V_0,V_1,V_\infty)$ defines an unstable bundle, we want to show that all the co-ordinates vanish. Suppose the closure of $(A,B,V_0,V_1,V_\infty)'s$ orbit under $SL(2,\C)\times SL(4,\C)$ contains $(0,0,0,0,0)$. First suppose the orbit itself contains $0$. Then there is $G\in SL(4,\C)$ such that $V_i G^{-1} =0$, and since $G$ is invertible this means $V_i = 0$ for all $V_0,V_1,V\infty$; this makes $y,z,w$ all 0. Furthermore, if $g\in SL(2,\C)$ such that $GAg^{-1} = GBg^{-1} =0$ then $A=B=0$ by invertibility of $G$ and $g$. Hence $x=0$; so if the orbit contains $0$ then $x=y=z=w=0$. 
 		
-		Now suppose that $0$ is in the closure of the orbit. This means there is a sequence of matrices $(G_i,g_i)_{i=1}^\infty$ which approach matrices which send $(A,B,V_0,V_1,V_\infty)$ to $0$. By the previous argument, either $G$ or $g$ is not invertible, or all the co-ordinates $x,y,z,w$ equal 0. Since the determinant is a continuous function on $SL(n,\C)$, the limit of the determinant is the determinant of the limit, and since $G_i$ and $g_i$ all have determinant $1$, so does their limit. They must be invertible, and hence $x=y=z=w=0$.\vspace{1em}
-		
+		Now suppose that $0$ is in the closure of the orbit. This means there is a sequence of matrices $(G_i,g_i)_{i=1}^\infty$ that approaches matrices that send $(A,B,V_0,V_1,V_\infty)$ to $0$. By the previous argument, either $G$ or $g$ is not invertible, or all the co-ordinates $x,y,z,w$ equal 0. Since the determinant is a continuous function on $SL(n,\C)$, the limit of the determinant is the determinant of the limit, and since $G_i$ and $g_i$ all have determinant $1$, so does their limit. They must be invertible, and hence $x=y=z=w=0$.\vspace{1em}
 		
 		Conversely, consider a point whose co-ordinates all vanish. This tells us that there is a basis of $\C^2$ for which $V_i A = (a_i,0)$ and $V_i B = (b_i ,0)$ for $i=0,1,\infty$. Pick a basis for $\C^4$ in which each $V_i$ has the form $(\ast,\ast,\ast,0)$. Then let $n>0$ and $G(z) = \text{diag}(z^{-n}, z^{-n}, z^{-n}, z^{3n})$. $G(z)$ is a one parameter family in $SL(4,\C)$ for which $G^{-1}(z)V_i \to 0$ as $z\to 0$. Let $g(z) = \text{diag}(z^{-m}, z^{m})$ for some $n < m < 3m$. Then
 		\begin{equation}
@@ -458,10 +461,91 @@
 		has a row of zeros. Suppose without loss of generality it is the last row. Then let $0 < m < n$ and let $G(z) = \text{diag}(z^{n}, z^{n}, z^{n}, z^{-3n})$ and $g(z) = \text{diag}(z^{-m}, z^{m})$. The family $(G,g)(z)$ will destabilize $(A,B,0,0,0)$. 
 	
 	\end{proof}
-	Now we prove theorem \ref{t:p3-iso}.
+	With this lemma we are ready to prove Theorem \ref{t:p3-iso}.
 	\begin{proof}
-		If we fix one of $x,y,z$ or $w$ to equal 1, then we are left with an open affine in $\PP^3$ isomorphic to $\C^3$. From the lemma we know $\Phi$ patches together correctly on the intersections of these affines, so if we can prove it is bijective on each affine then it will be bijective everywhere. 
+		If we fix one of $x,y,z$ or $w$ to equal 1, then we are left with an open affine set in $\PP^3$ isomorphic to $\C^3$. From the lemma we know $\Phi$ is well defined on the intersections of these affine sets, so if we can prove it is bijective on each affine piece then it will be bijective everywhere. To do this, we will perform a case-by-case analysis on the four possibilities for $E$ given by Lemma $\ref{t:four-seqs}$.
+		
+		\underline{Case 1}: $E = \OO\oplus \OO$. Then $x = \det(A,B) \neq 0$, so we can choose bases such that
+		\begin{align*}
+			A &= \begin{bmatrix}
+			1 & 0\\
+			0 & 1\\
+			0 & 0\\
+			0 & 0\\
+			\end{bmatrix}, & 
+			B &= \begin{bmatrix}
+			0 & 0\\
+			0 & 0\\
+			1 & 0\\
+			0 & 1\\
+			\end{bmatrix}.
+		\end{align*}
+		Then the stabiliser of $(A,B)$ under the $SL(2,\C)$ action (Eqn. \ref{e:p3-action}) is all of $SL(2,\C)$. The conditions of ($\ref{e:p3-conds}$) tell us that 
+		\begin{align}
+			V_0 &= (0,0,a,b), & V_1 &= (c,d,-c,d), & V_\infty &=(e,f,0,0).
+		\end{align}
+		Next we take the geometric quotient by the $SL(4,\C)$ action (Eq. \ref{e:p3-action}), which reduces to an action of $SL(2,\C)$ on the three vectors $(a,b),(c,d),(e,f)$ in $\C^2$. When these vectors span $\C^2$, their stabiliser will be finite, so we obtain a stable point in the moduli space. The functions $y,z,w$ map the set of stable points bijectively to $(\C^3 - \{0\})$. The semi-stable orbits are those for which the three vectors are linearly dependent; since $SL(2,\C)$ matrices are invertible, $0$ is not in the closure of the orbit. In this case, $y = z = w = 0$, so the semi-stable points are all sent to $(1,0,0,0)$ in $\PP^3$. Therefore, after the quotient, the set of bundles with $x \neq 0$ is in bijection with the affine set of points $(1,y,z,w)$ in $\PP^3$.
+		
+		\underline{Case 2}: $E = \OO(1)\oplus \OO(-1)$. In this case, $\det(A,B)=0$, and $\text{Im}(A) + \text{Im}(B)$ is three-dimensional.  By Theorem \ref{t:exactseq}, $(Az_0+Bz_1)$ is injective for all $(z_0,z_1)\neq (0,0)$. Therefore we can find bases in which
+		\begin{align*}
+		A &= \begin{bmatrix}
+		1 & 0\\
+		0 & 1\\
+		0 & 0\\
+		0 & 0\\
+		\end{bmatrix}, & 
+		B &= \begin{bmatrix}
+		0 & 0\\
+		1 & 0\\
+		0 & 1\\
+		0 & 0\\
+		\end{bmatrix}.
+		\end{align*}
+		Then from Eqns. (\ref{e:p3-conds}) we have
+		\begin{align}
+			V_0 &= (0,0,a,b), & V_1 &= (c,-c,c,d), & V_\infty&= (e,0,0,f).
+		\end{align}
+		This allows us to compute $(x,y,z,w) = (0,-ac,-ae,ec)$. If $a,c,e$ are all non-zero then the stabiliser of the $SL(4,\C)$ action is finite, so the points are stable and the projective co-ordinates are a bijection on this locus. If one of $a,c$ or $e$ is zero, then we obtain a semi-stable orbit with co-ordinates $[0:1:0:0]$, $[0:0:1:0]$ or $[0:0:0:1]$. If two are zero, we obtain an unstable point with co-ordinates $[0:0:0:0]$ which is not included in the moduli space.
+		
+		\underline{Case 3}: $E$ has one torsion point $p$. Then $x = \det(A,B) =0$, $\text{Im}(A) + \text{Im}(B)$ is three-dimensional, but $(Az_0 + Bz_1)$ will not be injective at some non-zero $(z_0,z_1)$. From Theorem \ref{t:exactseq}, $(Az_0+Bz_1)$ is injective away from the torsion points, and from Lemma \ref{l:ss-lemma} know that the torsion subsheaf of $E$ can only be non-zero at $0,1$ or $\infty$. We will compute the case with $z_0/z_1 = 0$, the other two cases are similar. Then we can find bases such that
+		\begin{align*}
+		A &= \begin{bmatrix}
+		0 & 1\\
+		0 & 0\\
+		0 & 0\\
+		0 & 0\\
+		\end{bmatrix}, & 
+		B &= \begin{bmatrix}
+		0 & 0\\
+		1 & 0\\
+		0 & 1\\
+		0 & 0\\
+		\end{bmatrix},
+		\end{align*}
+		in which $V_0 = (0,a,b,g)$, $V_1 = (c,0,-c,d)$ and $V_\infty = (e,0,0,f)$ and $(x,y,z,w) = (0,ac,ae,0)$. Semi-stability ensures that $a\neq 0$ and either $c$ or $e$ is also non-zero. If they're both non-zero we obtain a stable point, otherwise we obtain a semi-stable point, with co-ordinates $[0:1:0:0]$ and $[0:0:1:0]$.
+		
+		Case 4: $E$ has two torsion points. Then $x=\det(A,B)=0$ and $\text{Im}(A)+\text{Im}(B)$ is not three dimensional. Then since $A,B$ are $4\times 2$ and injective away from the torsion points, their image must be at least two dimensional. Once again, we only do one case, with torsion at $0,\infty$, as the other cases are similar. Then we can find bases such that
+		\begin{align*}
+		A &= \begin{bmatrix}
+		0 & 1\\
+		0 & 0\\
+		0 & 0\\
+		0 & 0\\
+		\end{bmatrix}, & 
+		B &= \begin{bmatrix}
+		0 & 0\\
+		1 & 0\\
+		0 & 0\\
+		0 & 0\\
+		\end{bmatrix},
+		\end{align*}
+		and $V_0 = (0,a,b,c)$, $V_1 = (0,0,d,e)$ and $V_\infty = (f,0,g,h)$. The projective co-ordinates are $(0,0,-ag,0)$ and the unique closed orbit is that given by $V_0 = (0,a,0,0)$, $V_2 = (0,0,0,0)$ and $V_3 = (f,0,0,0)$. Permuting the choice of torsion point, this case contains three orbits corresponding to three points in the plane at infinity; $[0:1:0:0], [0:0:1:0]$ and $[0:0:0:1]$.
+		
+		Summarizing, the sheaves in case 1 correspond to the set $\{[x:y:z:w]\in \PP^3~|~ x\neq 0\} \cong \C^3$. Those in case 2 correspond to the set $\{[0:y:z:w]~|~ y,z,w\neq 0\}\cup \{[0:0:0:1],[0:1:0:0],[0:0:1:0]\}$. Those in case 3 correspond to the sets with two projective co-ordinates equal to 0, and those in case 4 correspond to the sets with three projective co-ordinate equal to 0. Cases 2, 3 and 4 intersect at the points $[0:1:0:0], [0:0:1:0]$ and $[0:0:0:1]$, so it remains to check that the sheaves corresponding to these points in each case are in the same orbit of the moduli space $P$ (?? - I'm pretty sure this isn't true?)
+		
 	\end{proof}
+	Notice in particular that the four points $[1:0:0:0], [0:1:0:0], [0:0:1:0]$ and $[0:0:0:1]$ each correspond to a unique closed semi-stable orbit in $P$. The rest of $\PP^3$ correspond to stable points. Each of the cases in the proof correspond to the four possible cases for $E$ given by Lemma \ref{t:four-seqs}. In Case 1, $\det(A,B)\neq 0$ tells us $E = \OO\oplus \OO$, and there is a $\C^3$ of framed parabolic structures for the three punctures. In Case 2, there is no torsion and so the bundle is $\OO(-1)\oplus \OO(1)$. In Case 3, there is one torsion point, so $E = \OO\oplus \OO(-1)\oplus \C_p$, and in Case 4, there are two torsion points so $E = \OO(-1)\oplus \OO(-1)\oplus \C_{p_1}\oplus \C_{p_2}$. 
+	
 	Our moduli space is therefore $\cP|_D \cong \PP^3$ over the trinion $D$. We also have an action of $(\C^\ast)^3$ on $\cP|_D$ where each factor scales the parabolic structure at one point; for $\lambda_i\in \C^\ast$,
 	\begin{equation}
 		(\lambda_1,\lambda_2,\lambda_3)\cdot (A,B,V_0,V_1,V_\infty) = (A,B,\lambda_1 V_0, \lambda_2 V_1, \lambda_3 V_\infty).
@@ -481,16 +565,16 @@
 	\begin{equation}
 		(E_1)|_{p_1} \to \C \rightarrow (E_2)|_{p_2}.
 	\end{equation}
-	We consider two such diagrams to be equivalent if the framed parabolic bundles on each surface are isomorphic, and if the induced maps $(E_1)|_{p_1}/\ker(\alpha_1) \to (E_1)_{p_1}/\ker(\alpha_1)$ are the same. Then taking equivalence classes under this equivalence amounts to quotienting out the anti-diagonal action of $\C^\ast$ on the framing at $p_0$ and $p_1$, and we have $\cP_{\Sigma} = \cP_0 \times \cP_1 \sslash \C^\ast$. 
+	We consider two such diagrams to be equivalent if the framed parabolic bundles on each surface are isomorphic, and if the induced maps $(E_1)|_{p_1}/\ker(\alpha_1) \to (E_2)_{p_2}/\ker(\alpha_2)$ are the same. Then taking equivalence classes under this equivalence amounts to quotienting out the anti-diagonal action of $\C^\ast$ on the framing at $p_0$ and $p_1$, and we have $\cP_{\Sigma} = \cP_0 \times \cP_1 \sslash \C^\ast$. 
 	
-	In particular, given a compact Riemann surface $\Sigma$ with trinion decomposition $\{D_\gamma\}_{\gamma=1}^{2g-2}$, we can pinch the boundary circles ${C_i}_{i=1}^{3g-3}$ down to points to obtain a singular surface $\tilde{\Sigma}$, consisting of $2g-2$ copies of $\PP^1$ with three marked points glued along those $3g-3$ total marked points. Then we can obtain the moduli space $\cP$ for $\tilde{\Sigma}$ by gluing the moduli spaces $\cP_\gamma$ for each trinion $D_\gamma$. From the previous section we know each $\cP_\gamma$ is isomorphic to $\PP^3$. Heuristically, this lets us estimate the dimension of $\cP$ as follows. We have a total of $3(2g-2)$ dimensions for the $\PP^3$ over each trinion, and we have to quotient an action of $\C^\ast$ along $3g-3$ curves. Therefore, we expect that $\cP$ has dimension $3(2g-2)-3g-3 = 3g-3$, which agrees with our dimension calculation for the moduli space $\MM$ from section 2 and 3. \vspace{1em}
+	In particular, given a compact Riemann surface $\Sigma$ with trinion decomposition $\{D_\gamma\}_{\gamma=1}^{2g-2}$, we can pinch the boundary circles ${C_i}_{i=1}^{3g-3}$ down to points to obtain a singular surface $\tilde{\Sigma}$, consisting of $2g-2$ copies of $\PP^1$ with three marked points glued along those $3g-3$ total marked points. Then we can obtain the moduli space $\cP$ for $\tilde{\Sigma}$ by gluing the moduli spaces $\cP_\gamma$ for each trinion $D_\gamma$. From the previous section we know each $\cP_\gamma$ is isomorphic to $\PP^3$. Heuristically, this lets us estimate the dimension of $\cP$. There is a total of $3(2g-2)$ dimensions for the $\PP^3$ over each trinion, and we have to quotient an action of $\C^\ast$ along $3g-3$ curves. Therefore, we expect that $\cP$ has dimension $3(2g-2)-3g-3 = 3g-3$, which agrees with our dimension calculation for the moduli space $\MM$ from section 2 and 3. 
 	
 	Given two trinions $D_1$, $D_2$ with moduli spaces $\cP_1 \cong \cP_2 \cong \PP^3$, each of which has their own twisting sheaf $\OO(1)$, we can ask if we get a twisting sheaf exhibiting $\cP_1 \times \cP_2 \sslash \C^\ast$ as a quasi-projective scheme. The Segre embedding lets us embed $\PP^3 \times \PP^3$ into $\PP^{15}$, which has its own twisting sheaf $\OO(1)_{\PP^{15}}$. To recall, if $[x:y:z:w]$ and $[x':y':z':w']$ are co-ordinates for each copy of $\PP^3$, then the Segre embedding is the map
 	\begin{equation}
 		\label{e:segre}
 		([x:y:z:w], [x':y':z':w']) \to [xx':xy':xz':xw':yx':...:ww'],
 	\end{equation}
-	where the right-hand side is ordered lexicographically. Let $X$ denote the image of $\PP^3\times \PP^3$ in $\PP^{15}$ and let $p:X\to \PP^3$ denote the projection onto one factor. The Segre embedding has the property that (cite)
+	where the right-hand side is ordered lexicographically. Let $X$ denote the image of $\PP^3\times \PP^3$ in $\PP^{15}$ and let $p:X\to \PP^3$ denote the projection onto one factor. The Segre embedding has the property that
 	\begin{equation}
 		\OO(1)_{\PP^{15}}|_X = p^\ast \OO(1) \otimes p^\ast \OO(1).
 	\end{equation}
@@ -503,9 +587,42 @@
 	\begin{equation}
 		X\sslash \C^\ast := \text{Proj}\left(\bigg(\bigoplus_{n\geq 0} \Gamma(X, \left(\OO(1)_{\PP^{15}}|_X\right)^n)\bigg)^{\C^\ast}\right).
 	\end{equation}
-	The twisting sheaf of $X\sslash \C^\ast$ is exactly the degree-0 component of this ring, with sections $\Gamma(X, \left(\OO(1)_{\PP^{15}}|_X\right)^{\C^\ast}.$ Looking at the antidiagonal action when both points are $0$, we see the invariant sections of $\OO(1)_{\PP^{15}}|_X$ are those with no $y,z,y'$ or $z'$ components, i.e:
+	The twisting sheaf of $X\sslash \C^\ast$ is exactly the degree-0 component of this ring, with sections $\Gamma(X, \left(\OO(1)_{\PP^{15}}|_X\right)^{\C^\ast}.$ For the anti-diagonal action with both points zero, the invariant sections are the quadratic functions with equal powers of $\lambda$ and $\lambda^{-1}$:
 	\begin{equation}
-		\Gamma(X, \left(\OO(1)_{\PP^{15}}|_X\right))^{\C^\ast} = \text{span}(xx',xw',wx',ww').
+		\Gamma(X, \left(\OO(1)_{\PP^{15}}|_X\right))^{\C^\ast} = \text{span}(xx',xw',wx',ww',yy',zy',yz',zz').
 	\end{equation}
 	
 	In the full-trinion decomposition setting, repeating this process at each point gives us the moduli space $\cP$ with a very ample line bundle $\LL$ embedding $\cP$ into a large projective space. Any Fubini-Study metric on that projective space gives $\LL$ a Chern connection $\theta \in \Omega^{1,1}(T^\ast \cP)$ such that $i\theta$ is a metric for $\cP$. The complex structure and metric also yield a symplectic form $\omega$ for $\cP$. Later, we will want to check that when a point in $\cP$ is a stable point in $\MM$, this symplectic form agrees with the Atiyah-Bott form on $\MM$.
+	
+	Example: Let $\Sigma$ be a genus 2 curve, with decomposition into $2g-2 = 2$ trinions given in Figure (to be added). We will use the gluing process described above to find the moduli space $P$ of framed parabolic bundles for $\Sigma$. Degenerating the three curves in the decomposition and desingularizing, we obtain two trinions $D_1$ and $D_2$, with removed points ${p_1,p_2,p_3}$ and ${q_1,q_2,q_3}$ respectively, and we will glue $p_i$ to $q_i$. Over $D_1$ and $D_2$ we have moduli spaces $P_1$ and $P_2$, each isomorphic to $\PP^3$, which we will assign co-ordinates $[x:y:z:w]$ and $[x':y':z':w']$ respectively. Then we have an action of $(\C^\ast)^3$ on the co-ordinates by
+	\begin{align*}
+		(\lambda, \mu,\nu)\cdot [x:y:z:w] &= [x:\lambda \mu y: \lambda \nu z: \mu\nu w]\\
+		(\lambda, \mu,\nu)\cdot [x':y':z':w'] &= [x:\lambda^{-1} \mu^{-1} y: \lambda^{-1} \nu^{-1} z: \mu^{-1}\nu^{-1} w].
+	\end{align*}
+	The co-ordinates for the space $P = P_1 \times  P_2 \sslash (\C^\ast)^3$ are the invariant homogeneous polynomials in the Segre co-ordinates of $\PP^3 \times \PP^3$. Consider the polynomial $(x^\alpha y^\beta z^\gamma w^\delta x'^{\alpha'} y'^{\beta'} z'^{\gamma'} w'^{\delta'})$; the power of $\lambda,\mu$ and $\nu$ obtained by the action of $(\C^\ast)^3$ can be computed by the matrix-vector multiplication
+	\begin{equation}
+		\begin{bmatrix}
+		p_\lambda \\
+		p_\mu \\
+		p_\nu \\
+		\end{bmatrix} = \begin{bmatrix}
+		1 & 1 & 0 & -1 & -1 & 0\\
+		1 & 0 & 1 & -1 & 0 & -1\\
+		0 & 1 & 1 & 0 & -1 & - 1\\
+		\end{bmatrix}\begin{bmatrix}
+		\beta \\
+		\gamma \\
+		\delta \\
+		\beta' \\
+		\gamma'\\
+		\delta '\\
+		\end{bmatrix}.
+	\end{equation}
+	Putting the matrix into row-reduced echelon form, we obtain $[\mathds{1}_{3}, -\mathds{1}_3]$ which means the only possible invariant polynomials are those with $\beta = \beta'$, $\gamma = \gamma'$ and $\delta = \delta'$. For the polynomials to be homogeneous, we need $\alpha+\beta+\gamma+\delta = \alpha'+\beta'+\gamma'+\delta'$, and therefore $\alpha = \alpha'$ as well. The degree-1 polynomials in the Segre co-ordinates are
+	\begin{equation}
+		xx', yy', zz' \text{ and } ww'.
+	\end{equation}
+	The ring of invariant functions is $\C[xx',yy',zz',ww']$ and the moduli space is given by the GIT quotient
+	\begin{equation}
+		P = (P_1 \times P_2)\sslash (\C^\ast)^3 = \text{Proj} \left(\C[xx',yy',zz',ww']\right) = \PP^3.
+	\end{equation}

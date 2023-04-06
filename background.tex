@@ -90,7 +90,7 @@
 		$\cR$ is compact.
 	\end{lemma}
 	\begin{proof}
-		Let $p:\Hom(\pi_1(\Sigma),U(n))\to \MM$ denote the quotient by $U(n)$. Let $\tilde{\cR} = \pi^{-1}(\cR)$. Then $\tilde{\cR} \subset U(n)^{2g}$ is closed and thus since $U(n)$ is compact, $\tilde{\cR}$ is compact. Then $\cR = \tilde{\cR}/U(n)$ is also compact.
+		Let $p:\Hom(\pi_1(\Sigma),U(n))\to \MM$ denote the quotient by $U(n)$. Let $\tilde{\cR} = p^{-1}(\cR)$. Then $\tilde{\cR} \subset U(n)^{2g}$ is closed and thus since $U(n)$ is compact, $\tilde{\cR}$ is compact. Then $\cR = \tilde{\cR}/U(n)$ is also compact.
 	\end{proof}
 	Using this one can characterize the topology of $\cR$.
 	\begin{theorem}
@@ -102,7 +102,7 @@
 		where $T\subset G$ is a maximal torus and $W(T)$ is its Weyl group, acting by the $2g$-diagonal action.
 	\end{theorem}
 	\begin{proof}
-		Let ${a_i,b_i}_{i=1}^{g}$ generate $\pi_1(\Sigma)$. For $[\rho]\in \cR$, let $A_i = \rho(a_i)$ and $B_i = \rho(b_i)$. By lemma $\ref{l:irrep-lemma}$, $\rho\in \cR$ implies the $A_i$ and $B_i$ commute pairwise, and are hence contained in some maximal torus $T$, thus $(A_1,B_1,...,A_g,B_g)\in T^{2g}$. To pass to the quotient $[\rho]$ under conjugation by $U(n)$, we need to quotient the Weyl group $W(T)$. Thus $[A_1,B_1,...,A_g,B_g] \in T^{2g}/W(T)$. Diagrammatically, we have:
+		Let $\{a_i,b_i\}_{i=1}^{g}$ generate $\pi_1(\Sigma)$. For $[\rho]\in \cR$, let $A_i = \rho(a_i)$ and $B_i = \rho(b_i)$. By Lemma $\ref{l:irrep-lemma}$, $\rho\in \cR$ implies the $A_i$ and $B_i$ pairwise commute, and are hence contained in some maximal torus $T$, thus $(A_1,B_1,...,A_g,B_g)\in T^{2g}$. To pass to the quotient $[\rho]$ under conjugation by $U(n)$, we need to quotient the Weyl group $W(T)$. Thus $[A_1,B_1,...,A_g,B_g] \in T^{2g}/W(T)$. Diagrammatically, we have:
 		\[\begin{tikzcd}
 		{\Hom(\pi_1(\Sigma),U(n))} & {T^{2g}} \\
 		\MM & {T^{2g}/W(T)}
@@ -128,7 +128,7 @@
 	\begin{equation}
 		\MM = \cR \cong \frac{T^{2}}{W(T)}.
 	\end{equation}
-	Finally, we would like to address the irreducible points. In general, $\MM_0$ will be a smooth manifold \cite[\S7]{atiyah_yang-mills_1983} but here we only prove it for $G=SU(2)$. 
+	Now we would like to address the irreducible points. In general, $\MM_0$ will be a smooth manifold \cite[\S7]{atiyah_yang-mills_1983} but here we only prove it for $G=SU(2)$. 
 	\begin{theorem}
 		When $G=SU(2)$, $\MM_0$ is a smooth manifold of (real) dimension $6g-6$.
 	\end{theorem}

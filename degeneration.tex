@@ -10,13 +10,13 @@
 		\label{fig:degen}
 	\end{figure}
 	
-	Let $\Sigma$ be a compact connected Riemann surface of genus $g$ as before. Let $\Sigma_0$ denote the nodal curve obtained by trinion decomposition from $\Sigma$, replacing each boundary circle of the trinions with a single point and then gluing at those points. Let $x_0 \in \Sigma_0$ be a nodal point corresponding to a boundary circle $C_0$. Let $\tilde{\Sigma}_0$ denote the desingularization of $\Sigma_0$. Since we assumed $\Sigma$ is connected, $\Sigma_0$ will be an irreducible variety and hence $\tilde{\Sigma}_0$ will be connected and of genus $g-1$. (cite). Let $x_1$ and $x_2$ denote the two points of $\tilde{\Sigma}_0$ which map to $x_0 \in \Sigma$. 
+	Let $\Sigma$ be a compact connected Riemann surface of genus $g$ as before. Let $\Sigma_0$ denote the nodal curve obtained by trinion decomposition from $\Sigma$, replacing each boundary circle of the trinions with a single point and then gluing at those points. Let $x_0 \in \Sigma_0$ be a nodal point corresponding to a boundary circle $C_0$. Let $\tilde{\Sigma}_0$ denote the desingularization of $\Sigma_0$. Let $x_1$ and $x_2$ denote the two points of $\tilde{\Sigma}_0$ which map to $x_0 \in \Sigma$. 
 	
 	Let $B$ be the polydisk in $\C^2$ given by the product of two disks of radius 2 centred at the origin. Then define a family $\QQ$ of quadrics for $t\in U$ by 
 	\begin{equation}
 		Q_t = \{(x,y)\in B\ ~|~ xy = t, t\in U\}.
 	\end{equation}
-	For $t=0$ we get the axes in $\C^2$ which is a local model for $\Sigma_0$ around $x_0$, and for $t \neq 0$ we get a cylinder which is a local model for $\Sigma$ on a tubular neighbourhood of the boundary circle $C_0$. In fact, for $t\neq 0$, $Q_t$ is described by curves
+	For $t=0$ we get the axes in $\C^2$ which is a local model for $\Sigma_0$ around $x_0$, and for $t \neq 0$ we get a cylinder which is a local model for $\Sigma$ on a tubular neighbourhood of the boundary circle $C_0$. For $t\neq 0$, the boundary of $Q_t$ is two circles, given by the equations
 	\begin{align*}
 		(x(t,\theta), y(t, \theta)) &= \left(
 		2e^{i\theta}, \frac{t}{2}e^{-i\theta}
@@ -29,23 +29,19 @@
 	\begin{equation}
 		(x(t,\theta), y(t,\theta)) = \sqrt{t}(e^{i\theta}, e^{-i\theta}),
 	\end{equation}
-	which approaches $C_0$ at $t=1$ and $x_0$ at $t=0$. By gluing this local model to the boundaries of the disjoint union $(U\times S^1)\coprod (U\times S^1)$ to construct a family over $U$, with fibre $\Sigma_0$ at $t=0$, and $\Sigma \cong \Sigma_t$ at $t\neq 0$.
+	which approaches $C_0$ at $t=1$ and $x_0$ at $t=0$. By gluing this local model to the boundaries of the disjoint union $(U\times S^1)\coprod (U\times S^1)$ one obtains a family over $U$, with fibre $\Sigma_0$ at $t=0$, and $\Sigma \cong \Sigma_t$ (topologically) at $t\neq 0$.
 
 \section{Local Model for the Connections}
 	\label{s:local-model-conns}
-	On our local model for the degeneration of the curve $\Sigma$, we can also give a local model for the degeneration of a unitary connection $\nabla$ on a vector bundle $E$ over $\Sigma$. Let
+	On our local model for the degeneration of the curve $\Sigma$, one also has a local model for the degeneration of a unitary connection $\nabla$ on a vector bundle $E$ over $\Sigma$. Theorem \ref{t:atd-thm} guarantees that there exists some $\alpha \in \mathfrak{t}$ such that locally,
 	\begin{equation}
-		C = \Hol_{c_1}(\nabla),
-	\end{equation}
-	and let $\alpha = \text{diag}(\alpha_1,...,\alpha_{\text{rank } E}))$, where $\alpha_i$ are the eigenvalues of $C$. Up to gauge equivalence, we can assume $\nabla$ is a.t.d. (thm \ref{t:atd-thm}) and therefore locally
-	\begin{equation}
-		\nabla = d + i\frac{\alpha}{2}(d\theta_x - d\theta_y) = \partial + \frac{\alpha}{4}\left(\frac{dx}{x}-\frac{dy}{y}\right) + \dbar+ \frac{\alpha}{4}\left(\frac{d\bar{x}}{\bar{x}}-\frac{d\bar{y}}{\bar{y}}\right),
+	\nabla = d + i\frac{\alpha}{2}(d\theta_x - d\theta_y) = \partial + \frac{\alpha}{4}\left(\frac{dx}{x}-\frac{dy}{y}\right) + \dbar+ \frac{\alpha}{4}\left(\frac{d\bar{x}}{\bar{x}}-\frac{d\bar{y}}{\bar{y}}\right),
 	\end{equation} 
-	where $\theta_x$ and $\theta_y$ are the arguments of the complex co-ordinates $x$ and $y$. The connection is isomonodromic, meaning that for all $t\neq 0$, 
+	where $\theta_x$ and $\theta_y$ are the arguments of the complex co-ordinates $x$ and $y$. The holonomy $C := \Hol_{c_1}(\nabla)$ will be given in this gauge by $C = e^{-2\pi i \alpha}$. On our family $Q_t$, this connection is well defined for all $t\neq 0$, and it is isomonodromic, meaning that for all $t\neq 0$, 
 	\begin{equation}
-		\Hol_{c_t}(\nabla) = \Hol_{c_1}(\nabla)=C.
+	\Hol_{c_t}(\nabla) = \Hol_{c_1}(\nabla)=C.
 	\end{equation}
-	On our family $Q_t$, this connection is well defined for all $t\neq 0$, and so it remains to describe the connection in the limit $t=0$. We can change co-ordinates on $Q_t$ from $(x,y)$ to $(x,t)$, and the connection becomes
+	It remains to describe the connection in the limit $t=0$. Change co-ordinates on $Q_t$ from $(x,y)$ to $(x,t)$, and the connection becomes
 	\begin{equation}
 		\nabla = d + i\frac{\alpha}{2}(2d\theta_x - d\theta_t).
 	\end{equation}
@@ -53,7 +49,7 @@
 	\begin{equation}
 		\nabla = d + i\frac{\alpha}{2}(-2d\theta_y + d\theta_t).
 	\end{equation}
-	Since $Q_t$ is defined by the equation $xy=t$, $d\theta_t$ is a normal component and we will project it out to obtain a partial connection $\nabla^p$ on $Q_t$. On the patch $x\neq 0$, using $x$ co-ordinate:
+	Since $Q_t$ is defined by the equation $xy=t$, $d\theta_t$ is a normal component and one may project it out to obtain a partial connection $\nabla^p$ on $Q_t$. On the patch $x\neq 0$, using $x$ co-ordinate:
 	\begin{equation}
 		\label{e:dtx}
 		\nabla^p = d + i\alpha d\theta_x.
@@ -63,26 +59,31 @@
 		\label{e:dty}
 		\nabla^p = d - i\alpha d\theta_y,
 	\end{equation}
-	which passes well to the limit $x\to 0$. Therefore we obtain a partial connection $\nabla^p$ defined everywhere on $Q_0$ except the nodal point $x_0$.
+	which also passes well to the limit $x\to 0$. Therefore we obtain a partial connection $\nabla^p$ defined everywhere on $Q_0$ except the nodal point $x_0$. 
 	
-	This local model can also be described in terms of the holonomy of the connection. Suppose first that $\Sigma - c_1$ is not disconnected, and denote by $\tilde{\Sigma}_0$ the desingularized degenerated curve. Let $p_1, p_2$ denote the punctures in $\tilde{\Sigma}$ corresponding to $c_0 = x_0$. Then $\tilde{\Sigma}$ is a twice punctured curve for which we have the extended moduli space $\MM^G$ from section \ref{s:mastermoduli}:
+	This local model can also be described in terms of the holonomy of the connection. Suppose first that $\Sigma - c_1$ is not disconnected \footnote{A similar analysis can be performed for disconnecting curves, see \cite[Page 10]{biswas_degenerations_2021}.}, and denote by $\tilde{\Sigma}_0$ the desingularized degenerated curve. In this case, $\tilde{\Sigma}_0$ has genus $g-1$. Let $p_1, p_2$ denote the punctures in $\tilde{\Sigma}$ corresponding to $c_0 = x_0$. Then $\tilde{\Sigma}$ is a twice punctured curve for which we have the extended moduli space $\MM^G$ from section \ref{s:mastermoduli}:
 	\begin{equation}
-		M = \left\{\left((A_i,B_i)_{i=1}^{g-1}, (C_1,C_2,D_1,D_2)\right), ~|~ \prod_{i=1}^{g-1}[A_i,B_i]D_1C_1D_1^{-1}D_2C_2D_2^{-1} = 1\right\} / SU(n)
+		\MM^G = \left\{\left((A_i,B_i)_{i=1}^{g-1}, (C_1,C_2,D_1,D_2)\right), ~|~ \prod_{i=1}^{g-1}[A_i,B_i]D_1C_1D_1^{-1}D_2C_2D_2^{-1} = 1\right\} / SU(n)
 	\end{equation}
-	If we begin with a connection on $\Sigma$ with holonomy $C$ around the curve $c_1$, and degenerate the curve $c_1$, the degenerated connection has holonomy $C$ around the puncture $p_1$ and $R(C)^{-1}$ around the puncture $p_2$, where $R$ reverses the order of $\alpha$. After gluing the puncture, the fundamental group of $\Sigma$ has the relation
+	On the original space $\Sigma$, the connections correspond to representations of $\pi_1(\Sigma)$; picking a point $p\in\Sigma$, let $d_1$ and $d_2$ be curves from $p$ to $c_1$ such that $d_1d^{-1}_2$ is a non-contractible loop based at $p$. Then let $(A_i,B_i)_{i=1}^{g-1}$ denote the standard generators for the rest of $\pi_1(\Sigma)$. In this notation, a connection on $\Sigma$ is represented by holonomies $\left((A_i,B_i)_{i=1}^{g-1}, C,D_1,D_2\right)$ around these curves.
+	
+	Applying the degeneration, the resulting connection on $\tilde{\Sigma}_0$ has holonomy $C$ around the puncture $p_1$ and $R(C)^{-1}$ around the puncture $p_2$, where $R$ reverses the order of the entries of $\alpha$. Gluing $p_1$ and $p_2$, the fundamental group of the result $\Sigma_0$ has the relation
 	\begin{equation}
 	 D_1^{-1}CD_1D_2^{-1}C^{-1}D_2 = 1, \implies D_2D_1^{-1}CD_1D_2^{-1} = C.
 	\end{equation}
-	Therefore, $D_1D_2^{-1} \in \Stab(C)$, or $D_1\mu = D_2$ for some $\mu\in \Stab(C)$. Our degeneration thus sends the connection $\nabla = (A_i,B_i,C_j,D_j)$ to the orbit
+	Therefore, $D_1D_2^{-1} \in \Stab(C)$, or $D_1\mu = D_2$ for some $\mu\in \Stab(C)$. Our local degeneration thus sends the connection $\nabla = (A_i,B_i,C,D_1,D_2)$ on $\Sigma$ to the orbit
 	\begin{equation}
 		\label{e:degen-action}
-		(A_i,B_i,C_j,D_j) \to \left(
-		(A_i,B_i,C_j,D_j)_{j\neq k}, (\mu C_k \mu^{-1}, D_k, D_k \mu)\right), ~\mu \in \Stab(C_k)
-		= \text{Orb}_{\Stab (C_k)} (\nabla)
+		(A_i,B_i,C,D_1,D_2) \to \left(
+		(A_i,B_i), (\mu C \mu^{-1}, D_1, D_1 \mu)\right), ~\mu \in \Stab(C)
+		= \text{Orb}_{\Stab (C)} (\nabla),
 	\end{equation}
-	If $C_k$ is in $\exp \Delta^0$, then $\Stab(C_k) = \{e\}$ and the degeneration is bijective. Otherwise, when $C_k = \pm 1$, then $\Stab(C_k) = SU(2)$. Notice that the action of equation \ref{e:degen-action} matches the action of the $k$-th copy of $G$ on $\MM^G$ in equation \ref{e:impl-action}. Therefore, these orbits are points in the strata of the imploded cross-section of $M$. When we perform this local degeneration for each curve in the trinion decomposition, which corresponds to imploding $\MM^G$ for each puncture, we will obtain an element in the imploded cross-section $P$. 
+	in $\MM^G$. If $C$ is in $\exp \Delta^0$, then $\Stab(C) = \{e\}$ and the degeneration is bijective. Otherwise, when $C = \pm 1$, then $\Stab(C) = SU(2)$. Notice that the action of equation \ref{e:degen-action} matches the action of the $k$-th copy of $G$ on $\MM^G$ of equation \ref{e:impl-action}. Therefore, these orbits are points in the strata of the imploded cross-section of $\MM^G$. When we perform this local degeneration for each curve in the trinion decomposition, which corresponds to imploding $\MM^G$ for each puncture, we will obtain an element in the imploded cross-section $P$. 
  	
 \section{Degeneration of the Moduli Space}
+	Using this local model, one can describe the degeneration of the entire moduli space $\MM$ as $\Sigma$ is degenerated to $\Sigma_0$. First we will describe the degeneration in terms of representations of $\pi_1(\Sigma)$, and we will see that $\MM$ degenerates to obtain $P$.
+	
+	Consider (TODO)
 	On $\Sigma_t$ for $t\neq 0$, we simply have the moduli space $\MM$ of flat $SU(2)$ connections which corresponds to the moduli space of stable holomorphic vector bundles with $SL(2,\C)$ structure. Therefore it remains to understand the moduli space over $\Sigma_0$ and the desingularisation $\tilde{\Sigma}_0$. 
 	
 	Let $p$ be a nodal point in $\Sigma_0$ and $x_1,x_2$ the two points in $\tilde{\Sigma}_0$ which correspond to $p$. Any connection on $\Sigma_0$ has holonomy $A_i\in SU(2)$ around each nodal point which lives in the fundamental alcove of $SU(2)$. We can write the alcove as

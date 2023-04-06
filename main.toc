@@ -18,7 +18,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Polarisation of the Moduli Space}{19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Moduli of Connections on a Trinion}{22}%
+\contentsline {section}{\numberline {3.3}Moduli of Connections on a Trinion}{23}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}Counting Bohr-Sommerfeld Points}{24}%
 \defcounter {refsection}{0}\relax 
@@ -36,26 +36,26 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.6}Framed Parabolic Bundles on a Trinion}{37}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.7}Gluing $\mathcal {P}$ over Trinions }{43}%
+\contentsline {section}{\numberline {4.7}Gluing $\mathcal {P}$ over Trinions }{44}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Degenerating the Moduli Space}{46}%
+\contentsline {chapter}{\numberline {5}Degenerating the Moduli Space}{47}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Degeneration of the Curves}{46}%
+\contentsline {section}{\numberline {5.1}Degeneration of the Curves}{47}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Local Model for the Connections}{48}%
+\contentsline {section}{\numberline {5.2}Local Model for the Connections}{49}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Degeneration of the Moduli Space}{49}%
+\contentsline {section}{\numberline {5.3}Degeneration of the Moduli Space}{50}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Toric Degenerations}{51}%
+\contentsline {section}{\numberline {5.4}Toric Degenerations}{52}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Degeneration of the Moduli Space over one Trinion}{52}%
+\contentsline {section}{\numberline {5.5}Degeneration of the Moduli Space over one Trinion}{53}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Counting the Dimension of the Real Quantization}{54}%
+\contentsline {chapter}{\numberline {6}Counting the Dimension of the Real Quantization}{55}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Polarization and Prequantum Line Bundle on $P$}{54}%
+\contentsline {section}{\numberline {6.1}Polarization and Prequantum Line Bundle on $P$}{55}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Holomorphic Sections of $\mathcal {L}$}{57}%
+\contentsline {section}{\numberline {6.2}Holomorphic Sections of $\mathcal {L}$}{58}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Invariance of $\mathcal {L}$ under Degeneration.}{59}%
+\contentsline {section}{\numberline {6.3}Invariance of $\mathcal {L}$ under Degeneration.}{60}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Counting Sections of $\mathcal {J}_\pi $}{60}%
+\contentsline {section}{\numberline {6.4}Counting Sections of $\mathcal {J}_\pi $}{61}%

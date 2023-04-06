@@ -144,23 +144,29 @@ There is another construction of a prequantum line bundle for $\MM$, the \textit
 	\begin{equation}
 		y = R(s,\theta)d\theta + S(s,\theta)ds,
 	\end{equation}
-	for some $R,S \in C^\infty(\Sigma, \mathfrak{su}(2))$. The maximal torus theorem ensures we can conjugate by a constant matrix so that $X=S(0,0)$ lies in $\mathfrak{t}$. Now, suppose we had a gauge transformation $g(s,\theta)$ on $V$ satisfying
+	for some $R,S \in C^\infty(\Sigma, \mathfrak{su}(2))$. Suppose we have a gauge transformation $h(s,\theta)$ with $\partial_s h(s,\theta)=0$, $h(0,0)=\mathds{1}$ and
 	\begin{equation}
 		\label{e:atd-pde1}
-		Sg + \frac{\partial g}{\partial s} = 0.
+		\frac{\partial h}{\partial \theta} - Rh = 0.
 	\end{equation}
-	Then $g\cdot y$ yields
+	Then the $\theta$ component of $h\cdot y$ will be 
 	\begin{equation}
-		g^{-1}\left(Rd\theta + Sds,\right)g + g^{-1}dg = g^{-1}\left(Rg + \frac{dg}{d\theta}\right)d\theta.
+		h^{-1}\left(\frac{\partial h}{\partial \theta} - Rh\right) = 0.
 	\end{equation}
-	Define $T(s,\theta) = g^{-1}\left(Rg + \frac{dg}{d\theta}\right)$ and suppose we had another gauge transformation $h(\theta)$ for which
+	Such an $h$ must exist as Equation (\ref{e:atd-pde1}) is four linear first order ODEs for the components of the matrix $h$. One must only check that this solution will be an $SU(2)$ matrix for all $s$ as required. At $\theta=0$, $h = \mathds{1}$, and the derivative is $-R(0,0) \in \mathfrak{su}(2)$; therefore the solution starts in $SU(2)$ and its derivative for all time is an $\mathfrak{su}(2)$ matrix, so the solution remains in $SU(2)$. Notice that $h(0) \neq h(2\pi)$ so this gauge transformation exists on $[0,2\pi]\times[-1,1]$ but it does not pass to $V$.
+	
+	Now let $H=h(0,2\pi)$ and let $X \in \mathfrak{t}$ be the element such that $\exp(2\pi X) = H^{-1}$ and define $f(s,\theta) = \exp(\theta X)$. Then $\partial_s f = 0$, $\partial_\theta f = Xf$ and 
+	\begin{equation}
+		f\cdot h \cdot y = f^{-1}Xfd\theta + f^{-1}h^{-1}\left(\frac{\partial h}{\partial \theta} - Rh\right)f + S(s,\theta)ds = Xd\theta + S(s,\theta)ds.
+	\end{equation}
+	Furthermore $fh(0,0) = \mathds{1}$ and $fh(0,2\pi) = H^{-1}H = \mathds{1}$ so the gauge transformation $fh$ satisfies the periodic boundary condition and is well defined on $V$. Thus it remains to find a gauge transformation sending the $ds$ component to zero. Such a transformation must satisfy 
 	\begin{equation}
 		\label{e:atd-pde2}
-		h^{-1}Th + h^{-1}\frac{\partial h}{\partial \theta} = X.
-	\end{equation}
-	Then the product $hg$ gives a gauge transformation which puts $y$ in a.t.d. form. Equations (\ref{e:atd-pde1}) and (\ref{e:atd-pde2}) form a system of linear 1st order PDEs for $g$ and $h$ and thus (hopefully?) have a unique solution (how to show the solution actually lives in $SU(2)$?).
+		\frac{\partial k}{\partial s} - Sk = 0,
+	\end{equation} 
+	with $k(-1,\theta) = \mathds{1}$ and $\partial_\theta k = 0$. As before Equation (\ref{e:atd-pde2}) is four first order ODEs with a unique solution, and the same argument as before shows $k$ will be in $SU(2)$. The $s$ co-ordinate has no periodic boundary condition, so $k$ immediately passes to $V$, and the composition $g = kfh$ gives us our gauge transformation on $V$ putting $y$ in the desired form.
 	
-	Repeating this process for each boundary circle $C_i$ in our decomposition gives a set of local gauge transformations $g_i$ on each $V_i$. Complete $V_i$ to a cover $\{U_i\}$ of $\Sigma$ and let $g_i = \mathds{1}$ on any additional sets required. Within each $V_i$, pick a smaller tubular neighbourhood $W_i$, and let $\{\phi_i\}$ be a partition of unity for $\{U_i\}$ with $\phi_i = 1$ on $W_i$. Define the global gauge transformation $g = \sum g_i \phi_i$. Then for all $i$, $(g\cdot y)|_{W_i} = X_i d\theta_i$ and so $g\cdot y$ is an a.t.d. representative for $y \mod \cG$.
+	Repeating this process for each boundary circle $C_i$ in our decomposition gives a set of local gauge transformations $g_i$ on each $V_i$. Complete $V_i$ to a cover $\{U_i\}$ of $\Sigma$ and let $g_i = \mathds{1}$ on the additional sets added. Within each $V_i$, pick a smaller tubular neighbourhood $W_i$, and let $\{\phi_i\}$ be a partition of unity for $\{U_i\}$ with $\phi_i = 1$ on $W_i$. Define the global gauge transformation $g = \sum g_i \phi_i$. Then for all $i$, $(g\cdot y)|_{W_i} = X_i d\theta_i$ and so $g\cdot y$ is an a.t.d. representative for $y \mod \cG$.
 	\end{proof}
 	
 	This lets us define subgroups of $G=SU(2)$, which correspond to stabilizers of flat connections. Suppose $A$ is an a.t.d connection. Then the stabilizer of $A|_{C_i}$ in $\cG(C_i) = \Hom(C_i, G)$ consists of constant maps, and can thus be identified with a subgroup $H_i$ in $G$. If $\theta_i(A) \in \{0,\pi\}$, then $\text{hol}_{C_i}(A) = \pm\text{Id}$ and so $H_i = G$. Otherwise, $H_i = T$. 

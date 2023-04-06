@@ -1,20 +1,20 @@
 [0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is 'main.blg'
-[106] biber:322> INFO - === Fri Mar 31, 2023, 11:07:40
-[124] Biber.pm:415> INFO - Reading 'main.bcf'
-[232] Biber.pm:943> INFO - Found 22 citekeys in bib section 0
-[252] Biber.pm:4256> INFO - Processing section 0
-[252] Utils.pm:75> INFO - Globbing data source 'citations.bib'
-[252] Utils.pm:91> INFO - Globbed data source 'citations.bib' to citations.bib
-[265] Biber.pm:4455> INFO - Looking for bibtex format file 'citations.bib' for section 0
-[270] bibtex.pm:1653> INFO - LaTeX decoding ...
-[390] bibtex.pm:1471> INFO - Found BibTeX data source 'citations.bib'
-[506] Utils.pm:293> WARN - ISBN '978-1-4419-1936-6 978-1-4757-4265-7' in entry 'mumford_projective_2004' is invalid - run biber with '--validate_datamodel' for details.
-[612] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_iK6d/citations.bib_392465.utf8, line 181, warning: possible runaway string started at line 158
-[653] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[654] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[654] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[654] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[686] bbl.pm:652> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[704] bbl.pm:755> INFO - Output to main.bbl
-[704] Biber.pm:128> INFO - WARNINGS: 2
+[104] biber:322> INFO - === Wed Apr  5, 2023, 11:36:02
+[122] Biber.pm:415> INFO - Reading 'main.bcf'
+[212] Biber.pm:943> INFO - Found 23 citekeys in bib section 0
+[230] Biber.pm:4256> INFO - Processing section 0
+[230] Utils.pm:75> INFO - Globbing data source 'citations.bib'
+[231] Utils.pm:91> INFO - Globbed data source 'citations.bib' to citations.bib
+[243] Biber.pm:4455> INFO - Looking for bibtex format file 'citations.bib' for section 0
+[248] bibtex.pm:1653> INFO - LaTeX decoding ...
+[367] bibtex.pm:1471> INFO - Found BibTeX data source 'citations.bib'
+[459] Utils.pm:293> WARN - ISBN '978-1-4419-1936-6 978-1-4757-4265-7' in entry 'mumford_projective_2004' is invalid - run biber with '--validate_datamodel' for details.
+[554] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_hOmz/citations.bib_39838.utf8, line 181, warning: possible runaway string started at line 158
+[595] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[595] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[595] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[595] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[626] bbl.pm:652> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[641] bbl.pm:755> INFO - Output to main.bbl
+[641] Biber.pm:128> INFO - WARNINGS: 2

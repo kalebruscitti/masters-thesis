@@ -83,8 +83,9 @@
 \section{Degeneration of the Moduli Space}
 	Using this local model, one can describe the degeneration of the entire moduli space $\MM$ as $\Sigma$ is degenerated to $\Sigma_0$. First we will describe the degeneration in terms of representations of $\pi_1(\Sigma)$, and we will see that $\MM$ degenerates to obtain $P$.
 	
-	Consider (TODO)
-	On $\Sigma_t$ for $t\neq 0$, we simply have the moduli space $\MM$ of flat $SU(2)$ connections which corresponds to the moduli space of stable holomorphic vector bundles with $SL(2,\C)$ structure. Therefore it remains to understand the moduli space over $\Sigma_0$ and the desingularisation $\tilde{\Sigma}_0$. 
+	Consider the connected genus $g$ surface $\Sigma$ and its desingularized degeneration $\Sigma_0$. Let $\{c_i\}_{i=1}^{3g-3}$ be boundary curves in a trinion decomposition for $\Sigma$, which degenerate to points $\{p_i\}_{i=1}^{6g-6}$ in the desingularized curve; $p_{2k-1}$ and $p_{2k}$ each come from the degeneration of the curve $c_k$. 
+	
+	On $\Sigma_t$ for $t\neq 0$, we simply have the moduli space $\MM_t$ of flat $SU(2)$ connections which corresponds to the moduli space of stable holomorphic vector bundles with $SL(2,\C)$ structure over $\Sigma_t$. Therefore it remains to understand the moduli space over $\Sigma_0$ and the desingularisation $\tilde{\Sigma}_0$. 
 	
 	Let $p$ be a nodal point in $\Sigma_0$ and $x_1,x_2$ the two points in $\tilde{\Sigma}_0$ which correspond to $p$. Any connection on $\Sigma_0$ has holonomy $A_i\in SU(2)$ around each nodal point which lives in the fundamental alcove of $SU(2)$. We can write the alcove as
 	\begin{equation}
@@ -92,11 +93,13 @@
 		-2\pi i ~\text{diag}(\gamma, -\gamma)
 		\right)~|~ \gamma \in[1/2,1]\},
 	\end{equation}
-	and the logarithms of the holonomies are the values of $\gamma$. These logarithms will correspond to weights for a parabolic structure. Let $\Delta = [1/2,1]$, which divides into three faces $\{1/2\}, \{1\}$ and $(1/2,1)$. When $\gamma \in (1/2,1)$, the corresponding holonomy matrix has two distinct eigenvalues $\gamma$ and $-\gamma$, but if $\gamma=1/2$ then the matrix is $-1$ times the 2x2 identity and if $\gamma=1$ then it is the identity. 
+	and the logarithms of the holonomies are the values of $\gamma$. Under the Mehta-Seshadri correspondence these logarithms will define the weights for a parabolic structure of the $SL(2,\C)$ bundle corresponding to the connection. The flags assigned to the points $x_1$ and $x_2$ will be determined by the eigenspaces of $A_i$.
 	
-	Fix $\gamma \in [1/2,1]$ and consider the space of connections with holonomy whose logarithm is $\gamma$ about $p_i$. Quotienting out the gauge choice of $SL(2,\C)$ framing around $p_i$, the Mehta-Seshadri theorem (cite) tells us that this space of connections corresponds to the holomorphic moduli space of parabolic $SL(n,\C)$ vector bundles $E$ with parabolic structure at $p_i$ of weight $\gamma$. The parabolic structure is the flag given by the largest eigenspace of the holonomy, i.e. that with eigenvalue $\gamma$. If $\gamma = 1/2$ or $1$, then we are exactly in the case as discussed in section 3 where we acquire instead a framed parabolic sheaf with torsion at $p_1$ and the $SL(2,\C)$ structure vanishes. 
+	Let $\Delta = [1/2,1]$, which divides into three faces $\{1/2\}, \{1\}$ and $(1/2,1)$. When $\gamma \in (1/2,1)$, the corresponding holonomy matrix has two distinct eigenvalues $\gamma$ and $-\gamma$.  If $\gamma=1/2$ then $A_i = -\mathds{1}$, and if $\gamma = 1$ then $A_i = \mathds{1}$.
 	
-	Again just as in section 3, to obtain the entire moduli space of connections on $\Sigma_0$ and $\tilde{\Sigma}_0$, we need to allow the weights to vary and fit the space for each weight together. This process will give us exactly $\cP$, the space of framed parabolic sheaves constructed by Hurtubise and Jeffrey. There in summary, we have
+	Fix $\gamma \in [1/2,1]$ and consider the space of connections with holonomy whose logarithm is $\gamma$ about $p_i$. Quotienting out the gauge choice of $SL(2,\C)$ framing around $p_i$, the Mehta-Seshadri theorem \cite{mehta_moduli_1980} tells us that this space of connections corresponds to the holomorphic moduli space of parabolic $SL(n,\C)$ vector bundles $E$ with parabolic structure at $p_i$ of weight $\gamma$. The parabolic structure is the flag given by the largest eigenspace of the holonomy, i.e. that with eigenvalue $\gamma$. When $\gamma = 1/2$ or $1$, then we acquire instead a framed parabolic sheaf with torsion at $p_1$ and the $SL(2,\C)$ structure vanishes, as discussed in section \ref{s:mastermoduli}.
+		
+	To obtain the entire moduli space of connections on $\Sigma_0$ and $\tilde{\Sigma}_0$, we need to allow the weights to vary and fit the space for each weight together. This was the construction of $\cP$ from section \ref{s:mastermoduli}, the space of framed parabolic sheaves constructed by Hurtubise and Jeffrey. In summary, we have \cite[Theorems 3.17, 4.1]{biswas_degenerations_2021}
 	\begin{theorem}[Biswas and Hurtubise]
 		\label{t:bishurt}
 		There is a fibre bundle $\pi: \XX \to \C$, for which
@@ -147,9 +150,23 @@
 		\begin{equation}
 			D(A_i,B_i,C_j,D_k) = \text{Orb}_{SU(2)}(\nabla),
 		\end{equation}
-		under the action ref. which is the same as that defined for the imploded cross-section. Hence on each stratum, $\phi(\nabla) = D(\nabla)$.
+		under the action of $SU(2)$ of equation \ref{e:impl-action} which is the same as that defined for the imploded cross-section. Hence on each stratum, $\phi(\nabla) = D(\nabla)$. 
 		
-		For each curve in the trinion decomposition, we can repeat this process, until it remains to perform the final quotient by the first copy of $G$. (todo)
+		For each curve in the trinion decomposition, we can repeat this process, until it remains to perform the final quotient by the first copy of $G$. After these implosions, we arrive at the set
+		\begin{equation}
+			\left\{
+			(C_1,W_2,...,W_n) ~|~ C_1 \in G, W_j \in D(G)_{impl}, C_1\prod_{j=2}^{n}\Phi_G(W_j) = 1	
+			\right\}. 
+		\end{equation}
+		Where $W_j = (D_j,C_jD_j) \in D(G)_{impl}$, $j\neq 1$ and $W_1 = (\mathds{1},C_1)$. The final copy of $G$ acts by (Equation 4.15)
+		\begin{equation}
+			g\cdot(W_1,...,W_{n}) = (C_1,gD_2,C_2,...,gD_n, C_n). 
+		\end{equation}
+		As for the degeneration $D$, the final copy of $G$ acts by global conjugation on the representations $\Hom(\pi_1(G),G)$. However, as we already fixed the connection $A$ to be in A.T.D. gauge, we know $C_j \in T$ and hence the conjugation action fixes $C_j$, and is given by
+		\begin{equation}
+			g \cdot (C_1,(C_j,D_j, D_j\mu)_{j=2}^n) = (C_1, (C_j, gD_j, gD_j\mu)_{j=2}^n),
+		\end{equation}
+		which agrees with the action for the implosion. 
 	\end{proof}
 	
 	\section{Toric Degenerations}

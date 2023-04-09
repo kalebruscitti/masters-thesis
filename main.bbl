@@ -664,6 +664,59 @@
       \verb http://link.springer.com/10.1007/BF02096964
       \endverb
     \endentry
+    \entry{mehta_moduli_1980}{article}{}
+      \name{author}{2}{}{%
+        {{hash=593e72e367547a6a05b6cace2dd4eb12}{%
+           family={Mehta},
+           familyi={M\bibinitperiod},
+           given={V.\bibnamedelimi B.},
+           giveni={V\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=2e343700a354bd9f9e6e0ead08e49df8}{%
+           family={Seshadri},
+           familyi={S\bibinitperiod},
+           given={C.\bibnamedelimi S.},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{293fc6065dc73bee45ddf0268cd78c6d}
+      \strng{fullhash}{293fc6065dc73bee45ddf0268cd78c6d}
+      \strng{bibnamehash}{293fc6065dc73bee45ddf0268cd78c6d}
+      \strng{authorbibnamehash}{293fc6065dc73bee45ddf0268cd78c6d}
+      \strng{authornamehash}{293fc6065dc73bee45ddf0268cd78c6d}
+      \strng{authorfullhash}{293fc6065dc73bee45ddf0268cd78c6d}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1432-1807}
+      \field{journaltitle}{Mathematische Annalen}
+      \field{month}{10}
+      \field{number}{3}
+      \field{title}{Moduli of vector bundles on curves with parabolic structures}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2023}
+      \field{volume}{248}
+      \field{year}{1980}
+      \field{urldateera}{ce}
+      \field{pages}{205\bibrangedash 239}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.1007/BF01420526
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/kaleb/Zotero/storage/NUM5ITSF/Mehta and Seshadri - 1980 - Moduli of vector bundles on curves with parabolic .pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01420526
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01420526
+      \endverb
+      \keyw{Parabolic Structure,Vector Bundle}
+    \endentry
     \entry{michiels_moduli_nodate}{article}{}
       \name{author}{1}{}{%
         {{hash=bf753c4a8a1973cbfc48554f115a5310}{%
@@ -1067,51 +1120,6 @@
       \verb{url}
       \verb https://www.jstor.org/stable/2152810
       \endverb
-    \endentry
-    \entry{thaddeus_stable_1992}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=37fd632ee172b298c810cdfe20ab8eb0}{%
-           family={Thaddeus},
-           familyi={T\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {arXiv}%
-      }
-      \strng{namehash}{37fd632ee172b298c810cdfe20ab8eb0}
-      \strng{fullhash}{37fd632ee172b298c810cdfe20ab8eb0}
-      \strng{bibnamehash}{37fd632ee172b298c810cdfe20ab8eb0}
-      \strng{authorbibnamehash}{37fd632ee172b298c810cdfe20ab8eb0}
-      \strng{authornamehash}{37fd632ee172b298c810cdfe20ab8eb0}
-      \strng{authorfullhash}{37fd632ee172b298c810cdfe20ab8eb0}
-      \field{extraname}{3}
-      \field{sortinit}{T}
-      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{We study the moduli problem of pairs consisting of a rank 2 vector bundle and a nonzero section over a fixed smooth curve. The stability condition involves a parameter; as it varies, we show that the moduli space undergoes a sequence of flips in the sense of Mori. As applications, we prove several results about moduli spaces of rank 2 bundles, including the Harder-Narasimhan formula and the SU(2) Verlinde formula. Indeed, we prove a general result on the space of sections of powers of the ideal sheaf of a curve in projective space, which includes the Verlinde formula.}
-      \field{month}{10}
-      \field{note}{arXiv:alg-geom/9210007}
-      \field{title}{Stable pairs, linear systems and the {Verlinde} formula}
-      \field{urlday}{5}
-      \field{urlmonth}{4}
-      \field{urlyear}{2023}
-      \field{year}{1992}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.48550/arXiv.alg-geom/9210007
-      \endverb
-      \verb{file}
-      \verb arXiv Fulltext PDF:/home/kaleb/Zotero/storage/6LD8MKTC/Thaddeus - 1992 - Stable pairs, linear systems and the Verlinde form.pdf:application/pdf;arXiv.org Snapshot:/home/kaleb/Zotero/storage/HHUC6SNB/9210007.html:text/html
-      \endverb
-      \verb{urlraw}
-      \verb http://arxiv.org/abs/alg-geom/9210007
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/alg-geom/9210007
-      \endverb
-      \keyw{Mathematics - Algebraic Geometry}
     \endentry
     \entry{weitsman_real_1992}{article}{}
       \name{author}{1}{}{%

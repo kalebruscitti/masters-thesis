@@ -46,7 +46,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.3}Degeneration of the Moduli Space}{50}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Toric Degenerations}{52}%
+\contentsline {section}{\numberline {5.4}Toric Degenerations}{53}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.5}Degeneration of the Moduli Space over one Trinion}{54}%
 \defcounter {refsection}{0}\relax 

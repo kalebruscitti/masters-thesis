@@ -67,25 +67,21 @@
 	\end{equation}
 	On the original space $\Sigma$, the connections correspond to representations of $\pi_1(\Sigma)$; picking a point $p\in\Sigma$, let $d_1$ and $d_2$ be curves from $p$ to $c_1$ such that $d_1d^{-1}_2$ is a non-contractible loop based at $p$. Then let $(A_i,B_i)_{i=1}^{g-1}$ denote the standard generators for the rest of $\pi_1(\Sigma)$. In this notation, a connection on $\Sigma$ is represented by holonomies $\left((A_i,B_i)_{i=1}^{g-1}, C,D_1,D_2\right)$ around these curves.
 	
-	Applying the degeneration, the resulting connection on $\tilde{\Sigma}_0$ has holonomy $C$ around the puncture $p_1$ and $R(C)^{-1}$ around the puncture $p_2$, where $R$ reverses the order of the entries of $\alpha$. Gluing $p_1$ and $p_2$, the fundamental group of the result $\Sigma_0$ has the relation
+	Applying the degeneration, the resulting connection on $\tilde{\Sigma}_0$ has holonomy $C$ around the puncture $p_1$ and $C^{-1}$ around the puncture $p_2$. Gluing $p_1$ and $p_2$, the fundamental group of the result $\Sigma_0$ has the relation
 	\begin{equation}
 	 D_1^{-1}CD_1D_2^{-1}C^{-1}D_2 = 1, \implies D_2D_1^{-1}CD_1D_2^{-1} = C.
 	\end{equation}
-	Therefore, $D_1D_2^{-1} \in \Stab(C)$, or $D_1\mu = D_2$ for some $\mu\in \Stab(C)$. Our local degeneration thus sends the connection $\nabla = (A_i,B_i,C,D_1,D_2)$ on $\Sigma$ to the orbit
+	Therefore, $D_1D_2^{-1} \in \Stab(C)$, or $D_1\mu^{-1} = D_2$ for some $\mu\in \Stab(C)$. Our local degeneration thus sends the connection $\nabla = (A_i,B_i,C,D_1,D_2)$ on $\Sigma$ to the orbit under $\mu \in \Stab(C)$
 	\begin{equation}
 		\label{e:degen-action}
 		(A_i,B_i,C,D_1,D_2) \to \left(
-		(A_i,B_i), (\mu C \mu^{-1}, D_1, D_1 \mu)\right), ~\mu \in \Stab(C)
+		(A_i,B_i), (\mu C \mu^{-1}, D_1\mu^{-1})\right), 
 		= \text{Orb}_{\Stab (C)} (\nabla),
 	\end{equation}
 	in $\MM^G$. If $C$ is in $\exp \Delta^0$, then $\Stab(C) = \{e\}$ and the degeneration is bijective. Otherwise, when $C = \pm 1$, then $\Stab(C) = SU(2)$. Notice that the action of equation \ref{e:degen-action} matches the action of the $k$-th copy of $G$ on $\MM^G$ of equation \ref{e:impl-action}. Therefore, these orbits are points in the strata of the imploded cross-section of $\MM^G$. When we perform this local degeneration for each curve in the trinion decomposition, which corresponds to imploding $\MM^G$ for each puncture, we will obtain an element in the imploded cross-section $P$. 
  	
 \section{Degeneration of the Moduli Space}
-	Using this local model, one can describe the degeneration of the entire moduli space $\MM$ as $\Sigma$ is degenerated to $\Sigma_0$. First we will describe the degeneration in terms of representations of $\pi_1(\Sigma)$, and we will see that $\MM$ degenerates to obtain $P$.
-	
-	Consider the connected genus $g$ surface $\Sigma$ and its desingularized degeneration $\Sigma_0$. Let $\{c_i\}_{i=1}^{3g-3}$ be boundary curves in a trinion decomposition for $\Sigma$, which degenerate to points $\{p_i\}_{i=1}^{6g-6}$ in the desingularized curve; $p_{2k-1}$ and $p_{2k}$ each come from the degeneration of the curve $c_k$. 
-	
-	On $\Sigma_t$ for $t\neq 0$, we simply have the moduli space $\MM_t$ of flat $SU(2)$ connections which corresponds to the moduli space of stable holomorphic vector bundles with $SL(2,\C)$ structure over $\Sigma_t$. Therefore it remains to understand the moduli space over $\Sigma_0$ and the desingularisation $\tilde{\Sigma}_0$. 
+	Using this local model, one can describe the degeneration of the entire moduli space $\MM$ as $\Sigma$ is degenerated to $\Sigma_0$. Let $\{c_i\}_{i=1}^{3g-3}$ be boundary curves in a trinion decomposition for $\Sigma$, which degenerate to points $\{p_i\}_{i=1}^{6g-6}$ in the desingularized curve; $p_{2k-1}$ and $p_{2k}$ each come from the degeneration of the curve $c_k$. On $\Sigma_t$ for $t\neq 0$, we simply have the moduli space $\MM_t$ of flat $SU(2)$ connections which corresponds to the moduli space of stable holomorphic vector bundles with $SL(2,\C)$ structure over $\Sigma_t$. Therefore it remains to understand the moduli space over $\Sigma_0$ and the desingularisation $\tilde{\Sigma}_0$. 
 	
 	Let $p$ be a nodal point in $\Sigma_0$ and $x_1,x_2$ the two points in $\tilde{\Sigma}_0$ which correspond to $p$. Any connection on $\Sigma_0$ has holonomy $A_i\in SU(2)$ around each nodal point which lives in the fundamental alcove of $SU(2)$. We can write the alcove as
 	\begin{equation}
@@ -116,6 +112,7 @@
 	\end{equation}
 	described by Hurtubise and Jeffrey \cite[prop 2.37]{hurtubise_representations_2000}. 
 	\begin{lemma}
+		\label{l:degen-equal}
 		Given an element $A\in \MM$, let $D(A)$ denote the element in $P$ obtained by performing the local degeneration of section \ref{s:local-model-conns} at each curve in a trinion decomposition for $\Sigma$. Then $D(A) = \phi(A)$, where $\phi(A)$ is the composition of maps 
 		\begin{equation}
 			\MM = \MM^T \hookrightarrow \MM^G \twoheadrightarrow P,
@@ -169,8 +166,13 @@
 		which agrees with the action for the implosion. 
 	\end{proof}
 	
-	\section{Toric Degenerations}
-	Here we want to describe a result of Harada and Kaveh (cite), which constructs an integrable system from a \textit{toric degeneration} satisfying some additional hypotheses. 
+	\section{Toric Degenerations and Bohr-Sommerfeld Points}
+	
+	Theorem \ref{t:bishurt} gives us a relationship between the moduli space $\MM$ of flat $SU(2)$ connections over the Riemann surface $\Sigma$, and a toric variety $\cP$ via degeneration. Such degenerations to toric varieties have been studied in other contexts, where one can often prove a result about some space $X$ by degenerating it to a toric variety for which the result holds. In this case, one may hope to prove that the number of Bohr-Sommerfeld points of $\MM$ is equal to the number of fiberwise flat sections by proving Sniyaticki's theorem for toric varieties and then using the degeneration of $\MM$ to $\cP$. If the degeneration preserved the space of sections, then by relating the fibrewise flat sections of $\cP$ to the Bohr-Sommerfeld points you could obtain a similar relation for $\MM$. 
+	
+	However, it turns out that Sniyaticki's theorem does not hold for toric varieties. Hamilton proved in 2010 that if $M$ is a compact toric symplectic manifold with a singular Lagrangian fibration and a prequantum line bundle $\LL$, then the number of fibre-wise flat sections $(\dim H^0(\JJ_{\pi}, M))$ is equal to the number of \emph{non-singular} Bohr-Sommerfeld points \cite[Theorem 8.3.2]{hamilton_locally_2010}. For example, when $g=2$ we computed in section \ref{s:p-gluing} that the toric variety $\cP$ corresponding to the symmetric decomposition is $\PP^3$. This is also a compact symplectic manifold, so Hamilton's result applies. In this case, $\cP$ had four Bohr-Sommerfeld points, corresponding to the vertices of its moment polytope, which are all singular. Therefore this result tells us that $\cP$ has \emph{no} fibre-wise flat sections. It is conjectured that the number of fibre-wise flat sections of $\MM$ should agree with the Verlinde formula, so if the degeneration from $\MM$ to $\cP$ is section-preserving, this would contradict our expectations.
+	
+	To investigate the behaviour of the holomorphic and fibre-wise flat sections of $\LL$, we take inspiration from a result of Harada and Kaveh \cite{harada_integrable_2015}, which constructs an integrable system from a \textit{toric degeneration} satisfying some additional hypotheses which do not apply to the degeneration of Biswas and Hurtubise. 
 	\begin{definition}
 		\label{d:toricdegen}
 		Let $X$ be an $n$-dimensional quasi-projective irreducible reduced scheme. We call $\pi: \XX\to\C$ a \emph{toric degeneration} of $X$ if:
@@ -204,7 +206,9 @@
 			\item Let $U\subset X$ be the open dense subset of $X$ from item 1. Then the integrable system of item 2 generates a Hamiltonian torus action on $U$, and the inverse image $\mu^{-1}(\Delta^\circ)$ of the interior of $\Delta$ under the moment map lies in the open subset $U$.
 		\end{enumerate}
 	\end{theorem}
-
+	
+	For the degeneration $\MM\to \cP$, the spaces $\MM_t$ are not smooth, so the theorem does not apply. Despite that, in this case we still have a surjective continuous map $\phi:\MM\to \cP$ which is a symplectomorphism on a dense open subset of $\MM$, and we still have the moment polytopes of $\MM$ and $\cP$ coinciding. 
+	\iffalse
 	\section{Degeneration of the Moduli Space over one Trinion}
 	The local model for our degeneration gives us a description of the degeneration of the moduli space $\MM(D) \to P(D)$ for a single trinion $D = S^2 - {p_1,p_3,p_3}$. Let $B$ be the polydisk in $\C^2$ given by the product of two disks of radius 2 centred at the origin, and $U$ the unit disk in $\C$. As before, we can define a family for $t\in U$ by
 	\begin{equation}
@@ -227,3 +231,4 @@
 		\nabla_1 &= d + i\alpha d\theta_{x_1}, & \nabla_2 &= d + i\beta d\theta_{x_2}
 	\end{align*} 
 	on $Q_{0,1}$ and $Q_{0,2}$, equations (\ref{e:dtx}) and (\ref{e:dty}) tell us that $\nabla_1$ and $\nabla_2$ are in the image of the degeneration if $\alpha = -\beta$. 
+	\fi

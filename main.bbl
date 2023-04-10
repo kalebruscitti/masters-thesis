@@ -450,6 +450,99 @@
       \verb https://www.sciencedirect.com/science/article/pii/0022123683900927
       \endverb
     \endentry
+    \entry{hamilton_locally_2010}{book}{}
+      \name{author}{1}{}{%
+        {{hash=38cea133e412e097550253e97996c3ab}{%
+           family={Hamilton},
+           familyi={H\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{38cea133e412e097550253e97996c3ab}
+      \strng{fullhash}{38cea133e412e097550253e97996c3ab}
+      \strng{bibnamehash}{38cea133e412e097550253e97996c3ab}
+      \strng{authorbibnamehash}{38cea133e412e097550253e97996c3ab}
+      \strng{authornamehash}{38cea133e412e097550253e97996c3ab}
+      \strng{authorfullhash}{38cea133e412e097550253e97996c3ab}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Advancing research. Creating connections.}
+      \field{isbn}{978-1-4704-0585-4 978-0-8218-6712-9 978-0-8218-4714-5}
+      \field{month}{9}
+      \field{note}{ISSN: 0065-9266, 1947-6221 Issue: 971}
+      \field{series}{Memoirs of the {American} {Mathematical} {Society}}
+      \field{title}{Locally toric manifolds and singular {Bohr}-{Sommerfeld} leaves}
+      \field{urlday}{10}
+      \field{urlmonth}{4}
+      \field{urlyear}{2023}
+      \field{volume}{207}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1090/S0065-9266-10-00583-1
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/kaleb/Zotero/storage/3STI2EBM/Hamilton - 2010 - Locally toric manifolds and singular Bohr-Sommerfe.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ams.org/memo/0971/
+      \endverb
+      \verb{url}
+      \verb https://www.ams.org/memo/0971/
+      \endverb
+    \endentry
+    \entry{harada_integrable_2015}{article}{}
+      \name{author}{2}{}{%
+        {{hash=671df90f50f1a2bc9656e9678f8cf075}{%
+           family={Harada},
+           familyi={H\bibinitperiod},
+           given={Megumi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c4b0eb1f9c4092ab903dd82cc598de8a}{%
+           family={Kaveh},
+           familyi={K\bibinitperiod},
+           given={Kiumars},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{3c0378ae6fbbf18f018e08ed251d6d04}
+      \strng{fullhash}{3c0378ae6fbbf18f018e08ed251d6d04}
+      \strng{bibnamehash}{3c0378ae6fbbf18f018e08ed251d6d04}
+      \strng{authorbibnamehash}{3c0378ae6fbbf18f018e08ed251d6d04}
+      \strng{authornamehash}{3c0378ae6fbbf18f018e08ed251d6d04}
+      \strng{authorfullhash}{3c0378ae6fbbf18f018e08ed251d6d04}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Let X be a smooth complex projective variety of dimension n equipped with a very ample Hermitian line bundle L. In the first part of the paper, we show that if there exists a toric degeneration of X satisfying some natural hypotheses (which are satisfied in many settings), then there exists a completely integrable system on X in the sense of symplectic geometry. More precisely, we construct a collection of real-valued functions H\_1, ... H\_n on X which are continuous on all of X, smooth on an open dense subset U of X, and pairwise Poisson-commute on U. Moreover, we show that in many cases, we can construct the integrable system so that the functions H\_1, ..., H\_n generate a Hamiltonian torus action on U. In the second part, we show that the toric degenerations arising in the theory of Newton-Okounkov bodies satisfy all the hypotheses of the first part of the paper. In this case the image of the "moment map" {\textbackslash}mu = (H\_1, ..., H\_n): X to R{\textasciicircum}n is precisely the Okounkov body {\textbackslash}Delta = {\textbackslash}Delta(R, v) associated to the homogeneous coordinate ring R of X, and an appropriate choice of a valuation v on R. Our main technical tools come from algebraic geometry, differential (Kaehler) geometry, and analysis. Specifically, we use the gradient-Hamiltonian vector field, and a subtle generalization of the famous Lojasiewicz gradient inequality for real-valued analytic functions. Since our construction is valid for a large class of projective varieties X, this manuscript provides a rich source of new examples of integrable systems. We discuss concrete examples, including elliptic curves, flag varieties of arbitrary connected complex reductive groups, spherical varieties, and weight varieties.}
+      \field{journaltitle}{arXiv:1205.5249 [math]}
+      \field{month}{4}
+      \field{note}{arXiv: 1205.5249}
+      \field{title}{Integrable systems, toric degenerations and {Okounkov} bodies}
+      \field{urlday}{27}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb arXiv Fulltext PDF:/home/kaleb/Zotero/storage/KBJWG95J/Harada and Kaveh - 2015 - Integrable systems, toric degenerations and Okounk.pdf:application/pdf;arXiv.org Snapshot:/home/kaleb/Zotero/storage/28W2ETF4/1205.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1205.5249
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1205.5249
+      \endverb
+      \keyw{Mathematics - Symplectic Geometry,Mathematics - Algebraic Geometry,14M25,53D20}
+    \endentry
     \entry{hurtubise_representations_2000}{article}{}
       \name{author}{2}{}{%
         {{hash=11e9ad5d759e1641557c260d8d9bce08}{%

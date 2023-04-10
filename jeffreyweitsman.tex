@@ -288,10 +288,36 @@ There is another construction of a prequantum line bundle for $\MM$, the \textit
 			\item For each trinion $D_\gamma$, $l_{i_1(\gamma)} + l_{i_2(\gamma)} + l_{i_3(\gamma)} \in 2\mathbb{Z}$.
 		\end{enumerate}
 	\end{theorem}
-	From theorem \ref{t:torusfibres}, we know that $(\theta_1,...,\theta_{3g-3})$ is the image of a point $x\in B$ if and only if the conditions (\ref{e:trinion-ineqs}) are satisfied for the triple $(\theta_{i_1(\gamma)}, \theta_{i_2(\gamma)}, \theta_{i_3(\gamma)})$ corresponding to each trinion $D_\gamma$. We can represent a trinion decomposition as a trivalent graph, with a vertex for each trinion and an edge for each boundary circle. Therefore, a Bohr-Sommerfeld point gives a labelled trivalent graphs, where the integer $l_i$ is assigned the edge corresponding to boundary circle $C_i$. The set of Bohr-Sommerfeld points then corresponds with labelled trivalent graphs whose labelling satisfy certain conditions. This gives the final result of Jeffrey and Weitsman:
+	From theorem \ref{t:torusfibres}, we know that $(\theta_1,...,\theta_{3g-3})$ is the image of a point $x\in B$ if and only if the conditions (\ref{e:trinion-ineqs}) are satisfied for the triple $(\theta_{i_1(\gamma)}, \theta_{i_2(\gamma)}, \theta_{i_3(\gamma)})$ corresponding to each trinion $D_\gamma$. We can represent a trinion decomposition as a trivalent graph, with a vertex for each trinion and an edge for each boundary circle. Therefore, a Bohr-Sommerfeld point gives a labelled trivalent graphs, where the integer $l_i$ is assigned the edge corresponding to boundary circle $C_i$. The set of Bohr-Sommerfeld points then corresponds with labelled trivalent graphs whose labelling satisfy certain conditions. Expanding out the conditions of Theorem \ref{t:bs-count} at each vertex with edges labeled $l_1,l_2$ and $l_3$, one has:
+	\begin{enumerate}
+		\item $|l_1-l_2| \leq l_3 \leq l_1+l_2$,
+		\item $l_1+l_2+l_3 \leq 2k$,
+		\item $l_1+l_2+l_3 \in 2\mathbb{Z}$.
+	\end{enumerate}
+	This gives the final result of Jeffrey and Weitsman:
 	\begin{theorem}[Jeffrey and Weitsman, Theorem 8.3]
 		Consider a fixed trinion decomposition of a compact connected Riemann surface $\Sigma$ of genus $g$. It gives rise to a trivalent graph, and a real polarisation of the moduli space $\MM$ of flat $SU(2)$ connections on $\Sigma$. There is one-to-one correspondence between the Bohr-Sommerfeld points of the polarisation and the set of integer labellings of the edges of the graph satisfying the conditions 1,2 in \ref{t:bs-count} and equation \ref{e:trinion-ineqs}.
 	\end{theorem}
+
+	\underline{Example}:
+	Let $\Sigma$ be the compact Riemann surface of genus $2$, which has two trinion decompositions into two trinions. Replacing the trinions with vertices and the boundary circles with edges, we obtain the graphs in (FIGURE). Let us use Theorem \ref{t:bs-count} to find the number of Bohr-Sommerfeld points for the line bundle $\LL$ over $\Sigma$ with respect to the polarisations defined by these decompositions. For the symmetric decomposition, conditions 1 and 2 are the same at each vertex, so it suffices to consider them at one vertex. Since $k=1$, each label must be either $0$ or $1$. Their sum must be even, which leaves us with four possibilities:
+	\begin{equation}
+		(l_1, l_2, l_3) = (0,0,0), (1,1,0), (0,1,1), \text{ or } (1,0,1).
+	\end{equation}
+	Finally, one can check that each of these labellings satisfies $|l_1-l_2| \leq l_3 \leq l_1+l_2$, so these are all valid labellings. Therefore Theorem \ref{t:bs-count} tells us that there are four Bohr-Sommerfeld points of $\LL$ in the polarisation defined by the symmetric decomposition of $\Sigma$.
+	
+	For the asymmetric decomposition, the conditions at each vertex must be checked separately, as they are different. Denoting the vertices as $v^1$ and $v^2$ and their edges by $l^1_i$ and $l^2_i$, we have that
+	\begin{align}
+		(l^1_1,l^1_2,l^2_3) &= (l_1, l_1, l_3), & (l^2_1,l^2_2,l^2_3) &= (l_2, l_2, l_3).
+	\end{align} 
+	Once again since $k=1$ each label must be either $0$ or $1$. Their sum at each vertex must be even, which means $2l_1 + l_3$ and $2l_2 + l_3$ must be even. This forces $l_3$ to be zero, and we're left with the following possibilities:
+	\begin{equation}
+		(l_1,l_2,l_3) = (0,0,0), (1,0,0), (0,1,0), (1,1,0).
+	\end{equation}
+	Once again, one can check that each of these labellings satisfies $|l^i_1-l^i_2| \leq l^i_3 \leq l^i_1+l^i_2,$ ($i=1,2$) and is therefore a valid labelling of the graph. Thus Theorem \ref{t:bs-count} tells us that there are also four Bohr-Sommerfeld points of $\LL$ in the polarisation defined by the asymmetric decomposition of $\Sigma$.
+	
+	For higher values of $k$, a computer-assisted search finds that the number of labellings of these two graphs agree, and is equal to $10, 20, 35$ for $k=2, 3, 4$ and so on.  
+
 	One important consequence of this theorem is that the number of Bohr-Sommerfeld points can be computed by counting points in the intersection of the period lattice $\Lambda$ with the moment polytope defined by equation \ref{e:trinion-ineqs}. In the next chapter, we will discuss the construction of another moduli space $P$ which is the toric variety corresponding to this moment polytope. From the theory of toric varieties, we know there is a line bundle over $P$ corresponding to the polytope, with a basis of sections given by the Bohr-Sommerfeld points. It will then remain to show that this line bundle over $P$ corresponds to the prequantum line bundle over $\MM$ in a way which preserves the space of sections.
 	
 	

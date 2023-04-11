@@ -66,7 +66,7 @@
       \verb 10.4310/jdg/1214460860
       \endverb
       \verb{file}
-      \verb Full Text PDF:/home/kaleb/Zotero/storage/AR3VPCP6/Alekseev et al. - 1998 - Lie group valued moment maps.pdf:application/pdf
+      \verb Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\AR3VPCP6\\Alekseev et al. - 1998 - Lie group valued moment maps.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://projecteuclid.org/journals/journal-of-differential-geometry/volume-48/issue-3/Lie-group-valued-moment-maps/10.4310/jdg/1214460860.full
@@ -116,7 +116,7 @@
       \verb 10.1098/rsta.1983.0017
       \endverb
       \verb{file}
-      \verb 1983 - The Yang-Mills equations over Riemann surfaces.pdf:/home/kaleb/Zotero/storage/W57FULVR/1983 - The Yang-Mills equations over Riemann surfaces.pdf:application/pdf
+      \verb 1983 - The Yang-Mills equations over Riemann surfaces.pdf:C\:\\Users\\kaleb\\Zotero\\storage\\W57FULVR\\1983 - The Yang-Mills equations over Riemann surfaces.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://royalsocietypublishing.org/doi/10.1098/rsta.1983.0017
@@ -163,7 +163,7 @@
       \verb 10.1007/BF02386356
       \endverb
       \verb{file}
-      \verb Full Text PDF:/home/kaleb/Zotero/storage/CXRETG65/Bhosle - 1989 - Parabolic vector bundles on curves.pdf:application/pdf
+      \verb Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\CXRETG65\\Bhosle - 1989 - Parabolic vector bundles on curves.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1007/BF02386356
@@ -197,6 +197,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Over a family \${\textbackslash}mathbb X\$ of genus \$g\$ complete curves, which gives the degeneration of a smooth curve into one with nodal singularities, we build a moduli space which is the moduli space of \$\{{\textbackslash}rm SL\}(n, {\textbackslash}mathbb C)\$ bundles over the generic smooth curve \$X\_t\$ in the family, and is a moduli space of bundles equipped with extra structure at the nodes for the nodal curves in the family. This moduli space is a quotient by \$({\textbackslash}mathbb C{\textasciicircum}*){\textasciicircum}s\$ of a moduli space on the desingularisation. Taking a "maximal" degeneration of the curve into a nodal curve built from the glueing of three-pointed spheres, we obtain a degeneration of the moduli space of bundles into a \$({\textbackslash}mathbb C{\textasciicircum}*){\textasciicircum}\{(3g-3)(n-1)\}\$-quotient of a \$(2g-2)\$-th power of a space associated to the three-pointed sphere. Via the Narasimhan-Seshadri theorem, the moduli of bundles on the smooth curve is a space of representations of the fundamental group into \$\{{\textbackslash}rm SU\}(n)\$ (the "symplectic picture"). We obtain the degenerations also in this symplectic context, in a way that is compatible with the holomorphic degeneration, so that our limit space is also a \$(S{\textasciicircum}1){\textasciicircum}\{(3g-3)(n-1)\}\$ symplectic quotient of a \$(2g-2)\$-th power of a space associated to the three-pointed sphere.}
+      \field{annotation}{Comment: 25 pages; with a few corrections (polystable substituted for stable at some places), and a few extra references}
       \field{journaltitle}{arXiv:2109.13358 [math]}
       \field{month}{10}
       \field{note}{arXiv: 2109.13358}
@@ -207,7 +208,7 @@
       \field{year}{2021}
       \field{urldateera}{ce}
       \verb{file}
-      \verb arXiv Fulltext PDF:/home/kaleb/Zotero/storage/AJ5X5LXH/Biswas and Hurtubise - 2021 - Degenerations of Bundle Moduli.pdf:application/pdf;arXiv.org Snapshot:/home/kaleb/Zotero/storage/UBURIH4G/2109.html:text/html
+      \verb arXiv Fulltext PDF:C\:\\Users\\kaleb\\Zotero\\storage\\AJ5X5LXH\\Biswas and Hurtubise - 2021 - Degenerations of Bundle Moduli.pdf:application/pdf;arXiv.org Snapshot:C\:\\Users\\kaleb\\Zotero\\storage\\UBURIH4G\\2109.html:text/html
       \endverb
       \verb{urlraw}
       \verb http://arxiv.org/abs/2109.13358
@@ -253,7 +254,7 @@
       \verb 10.4310/jdg/1214437664
       \endverb
       \verb{file}
-      \verb Donaldson - 1983 - A new proof of a theorem of Narasimhan and Seshadr.pdf:/home/kaleb/Zotero/storage/RVXJFMW9/Donaldson - 1983 - A new proof of a theorem of Narasimhan and Seshadr.pdf:application/pdf
+      \verb Donaldson - 1983 - A new proof of a theorem of Narasimhan and Seshadr.pdf:C\:\\Users\\kaleb\\Zotero\\storage\\RVXJFMW9\\Donaldson - 1983 - A new proof of a theorem of Narasimhan and Seshadr.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://projecteuclid.org/journals/journal-of-differential-geometry/volume-18/issue-2/A-new-proof-of-a-theorem-of-Narasimhan-and-Seshadri/10.4310/jdg/1214437664.full
@@ -300,7 +301,7 @@
       \verb 10.1002/cpa.3160330602
       \endverb
       \verb{file}
-      \verb Full Text PDF:/home/kaleb/Zotero/storage/9YT3L466/Duistermaat - 1980 - On global action-angle coordinates.pdf:application/pdf
+      \verb Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\9YT3L466\\Duistermaat - 1980 - On global action-angle coordinates.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/cpa.3160330602
@@ -369,7 +370,7 @@
       \verb 10.2307/1971157
       \endverb
       \verb{file}
-      \verb JSTOR Full Text PDF:/home/kaleb/Zotero/storage/TSR3TDEP/Gieseker - 1977 - On the Moduli of Vector Bundles on an Algebraic Su.pdf:application/pdf
+      \verb JSTOR Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\TSR3TDEP\\Gieseker - 1977 - On the Moduli of Vector Bundles on an Algebraic Su.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://www.jstor.org/stable/1971157
@@ -413,7 +414,7 @@
       \verb 10.2307/2372388
       \endverb
       \verb{file}
-      \verb JSTOR Full Text PDF:/home/kaleb/Zotero/storage/TEYKE7VS/Grothendieck - 1957 - Sur La Classification Des Fibres Holomorphes Sur L.pdf:application/pdf
+      \verb JSTOR Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\TEYKE7VS\\Grothendieck - 1957 - Sur La Classification Des Fibres Holomorphes Sur L.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://www.jstor.org/stable/2372388
@@ -466,7 +467,7 @@
       \verb 10.1016/0022-1236(83)90092-7
       \endverb
       \verb{file}
-      \verb ScienceDirect Full Text PDF:/home/kaleb/Zotero/storage/FT8CXS59/Guillemin and Sternberg - 1983 - The Gelfand-Cetlin system and quantization of the .pdf:application/pdf;ScienceDirect Snapshot:/home/kaleb/Zotero/storage/8ZMJ76WE/0022123683900927.html:text/html
+      \verb ScienceDirect Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\FT8CXS59\\Guillemin and Sternberg - 1983 - The Gelfand-Cetlin system and quantization of the .pdf:application/pdf;ScienceDirect Snapshot:C\:\\Users\\kaleb\\Zotero\\storage\\8ZMJ76WE\\0022123683900927.html:text/html
       \endverb
       \verb{urlraw}
       \verb https://www.sciencedirect.com/science/article/pii/0022123683900927
@@ -548,6 +549,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Let X be a smooth complex projective variety of dimension n equipped with a very ample Hermitian line bundle L. In the first part of the paper, we show that if there exists a toric degeneration of X satisfying some natural hypotheses (which are satisfied in many settings), then there exists a completely integrable system on X in the sense of symplectic geometry. More precisely, we construct a collection of real-valued functions H\_1, ... H\_n on X which are continuous on all of X, smooth on an open dense subset U of X, and pairwise Poisson-commute on U. Moreover, we show that in many cases, we can construct the integrable system so that the functions H\_1, ..., H\_n generate a Hamiltonian torus action on U. In the second part, we show that the toric degenerations arising in the theory of Newton-Okounkov bodies satisfy all the hypotheses of the first part of the paper. In this case the image of the "moment map" {\textbackslash}mu = (H\_1, ..., H\_n): X to R{\textasciicircum}n is precisely the Okounkov body {\textbackslash}Delta = {\textbackslash}Delta(R, v) associated to the homogeneous coordinate ring R of X, and an appropriate choice of a valuation v on R. Our main technical tools come from algebraic geometry, differential (Kaehler) geometry, and analysis. Specifically, we use the gradient-Hamiltonian vector field, and a subtle generalization of the famous Lojasiewicz gradient inequality for real-valued analytic functions. Since our construction is valid for a large class of projective varieties X, this manuscript provides a rich source of new examples of integrable systems. We discuss concrete examples, including elliptic curves, flag varieties of arbitrary connected complex reductive groups, spherical varieties, and weight varieties.}
+      \field{annotation}{Comment: 44 pages. Final version. Appeared in Inventiones Mathematicae}
       \field{journaltitle}{arXiv:1205.5249 [math]}
       \field{month}{4}
       \field{note}{arXiv: 1205.5249}
@@ -558,7 +560,7 @@
       \field{year}{2015}
       \field{urldateera}{ce}
       \verb{file}
-      \verb arXiv Fulltext PDF:/home/kaleb/Zotero/storage/KBJWG95J/Harada and Kaveh - 2015 - Integrable systems, toric degenerations and Okounk.pdf:application/pdf;arXiv.org Snapshot:/home/kaleb/Zotero/storage/28W2ETF4/1205.html:text/html
+      \verb arXiv Fulltext PDF:C\:\\Users\\kaleb\\Zotero\\storage\\KBJWG95J\\Harada and Kaveh - 2015 - Integrable systems, toric degenerations and Okounk.pdf:application/pdf;arXiv.org Snapshot:C\:\\Users\\kaleb\\Zotero\\storage\\28W2ETF4\\1205.html:text/html
       \endverb
       \verb{urlraw}
       \verb http://arxiv.org/abs/1205.5249
@@ -613,7 +615,7 @@
       \verb 10.4153/CJM-2000-052-4
       \endverb
       \verb{file}
-      \verb Full Text PDF:/home/kaleb/Zotero/storage/ALNYVFYM/Hurtubise and Jeffrey - 2000 - Representations with Weighted Frames and Framed Pa.pdf:application/pdf;Snapshot:/home/kaleb/Zotero/storage/RYN8AEVU/D88FA00E4F17CAFCE97A9A5F0AC35547.html:text/html
+      \verb Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\ALNYVFYM\\Hurtubise and Jeffrey - 2000 - Representations with Weighted Frames and Framed Pa.pdf:application/pdf;Snapshot:C\:\\Users\\kaleb\\Zotero\\storage\\RYN8AEVU\\D88FA00E4F17CAFCE97A9A5F0AC35547.html:text/html
       \endverb
       \verb{urlraw}
       \verb https://www.cambridge.org/core/journals/canadian-journal-of-mathematics/article/representations-with-weighted-frames-and-framed-parabolic-bundles/D88FA00E4F17CAFCE97A9A5F0AC35547
@@ -672,7 +674,7 @@
       \verb 10.1007/s10455-005-1941-6
       \endverb
       \verb{file}
-      \verb Full Text PDF:/home/kaleb/Zotero/storage/4D4DCBSC/Hurtubise et al. - 2005 - Moduli of Framed Parabolic Sheaves.pdf:application/pdf
+      \verb Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\4D4DCBSC\\Hurtubise et al. - 2005 - Moduli of Framed Parabolic Sheaves.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1007/s10455-005-1941-6
@@ -719,7 +721,7 @@
       \field{year}{2020}
       \field{urldateera}{ce}
       \verb{file}
-      \verb Jeffrey and Zabanfahm - 2020 - Imploded cross-sections.pdf:/home/kaleb/Zotero/storage/M2TN64LC/Jeffrey and Zabanfahm - 2020 - Imploded cross-sections.pdf:application/pdf
+      \verb Jeffrey and Zabanfahm - 2020 - Imploded cross-sections.pdf:C\:\\Users\\kaleb\\Zotero\\storage\\M2TN64LC\\Jeffrey and Zabanfahm - 2020 - Imploded cross-sections.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb http://arxiv.org/abs/1812.04523
@@ -773,7 +775,7 @@
       \verb 10.1007/BF02096964
       \endverb
       \verb{file}
-      \verb Jeffrey and Weitsman - 1992 - Bohr-sommerfeld orbits in the moduli space of flat.pdf:/home/kaleb/Zotero/storage/QJPXHYVN/Jeffrey and Weitsman - 1992 - Bohr-sommerfeld orbits in the moduli space of flat.pdf:application/pdf
+      \verb Jeffrey and Weitsman - 1992 - Bohr-sommerfeld orbits in the moduli space of flat.pdf:C\:\\Users\\kaleb\\Zotero\\storage\\QJPXHYVN\\Jeffrey and Weitsman - 1992 - Bohr-sommerfeld orbits in the moduli space of flat.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb http://link.springer.com/10.1007/BF02096964
@@ -825,7 +827,7 @@
       \verb 10.1007/BF01420526
       \endverb
       \verb{file}
-      \verb Full Text PDF:/home/kaleb/Zotero/storage/NUM5ITSF/Mehta and Seshadri - 1980 - Moduli of vector bundles on curves with parabolic .pdf:application/pdf
+      \verb Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\NUM5ITSF\\Mehta and Seshadri - 1980 - Moduli of vector bundles on curves with parabolic .pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1007/BF01420526
@@ -833,7 +835,7 @@
       \verb{url}
       \verb https://doi.org/10.1007/BF01420526
       \endverb
-      \keyw{Parabolic Structure,Vector Bundle}
+      \keyw{Vector Bundle,Parabolic Structure}
     \endentry
     \entry{michiels_moduli_nodate}{article}{}
       \name{author}{1}{}{%
@@ -860,7 +862,7 @@
       \field{pages}{99}
       \range{pages}{1}
       \verb{file}
-      \verb Michiels - Moduli Spaces of Flat Connections.pdf:/home/kaleb/Zotero/storage/7849SJBW/Michiels - Moduli Spaces of Flat Connections.pdf:application/pdf
+      \verb Michiels - Moduli Spaces of Flat Connections.pdf:C\:\\Users\\kaleb\\Zotero\\storage\\7849SJBW\\Michiels - Moduli Spaces of Flat Connections.pdf:application/pdf
       \endverb
     \endentry
     \entry{mumford_projective_2004}{incollection}{}
@@ -904,7 +906,7 @@
       \verb 10.1007/978-1-4757-4265-7_2
       \endverb
       \verb{file}
-      \verb Mumford - 2004 - Projective Invariants of Projective Structures and.pdf:/home/kaleb/Zotero/storage/AZJSIS99/Mumford - 2004 - Projective Invariants of Projective Structures and.pdf:application/pdf
+      \verb Mumford - 2004 - Projective Invariants of Projective Structures and.pdf:C\:\\Users\\kaleb\\Zotero\\storage\\AZJSIS99\\Mumford - 2004 - Projective Invariants of Projective Structures and.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb http://link.springer.com/10.1007/978-1-4757-4265-7_2
@@ -953,7 +955,7 @@
       \verb 10.2307/1970710
       \endverb
       \verb{file}
-      \verb JSTOR Full Text PDF:/home/kaleb/Zotero/storage/XNBC665D/Narasimhan and Seshadri - 1965 - Stable and Unitary Vector Bundles on a Compact Rie.pdf:application/pdf
+      \verb JSTOR Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\XNBC665D\\Narasimhan and Seshadri - 1965 - Stable and Unitary Vector Bundles on a Compact Rie.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://www.jstor.org/stable/1970710
@@ -1000,7 +1002,7 @@
       \verb 10.1007/BF01086022
       \endverb
       \verb{file}
-      \verb Full Text PDF:/home/kaleb/Zotero/storage/8X4HZZ3V/Quillen - 1985 - Determinants of Cauchy-Riemann operators over a Ri.pdf:application/pdf
+      \verb Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\8X4HZZ3V\\Quillen - 1985 - Determinants of Cauchy-Riemann operators over a Ri.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1007/BF01086022
@@ -1054,7 +1056,7 @@
       \field{pages}{409\bibrangedash 420}
       \range{pages}{12}
       \verb{file}
-      \verb Full Text PDF:/home/kaleb/Zotero/storage/5JGH88PV/Ramadas et al. - 1989 - Some comments on Chern-Simons gauge theory.pdf:application/pdf;Snapshot:/home/kaleb/Zotero/storage/RDRDQU89/1104179858.html:text/html
+      \verb Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\5JGH88PV\\Ramadas et al. - 1989 - Some comments on Chern-Simons gauge theory.pdf:application/pdf;Snapshot:C\:\\Users\\kaleb\\Zotero\\storage\\RDRDQU89\\1104179858.html:text/html
       \endverb
       \verb{urlraw}
       \verb https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-126/issue-2/Some-comments-on-Chern-Simons-gauge-theory/cmp/1104179858.full
@@ -1063,6 +1065,34 @@
       \verb https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-126/issue-2/Some-comments-on-Chern-Simons-gauge-theory/cmp/1104179858.full
       \endverb
       \keyw{14D20,32G13,32L05,53C80,58G25,81E13}
+    \endentry
+    \entry{reid_graded_2002}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b36ed2e74acb2c122428f1cb5b896108}{%
+           family={Reid},
+           familyi={R\bibinitperiod},
+           given={Miles},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{b36ed2e74acb2c122428f1cb5b896108}
+      \strng{fullhash}{b36ed2e74acb2c122428f1cb5b896108}
+      \strng{bibnamehash}{b36ed2e74acb2c122428f1cb5b896108}
+      \strng{authorbibnamehash}{b36ed2e74acb2c122428f1cb5b896108}
+      \strng{authornamehash}{b36ed2e74acb2c122428f1cb5b896108}
+      \strng{authorfullhash}{b36ed2e74acb2c122428f1cb5b896108}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{title}{Graded rings and varieties in weighted projective space}
+      \field{year}{2002}
+      \verb{file}
+      \verb Reid - Graded rings and varieties in weighted projective .pdf:C\:\\Users\\kaleb\\Zotero\\storage\\V2CCDZ2Q\\Reid - Graded rings and varieties in weighted projective .pdf:application/pdf
+      \endverb
     \endentry
     \entry{schottenloher_mathematical_2008}{book}{}
       \name{author}{1}{}{%
@@ -1099,7 +1129,7 @@
       \field{title}{A mathematical introduction to conformal field theory}
       \field{year}{2008}
       \verb{file}
-      \verb 978-3-540-68628-6.pdf:/home/kaleb/Zotero/storage/ATW6NP8Z/978-3-540-68628-6.pdf:application/pdf;Schottenloher - 2008 - A mathematical introduction to conformal field the.pdf:/home/kaleb/Zotero/storage/JGNU7XGB/Schottenloher - 2008 - A mathematical introduction to conformal field the.pdf:application/pdf
+      \verb 978-3-540-68628-6.pdf:C\:\\Users\\kaleb\\Zotero\\storage\\ATW6NP8Z\\978-3-540-68628-6.pdf:application/pdf;Schottenloher - 2008 - A mathematical introduction to conformal field the.pdf:C\:\\Users\\kaleb\\Zotero\\storage\\JGNU7XGB\\Schottenloher - 2008 - A mathematical introduction to conformal field the.pdf:application/pdf
       \endverb
     \endentry
     \entry{sniatycki_cohomology_1977}{inproceedings}{}
@@ -1155,7 +1185,7 @@
       \verb 10.1007/BFb0087781
       \endverb
       \verb{file}
-      \verb Full Text PDF:/home/kaleb/Zotero/storage/RYDEQRE2/Śniatycki - 1977 - On cohomology groups appearing in geometric quanti.pdf:application/pdf
+      \verb Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\RYDEQRE2\\Śniatycki - 1977 - On cohomology groups appearing in geometric quanti.pdf:application/pdf
       \endverb
       \keyw{Cohomology Group,Geometric Quantization,Homogeneous Polynomial,Integral Manifold,Symplectic Manifold}
     \endentry
@@ -1225,7 +1255,7 @@
       \verb 10.1201/9781003072393-5
       \endverb
       \verb{file}
-      \verb Thaddeus - 2021 - An Introduction to the Topology of the Moduli Spac.pdf:/home/kaleb/Zotero/storage/YZWI8TUN/Thaddeus - 2021 - An Introduction to the Topology of the Moduli Spac.pdf:application/pdf
+      \verb Thaddeus - 2021 - An Introduction to the Topology of the Moduli Spac.pdf:C\:\\Users\\kaleb\\Zotero\\storage\\YZWI8TUN\\Thaddeus - 2021 - An Introduction to the Topology of the Moduli Spac.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://www.taylorfrancis.com/books/9781000110852/chapters/10.1201/9781003072393-5
@@ -1268,7 +1298,7 @@
       \field{pages}{691\bibrangedash 723}
       \range{pages}{33}
       \verb{file}
-      \verb JSTOR Full Text PDF:/home/kaleb/Zotero/storage/P7LNKLPK/Thaddeus - 1996 - Geometric Invariant Theory and Flips.pdf:application/pdf
+      \verb JSTOR Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\P7LNKLPK\\Thaddeus - 1996 - Geometric Invariant Theory and Flips.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://www.jstor.org/stable/2152810
@@ -1315,7 +1345,7 @@
       \verb 10.1016/0550-3213(88)90603-7
       \endverb
       \verb{file}
-      \verb ScienceDirect Full Text PDF:/home/kaleb/Zotero/storage/7ZXWX9TW/Verlinde - 1988 - Fusion rules and modular transformations in 2D con.pdf:application/pdf
+      \verb ScienceDirect Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\7ZXWX9TW\\Verlinde - 1988 - Fusion rules and modular transformations in 2D con.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://www.sciencedirect.com/science/article/pii/0550321388906037
@@ -1358,7 +1388,7 @@
       \field{pages}{425\bibrangedash 433}
       \range{pages}{9}
       \verb{file}
-      \verb Full Text PDF:/home/kaleb/Zotero/storage/HIZBKZTW/Weitsman - 1992 - Real polarization of the moduli space of flat conn.pdf:application/pdf;Snapshot:/home/kaleb/Zotero/storage/EYPV6T48/1104249807.html:text/html
+      \verb Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\HIZBKZTW\\Weitsman - 1992 - Real polarization of the moduli space of flat conn.pdf:application/pdf;Snapshot:C\:\\Users\\kaleb\\Zotero\\storage\\EYPV6T48\\1104249807.html:text/html
       \endverb
       \verb{urlraw}
       \verb https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-145/issue-3/Real-polarization-of-the-moduli-space-of-flat-connections-on/cmp/1104249807.full

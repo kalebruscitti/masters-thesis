@@ -18,7 +18,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Polarisation of the Moduli Space}{19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Moduli of Connections on a Trinion}{23}%
+\contentsline {section}{\numberline {3.3}Moduli of Connections on a Trinion}{22}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}Counting Bohr-Sommerfeld Points}{24}%
 \defcounter {refsection}{0}\relax 
@@ -38,18 +38,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.7}Gluing $\mathcal {P}$ over Trinions }{46}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Degenerating the Moduli Space}{49}%
+\contentsline {chapter}{\numberline {5}Degenerating the Moduli Space}{50}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Degeneration of the Curves}{49}%
+\contentsline {section}{\numberline {5.1}Degeneration of the Curves}{50}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Local Model for the Connections}{50}%
+\contentsline {section}{\numberline {5.2}Local Model for the Connections}{51}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Degeneration of the Moduli Space}{52}%
+\contentsline {section}{\numberline {5.3}Degeneration of the Moduli Space}{53}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Toric Degenerations and Bohr-Sommerfeld Points}{54}%
+\contentsline {section}{\numberline {5.4}Toric Degenerations and Bohr-Sommerfeld Points}{56}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Polarization and Prequantum Line Bundle on $\mathcal {P}$}{57}%
+\contentsline {section}{\numberline {5.5}Polarization and Prequantum Line Bundle on $\mathcal {P}$}{58}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.6}Holomorphic Sections of $\mathcal {L}$}{60}%
+\contentsline {section}{\numberline {5.6}Holomorphic Sections of $\mathcal {L}$}{61}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusions and Further Discussion}{63}%
+\contentsline {chapter}{\numberline {6}Conclusions and Further Discussion}{64}%

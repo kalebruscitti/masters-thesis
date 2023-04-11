@@ -2,6 +2,7 @@
 	The degeneration of Section \ref{s:degeneration} allows us to relate the moduli space $\MM$ to the toric variety $\cP$, with a surjection $\phi:\MM\to \cP$ that is compatible with the symplectic structure on both spaces. Furthermore, the toric variety is projective and has a very ample line bundle $\LL_0$ whose sections are computed by counting lattice points in $\cP$'s polytope. In this section, we want to investigate the space of holomorphic sections $H^0(\cP,\LL_0)$ and we want to define a polarization of $\cP$ which will allow us to discuss the cohomology of fibre-wise flat sections, $\oplus_{k\geq 0}H^k(\cP, \JJ_{\pi,0})$. In particular, we ask if the degeneration from $\MM$ to $\cP$ preserves these spaces or not.
 	 
 \section{Polarization and Prequantum Line Bundle on $\cP$}
+	\label{s:l0-def}
 	From Section \ref{s:mastermoduli}, $\cP$ has a symplectic form $\omega$, and the degeneration $\phi:\MM\to \cP$ is symplectomorphic on an open dense subset $U$ of $\MM$. Thus, it remains to equip $\cP$ with a real polarisation $\pi_{\cP}$ and a line bundle $\LL_0$ with curvature $2\pi i \omega$. In both cases, we mirror the construction of the corresponding object for $\MM$.
 	
 	For $\MM$ we defined functions $f_i:\MM\to \mathbb{R}$ by taking the cosines of the holonomies of a connection around each loop in a given trinion decomposition of the surface $\Sigma$. Now for $\cP$, we have $\Sigma_0$ with $n=3g-3$-punctures and the extended moduli space $\MM^G$; given an element $x = (C_1,(D_i,C_i)_{i=2}^n)\in \MM^G$, it is the matrices $\{C_j\}$ which correspond to these holonomies. Taking the implosion, we obtained elements $W_j \in D(G)_{impl}$ with $W_j = (D_k, C_k)$, and so we want to define functions $f_k:\MM^G \to \mathbb{R}$ by 
@@ -150,18 +151,23 @@
 \end{proof}
 \begin{theorem}
 	\label{t:lp-ample}
-	The line bundle $\LL_0$ over $P$ is ample. 
+	The line bundle $\LL_0$ over $\cP$ is ample. 
 \end{theorem}
 \begin{proof}
 	Let $D$ be a trinion and $P(D)$ the toric moduli space for $D$. By Corollary \ref{t:P3-veryample}, there exists large enough $n$ for which $\LL_{P(D)}^{\otimes^n}$ is very ample over $P(D)$. That is, since $P(D) = \PP^3$,
 	\begin{equation}
 	\OO(1) = \LL_{P(D)}^{\otimes^n}.
 	\end{equation}
-	From the discussion in section \ref{s:p-gluing} we know that $P$ can be constructed by gluing $\PP^3$s along a trinion decomposition of the Riemann surface $\Sigma$, and that the bundles $\OO(1)$ over each copy of $\PP^3$ glue together to give a very ample line bundle on $P$. Letting $\iota$ denote the Segre embedding (equation \ref{e:segre}) $\PP^3 \coprod \PP^3 \xrightarrow{\iota} X\subset \PP^{15}$ and $p:X\to \PP^3$ the projection, we have
+	From the discussion in section \ref{s:p-gluing} we know that $P$ can be constructed by gluing $\PP^3$s along a trinion decomposition of the Riemann surface $\Sigma$. Letting $\iota$ denote the Segre embedding (Equation \ref{e:segre}) $\PP^3 \coprod \PP^3 \xrightarrow{\iota} X\subset \PP^{15}$ and $p_i:X\to \PP^3$ the projection to each factor, we have
 	\begin{equation}
-	\OO(1)_{\PP^{15}}|_X = p^\ast \OO(1)\otimes p^\ast \OO(1) = p^\ast \LL_{P(D)}^{\otimes n}\otimes p^\ast \LL_{P(D)}^{\otimes n} = \left(p^\ast \LL_{P(D)}\otimes p^\ast \LL_{P(D)}\right)^{\otimes n}.
+	\OO(1)_{\PP^{15}}|_X = p_1^\ast \OO(1)\otimes p_2^\ast \OO(1) = p_1^\ast \LL_{P(D)}^{\otimes n}\otimes p_2^\ast \LL_{P(D)}^{\otimes n} = \left(p_1^\ast \LL_{P(D)}\otimes p_2^\ast \LL_{P(D)}\right)^{\otimes n} := \tilde{\LL}.
 	\end{equation}
-	Let $p_1$ and $p_2$ denote the points in the copies of $\PP^3$ which are being identified. Now we consider the quotient of $\PP^3 \coprod \PP^3$ under the anti-diagonal action of $\C^\ast$ on the framing at $p_1$ and $p_2$. Away from $p_1$ and $p_2$, the quotient
+	Then we quotient an action of $(\C^\ast)$, and the invariant sections of $\tilde{\LL}$ give us the degree-1 functions on $X\sslash\C^\ast$. 
+	
+	The quotient by $\C^\ast$ takes framed parabolic bundles on each trinion and glues them together, and if a section of $\tilde{\LL}$ is invariant, it means that for 
+	
+	
+	Let $q_1$ and $q_2$ denote the points in the copies of $\PP^3$ which are being identified. Now we consider the quotient of $\PP^3 \coprod \PP^3$ under the anti-diagonal action of $\C^\ast$ on the framing at $q_1$ and $q_2$. Away from $p_1$ and $p_2$, the quotient
 	\begin{equation}
 	q: \PP^3 \cup \PP^3 \to \PP^3 \cup \PP^3 / \C^\ast
 	\end{equation}
@@ -177,6 +183,9 @@
 	\end{equation}
 	However, we also know that there is an open dense subset $U \subset P$ for which $\phi:\MM\to P$ is a symplectomorphism. Hence, on this subset, the curvature $\omega_P$ of $\LL_0$ agrees with that of $\LL$ on $M$ which is the Fubini-Study metric $\omega_{fs}$. Then the curvature of $\LL^{\otimes n}_P$ is $n\omega_{fs}$. However $\OO(1)_{\PP^N}$ has curvature given by the Fubini-Study metric, so we must have $n\omega_{fs} = \omega_{fs}$ and therefore $n=1$. Therefore, $\LL_0 = \iota^\ast \OO(1)_{\PP^N}$.
 \end{proof}
+
+
+\iffalse
 \begin{theorem}
 	The holomorphic sections $H^0(\MM,\LL) = H^0(\cP, \LL_0)$, and for all, $k>0$ $H^k(\MM,\LL) = H^k(\cP,\LL_0) = 0$.
 \end{theorem}
@@ -236,8 +245,6 @@ If $\pi(x)$ is on an edge of $\Delta$ then $x = [0:1:1:0]$ e.t.c. in this case, 
 	\begin{lemma}
 		The sections of $F$ are constant with respect to the moment map $\pi$.
 	\end{lemma} 
-	
-	
-	
+\fi
 		
 	

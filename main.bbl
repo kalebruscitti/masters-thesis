@@ -309,6 +309,31 @@
       \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/cpa.3160330602
       \endverb
     \endentry
+    \entry{faltings_proof_1994}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9951ee6d63b7a96e1adea62988e6017b}{%
+           family={Faltings},
+           familyi={F\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{9951ee6d63b7a96e1adea62988e6017b}
+      \strng{fullhash}{9951ee6d63b7a96e1adea62988e6017b}
+      \strng{bibnamehash}{9951ee6d63b7a96e1adea62988e6017b}
+      \strng{authorbibnamehash}{9951ee6d63b7a96e1adea62988e6017b}
+      \strng{authornamehash}{9951ee6d63b7a96e1adea62988e6017b}
+      \strng{authorfullhash}{9951ee6d63b7a96e1adea62988e6017b}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Alg. Geom}
+      \field{title}{A proof of the {Verlinde} formula. {J}. {Alg}. {Geom}. 3 (1994)}
+      \field{volume}{3}
+      \field{year}{1994}
+      \field{pages}{347\bibrangedash 374}
+      \range{pages}{28}
+    \endentry
     \entry{gieseker_moduli_1977}{article}{}
       \name{author}{1}{}{%
         {{hash=36e16f3c7f45fd9e6609944e74bcee48}{%
@@ -1039,6 +1064,44 @@
       \endverb
       \keyw{14D20,32G13,32L05,53C80,58G25,81E13}
     \endentry
+    \entry{schottenloher_mathematical_2008}{book}{}
+      \name{author}{1}{}{%
+        {{hash=81f331dc16ef91712c32d554f4b9d15d}{%
+           family={Schottenloher},
+           familyi={S\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Berlin}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{81f331dc16ef91712c32d554f4b9d15d}
+      \strng{fullhash}{81f331dc16ef91712c32d554f4b9d15d}
+      \strng{bibnamehash}{81f331dc16ef91712c32d554f4b9d15d}
+      \strng{authorbibnamehash}{81f331dc16ef91712c32d554f4b9d15d}
+      \strng{authornamehash}{81f331dc16ef91712c32d554f4b9d15d}
+      \strng{authorfullhash}{81f331dc16ef91712c32d554f4b9d15d}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{"The first part of this book gives a detailed, self-contained and mathematically rigorous exposition of classical conformal symmetry in n dimensions and its quantization in two dimensions. The second part surveys some more advanced topics of conformal field theory, such as the representation theory of the Virasoro algebra, conformal symmetry within string theory, an axiomatic approach to Euclidean conformally covariant quantum field theory and a mathematical interpretation of the Verlinde formula in the context of moduli spaces of holomorphic vector bundles on a Riemann surface." "The substantially revised and enlarged second edition makes in particular the second part of the book more self-contained and tutorial, with many more examples given. Furthermore, two new chapters on Wightman's axioms for quantum field theory and vertex algebras broaden the survey of advanced topics. An outlook making the connection with most recent developments has also been added."--Jacket}
+      \field{edition}{2nd ed}
+      \field{isbn}{978-3-540-68628-6}
+      \field{number}{759}
+      \field{series}{Lecture notes in physics}
+      \field{title}{A mathematical introduction to conformal field theory}
+      \field{year}{2008}
+      \verb{file}
+      \verb 978-3-540-68628-6.pdf:/home/kaleb/Zotero/storage/ATW6NP8Z/978-3-540-68628-6.pdf:application/pdf;Schottenloher - 2008 - A mathematical introduction to conformal field the.pdf:/home/kaleb/Zotero/storage/JGNU7XGB/Schottenloher - 2008 - A mathematical introduction to conformal field the.pdf:application/pdf
+      \endverb
+    \endentry
     \entry{sniatycki_cohomology_1977}{inproceedings}{}
       \name{author}{1}{}{%
         {{hash=395bb263e408b9bce12144e976e6fd99}{%
@@ -1212,6 +1275,53 @@
       \endverb
       \verb{url}
       \verb https://www.jstor.org/stable/2152810
+      \endverb
+    \endentry
+    \entry{verlinde_fusion_1988}{article}{}
+      \name{author}{1}{}{%
+        {{hash=bb173e9b623b7737a79f22558b0becc4}{%
+           family={Verlinde},
+           familyi={V\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{bb173e9b623b7737a79f22558b0becc4}
+      \strng{fullhash}{bb173e9b623b7737a79f22558b0becc4}
+      \strng{bibnamehash}{bb173e9b623b7737a79f22558b0becc4}
+      \strng{authorbibnamehash}{bb173e9b623b7737a79f22558b0becc4}
+      \strng{authornamehash}{bb173e9b623b7737a79f22558b0becc4}
+      \strng{authorfullhash}{bb173e9b623b7737a79f22558b0becc4}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We study conformal field theories with a finite number of primary fields with respect to some chiral algebra. It is shown that the fusion rules are completely determined by the behavior of the characters under the modular group. We illustrate with some examples that conversely the modular properties of the characters can be derived from the fusion rules. We propose how these results can be used to find restrictions on the values of the central charge and conformal dimensions.}
+      \field{issn}{0550-3213}
+      \field{journaltitle}{Nuclear Physics B}
+      \field{month}{1}
+      \field{title}{Fusion rules and modular transformations in {2D} conformal field theory}
+      \field{urlday}{11}
+      \field{urlmonth}{11}
+      \field{urlyear}{2022}
+      \field{volume}{300}
+      \field{year}{1988}
+      \field{urldateera}{ce}
+      \field{pages}{360\bibrangedash 376}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1016/0550-3213(88)90603-7
+      \endverb
+      \verb{file}
+      \verb ScienceDirect Full Text PDF:/home/kaleb/Zotero/storage/7ZXWX9TW/Verlinde - 1988 - Fusion rules and modular transformations in 2D con.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0550321388906037
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0550321388906037
       \endverb
     \endentry
     \entry{weitsman_real_1992}{article}{}

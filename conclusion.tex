@@ -1,0 +1,36 @@
+
+The moduli space $\MM$ of flat $SU(2)$ connections over a compact genus $g\geq 2$ Riemann surface $\Sigma$, has the Atiyah-Bott symplectic structure (Section \ref{s:background-sym}) and a complex structure. The space can be polarised using the Kahler polarisation associated to this complex structure, in which case the (level $k$) quantization of the space is defined to be the vector space $\mathcal{H}(k,g)=H^0(\MM,\LL^k)$ of sections of the prequantum line bundle over $\MM$ (Section \ref{s:cs-bundle}). In this case, it is known that the dimension of $\mathcal{H}$ is given by the Verlinde formula \cite{verlinde_fusion_1988}\cite{schottenloher_mathematical_2008}\cite{faltings_proof_1994}\footnote{The author cannot find a copy of Falting's article, only other articles citing it as the original mathematical proof of the Verlinde formula.}, which can be given by counting integer labelling of graphs, or by the closed form 
+\begin{equation}
+	\dim \mathcal{H}(k,g) = \left(
+	\frac{k+2}{2}
+	\right)^{g-1}\sum_{j=1}^{k+1}\left(
+	\sin^2\frac{j\pi}{k+2}
+	\right)^{1-g}.
+\end{equation}
+On the other hand, we have the real polarisation of the space defined by a given trinion decomposition of $\Sigma$, due to Weitsman \cite{weitsman_real_1992}. In this case, instead of holomorphic sections, one looks at the fibre-wise flat sections $\JJ_{\pi}$, namely those sections of $\LL$ whose restrictions to the fibres of $\pi$ are covariant constant. No such sections exist, but instead there will be a higher cohomology $H^n(\MM,\JJ_\pi)$ with non-zero elements, and so in this case we define $\mathcal{H}_\pi = \bigoplus_{n\geq 0} H^n(\MM, \JJ_{\pi})$ to be the quantization associated to the polarisation $\pi$. This definition is inspired from the case of a smooth polarisation of a Kahler manifold $M$, for which Sniyaticki's theorem provides an isomorphism between this space and the set of Bohr-Sommerfeld fibres of the polarisation $\pi$ \cite{sniatycki_cohomology_1977}.
+
+Jeffrey and Weitsman provided strong evidence that these two polarisations yield the same quantization when they proved that the number of Bohr-Sommerfeld fibres of the real polarisation of $\MM$ is given by the Verlinde formula \cite{jeffrey_bohr-sommerfeld_1992}. However, Sniyaticki's theorem does not apply in that case, so we do not know that the number of Bohr-Sommerfeld fibres gives the dimension of $\mathcal{H}_\pi$.
+
+The moduli space $\MM$ with its real polarisation $\pi:\MM\to\mathbb{R}^{3g-3}$ is also equipped with Hamiltonian functions for which $\pi$ is the moment map. The image of $\MM$ under $\pi$ is a polytope $\Delta \in \mathbb{R}^{3g-3}$. Furthermore, the integer values of the Hamiltonians defines a lattice on the polytope, so it is natural to ask what the toric variety corresponding to this polytope is, and how it relates to $\MM$. Hurtubise and Jeffrey constructed this toric variety $\cP$ in two different ways, as a space of representations with weighted frames, and as a space of framed parabolic bundles (Section \ref{s:mastermoduli}) \cite{hurtubise_representations_2000}, in both cases over a \emph{degenerated} Riemann surface $\Sigma_0$ with some punctures. The relationship between $\MM$ and $\cP$ was made explicit by Biswas and Hurtubise who showed that $\cP$ arises as a degeneration of $\MM$ as you degenerate $\Sigma$ to $\Sigma_0$ by collapsing the boundary curves of the trinion decomposition defining the polarisation $\pi$ (Section \ref{s:degeneration}) \cite{biswas_degenerations_2021}. Finally in Section \ref{s:l0-def} we construct a bundle $\LL_0$ over $\cP$ that corresponds to $\LL$ over $\MM$. To summarize the situation, we have the following diagram:
+\[\begin{tikzcd}[ampersand replacement=\&]
+\LL \& \MM \&\& \Sigma \\
+\&\& \Delta \\
+{\LL_0} \& \cP \&\& {\Sigma_0}
+\arrow["\phi", two heads, from=1-2, to=3-2]
+\arrow["\pi"', from=1-2, to=2-3]
+\arrow["{\pi_P}", from=3-2, to=2-3]
+\arrow[from=1-1, to=1-2]
+\arrow[from=3-1, to=3-2]
+\arrow["{\phi^\ast}"', from=3-1, to=1-1]
+\arrow[from=1-4, to=3-4]
+\end{tikzcd}\]
+Moving forward there are some interesting questions one can ask about this degeneration of $\MM$ to $\cP$. 
+
+1. From the theory of toric varieties, we can compute the number of holomorphic sections of $\LL_0$ by counting points in the moment polytope $\Delta$ corresponding to $\cP$. This polytope is preserved by the degeneration, and so the result of Jeffrey and Weitsman that the count point is given by the Verlinde formula remains true for $\cP$. Therefore, the space $H^0(\cP,\LL^k_0)$ has dimension given by the Verlinde formula. We also know that $H^0(\MM,\LL^k)$ has this dimension, and thus the dimension is preserved under the degeneration. However, we hope that there is a more direct isomorphism of $H^0(\cP,\LL^k_0)$ and $H^0(\MM,\LL^k)$ that can be constructed using the degeneration, and such an isomorphism would provide a new proof of the Verlinde formula for $\dim\mathcal{H}(k,g)$.
+
+2. It has been proven that for toric symplectic manifolds with a singular polarisation $\pi$, that the dimension of $\mathcal{H}_\pi$ is given by counting the \emph{non-singular} Bohr-Sommerfeld fibres of $\pi$ \cite{hamilton_locally_2010}. For $\cP$, this count is strictly less than the Verlinde formula. Therefore, there are two possibilities:
+\begin{enumerate}[(a)]
+	\item The degeneration preserves the fibre-wise flat cohomology: $\bigoplus_{n\geq 0}H^n(\MM,\JJ_\pi) = \bigoplus_{n\geq 0}H^n(\cP,\JJ_{\pi_P})$. In this case, we would conclude $\dim \mathcal{H}_\pi < \dim \mathcal{H}$, which suggests that there may be a more careful definition of the quantization required for real polarisations.
+	\item The dimensions $\dim \mathcal{H} = \dim\mathcal{H}_\pi$ are equal, and therefore the degeneration does not preserve the fibre-wise flat cohomology. In this case, one would ask what cohomology elements are being lost, and if this data is preserved in another form.
+\end{enumerate}
+Currently, it is expected that $\dim \mathcal{H} = \dim\mathcal{H}_\pi$ due to justifications from theoretical physics. In this case, the process of symplectically imploding the fibres with central holonomy must be collapsing some cohomology elements It may be possible that the number of cohomology elements lost during the degeneration process can be counted, and if this count is equal to the number of singular Bohr-Sommerfeld fibres then it would provide a proof that $\dim\mathcal{H} = \dim\mathcal{H}_\pi$.

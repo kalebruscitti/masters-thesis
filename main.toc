@@ -48,10 +48,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.4}Toric Degenerations and Bohr-Sommerfeld Points}{54}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Preservation of Sections under Degeneration}{57}%
+\contentsline {section}{\numberline {5.5}Polarization and Prequantum Line Bundle on $\mathcal {P}$}{57}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Polarization and Prequantum Line Bundle on $\mathcal {P}$}{57}%
+\contentsline {section}{\numberline {5.6}Holomorphic Sections of $\mathcal {L}$}{60}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Holomorphic Sections of $\mathcal {L}$}{61}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Counting Sections of $\mathcal {J}_\pi $}{63}%
+\contentsline {chapter}{\numberline {6}Conclusions and Further Discussion}{63}%

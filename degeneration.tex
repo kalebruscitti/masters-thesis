@@ -67,11 +67,17 @@
 	\end{equation}
 	On the original space $\Sigma$, the connections correspond to representations of $\pi_1(\Sigma)$; picking a point $p\in\Sigma$, let $d_1$ and $d_2$ be curves from $p$ to $c_1$ such that $d_1d^{-1}_2$ is a non-contractible loop based at $p$. Then let $(A_i,B_i)_{i=1}^{g-1}$ denote the standard generators for the rest of $\pi_1(\Sigma)$. In this notation, a connection on $\Sigma$ is represented by holonomies $\left((A_i,B_i)_{i=1}^{g-1}, C,D_1,D_2\right)$ around these curves.
 	
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8\linewidth]{d1d2_degen.png}
+		\caption{Example of $d_1$ and $d_2$, and the degeneration to $\tilde{\Sigma}_0$.}
+	\end{figure}
+	
 	Applying the degeneration, the resulting connection on $\tilde{\Sigma}_0$ has holonomy $C$ around the puncture $p_1$ and $C^{-1}$ around the puncture $p_2$. Gluing $p_1$ and $p_2$, the fundamental group of the result $\Sigma_0$ has the relation
 	\begin{equation}
-	 D_1^{-1}CD_1D_2^{-1}C^{-1}D_2 = 1, \implies D_2D_1^{-1}CD_1D_2^{-1} = C.
+	 D_1CD_1^{-1}D_2C^{-1}D_2^{-1} = 1, \implies D_2^{-1}D_1CD_1^{-1}D_2 = C.
 	\end{equation}
-	Therefore, $D_1D_2^{-1} \in \Stab(C)$, or $D_1\mu^{-1} = D_2$ for some $\mu\in \Stab(C)$. Our local degeneration thus sends the connection $\nabla = (A_i,B_i,C,D_1,D_2)$ on $\Sigma$ to the orbit under $\mu \in \Stab(C)$
+	Therefore, $D_2^{-1}D_1 \in \Stab(C)$, or $D_1\mu^{-1} = D_2$ for some $\mu\in \Stab(C)$. Our local degeneration thus sends the connection $\nabla = (A_i,B_i,C,D_1,D_2)$ on $\Sigma$ to the orbit under $\mu \in \Stab(C)$
 	\begin{equation}
 		\label{e:degen-action}
 		(A_i,B_i,C,D_1,D_2) \to \left(

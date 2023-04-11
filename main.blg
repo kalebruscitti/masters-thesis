@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is 'main.blg'
 [118] biber:322> INFO - === Tue Apr 11, 2023, 10:28:36
@@ -19,3 +20,25 @@
 [736] bbl.pm:652> INFO - Writing 'main.bbl' with encoding 'UTF-8'
 [754] bbl.pm:755> INFO - Output to main.bbl
 [754] Biber.pm:128> INFO - WARNINGS: 3
+=======
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is 'main.blg'
+[137] biber-MSWIN32:340> INFO - === 
+[179] Biber.pm:415> INFO - Reading 'main.bcf'
+[322] Biber.pm:952> INFO - Found 26 citekeys in bib section 0
+[339] Biber.pm:4340> INFO - Processing section 0
+[353] Biber.pm:4531> INFO - Looking for bibtex format file 'citations.bib' for section 0
+[411] bibtex.pm:1689> INFO - LaTeX decoding ...
+[541] bibtex.pm:1494> INFO - Found BibTeX data source 'citations.bib'
+[547] Utils.pm:395> WARN - Duplicate entry key: 'reid_graded_2002' in file 'citations.bib', skipping ...
+[625] Utils.pm:395> WARN - ISBN '978-1-4419-1936-6 978-1-4757-4265-7' in entry 'mumford_projective_2004' is invalid - run biber with '--validate_datamodel' for details.
+[694] Utils.pm:395> WARN - ISBN '978-1-4704-0585-4 978-0-8218-6712-9 978-0-8218-4714-5' in entry 'hamilton_locally_2010' is invalid - run biber with '--validate_datamodel' for details.
+[705] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\kaleb\AppData\Local\Temp\biber_tmp_Uk0Z\56f1c414433802ad7930cb94138c5670_16696.utf8, line 181, warning: possible runaway string started at line 158
+[741] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[742] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[742] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[742] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[775] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[791] bbl.pm:757> INFO - Output to main.bbl
+[792] Biber.pm:128> INFO - WARNINGS: 4
+>>>>>>> 4315ab84ba53c6816be9e66ff1b42cd9f85fb7fe

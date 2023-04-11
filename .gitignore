@@ -2,3 +2,6 @@
 *.pdf
 *.aux
 *.synctex.gz
+*.toc
+*.bbl
+*.bcf

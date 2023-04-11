@@ -97,8 +97,9 @@ There is another construction of a prequantum line bundle for $\MM$, the \textit
 	\begin{figure}[h]
 		\centering
 		\label{fig:torusdecomp}
-		\subfloat[][A trinion decomposition for surfaces of genus $g\geq 2$.]{\includegraphics[width=0.5\linewidth]{genusg.png}\label{fig:genusg}}
-		\subfloat[][Example: A different decomposition for $g=2$.]{\includegraphics[width=0.5\linewidth]{g2sym.png}\label{fig:genus2}}
+		\subfloat[][One decomposition for surfaces of genus $g\geq 2$.]{\includegraphics[width=0.4\linewidth]{genusg.png}\label{fig:genusg}}
+		\hspace{0.1\linewidth}
+		\subfloat[][A different decomposition for $g=2$.]{\includegraphics[width=0.35\linewidth]{g2sym_nolabels.png}\label{fig:genus2}}
 		\caption{Decomposition of a surface $\Sigma$ into $2g-2$ trinions. }
 	\end{figure}
 
@@ -299,14 +300,23 @@ There is another construction of a prequantum line bundle for $\MM$, the \textit
 		Consider a fixed trinion decomposition of a compact connected Riemann surface $\Sigma$ of genus $g$. It gives rise to a trivalent graph, and a real polarisation of the moduli space $\MM$ of flat $SU(2)$ connections on $\Sigma$. There is one-to-one correspondence between the Bohr-Sommerfeld points of the polarisation and the set of integer labellings of the edges of the graph satisfying the conditions 1,2 in \ref{t:bs-count} and equation \ref{e:trinion-ineqs}.
 	\end{theorem}
 
+	\begin{figure}[h]
+		\centering
+		\label{fig:g2-graphs}
+		\subfloat[][The symmetric decomposition and graph.]{\includegraphics[width=0.4\linewidth]{g2sym_graph.png}\label{fig:sym-graph}}
+		\hspace{0.1\linewidth}
+		\subfloat[][The asymmetric decomposition and graph.]{\includegraphics[width=0.4\linewidth]{g2asym_graph.png}\label{fig:asym-graph}}
+		\caption{Decompositions of a genus 2 surface and the corresponding trivalent graphs.}
+	\end{figure}
+
 	\underline{Example}:
-	Let $\Sigma$ be the compact Riemann surface of genus $2$, which has two trinion decompositions into two trinions. Replacing the trinions with vertices and the boundary circles with edges, we obtain the graphs in (FIGURE). Let us use Theorem \ref{t:bs-count} to find the number of Bohr-Sommerfeld points for the line bundle $\LL$ over $\Sigma$ with respect to the polarisations defined by these decompositions. For the symmetric decomposition, conditions 1 and 2 are the same at each vertex, so it suffices to consider them at one vertex. Since $k=1$, each label must be either $0$ or $1$. Their sum must be even, which leaves us with four possibilities:
+	Let $\Sigma$ be the compact Riemann surface of genus $2$, which has two trinion decompositions into two trinions. Replacing the trinions with vertices and the boundary circles with edges, we obtain the graphs in Figure \ref{fig:g2-graphs}. Let us use Theorem \ref{t:bs-count} to find the number of Bohr-Sommerfeld points for the line bundle $\LL$ over $\Sigma$ with respect to the polarisations defined by these decompositions. For the symmetric decomposition, conditions 1 and 2 are the same at each vertex, so it suffices to consider them at one vertex. Since $k=1$, each label must be either $0$ or $1$. Their sum must be even, which leaves us with four possibilities:
 	\begin{equation}
 		(l_1, l_2, l_3) = (0,0,0), (1,1,0), (0,1,1), \text{ or } (1,0,1).
 	\end{equation}
 	Finally, one can check that each of these labellings satisfies $|l_1-l_2| \leq l_3 \leq l_1+l_2$, so these are all valid labellings. Therefore Theorem \ref{t:bs-count} tells us that there are four Bohr-Sommerfeld points of $\LL$ in the polarisation defined by the symmetric decomposition of $\Sigma$.
 	
-	For the asymmetric decomposition, the conditions at each vertex must be checked separately, as they are different. Denoting the vertices as $v^1$ and $v^2$ and their edges by $l^1_i$ and $l^2_i$, we have that
+	For the asymmetric decomposition, the conditions at each vertex must be checked separately, as they are different. Denoting the edges at the two vertices by $l^1_i$ and $l^2_i$, we have that
 	\begin{align}
 		(l^1_1,l^1_2,l^2_3) &= (l_1, l_1, l_3), & (l^2_1,l^2_2,l^2_3) &= (l_2, l_2, l_3).
 	\end{align} 

@@ -1,37 +1,42 @@
-\section{Polarization and Prequantum Line Bundle on $P$}
-	From section \ref{s:mastermoduli}, $P$ has a symplectic form $\omega$, and the degeneration $\phi:\MM\to P$ is symplectomorphic on an open dense subset $U$ of $\MM$. Thus, it remains to equip $P$ with a real polarisation $\pi_P$ and a line bundle $\LL_0$ with curvature $2\pi i \omega$. In both cases, we mirror the construction of the corresponding object for $\MM$.
+
+	The degeneration of Section \ref{s:degeneration} allows us to relate the moduli space $\MM$ to the toric variety $\cP$, with a surjection $\phi:\MM\to \cP$ that is compatible with the symplectic structure on both spaces. Furthermore, the toric variety is projective and has a very ample line bundle $\LL_0$ whose sections are computed by counting lattice points in $\cP$'s polytope. In this section, we want to investigate the space of holomorphic sections $H^0(\cP,\LL_0)$ and we want to define a polarization of $\cP$ which will allow us to discuss the cohomology of fibre-wise flat sections, $\oplus_{k\geq 0}H^k(\cP, \JJ_{\pi,0})$. In particular, we ask if the degeneration from $\MM$ to $\cP$ preserves these spaces or not.
+	 
+\section{Polarization and Prequantum Line Bundle on $\cP$}
+	From Section \ref{s:mastermoduli}, $\cP$ has a symplectic form $\omega$, and the degeneration $\phi:\MM\to \cP$ is symplectomorphic on an open dense subset $U$ of $\MM$. Thus, it remains to equip $\cP$ with a real polarisation $\pi_{\cP}$ and a line bundle $\LL_0$ with curvature $2\pi i \omega$. In both cases, we mirror the construction of the corresponding object for $\MM$.
 	
-	For $\MM$ we defined functions $f_i:\MM\to \mathbb{R}$ by taking the cosines of the holonomies of a connection around each loop in a given trinion decomposition. For an element $x=(A_i,B_i,D_j,C_j)$ in $\MM^G$, it is the elements $\{C_j\}$ which correspond to these holonomies, and so we want to define functions $f_k:\MM^G \to \mathbb{R}$ by 
+	For $\MM$ we defined functions $f_i:\MM\to \mathbb{R}$ by taking the cosines of the holonomies of a connection around each loop in a given trinion decomposition of the surface $\Sigma$. Now for $\cP$, we have $\Sigma_0$ with $n=3g-3$-punctures and the extended moduli space $\MM^G$; given an element $x = (C_1,(D_i,C_i)_{i=2}^n)\in \MM^G$, it is the matrices $\{C_j\}$ which correspond to these holonomies. Taking the implosion, we obtained elements $W_j \in D(G)_{impl}$ with $W_j = (D_k, C_k)$, and so we want to define functions $f_k:\MM^G \to \mathbb{R}$ by 
 	\begin{equation}
-		\tilde{f}_k(A_i,B_i,D_j,C_j) = \frac{1}{\pi}\cos^{-1} \left(\Tr C_k\right)
+		\tilde{f}_k(C_1,(D_i,C_i)_{i=2}^n) = \frac{1}{\pi}\cos^{-1} \left(\Tr C_k\right)
 	\end{equation}
-	To get functions on $P$, one must check that these $\tilde{f}_k$ pass to the symplectic implosion. For the action of $G_k$ on $\MM^G$, with moment map $\Phi_k(A_i,B_i,D_j,C_j) = C_j^{-1}$, and a given face $\sigma$ of $\Delta$ we have
+	To get functions on $P$, one must check that these $\tilde{f}_k$ pass to the symplectic implosion. For the action of $G_k$ on $\MM^G$, with moment map $\Phi_k(C_1,(D_i,C_i)_{i=2}^n) = (C_k)^{-1}$, and a given face $\sigma$ of $\Delta$ we have
 	\begin{equation}
 		\Phi_k^{-1}(\sigma_0) = \{
-		(A_i,B_i,D_j,C_j) \in \MM^G ~|~ C_k^{-1} \in \sigma
+		(C_1,(D_i,C_i)_{i=2}^n) \in \MM^G ~|~ (C_k)^{-1} \in \sigma
 		\}
 	\end{equation}
-	Hence $\tilde{f}_k$ is constant on on $\Phi_k^{-1}(\sigma)$ and passes to the quotient by $[G_\sigma,G_\sigma]$. For $l != k$, the value of $\tilde{f}_l$ depends only on $C_l$, which is not acted on by $G_k$ and therefore $\tilde{f}_l$ also passes to the quotient. It remains to check that these functions pass under the quotient by the first copy of $G$. Recall that after quotienting, we have elements $(A_i,B_i,W_k)$, where $W_1=(D_1,C_1)$ for some $D_1 \in G$. The action of the first $G$ on $(A_i,B_i,W_k)$ is given by (\ref{e:first-action}):
+	Hence $\tilde{f}_k$ is constant on on $\Phi_k^{-1}(\sigma)$. To perform the quotient of $[G_\sigma, G_\sigma]$, we have two cases: if $\sigma = \Delta^0$ then $[G_\sigma, G_\sigma] = \{e\}$ and so $\Phi_k$ passes to the quotient. If $\sigma \in \{0,1\}$, then $[G_\sigma, G_\sigma] = SU(2)$ and we have 
 	\begin{equation}
-		\left(A_i,B_i,W_k = (u_k,v_k)\right) \to (gA_ig^{-1}, gB_ig^{-1}, (gu_k, v_k)).
+		\tilde{f}_k(g\cdot \left(C_1,(D_i,C_i)_{i=2}^n)\right) = \frac{1}{\pi}\cos^{-1}\Tr(\Ad_{g} (C_k)) = \tilde{f}_k(C_1,(D_i,C_i)_{i=2}^n).
 	\end{equation}
-	In the $(u_j,v_j)$ co-ordinates for $D(G)$, $C_j$ corresponds to $v_j$, which is fixed by this action of $G$. Thus, our functions $\tilde{f}_k$ are constant on the equivalence classes, and pass to the quotient to obtain functions $f_k:P\to \mathbb{R}$. For an element represented by $(A_i,B_i,W_k)$ in $P$, where $W_k = (u_k,v_k) \in D(G)_{impl}$, the function $f_k$ is given by
+	Hence $\tilde{f}_k$ is invariant and passes to the quotient by $[G_\sigma,G_\sigma]$. For $l \neq k$, the value of $\tilde{f}_l$ depends only on $C_l$, which is not acted on by $G_k$ and therefore $\tilde{f}_l$ also passes to the quotient. It remains to check that these functions pass under the quotient by the first copy of $G$. Recall that after quotienting, we obtain the elements $(W_1,W_2,...,W_n)$, where $W_i=(D_i,C_i)\in D(G)_{impl}$ ($D_1 =\mathds{1}$). The action of the first $G$ on $W_k$ is given by (\ref{e:first-action}):
 	\begin{equation}
-		f_k(A_i,B_i,W_k) = \frac{1}{\pi}\cos^{-1}\left(\Tr(v_k)\right).
- 	\end{equation}
+		(D_k,C_k) \to (gD_k, C_k)).
+	\end{equation}
+	The functions $\tilde{f}_k$ do not depend on $D_k$ and are therefore constant on the equivalence classes, and pass to the quotient to obtain functions $f_k:\cP\to \mathbb{R}$.
+	
+	From Equation \ref{e:degen-action} we know that $\phi:\MM\to\cP$ sends a connection with holonomy $C_k$ around a trinion decomposition curve $c_k$ to the orbit with $W_k = (D_k\mu^{-1}, \mu C_k\mu^{-1})$, $\mu^{-1}\in\Stab(C_k)$. Therefore if we define $\theta_{k,P} = \cos^{-1}(f_k)$, $\theta_{k,P}:\cP \to \mathbb{R}$, we have
+	\begin{equation}
+		\theta_{k,P} \circ \phi = \theta_k
+	\end{equation}
+	where $\theta_k:\MM\to\mathbb{R}$ were the functions defined in Section \ref{s:jeffreyweitsman}. Letting $\pi_P = (\theta_{1,P},...,\theta_{3g-3,P})$ we thus obtain a polarisation of $\cP$ with $\pi_P\circ \phi = \pi$.
 	
 	Next we build a prequantum line bundle on $P$. On the locus where $\phi:\MM\to P$ is a symplectomorphism, we can simply define $\LL_P = \LL$, but we must discuss the extension to the rest of $P$. Recall that we defined a function $\Theta:\cA\times\cG\to U(1)$ for connections over $\Sigma$, which we computed to be (Equation (\ref{e:cs-gauge})) 
 	\begin{equation}
 	\Theta(A,g) = \exp\left[-ik\int\limits_\Sigma \Tr(dg g^{-1}\wedge A)\right].
 	\end{equation}
-	Let $D$ denote a trinion and $\cA(D), \cG(D)$ denote the affine space of flat connections and the gauge group over $D$. Then we can define $\Theta:\cA(D)\times\cG(D)\to U(1)$ by copying the formula for $\Theta$ above:
-		\begin{equation}
-	\Theta(A,g) = \exp\left[-ik\int\limits_D \Tr(dg g^{-1}\wedge A)\right].
-	\end{equation}
-	Then as before we define an equivalence relation on $\cA(D)\times \C$ by $(A,z)\sim (g\cdot A, \Theta(A,g)z)$, and define the line bundle $\LL_{D} = $
+	For the singular curve $\Sigma_0$, we can define $\Theta$ exactly the same way, which allows us to define an equivalence relation on $\cA_0\times \mathbb{C}$ by $(A,z)\sim (g\cdot A, \Theta(A,g)z)$. Then we can define a line bundle $\LL_0 = \cA_0 \times \mathbb{C}/\sim$ over $\cA_0/\cG_0 = \cP$.	
 	
-	
-	For the singular curve $\Sigma_0$, we can define $\Theta$ exactly the same way, which would allow us to define an equivalence relation on $\cA_0\times \mathbb{C}$ by $(A,z)\sim (g\cdot A, \Theta(A,g)z)$. Then we can define a line bundle $\tilde{\LL} = \cA_0 \times \mathbb{C}/\sim$ over $\MM^T$. To get a bundle on $P$, we want to check that $\Theta$ passes well under the quotient map to each strata of the imploded cross-section $P$. On the generic locus where $\phi$ is a symplectomorphism, there is nothing to check, so we're left only with the subset where $\phi$ is merely surjective. 
+	We want this line bundle to be compatible with the degenerate $\phi:\MM\to\cP$, in the sense that $\phi^\ast \LL_0 = \LL$.
 	\begin{lemma}
 		Let $V_i$ be a tubular neighbourhood of $C_i$ in $\Sigma$. Let $V_{0}$ denote the (disconnected) image of $V_i$ under the surface degeneration. Then for every pair $(A,g)\in\cA\times \cG$ on $\Sigma$ which degenerates to a pair $(A_0, g_0)$ on $\Sigma_0$, there exists liftings $(\bA,\bg)$ and $(\bA_0,\bg_0)$ such that
 		\begin{equation}
@@ -93,8 +98,7 @@
 		\begin{equation}
 			\Theta(A,g) = \Theta(A_0, g_0).
 		\end{equation}
-		In particular, this implies that if $(A,g)$ and $(B,h)$ both degenerate to $(A_0,g_0)$, then $\Theta(A,g)=\Theta(B,g)$
-		 $\LL = \phi^\ast \LL_0 =$.
+		In particular, this implies that if $(A,g)$ and $(B,h)$ both degenerate to $(A_0,g_0)$, then $\Theta(A,g)=\Theta(B,g)$. 
 		\label{t:l=l0}
 	\end{theorem}
 	\begin{proof}
@@ -114,88 +118,100 @@
 				&= \Theta(A_0,g_0).
 		\end{align*}
 	\end{proof}
-	This theorem allows us to define the line bundle $\LL_P$ over $P$ by taking the quotient of $\LL$ under the relation $(x,z)\sim (y,z') \iff (\phi(x)=\phi(y), z=z')$. In particular, we have (???)
+	Using Theorem \ref{t:l=l0} we can show $\LL = \phi^\ast \LL_0$. By definition
 	\begin{equation}
-		\phi^\ast \LL_P = \{(x,(y,z))\in \MM\times \LL_P ~|~ \phi(x) = y\} = \LL
+	\phi^\ast \LL_0 = \left\{
+	(x,(y,z)) \in \MM\times\LL_0  ~|~ \phi(x) = y 		
+	\right\}.
 	\end{equation}
-
+	Given a point $(x,z) \in \LL$ we can map it to $(x, (\phi(x),z))$ in $\phi^\ast \LL_0$. Since $\phi$ is surjective, this is surjective. Suppose then that for some $(x,z)$ and $(x',z') \in \LL$ we have
+	\begin{equation}
+	(x, (\phi(x), z)) = (x', (\phi(x'), z')).
+	\end{equation}
+	Then $x=x'$ and $z = z' \mod \Theta$, namely $z' = \Theta(\phi(x), g_0)z$ for some $g_0 \in \cG_0$. Then to show $z=z'$ in $\LL$, we need that there is some $g\in \cG$ such that $\Theta(A,g)z' = z$, where $A\in \cA$ represents $x\in \MM$. The surjectivity of the degeneration gives the existence of some $g$ that degenerates to $g_0$, and Theorem \ref{t:l=l0} tells us that $\Theta(A_0, g_0)z = \Theta(A,g)z = z'$ and therefore $z=z'$ in $\LL$. 
+	
 \section{Holomorphic Sections of $\LL$}
-	\begin{lemma}
-		The line bundle $\LL_P$ on the toric moduli space $P(D)$ over a trinion $D$, has curvature $\omega$ equal to the Fubini-Study metric on $P(D) \cong \PP^3$.
-	\end{lemma}
-	{\tiny }\begin{proof}
-		Let $\MM(D)$ denote the moduli space of flat $SU(2)$ connections over a single trinion. Then $\pi(\MM(D)) = \Delta$ and over the interior $\Delta^{0}$ we have the symplectomorphism $\phi$. Thus, on on the dense torus $(\C^\ast)^3$ inside $P(D)$, we have $\phi^\ast \omega_P = \omega_{\MM}$. Recall that the form on $\MM(D)$ is the Atiyah-Bott form (equation (\ref{e:ab-form})).
-		
-		The prequantum bundle $\LL$ on $\MM(D)$ is isomorphic to the determinant line bundle (Theorem \ref{t:cs=det}) and the determinant line bundle's sections give an embedding $\iota$ of $\MM(D)$ into projective space (Proposition \ref{t:det-embed}). Therefore $\LL$ is very ample over $\MM(D)$ and $\LL = \iota^\ast \OO(1)$. The curvature $\omega_{fs}$ of $\OO(1)$ is the Fubini-Study metric, so $\iota^\ast \omega_{fs} = \omega_\MM = \phi^\ast \omega_P$ over $(\C^\ast)^3 \subset P(D)$.
-		
-		Therefore, on $P(D) = \PP^3$ we have two forms, $\omega_{fs}$ and $\omega_P$, which agree on an open dense subset. Therefore they are equal everywhere on $P(D)$.
-	\end{proof}
-	\begin{corollary}
-		\label{t:P3-veryample}
-		The line bundle $\LL_P$ over $P(D)$ is ample.
-	\end{corollary}
-	\begin{proof}
-		From the lemma, the curvature of $\LL_P$ is a positive (1,1) form. Then since $P(D)$ is a compact Kahler manifold, the Kodaira embedding theorem says $\LL_P$ is ample.
-	\end{proof}
-	\begin{theorem}
-		\label{t:lp-ample}
-		The line bundle $\LL_P$ over $P$ is ample. 
-	\end{theorem}
-	\begin{proof}
-		Let $D$ be a trinion and $P(D)$ the toric moduli space for $D$. By corollary \ref{t:P3-veryample}, there exists large enough $n$ for which $\LL_{P(D)}^{\otimes^n}$ is very ample over $P(D)$. That is, since $P(D) = \PP^3$,
-		\begin{equation}
-			\OO(1) = \LL_{P(D)}^{\otimes^n}.
-		\end{equation}
-		From the discussion in section \ref{s:p-gluing} we know that $P$ can be constructed by gluing $\PP^3$s along a trinion decomposition of the Riemann surface $\Sigma$, and that the bundles $\OO(1)$ over each copy of $\PP^3$ glue together to give a very ample line bundle on $P$. Letting $\iota$ denote the Segre embedding (equation \ref{e:segre}) $\PP^3 \coprod \PP^3 \xrightarrow{\iota} X\subset \PP^{15}$ and $p:X\to \PP^3$ the projection, we have
-		\begin{equation}
-			\OO(1)_{\PP^{15}}|_X = p^\ast \OO(1)\otimes p^\ast \OO(1) = p^\ast \LL_{P(D)}^{\otimes n}\otimes p^\ast \LL_{P(D)}^{\otimes n} = \left(p^\ast \LL_{P(D)}\otimes p^\ast \LL_{P(D)}\right)^{\otimes n}.
-		\end{equation}
-		Let $p_1$ and $p_2$ denote the points in the copies of $\PP^3$ which are being identified. Now we consider the quotient of $\PP^3 \coprod \PP^3$ under the anti-diagonal action of $\C^\ast$ on the framing at $p_1$ and $p_2$. Away from $p_1$ and $p_2$, the quotient
-		\begin{equation}
-			q: \PP^3 \cup \PP^3 \to \PP^3 \cup \PP^3 / \C^\ast
-		\end{equation}
-		does nothing. On a (disconnected) neighbourhood $V_0$ of $p_1$ and $p_2$, which is glued to obtain the tubular neighbourhood $V$ of the identified point $p=p_1=p_2$, lemma \ref{l:main-lemma} tells us that $q^\ast \LL_{P} = p^\ast \LL_{P(D)}\otimes p^\ast \LL_{P(D)}$. Therefore we have that on the glued space $\PP^3\coprod \PP^3 / \C^\ast$, $q^\ast \LL_P^{\otimes n} = \OO(1)_{\PP^{15}}$, and hence $\LL_P$ is very ample on this glued space. Repeating this at each puncture on the degenerated Riemann surface $\Sigma$ we obtain the desired result.
-	\end{proof}
-	\begin{corollary}
-		The line bundle $\LL_P$ over $P$ is very ample.
-	\end{corollary}
-	\begin{proof}
-		From Theorem \ref{t:lp-ample}, there exists an embedding $\iota:P\to\PP^N$ and an integer $n>0$ such that
-		\begin{equation}
-		\LL^{\otimes n}_P = \iota^\ast \OO(1)_{\PP^N}.
-		\end{equation}
-		However, we also know that there is an open dense subset $U \subset P$ for which $\phi:\MM\to P$ is a symplectomorphism. Hence, on this subset, the curvature $\omega_P$ of $\LL_P$ agrees with that of $\LL$ on $M$ which is the Fubini-Study metric $\omega_{fs}$. Then the curvature of $\LL^{\otimes n}_P$ is $n\omega_{fs}$. However $\OO(1)_{\PP^N}$ has curvature given by the Fubini-Study metric, so we must have $n\omega_{fs} = \omega_{fs}$ and therefore $n=1$. Therefore, $\LL_P = \iota^\ast \OO(1)_{\PP^N}$.
-	\end{proof}
-	\begin{theorem}
-		The holomorphic sections $H^0(\MM,\LL) = H^0(\cP, \LL_P)$, and for all, $k>0$ $H^k(\MM,\LL) = H^k(\cP,\LL_P) = 0$.
-	\end{theorem}
-	\begin{proof}
-		The bundle $\LL$ is isomorphic to the determinant bundle on $\MM$, which is very ample (Theorems \ref{t:cs=det}, \ref{t:det-embed}). As a very ample bundle on a compact projective variety, $H^k(\MM,\LL) = 0$ for $k>0$. Then since $\phi:\MM\to P$ is surjective, $\phi^\ast:H^k(\cP,\LL_P)\to H^k(\MM,\LL)$ is injective and hence $H^k(\cP,\LL_P) =0$ as well.
-		
-		For the global sections, we already know $\phi^\ast$ is injective, and so it remains to show that it is also surjective. Suppose then that $s\in H^0(\LL,\MM)$. Let $U \subset M$ be the locus on which $\phi$ is a symplectomorphism. The $\dbar$ operator defining holomorphic sections is the $(0,1)$ part of the connection on $\LL$, and thus over $U$ holomorphic sections on $\LL$ agree with those on $\LL_P$. The space $\MM$ is connected and simply connected ([413]\cite{ramadas_comments_1989}), so 
-	\end{proof}
+\begin{lemma}
+	The line bundle $\LL_0$ on the toric moduli space $P(D)$ over a trinion $D$, has curvature $\omega$ equal to the Fubini-Study metric on $P(D) \cong \PP^3$.
+\end{lemma}
+{\tiny }\begin{proof}
+	Let $\MM(D)$ denote the moduli space of flat $SU(2)$ connections over a single trinion. Then $\pi(\MM(D)) = \Delta$ and over the interior $\Delta^{0}$ we have the symplectomorphism $\phi$. Thus, on on the dense torus $(\C^\ast)^3$ inside $P(D)$, we have $\phi^\ast \omega_P = \omega_{\MM}$. Recall that the form on $\MM(D)$ is the Atiyah-Bott form (Equation (\ref{e:ab-form})).
+	
+	The prequantum bundle $\LL$ on $\MM(D)$ is isomorphic to the determinant line bundle (Theorem \ref{t:cs=det}) and the determinant line bundle's sections give an embedding $\iota$ of $\MM(D)$ into projective space (Proposition \ref{t:det-embed}). Therefore $\LL$ is very ample over $\MM(D)$ and $\LL = \iota^\ast \OO(1)$. The curvature $\omega_{fs}$ of $\OO(1)$ is the Fubini-Study metric, so $\iota^\ast \omega_{fs} = \omega_\MM = \phi^\ast \omega_P$ over $(\C^\ast)^3 \subset P(D)$.
+	
+	Therefore, on $P(D) = \PP^3$ we have two forms, $\omega_{fs}$ and $\omega_P$, which agree on an open dense subset. Therefore they are equal everywhere on $P(D)$.
+\end{proof}
+\begin{corollary}
+	\label{t:P3-veryample}
+	The line bundle $\LL_0$ over $P(D)$ is ample.
+\end{corollary}
+\begin{proof}
+	From the lemma, the curvature of $\LL_0$ is a positive (1,1) form. Then since $P(D)$ is a compact Kahler manifold, the Kodaira embedding theorem says $\LL_0$ is ample.
+\end{proof}
+\begin{theorem}
+	\label{t:lp-ample}
+	The line bundle $\LL_0$ over $P$ is ample. 
+\end{theorem}
+\begin{proof}
+	Let $D$ be a trinion and $P(D)$ the toric moduli space for $D$. By Corollary \ref{t:P3-veryample}, there exists large enough $n$ for which $\LL_{P(D)}^{\otimes^n}$ is very ample over $P(D)$. That is, since $P(D) = \PP^3$,
+	\begin{equation}
+	\OO(1) = \LL_{P(D)}^{\otimes^n}.
+	\end{equation}
+	From the discussion in section \ref{s:p-gluing} we know that $P$ can be constructed by gluing $\PP^3$s along a trinion decomposition of the Riemann surface $\Sigma$, and that the bundles $\OO(1)$ over each copy of $\PP^3$ glue together to give a very ample line bundle on $P$. Letting $\iota$ denote the Segre embedding (equation \ref{e:segre}) $\PP^3 \coprod \PP^3 \xrightarrow{\iota} X\subset \PP^{15}$ and $p:X\to \PP^3$ the projection, we have
+	\begin{equation}
+	\OO(1)_{\PP^{15}}|_X = p^\ast \OO(1)\otimes p^\ast \OO(1) = p^\ast \LL_{P(D)}^{\otimes n}\otimes p^\ast \LL_{P(D)}^{\otimes n} = \left(p^\ast \LL_{P(D)}\otimes p^\ast \LL_{P(D)}\right)^{\otimes n}.
+	\end{equation}
+	Let $p_1$ and $p_2$ denote the points in the copies of $\PP^3$ which are being identified. Now we consider the quotient of $\PP^3 \coprod \PP^3$ under the anti-diagonal action of $\C^\ast$ on the framing at $p_1$ and $p_2$. Away from $p_1$ and $p_2$, the quotient
+	\begin{equation}
+	q: \PP^3 \cup \PP^3 \to \PP^3 \cup \PP^3 / \C^\ast
+	\end{equation}
+	does nothing. On a (disconnected) neighbourhood $V_0$ of $p_1$ and $p_2$, which is glued to obtain the tubular neighbourhood $V$ of the identified point $p=p_1=p_2$, lemma \ref{l:main-lemma} tells us that $q^\ast \LL_{P} = p^\ast \LL_{P(D)}\otimes p^\ast \LL_{P(D)}$. Therefore we have that on the glued space $\PP^3\coprod \PP^3 / \C^\ast$, $q^\ast \LL_0^{\otimes n} = \OO(1)_{\PP^{15}}$, and hence $\LL_0$ is very ample on this glued space. Repeating this at each puncture on the degenerated Riemann surface $\Sigma$ we obtain the desired result.
+\end{proof}
+\begin{corollary}
+	The line bundle $\LL_0$ over $P$ is very ample.
+\end{corollary}
+\begin{proof}
+	From Theorem \ref{t:lp-ample}, there exists an embedding $\iota:P\to\PP^N$ and an integer $n>0$ such that
+	\begin{equation}
+	\LL^{\otimes n}_P = \iota^\ast \OO(1)_{\PP^N}.
+	\end{equation}
+	However, we also know that there is an open dense subset $U \subset P$ for which $\phi:\MM\to P$ is a symplectomorphism. Hence, on this subset, the curvature $\omega_P$ of $\LL_0$ agrees with that of $\LL$ on $M$ which is the Fubini-Study metric $\omega_{fs}$. Then the curvature of $\LL^{\otimes n}_P$ is $n\omega_{fs}$. However $\OO(1)_{\PP^N}$ has curvature given by the Fubini-Study metric, so we must have $n\omega_{fs} = \omega_{fs}$ and therefore $n=1$. Therefore, $\LL_0 = \iota^\ast \OO(1)_{\PP^N}$.
+\end{proof}
+\begin{theorem}
+	The holomorphic sections $H^0(\MM,\LL) = H^0(\cP, \LL_0)$, and for all, $k>0$ $H^k(\MM,\LL) = H^k(\cP,\LL_0) = 0$.
+\end{theorem}
+\begin{proof}
+	The bundle $\LL$ is isomorphic to the determinant bundle on $\MM$, which is very ample (Theorems \ref{t:cs=det}, \ref{t:det-embed}). As a very ample bundle on a compact projective variety, $H^k(\MM,\LL) = 0$ for $k>0$. Then since $\phi:\MM\to P$ is surjective, $\phi^\ast:H^k(\cP,\LL_0)\to H^k(\MM,\LL)$ is injective and hence $H^k(\cP,\LL_0) =0$ as well.
+	
+	For the global sections, we already know $\phi^\ast$ is injective, and so it remains to show that it is also surjective. Suppose then that $s\in H^0(\LL,\MM)$. Let $U \subset M$ be the locus on which $\phi$ is a symplectomorphism. The $\dbar$ operator defining holomorphic sections is the $(0,1)$ part of the connection on $\LL$, and thus over $U$ holomorphic sections on $\LL$ agree with those on $\LL_0$.  
+\end{proof}
 
-\section{Invariance of $\LL$ under Degeneration.}
-	\begin{theorem}
-		For the prequantum systems $(M,\pi,\LL)$ and $(P,\pi_{P}, \LL_P)$, let $\JJ_\pi ~(\JJ_{\pi,P})$ be the sheaf of sections of $\LL ~(\LL_P)$ which are covariant constant on the fibres of $\pi ~(\pi_P)$. Then
-		\begin{equation}
-			H^0(\JJ_\pi, \MM) = H^0(\JJ_{\pi,P}, P).
-		\end{equation}
-	\end{theorem}
-	\begin{proof}
-		The degeneration $\phi:\MM\to\cP$ is surjective, and thus $\phi^\ast:H^0(\JJ_{\pi,0},P) \to H^0(\JJ_\pi,\MM)$ is injective. Hence it remains to show that $\phi^\ast$ is surjective.
-		\smallskip
-		
-		From theorem \ref{t:l=l0}, we have that $\LL=\phi^\ast \LL_P$ and $\phi^\ast \omega_P = \omega$. Suppose $s\in H^0(\JJ_{\pi},\MM)$ and suppose $x \in P$. Let $y_1,y_2 \in \phi^{-1}(x)$; it is permitted that $y_1=y_2$. Then $\pi(y_1) = \pi_P\circ \phi(x) = \pi(y_2)$ so $y_1$ and $y_2$ are in the same fibre of $\pi$. Stalkwise we have
-		\begin{equation}
-			\LL_{y_1} \cong \LL_{P,x} \cong \LL_{y_2},
-		\end{equation} 
-		so it makes sense to ask if $s(y_1) = s(y_2)$. Since $s$ is covariant constant on the fibres of $\pi$, and the fibres of $\pi$ are (path?) connected \cite[thm 2.5]{jeffrey_bohr-sommerfeld_1992}, we must have $s(y_1)=s(y_2)$, and so it is well defined to let $s'\in H^0(\JJ_{\pi,P},P)$ be given by $s'(x) = s\left(\phi^{-1}(x)\right)$. Then
-		\begin{equation}
-			\phi^\ast s'(y) = s'(\phi(x)) = s(y),
-		\end{equation}
-		so $\phi^\ast$ is surjective.
-		\end{proof}
+Consider one trinion $D$, over which $\MM(D) = \PP^3 = \cP(D)$. Let $[x:y:z:w]$ denote homogeneous co-ordinates. Let $x\in \MM(D)$ be an element such that $\pi(x)$ is not an interior triple. If $\pi(x)$ is a vertex of $\Delta$ then $x = [1:0:0:0], [0:1:0:0], [0:0:1:0],$ or  $[0:0:0:1]$. In this case, the $(\C^\ast)$ actions on $\PP^3$ are all trivial so $\sigma(x)$ is invariant under the degeneration.
+
+If $\pi(x)$ is on an edge of $\Delta$ then $x = [0:1:1:0]$ e.t.c. in this case, there is one non-trivial $\C^\ast$ which $\sigma(x)$ may depend on. Suppose 
+
+
+\begin{theorem}
+	For the prequantum systems $(M,\pi,\LL)$ and $(P,\pi_{P}, \LL_0)$, let $\JJ_\pi ~(\JJ_{\pi,P})$ be the sheaf of sections of $\LL ~(\LL_0)$ which are covariant constant on the fibres of $\pi ~(\pi_P)$. Then
+	\begin{equation}
+	H^0(\JJ_\pi, \MM) = H^0(\JJ_{\pi,P}, P).
+	\end{equation}
+\end{theorem}
+\begin{proof}
+	The degeneration $\phi:\MM\to\cP$ is surjective, and thus $\phi^\ast:H^0(\JJ_{\pi,0},P) \to H^0(\JJ_\pi,\MM)$ is injective. Hence it remains to show that $\phi^\ast$ is surjective.
+	\smallskip
+	
+	From theorem \ref{t:l=l0}, we have that $\LL=\phi^\ast \LL_P$ and $\phi^\ast \omega_P = \omega$. Suppose $s\in H^0(\JJ_{\pi},\MM)$ and suppose $x \in P$. Let $y_1,y_2 \in \phi^{-1}(x)$; it is permitted that $y_1=y_2$. Then $\pi(y_1) = \pi_P\circ \phi(x) = \pi(y_2)$ so $y_1$ and $y_2$ are in the same fibre of $\pi$. Stalkwise we have
+	\begin{equation}
+	\LL_{y_1} \cong \LL_{P,x} \cong \LL_{y_2},
+	\end{equation} 
+	so it makes sense to ask if $s(y_1) = s(y_2)$. Since $s$ is covariant constant on the fibres of $\pi$, and the fibres of $\pi$ are (path?) connected \cite[thm 2.5]{jeffrey_bohr-sommerfeld_1992}, we must have $s(y_1)=s(y_2)$, and so it is well defined to let $s'\in H^0(\JJ_{\pi,P},P)$ be given by $s'(x) = s\left(\phi^{-1}(x)\right)$. Then
+	\begin{equation}
+	\phi^\ast s'(y) = s'(\phi(x)) = s(y),
+	\end{equation}
+	so $\phi^\ast$ is surjective.
+\end{proof}
+
 
 \section{Counting Sections of $\JJ_\pi$}
 

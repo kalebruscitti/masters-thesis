@@ -38,7 +38,7 @@
 	\end{equation}
 	For the singular curve $\Sigma_0$, we can define $\Theta$ exactly the same way, which allows us to define an equivalence relation on $\cA_0\times \mathbb{C}$ by $(A,z)\sim (g\cdot A, \Theta(A,g)z)$. Then we can define a line bundle $\LL_0 = \cA_0 \times \mathbb{C}/\sim$ over $\cA_0/\cG_0 = \cP$.	
 	
-	We want this line bundle to be compatible with the degenerate $\phi:\MM\to\cP$, in the sense that $\phi^\ast \LL_0 = \LL$.
+	We want this line bundle to be compatible with the degeneration $\phi:\MM\to\cP$, in the sense that $\phi^\ast \LL_0 = \LL$.
 	\begin{lemma}
 		Let $V_i$ be a tubular neighbourhood of $C_i$ in $\Sigma$. Let $V_{0}$ denote the (disconnected) image of $V_i$ under the surface degeneration. Then for every pair $(A,g)\in\cA\times \cG$ on $\Sigma$ which degenerates to a pair $(A_0, g_0)$ on $\Sigma_0$, there exists liftings $(\bA,\bg)$ and $(\bA_0,\bg_0)$ such that
 		\begin{equation}
@@ -137,6 +137,7 @@
 	The line bundle $\LL_0$ on the toric moduli space $P(D)$ over a trinion $D$, has curvature $\omega$ equal to the Fubini-Study metric on $P(D) \cong \PP^3$.
 \end{lemma}
 {\tiny }\begin{proof}
+	\label{l:metric}
 	Let $\MM(D)$ denote the moduli space of flat $SU(2)$ connections over a single trinion. Then $\pi(\MM(D)) = \Delta$ and over the interior $\Delta^{0}$ we have the symplectomorphism $\phi$. Thus, on on the dense torus $(\C^\ast)^3$ inside $P(D)$, we have $\phi^\ast \omega_P = \omega_{\MM}$. Recall that the form on $\MM(D)$ is the Atiyah-Bott form (Equation (\ref{e:ab-form})).
 	
 	The prequantum bundle $\LL$ on $\MM(D)$ is isomorphic to the determinant line bundle (Theorem \ref{t:cs=det}) and the determinant line bundle's sections give an embedding $\iota$ of $\MM(D)$ into projective space (Proposition \ref{t:det-embed}). Therefore $\LL$ is very ample over $\MM(D)$ and $\LL = \iota^\ast \OO(1)$. The curvature $\omega_{fs}$ of $\OO(1)$ is the Fubini-Study metric, so $\iota^\ast \omega_{fs} = \omega_\MM = \phi^\ast \omega_P$ over $(\C^\ast)^3 \subset P(D)$.
@@ -159,47 +160,58 @@
 	\begin{equation}
 	\OO(1) = \LL_{P(D)}^{\otimes^n}.
 	\end{equation}
-	From the discussion in section \ref{s:p-gluing} we know that $P$ can be constructed by gluing $\PP^3$s along a trinion decomposition of the Riemann surface $\Sigma$. Letting $\iota$ denote the Segre embedding (Equation \ref{e:segre}) $\PP^3 \coprod \PP^3 \xrightarrow{\iota} X\subset \PP^{15}$ and $p_i:X\to \PP^3$ the projection to each factor, we have
+	From the discussion in section \ref{s:p-gluing} we know that $\cP$ can be constructed by gluing $\PP^3$s along a trinion decomposition of the Riemann surface $\Sigma$. The decomposition consists of $2g-2$ copies of $\PP^3$, and we must quotient by $3g-3$ actions of $\C^\ast$. Letting $\iota$ denote the Segre embedding (Equation \ref{e:segre}) $\PP^3 \coprod \PP^3 \xrightarrow{\iota} X\subset \PP^{15}$ and $p_i:X\to \PP^3$ the projection to each factor, we have
 	\begin{equation}
-	\OO(1)_{\PP^{15}}|_X = p_1^\ast \OO(1)\otimes p_2^\ast \OO(1) = p_1^\ast \LL_{P(D)}^{\otimes n}\otimes p_2^\ast \LL_{P(D)}^{\otimes n} = \left(p_1^\ast \LL_{P(D)}\otimes p_2^\ast \LL_{P(D)}\right)^{\otimes n} := \tilde{\LL}.
+	\OO(1)_{\PP^{15}}|_X = p_1^\ast \OO(1)\otimes p_2^\ast \OO(1) = p_1^\ast \LL_{P(D)}^{\otimes n}\otimes p_2^\ast \LL_{P(D)}^{\otimes n} = \left(p_1^\ast \LL_{P(D)}\otimes p_2^\ast \LL_{P(D)}\right)^{\otimes n}.
 	\end{equation}
-	Then we quotient an action of $(\C^\ast)$, and the invariant sections of $\tilde{\LL}$ give us the degree-1 functions on $X\sslash\C^\ast$. 
-	
-	The quotient by $\C^\ast$ takes framed parabolic bundles on each trinion and glues them together, and if a section of $\tilde{\LL}$ is invariant, it means that for 
-	
-	
-	Let $q_1$ and $q_2$ denote the points in the copies of $\PP^3$ which are being identified. Now we consider the quotient of $\PP^3 \coprod \PP^3$ under the anti-diagonal action of $\C^\ast$ on the framing at $q_1$ and $q_2$. Away from $p_1$ and $p_2$, the quotient
+	Repeating this for all the copies, we can embed the product of the $\PP^3$s into $\PP^N$ for some large $N$, and we obtain an ample bundle 
 	\begin{equation}
-	q: \PP^3 \cup \PP^3 \to \PP^3 \cup \PP^3 / \C^\ast
+		\tilde{L} = \bigotimes_{i=1}^{3g-3} p_i^\ast \LL_{P(D)}
 	\end{equation}
-	does nothing. On a (disconnected) neighbourhood $V_0$ of $p_1$ and $p_2$, which is glued to obtain the tubular neighbourhood $V$ of the identified point $p=p_1=p_2$, lemma \ref{l:main-lemma} tells us that $q^\ast \LL_{P} = p^\ast \LL_{P(D)}\otimes p^\ast \LL_{P(D)}$. Therefore we have that on the glued space $\PP^3\coprod \PP^3 / \C^\ast$, $q^\ast \LL_0^{\otimes n} = \OO(1)_{\PP^{15}}$, and hence $\LL_0$ is very ample on this glued space. Repeating this at each puncture on the degenerated Riemann surface $\Sigma$ we obtain the desired result.
+	Taking the GIT quotient under $\mathbb{T}:=(\C^\ast)^{3g-3}$, the result is given by the homogeneous spectrum of the invariant sections of $\tilde{\LL}$, that is
+	\begin{equation}
+		\cP = \text{Proj}\left(
+		\bigoplus_{k\geq 0} H^0(X,\tilde{L}^k)^\mathbb{T}
+		\right).
+	\end{equation}
+	Therefore, if we denote $q:X\to \cP$ as the quotient, then $q^\ast \OO(1)_{\cP} = \tilde{\LL}^{\otimes n}$. 
+	
+	On the other hand, a section of $\tilde{\LL}$ is a tensor product  $\otimes_{i=1}^{3g-3}\sigma_i$ of sections in $\LL_{P(D)}$ for each trinion $D$, and we can define a section of $\LL_0$ over $\cP$ by defining $\sigma(x) = \otimes_{i=1}^{3g-3}\sigma_i(\tilde{x_i})$, where $q(\tilde{x_i}) = x$. For most sections, this will not be well defined as the value of $\sigma_i$ may depend on the choice of $\tilde{x_i}$,  but a section will be invariant under the $\mathbb{T}$ action exactly if it does not depend on this choice: if $\tilde{x_i}$ and $\tilde{y_i}$ both map to $x$ then there is some $t\in \mathbb{T}$ with $t\cdot\tilde{x_i} = \tilde{y_i}$ and therefore $\sigma_i(x_i) = \sigma_i(y_i)$. Thus $\LL_0 \cong q^\ast\tilde{\LL}$ and $\LL^\{\otimes n\} \cong q^\ast \OO(1)_{\cP}$ meaning $\LL_0$ is ample.
+	
+	Finally, $\LL_0$ is very ample as by the same argument as Lemma \ref{l:metric}, its curvature is given on $\cP$ by the Fubini-Study metric, and thus the curvature of $\LL_0^n = n\omega_{fs}$. The curvature of $\OO(1)$ is the Fubini-Study metric, so for these to be equal we must have $n=1$.
 \end{proof}
 \begin{corollary}
-	The line bundle $\LL_0$ over $P$ is very ample.
+	For $k\geq 0$, $H^k(\cP,\LL_0) =0$.
 \end{corollary}
 \begin{proof}
-	From Theorem \ref{t:lp-ample}, there exists an embedding $\iota:P\to\PP^N$ and an integer $n>0$ such that
-	\begin{equation}
-	\LL^{\otimes n}_P = \iota^\ast \OO(1)_{\PP^N}.
-	\end{equation}
-	However, we also know that there is an open dense subset $U \subset P$ for which $\phi:\MM\to P$ is a symplectomorphism. Hence, on this subset, the curvature $\omega_P$ of $\LL_0$ agrees with that of $\LL$ on $M$ which is the Fubini-Study metric $\omega_{fs}$. Then the curvature of $\LL^{\otimes n}_P$ is $n\omega_{fs}$. However $\OO(1)_{\PP^N}$ has curvature given by the Fubini-Study metric, so we must have $n\omega_{fs} = \omega_{fs}$ and therefore $n=1$. Therefore, $\LL_0 = \iota^\ast \OO(1)_{\PP^N}$.
+	$\LL_0$ is a very ample bundle on a complex projective variety, so $H^k(\MM,\LL)=0$ for $k>0$ \cite[III, Prop 2.6.1]{grothendieck_elements_1960}.
 \end{proof}
-
-
-\iffalse
+The prequantum line bundle bundle $\LL$ is also very ample over a complex projective variety, so $H^k(\MM,\LL)=0$ for $k>0$ as well. Therefore, if the sections $H^0(\MM,\LL)$ and $H^0(\cP,\LL)$ are the same, then the entire cohomologies will be the same. In fact, we know from Jeffrey and Weitsman that the dimension of $H^0(\cP,\LL)$ is computed by the Verlinde formula, and it has also been shown that the dimension of $H^0(\MM,\LL)$ is computed by the Verlinde formula \cite{faltings_proof_1994}\cite{schottenloher_mathematical_2008}. This argument proves $H^0(\MM,\LL)\cong H^0(\cP,\LL_0)$, but in a non-canonical way. One may hope to find a direct isomorphism via the degeneration $\phi:\MM\to\cP$, and such an isomorphism would then provide another way to prove the Verlinde formula for $H^0(\MM,\LL)$.
 \begin{theorem}
-	The holomorphic sections $H^0(\MM,\LL) = H^0(\cP, \LL_0)$, and for all, $k>0$ $H^k(\MM,\LL) = H^k(\cP,\LL_0) = 0$.
+	$H^0(\MM,\LL) = H^0(\cP,\LL_0)$
 \end{theorem}
 \begin{proof}
-	The bundle $\LL$ is isomorphic to the determinant bundle on $\MM$, which is very ample (Theorems \ref{t:cs=det}, \ref{t:det-embed}). As a very ample bundle on a compact projective variety, $H^k(\MM,\LL) = 0$ for $k>0$. Then since $\phi:\MM\to P$ is surjective, $\phi^\ast:H^k(\cP,\LL_0)\to H^k(\MM,\LL)$ is injective and hence $H^k(\cP,\LL_0) =0$ as well.
+	First, the surjection $\phi:\MM\to\cP$ defines an injective map $\phi^\ast:H^0(\cP,\LL_0) \to H^0(\MM,\LL)$ by
+	$\phi^\ast\sigma(x) = \sigma(\phi(x))$. If $\phi^\ast\sigma = \phi^\ast\tau$ for some $\sigma,\tau \in H^0(\cP,\LL_0)$, then since $\phi$ is a bijection on an open dense subset $U$ of $\MM$, $\sigma = \phi^\ast \sigma =  \phi^\ast \tau = \tau$ on $U=\phi(U)$. Then by the continuity, we must have $\sigma = \tau$ everywhere on $\cP$.
 	
-	For the global sections, we already know $\phi^\ast$ is injective, and so it remains to show that it is also surjective. Suppose then that $s\in H^0(\LL,\MM)$. Let $U \subset M$ be the locus on which $\phi$ is a symplectomorphism. The $\dbar$ operator defining holomorphic sections is the $(0,1)$ part of the connection on $\LL$, and thus over $U$ holomorphic sections on $\LL$ agree with those on $\LL_0$.  
+	On the other hand, pick two non-equal sections $\sigma, \tau \in H^0(\MM,\LL)$. By the identity theorem for holomorphic sections, if these sections agree on any open set then they are equal; contrapositively, since they are not equal they must not be equal on any open set. In particular, this means they are not equal on the locus $U$ where $\phi$ is a bijection. The identity theorem tells us that restriction of holomorphic sections from $\MM$ to $U$ is injective, and thus $\dim H^0(\MM,\LL) \leq \dim H^0(U,\LL)$. Then by $\phi$'s bijective, $\LL\cong \LL_0$ on $U=\phi(U)$ and hence $H^0(U,LL)=H^0(\phi(U),\LL_0)$. 
+	
+	Given a section of $\sigma \in H^0(\phi(U),\LL_0)$ which was the restriction of some $\sigma' \in H^0(\MM,\LL)$, we can analytically continue $\sigma$ to a section $\tau $ on a maximal domain $V \subset \cP$. There are two possibilities:
+	
+	1. $V = \cP$. In this case, $\tau \in H^0(\cP,\LL_0)$. For any $x\in \MM$, let $y_i\to x$, $\{y_i\} \in \phi(U)\subset\cP$, and $x_i = \phi(y_i)$. Then
+	\begin{equation}
+		\phi^\ast \tau(x) = \tau(\phi(x)) = \lim_{y_i \to x}\tau(\phi(y_i)) = \lim_{x_i \to x}\sigma(x_i) = \sigma'(x)
+	\end{equation}
+	2. $V \neq \cP$. In this case, there is some point $y\in \partial U = \cP - U$ where $\tau$ has a pole. Then let $y_i\to y$ in $\phi(U) \subset \cP$ and let $x_i = \phi^{-1}(y_i)$ (since $\phi$ is bijective on $U$). Then pick any $x \in \phi^{-1}(y)$, and we have
+	\begin{equation}
+		\lim_{x_i \to x} \sigma'(x) = \lim_{y_i \to y} \tau(y_i) = \infty 
+	\end{equation}
+	this contradicts $\sigma'$ being holomorphic on $\MM$.
+	
+	Hence, given any section $\sigma'\in H^0(\MM,\LL)$ the composition of restriction to $U$ and analytic continuation to $\cP$ gives us a section $\sigma$ in $H^0(\cP,\LL_0)$ with $\phi^\ast \sigma = \sigma'$. 
 \end{proof}
-
-Consider one trinion $D$, over which $\MM(D) = \PP^3 = \cP(D)$. Let $[x:y:z:w]$ denote homogeneous co-ordinates. Let $x\in \MM(D)$ be an element such that $\pi(x)$ is not an interior triple. If $\pi(x)$ is a vertex of $\Delta$ then $x = [1:0:0:0], [0:1:0:0], [0:0:1:0],$ or  $[0:0:0:1]$. In this case, the $(\C^\ast)$ actions on $\PP^3$ are all trivial so $\sigma(x)$ is invariant under the degeneration.
-
-If $\pi(x)$ is on an edge of $\Delta$ then $x = [0:1:1:0]$ e.t.c. in this case, there is one non-trivial $\C^\ast$ which $\sigma(x)$ may depend on. Suppose 
-
+note to Jacques: I wrote the above proof while tired at like 10pm and I'm not sure if it makes sense so I didn't bother updating the conclusion section/abstract to reflect this result
+\iffalse
 
 \begin{theorem}
 	For the prequantum systems $(M,\pi,\LL)$ and $(P,\pi_{P}, \LL_0)$, let $\JJ_\pi ~(\JJ_{\pi,P})$ be the sheaf of sections of $\LL ~(\LL_0)$ which are covariant constant on the fibres of $\pi ~(\pi_P)$. Then

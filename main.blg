@@ -1,22 +1,19 @@
-[1] Config.pm:304> INFO - This is Biber 2.14 (beta)
-[2] Config.pm:307> INFO - Logfile is 'main.blg'
-[111] biber:322> INFO - === Tue Apr 11, 2023, 14:18:56
-[129] Biber.pm:415> INFO - Reading 'main.bcf'
-[228] Biber.pm:943> INFO - Found 29 citekeys in bib section 0
-[248] Biber.pm:4256> INFO - Processing section 0
-[249] Utils.pm:75> INFO - Globbing data source 'citations.bib'
-[249] Utils.pm:91> INFO - Globbed data source 'citations.bib' to citations.bib
-[261] Biber.pm:4455> INFO - Looking for bibtex format file 'citations.bib' for section 0
-[267] bibtex.pm:1653> INFO - LaTeX decoding ...
-[418] bibtex.pm:1471> INFO - Found BibTeX data source 'citations.bib'
-[424] Utils.pm:293> WARN - Duplicate entry key: 'reid_graded_2002' in file 'citations.bib', skipping ...
-[543] Utils.pm:293> WARN - ISBN '978-1-4419-1936-6 978-1-4757-4265-7' in entry 'mumford_projective_2004' is invalid - run biber with '--validate_datamodel' for details.
-[636] Utils.pm:293> WARN - ISBN '978-1-4704-0585-4 978-0-8218-6712-9 978-0-8218-4714-5' in entry 'hamilton_locally_2010' is invalid - run biber with '--validate_datamodel' for details.
-[662] Utils.pm:293> WARN - BibTeX subsystem: /tmp/biber_tmp_luwD/citations.bib_174620.utf8, line 181, warning: possible runaway string started at line 158
-[712] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[712] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[712] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[712] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[752] bbl.pm:652> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[771] bbl.pm:755> INFO - Output to main.bbl
-[771] Biber.pm:128> INFO - WARNINGS: 4
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is 'main.blg'
+[132] biber-MSWIN32:340> INFO - === 
+[178] Biber.pm:415> INFO - Reading 'main.bcf'
+[330] Biber.pm:952> INFO - Found 30 citekeys in bib section 0
+[348] Biber.pm:4340> INFO - Processing section 0
+[362] Biber.pm:4531> INFO - Looking for bibtex format file 'citations.bib' for section 0
+[437] bibtex.pm:1689> INFO - LaTeX decoding ...
+[566] bibtex.pm:1494> INFO - Found BibTeX data source 'citations.bib'
+[660] Utils.pm:395> WARN - ISBN '978-1-4419-1936-6 978-1-4757-4265-7' in entry 'mumford_projective_2004' is invalid - run biber with '--validate_datamodel' for details.
+[716] Utils.pm:395> WARN - ISBN '978-1-4704-0585-4 978-0-8218-6712-9 978-0-8218-4714-5' in entry 'hamilton_locally_2010' is invalid - run biber with '--validate_datamodel' for details.
+[738] Utils.pm:395> WARN - BibTeX subsystem: C:\Users\kaleb\AppData\Local\Temp\biber_tmp_Pnou\56f1c414433802ad7930cb94138c5670_19548.utf8, line 181, warning: possible runaway string started at line 158
+[778] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[778] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[778] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[778] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[814] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[832] bbl.pm:757> INFO - Output to main.bbl
+[833] Biber.pm:128> INFO - WARNINGS: 3

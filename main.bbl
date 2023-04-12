@@ -44,7 +44,7 @@
       \strng{authornamehash}{ce2decd766ce8d8ee23e06a29e222fe3}
       \strng{authorfullhash}{ce2decd766ce8d8ee23e06a29e222fe3}
       \field{sortinit}{A}
-      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Journal of Differential Geometry}
@@ -95,7 +95,7 @@
       \strng{authornamehash}{173876bb5542d61c92d1d2a8baa5e2e1}
       \strng{authorfullhash}{173876bb5542d61c92d1d2a8baa5e2e1}
       \field{sortinit}{A}
-      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The Yang-Mills functional over a Riemann surface is studied from the point of view of Morse theory. The main result is that this is a ‘perfect' functional provided due account is taken of its gauge symmetry. This enables topological conclusions to be drawn about the critical sets and leads eventually to information about the moduli space of algebraic bundles over the Riemann surface. This in turn depends on the interplay between the holomorphic and unitary structures, which is analysed in detail.}
@@ -143,7 +143,7 @@
       \strng{authornamehash}{a80bc451bc41f5c1a79e38e8524e5523}
       \strng{authorfullhash}{a80bc451bc41f5c1a79e38e8524e5523}
       \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1871-2487}
@@ -193,7 +193,7 @@
       \strng{authornamehash}{34d7beb1996c4984f0abedbcfd31d057}
       \strng{authorfullhash}{34d7beb1996c4984f0abedbcfd31d057}
       \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Over a family \${\textbackslash}mathbb X\$ of genus \$g\$ complete curves, which gives the degeneration of a smooth curve into one with nodal singularities, we build a moduli space which is the moduli space of \$\{{\textbackslash}rm SL\}(n, {\textbackslash}mathbb C)\$ bundles over the generic smooth curve \$X\_t\$ in the family, and is a moduli space of bundles equipped with extra structure at the nodes for the nodal curves in the family. This moduli space is a quotient by \$({\textbackslash}mathbb C{\textasciicircum}*){\textasciicircum}s\$ of a moduli space on the desingularisation. Taking a "maximal" degeneration of the curve into a nodal curve built from the glueing of three-pointed spheres, we obtain a degeneration of the moduli space of bundles into a \$({\textbackslash}mathbb C{\textasciicircum}*){\textasciicircum}\{(3g-3)(n-1)\}\$-quotient of a \$(2g-2)\$-th power of a space associated to the three-pointed sphere. Via the Narasimhan-Seshadri theorem, the moduli of bundles on the smooth curve is a space of representations of the fundamental group into \$\{{\textbackslash}rm SU\}(n)\$ (the "symplectic picture"). We obtain the degenerations also in this symplectic context, in a way that is compatible with the holomorphic degeneration, so that our limit space is also a \$(S{\textasciicircum}1){\textasciicircum}\{(3g-3)(n-1)\}\$ symplectic quotient of a \$(2g-2)\$-th power of a space associated to the three-pointed sphere.}
@@ -236,7 +236,7 @@
       \strng{authornamehash}{3a65b03ccccf2b0ce95b575a638788e0}
       \strng{authorfullhash}{3a65b03ccccf2b0ce95b575a638788e0}
       \field{sortinit}{D}
-      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-040X}
@@ -281,7 +281,7 @@
       \strng{authornamehash}{b296af2b2a11b7a7d0559aa62ed54c50}
       \strng{authorfullhash}{b296af2b2a11b7a7d0559aa62ed54c50}
       \field{sortinit}{D}
-      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1097-0312}
@@ -325,7 +325,7 @@
       \strng{authornamehash}{9951ee6d63b7a96e1adea62988e6017b}
       \strng{authorfullhash}{9951ee6d63b7a96e1adea62988e6017b}
       \field{sortinit}{F}
-      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{J. Alg. Geom}
@@ -350,7 +350,7 @@
       \strng{authornamehash}{36e16f3c7f45fd9e6609944e74bcee48}
       \strng{authorfullhash}{36e16f3c7f45fd9e6609944e74bcee48}
       \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0003-486X}
@@ -394,7 +394,7 @@
       \strng{authornamehash}{6e1e873f9a9e10eed2c0bea7d3c8c7a8}
       \strng{authorfullhash}{6e1e873f9a9e10eed2c0bea7d3c8c7a8}
       \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0002-9327}
@@ -423,6 +423,58 @@
       \verb https://www.jstor.org/stable/2372388
       \endverb
     \endentry
+    \entry{grothendieck_elements_1960}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6e1e873f9a9e10eed2c0bea7d3c8c7a8}{%
+           family={Grothendieck},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e28a92db4897ac84ce300a3505f605b7}{%
+           family={Dieudonné},
+           familyi={D\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {fr}%
+      }
+      \strng{namehash}{a57dd38db340eb7771332e0c5cbca575}
+      \strng{fullhash}{a57dd38db340eb7771332e0c5cbca575}
+      \strng{bibnamehash}{a57dd38db340eb7771332e0c5cbca575}
+      \strng{authorbibnamehash}{a57dd38db340eb7771332e0c5cbca575}
+      \strng{authornamehash}{a57dd38db340eb7771332e0c5cbca575}
+      \strng{authorfullhash}{a57dd38db340eb7771332e0c5cbca575}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1618-1913}
+      \field{journaltitle}{Publications Mathématiques de l'Institut des Hautes Études Scientifiques}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Éléments de {Géométrie} algébrique}
+      \field{urlday}{12}
+      \field{urlmonth}{4}
+      \field{urlyear}{2023}
+      \field{volume}{4}
+      \field{year}{1960}
+      \field{urldateera}{ce}
+      \field{pages}{5\bibrangedash 214}
+      \range{pages}{210}
+      \verb{doi}
+      \verb 10.1007/BF02684778
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\6H3P428G\\Grothendieck and Dieudonné - 1960 - Éléments de Géométrie algébrique.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF02684778
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF02684778
+      \endverb
+    \endentry
     \entry{guillemin_gelfand-cetlin_1983}{article}{}
       \name{author}{2}{}{%
         {{hash=c72a98e80ca8c5eb7715404eda453cd4}{%
@@ -446,7 +498,7 @@
       \strng{authornamehash}{88734d23a442120670ebc302d80a8252}
       \strng{authorfullhash}{88734d23a442120670ebc302d80a8252}
       \field{sortinit}{G}
-      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The construction of angle action variables for collective completely integrable systems is described and the associated Bohr-Sommerfeld sets are determined. The quantization method of Sniatycki applied to such systems gives formulas for multiplicities. For the Gelfand-Cetlin system on complex flag manifolds we show that these formulas give the correct answers for the multiplicities of the associated representations.}
@@ -497,7 +549,7 @@
       \strng{authornamehash}{38cea133e412e097550253e97996c3ab}
       \strng{authorfullhash}{38cea133e412e097550253e97996c3ab}
       \field{sortinit}{H}
-      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Advancing research. Creating connections.}
@@ -516,7 +568,7 @@
       \verb 10.1090/S0065-9266-10-00583-1
       \endverb
       \verb{file}
-      \verb Full Text PDF:/home/kaleb/Zotero/storage/3STI2EBM/Hamilton - 2010 - Locally toric manifolds and singular Bohr-Sommerfe.pdf:application/pdf
+      \verb Full Text PDF:C\:\\Users\\kaleb\\Zotero\\storage\\3STI2EBM\\Hamilton - 2010 - Locally toric manifolds and singular Bohr-Sommerfe.pdf:application/pdf
       \endverb
       \verb{urlraw}
       \verb https://www.ams.org/memo/0971/
@@ -545,7 +597,7 @@
       \strng{authornamehash}{3c0378ae6fbbf18f018e08ed251d6d04}
       \strng{authorfullhash}{3c0378ae6fbbf18f018e08ed251d6d04}
       \field{sortinit}{H}
-      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Let X be a smooth complex projective variety of dimension n equipped with a very ample Hermitian line bundle L. In the first part of the paper, we show that if there exists a toric degeneration of X satisfying some natural hypotheses (which are satisfied in many settings), then there exists a completely integrable system on X in the sense of symplectic geometry. More precisely, we construct a collection of real-valued functions H\_1, ... H\_n on X which are continuous on all of X, smooth on an open dense subset U of X, and pairwise Poisson-commute on U. Moreover, we show that in many cases, we can construct the integrable system so that the functions H\_1, ..., H\_n generate a Hamiltonian torus action on U. In the second part, we show that the toric degenerations arising in the theory of Newton-Okounkov bodies satisfy all the hypotheses of the first part of the paper. In this case the image of the "moment map" {\textbackslash}mu = (H\_1, ..., H\_n): X to R{\textasciicircum}n is precisely the Okounkov body {\textbackslash}Delta = {\textbackslash}Delta(R, v) associated to the homogeneous coordinate ring R of X, and an appropriate choice of a valuation v on R. Our main technical tools come from algebraic geometry, differential (Kaehler) geometry, and analysis. Specifically, we use the gradient-Hamiltonian vector field, and a subtle generalization of the famous Lojasiewicz gradient inequality for real-valued analytic functions. Since our construction is valid for a large class of projective varieties X, this manuscript provides a rich source of new examples of integrable systems. We discuss concrete examples, including elliptic curves, flag varieties of arbitrary connected complex reductive groups, spherical varieties, and weight varieties.}
@@ -593,7 +645,7 @@
       \strng{authornamehash}{568ccf5a2a97beedf6408e73c1ad083d}
       \strng{authorfullhash}{568ccf5a2a97beedf6408e73c1ad083d}
       \field{sortinit}{H}
-      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{There is a well-known correspondence (due to Mehta and Seshadri in the unitary case, and extended by Bhosle and Ramanathan to other groups), between the symplectic variety MhMh\{\{M\}\_\{h\}\} of representations of the fundamental group of a punctured Riemann surface into a compact connected Lie group GGG , with fixed conjugacy classes hhh at the punctures, and a complex variety MhMh\{\{{\textbackslash}mathcal\{M\}\}\_\{h\}\} of holomorphic bundles on the unpunctured surface with a parabolic structure at the puncture points. For G=SU(2)G=SU(2)G{\textbackslash},={\textbackslash},{\textbackslash}text\{SU\}{\textbackslash}left( 2 {\textbackslash}right) , we build a symplectic variety PPP of pairs (representations of the fundamental group into GGG , “weighted frame” at the puncture points), and a corresponding complex variety PP{\textbackslash}mathcal\{P\} of moduli of “framed parabolic bundles”, which encompass respectively all of the spaces MhMh\{\{M\}\_\{h\}\} , MhMh\{\{{\textbackslash}mathcal\{M\}\}\_\{h\}\} , in the sense that one can obtain MhMh\{\{M\}\_\{h\}\} from PPP by symplectic reduction, and MhMh\{\{{\textbackslash}mathcal\{M\}\}\_\{h\}\} from PP{\textbackslash}mathcal\{P\} by a complex quotient. This allows us to explain certain features of the toric geometry of the SU(2)SU(2){\textbackslash}text\{SU(2)\} moduli spaces discussed by Jeffrey and Weitsman, by giving the actual toric variety associated with their integrable system.}
@@ -653,7 +705,7 @@
       \strng{authornamehash}{463a1022753ee4ad6a24c516bf99d4bf}
       \strng{authorfullhash}{463a1022753ee4ad6a24c516bf99d4bf}
       \field{sortinit}{H}
-      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper gives a construction of the moduli space of framed parabolic sheaves on a Riemann surface. This space serves as a universal, master, space for the well known moduli space of parabolic bundles, as well as moduli spaces of vector bundles, which can all be obtained from this space by torus quotients. The construction is given for the structure group SL(N, C), and indeed is adapted to this case. At the end of the paper, an approach is suggested for dealing with the case of arbitrary reductive groups, involving the associated loop group.}
@@ -707,7 +759,7 @@
       \strng{authornamehash}{86e4116304e837308dd6f8def0725a19}
       \strng{authorfullhash}{86e4116304e837308dd6f8def0725a19}
       \field{sortinit}{J}
-      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In this survey article, we describe imploded cross-sections, which were developed in order to solve the problem that the cross-section of a Hamiltonian K-space is usually not symplectic. In some speciﬁc examples we contrast the intersection homology of some imploded cross-sections with their homology intersection spaces. Moreover, we compute the homology of intersection spaces associated to the open cone of a simply connected, smooth, oriented manifold and the suspension of such a manifold.}
@@ -754,7 +806,7 @@
       \strng{authornamehash}{7b4d8908f1c5e6fa99489075b5ee2e1c}
       \strng{authorfullhash}{7b4d8908f1c5e6fa99489075b5ee2e1c}
       \field{sortinit}{J}
-      \field{sortinithash}{c45040a764d616897e7f5b30174d7b92}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We show how the moduli space of flat SU(2) connections on a twomanifold can be quantized in the real polarization of [15], using the methods of [6]. The dimension of the quantization, given by the number of integral fibres of the polarization, matches the Verlinde formula, which is known to give the dimension of the quantization of this space in a K/ihler polarization.}
@@ -807,7 +859,7 @@
       \strng{authornamehash}{293fc6065dc73bee45ddf0268cd78c6d}
       \strng{authorfullhash}{293fc6065dc73bee45ddf0268cd78c6d}
       \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1432-1807}
@@ -855,7 +907,7 @@
       \strng{authornamehash}{bf753c4a8a1973cbfc48554f115a5310}
       \strng{authorfullhash}{bf753c4a8a1973cbfc48554f115a5310}
       \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Moduli {Spaces} of {Flat} {Connections}}
@@ -889,7 +941,7 @@
       \strng{authornamehash}{275b714ea594482428d9b55ee81df320}
       \strng{authorfullhash}{275b714ea594482428d9b55ee81df320}
       \field{sortinit}{M}
-      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Selected {Papers}}
@@ -935,7 +987,7 @@
       \strng{authornamehash}{aaedd938b4a700737ad3134f74cf35ec}
       \strng{authorfullhash}{aaedd938b4a700737ad3134f74cf35ec}
       \field{sortinit}{N}
-      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0003-486X}
@@ -982,7 +1034,7 @@
       \strng{authornamehash}{e12a679e0498b1d4773d54dcfa27e817}
       \strng{authorfullhash}{e12a679e0498b1d4773d54dcfa27e817}
       \field{sortinit}{Q}
-      \field{sortinithash}{c54e16deb53fc904a621fa8fd8703b5a}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1573-8485}
@@ -1037,7 +1089,7 @@
       \strng{authornamehash}{9dae114e426c18eeda12c58651393d25}
       \strng{authorfullhash}{9dae114e426c18eeda12c58651393d25}
       \field{sortinit}{R}
-      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Communications in Mathematical Physics}
@@ -1084,7 +1136,7 @@
       \strng{authornamehash}{b36ed2e74acb2c122428f1cb5b896108}
       \strng{authorfullhash}{b36ed2e74acb2c122428f1cb5b896108}
       \field{sortinit}{R}
-      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{1}
@@ -1118,7 +1170,7 @@
       \strng{authornamehash}{81f331dc16ef91712c32d554f4b9d15d}
       \strng{authorfullhash}{81f331dc16ef91712c32d554f4b9d15d}
       \field{sortinit}{S}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{"The first part of this book gives a detailed, self-contained and mathematically rigorous exposition of classical conformal symmetry in n dimensions and its quantization in two dimensions. The second part surveys some more advanced topics of conformal field theory, such as the representation theory of the Virasoro algebra, conformal symmetry within string theory, an axiomatic approach to Euclidean conformally covariant quantum field theory and a mathematical interpretation of the Verlinde formula in the context of moduli spaces of holomorphic vector bundles on a Riemann surface." "The substantially revised and enlarged second edition makes in particular the second part of the book more self-contained and tutorial, with many more examples given. Furthermore, two new chapters on Wightman's axioms for quantum field theory and vertex algebras broaden the survey of advanced topics. An outlook making the connection with most recent developments has also been added."--Jacket}
@@ -1171,7 +1223,7 @@
       \strng{editornamehash}{7a39c5aefe993fd37c0bd6c3b9af60e1}
       \strng{editorfullhash}{7a39c5aefe993fd37c0bd6c3b9af60e1}
       \field{sortinit}{Ś}
-      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Differential {Geometrical} {Methods} in {Mathematical} {Physics}}
@@ -1236,7 +1288,7 @@
       \strng{editorfullhash}{826de37ae3494408e4ae131f0d4e15fc}
       \field{extraname}{1}
       \field{sortinit}{T}
-      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Geometry and physics}
@@ -1280,7 +1332,7 @@
       \strng{authorfullhash}{37fd632ee172b298c810cdfe20ab8eb0}
       \field{extraname}{2}
       \field{sortinit}{T}
-      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We study the dependence of geometric invariant theory quotients on the choice of a linearization. We show that, in good cases, two such quotients are related by a flip in the sense of Mori, and explain the relationship with the minimal model program. Moreover, we express the flip as the blow-up and blow-down of specific ideal sheaves, leading, under certain hypotheses, to a quite explicit description of the flip. We apply these ideas to various familiar moduli problems, recovering results of Kirwan, Boden-Hu, Bertram-Daskalopoulos-Wentworth, and the author. Along the way we display a chamber structure, following Duistermaat-Heckman, on the space of all linearizations. We also give a new, easy proof of the Bialynicki-Birula decomposition theorem.}
@@ -1325,7 +1377,7 @@
       \strng{authornamehash}{bb173e9b623b7737a79f22558b0becc4}
       \strng{authorfullhash}{bb173e9b623b7737a79f22558b0becc4}
       \field{sortinit}{V}
-      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We study conformal field theories with a finite number of primary fields with respect to some chiral algebra. It is shown that the fusion rules are completely determined by the behavior of the characters under the modular group. We illustrate with some examples that conversely the modular properties of the characters can be derived from the fusion rules. We propose how these results can be used to find restrictions on the values of the central charge and conformal dimensions.}
@@ -1369,7 +1421,7 @@
       \strng{authornamehash}{0b963c4b8dd4aeedc1be83e9ee871fe1}
       \strng{authorfullhash}{0b963c4b8dd4aeedc1be83e9ee871fe1}
       \field{sortinit}{W}
-      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Communications in Mathematical Physics}

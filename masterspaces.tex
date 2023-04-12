@@ -72,7 +72,7 @@
 	\begin{proof}
 		We only give a sketch here, the details can be found in \cite[Prop 2.29]{hurtubise_representations_2000}. For $SU(2)$, the fundamental alcove is $\Delta = [0,1]$, which has three faces, $\sigma_0 = (0,1)$, and $\sigma_{\pm} = \pm1$. For $\sigma_0$, we have $G_{\sigma_0} = T$ and hence $[G_{\sigma_0}, G_{\sigma_0}]$ is trivial. For $\sigma_\pm$, $G_\sigma = G = [G_\sigma,G_\sigma]$. For each face $\sigma$ of $\Delta$, the imploded cross-section has a stratum that is a quasi-Hamiltonian $G\times T$-space \cite[Theorem 5.1]{alekseev_lie_1998}.
 		
-		For the interior $\sigma_0$, we have $\Phi^{-1}(\sigma_0) = \{(u,v)\in D(G)~|~ v^{-1}\in \sigma^0\} = G \times \sigma^0$, and hence $\Phi^{-1}(\sigma_0)/[G_{\sigma_0},G_{\sigma_0}] = G\times \sigma^0$. For the other faces $\sigma_{\pm}$, $\Phi^{-1}(\sigma_\pm) = \{(u,v)\in D(G)~|~ v^{-1} = \pm 1\} = G$, hence $\Phi^{-1}(\sigma_\pm)/[G_{\sigma_\pm},G_{\sigma_\pm}] = G/G = 1$. Therefore the imploded cross section is
+		For the interior $\sigma_0$, we have $\Phi^{-1}(\sigma_0) = \{(u,v)\in D(G)~|~ v^{-1}\in \sigma^0\} = G \times \sigma^0$, hence $\Phi^{-1}(\sigma_0)/[G_{\sigma_0},G_{\sigma_0}] = G\times \sigma^0$. For the other faces $\sigma_{\pm}$, $\Phi^{-1}(\sigma_\pm) = \{(u,v)\in D(G)~|~ v^{-1} = \pm 1\} = G$, hence $\Phi^{-1}(\sigma_\pm)/[G_{\sigma_\pm},G_{\sigma_\pm}] = G/G = 1$. Therefore the imploded cross section is
 		\begin{equation}
 			D(G)_{impl} = (G\times \sigma^0) \coprod {1} \coprod {1}.
 		\end{equation}
@@ -162,7 +162,7 @@
 		\begin{equation}
 		e_1\wedge...\wedge s_k=\phi_1(s_1)\wedge...\wedge \phi_1(s_k)= \wedge^k \phi_1(s) = \lambda \wedge^k \phi_2(s) = \lambda \phi_2(s_1)\wedge...\wedge \phi_2(s_k)
 		\end{equation}
-		Since $\{e_i\}$ was a local frame, the LHS is non-zero, and thus the RHS is non-zero. Therefore $\{\phi_2(s_i)\}$ is a local frame trivializing $E_2$ on $U$. This map $e_i \to \phi_2(s_2)$ gives an isomorphism of $E_1$ with $E_2$. Note that this isomorphism is not unique as we could have picked other sections $\tilde{s}_i$ with $\phi_1(\tilde{s}_i) = e_i$.
+		Since $\{e_i\}$ was a local frame, the left-hand-side is non-zero, and the right-hand-side is also non-zero. Therefore $\{\phi_2(s_i)\}$ is a local frame trivializing $E_2$ on $U$. This map $e_i \to \phi_2(s_2)$ gives an isomorphism of $E_1$ with $E_2$. Note that this isomorphism is not unique as we could have picked other sections $\tilde{s}_i$ with $\phi_1(\tilde{s}_i) = e_i$.
 	\end{proof}
 	\begin{theorem}
 		\label{t:det-embed}
@@ -224,7 +224,7 @@
 	\begin{equation}
 		\phi: \OO^N \to E.
 	\end{equation}
-	Just as in section \ref{s:m-embedding} we have a mapping $\hat{\beta}$ taking $E$ to the vector space $V_1 := \Hom(H^0(\wedge^k(\OO^N)), H^0(L^2))$. Now we add the parabolic data. At a point $p_i$, the map $\alpha_i:E\to \C_{p_i}$ pulls back to $\hat{\alpha}_i = \alpha_i\circ \phi$ in $V_2 := H^0(\OO^N)^\ast$. Since we are only interested in $\alpha_i$ up to (independent) scaling, the parabolic bundle $(E,\alpha)$ represents an equivalence class in
+	Just as in Section \ref{s:m-embedding} we have a mapping $\hat{\beta}$ taking $E$ to the vector space $V_1 := \Hom(H^0(\wedge^k(\OO^N)), H^0(L^2))$. Now we add the parabolic data. At a point $p_i$, the map $\alpha_i:E\to \C_{p_i}$ pulls back to $\hat{\alpha}_i = \alpha_i\circ \phi$ in $V_2 := H^0(\OO^N)^\ast$. Since we are only interested in $\alpha_i$ up to (independent) scaling, the parabolic bundle $(E,\alpha)$ represents an equivalence class in
 	\begin{equation}
 		Z := \PP(V_1) \times \PP(V_2) \times ... \times \PP(V_2),
 	\end{equation}
@@ -314,7 +314,7 @@
 		(\phi(p_i)^N, \phi(p_i)^{N-1}\alpha_i^2
 		\right),
 	\end{equation}
-	and we define $\hat{Y}$ to be the closure in $Y$ of the image of this map. In this closure, one obtains the points with $\alpha_i =0$. Then since $\phi(p_i)\neq 0$, lemma \ref{t:sl2-lemma} guarantees $E$ is torsion free at $p_i$. The next proposition addresses stability:
+	and we define $\hat{Y}$ to be the closure in $Y$ of the image of this map. In this closure, one obtains the points with $\alpha_i =0$. Then since $\phi(p_i)\neq 0$, Lemma \ref{t:sl2-lemma} guarantees $E$ is torsion free at $p_i$. The next proposition addresses stability:
 	\begin{theorem}[Hurtubise and Jeffrey, Prop. 4.14]
 		Let 
 		\begin{equation}
@@ -370,7 +370,7 @@
 		\end{equation}
 		The left hand side is at most 3, so $F$ is destabilizing. So $E' \cong \OO(-1)\oplus \OO(-1)$ is the only semistable choice, and $E \cong \OO(-1)\oplus \OO(-1)\oplus \C_{p_1} \oplus \C_{p_2}$. 
 		
-		Finally, if $E$ has torsion at all three marked points, $E' = \OO(-j)\oplus \OO(j-3)$. Then from lemma \ref{l:ss-lemma}, $\gamma_i = 1$ for all $i$, $\mu_i = 0$ for all $i$.  Therefore the stability condition for the subsheaf $F=\OO(j-3)\oplus\C_{0}\oplus \C_{1}\oplus \C_{\infty}$ becomes
+		Finally, if $E$ has torsion at all three marked points, $E' = \OO(-j)\oplus \OO(j-3)$. Then from Lemma \ref{l:ss-lemma}, $\gamma_i = 1$ for all $i$, $\mu_i = 0$ for all $i$.  Therefore the stability condition for the subsheaf $F=\OO(j-3)\oplus\C_{0}\oplus \C_{1}\oplus \C_{\infty}$ becomes
 		\begin{equation}
 			2j \leq -3 + 2(3) = 3
 		\end{equation}
@@ -487,11 +487,11 @@
 			0 & 1\\
 			\end{bmatrix}.
 		\end{align*}
-		Then the stabiliser of $(A,B)$ under the $SL(2,\C)$ action (Eqn. \ref{e:p3-action}) is all of $SL(2,\C)$. The conditions of ($\ref{e:p3-conds}$) tell us that 
+		Then the stabiliser of $(A,B)$ under the $SL(2,\C)$ action (equation \ref{e:p3-action}) is all of $SL(2,\C)$. The conditions of ($\ref{e:p3-conds}$) tell us that 
 		\begin{align}
 			V_0 &= (0,0,a,b), & V_1 &= (c,d,-c,d), & V_\infty &=(e,f,0,0).
 		\end{align}
-		Next we take the geometric quotient by the $SL(4,\C)$ action (Eq. \ref{e:p3-action}), which reduces to an action of $SL(2,\C)$ on the three vectors $(a,b),(c,d),(e,f)$ in $\C^2$. When these vectors span $\C^2$, their stabiliser will be finite, so we obtain a stable point in the moduli space. The functions $y,z,w$ map the set of stable points bijectively to $(\C^3 - \{0\})$. The semi-stable orbits are those for which the three vectors are linearly dependent; since $SL(2,\C)$ matrices are invertible, $0$ is not in the closure of the orbit. In this case, $y = z = w = 0$, so the semi-stable points are all sent to $(1,0,0,0)$ in $\PP^3$. Therefore, after the quotient, the set of bundles with $x \neq 0$ is in bijection with the affine set of points $(1,y,z,w)$ in $\PP^3$.
+		Next we take the geometric quotient by the $SL(4,\C)$ action (equation \ref{e:p3-action}), which reduces to an action of $SL(2,\C)$ on the three vectors $(a,b),(c,d),(e,f)$ in $\C^2$. When these vectors span $\C^2$, their stabiliser will be finite, so we obtain a stable point in the moduli space. The functions $y,z,w$ map the set of stable points bijectively to $(\C^3 - \{0\})$. The semi-stable orbits are those for which the three vectors are linearly dependent; since $SL(2,\C)$ matrices are invertible, $0$ is not in the closure of the orbit. In this case, $y = z = w = 0$, so the semi-stable points are all sent to $(1,0,0,0)$ in $\PP^3$. Therefore, after the quotient, the set of bundles with $x \neq 0$ is in bijection with the affine set of points $(1,y,z,w)$ in $\PP^3$.
 		
 		\underline{Case 2}: $E = \OO(1)\oplus \OO(-1)$. In this case, $\det(A,B)=0$, and $\text{Im}(A) + \text{Im}(B)$ is three-dimensional.  By Theorem \ref{t:exactseq}, $(Az_0+Bz_1)$ is injective for all $(z_0,z_1)\neq (0,0)$. Therefore we can find bases in which
 		\begin{align*}
@@ -508,7 +508,7 @@
 		0 & 0\\
 		\end{bmatrix}.
 		\end{align*}
-		Then from Eqns. (\ref{e:p3-conds}) we have
+		Then from equations (\ref{e:p3-conds}) we have
 		\begin{align}
 			V_0 &= (0,0,a,b), & V_1 &= (c,-c,c,d), & V_\infty&= (e,0,0,f).
 		\end{align}
@@ -585,7 +585,7 @@
 	\label{e:segre}
 	([x:y:z:w], [x':y':z':w']) \to [xx':xy':xz':xw':yx':...:ww'],
 	\end{equation}
-	where the right-hand side is ordered lexicographically. Suppose the punctured points are ${p_1,p_2,p_3}$ for $D_1$ and ${q_1,q_2,q_3}$ for $D_2$, and that we wanted to glue $p_1$ to $q_1$. The anti-diagonal action of $\C^\ast$ on $\PP^3\times \PP^3$ is given on each copy of $\PP^3$ from Equation (\ref{e:action-on-p3}):
+	where the right-hand side is ordered lexicographically. Suppose the punctured points are ${p_1,p_2,p_3}$ for $D_1$ and ${q_1,q_2,q_3}$ for $D_2$, and that we wanted to glue $p_1$ to $q_1$. The anti-diagonal action of $\C^\ast$ on $\PP^3\times \PP^3$ is given on each copy of $\PP^3$ from equation (\ref{e:action-on-p3}):
 	\begin{align*}
 		\lambda \cdot [x:y:z:w] &\to [x:\lambda y:\lambda z:\lambda w], & \lambda \cdot [x':y':z':w'] &\to [x':\lambda^{-1} y':\lambda^{-1} z':\lambda^{-1}w'].
 	\end{align*}
@@ -597,7 +597,7 @@
 	\begin{equation}
 		\Gamma(X, \left(\OO(1)_{\PP^{15}}|_X\right))^{\C^\ast} = \text{span}(xx',xw',wx',ww',yy',zy',yz',zz').
 	\end{equation}
-	We can also glue two points on one trinion to each other. For example, if $D$ has punctures $p_1,p_2$ and $p_3$ and we glue $p_2$ to $p_3$, then the $(\C^\ast)$ action from Equation (\ref{e:action-on-p3}) becomes
+	We can also glue two points on one trinion to each other. For example, if $D$ has punctures $p_1,p_2$ and $p_3$ and we glue $p_2$ to $p_3$, then the $(\C^\ast)$ action from equation (\ref{e:action-on-p3}) becomes
 	\begin{equation}
 		(1,\mu, mu^{-1})\cdot [x:y:z:w] = [x:\mu y: \mu^{-1}w: \mu\mu^{-1}z] = [x:\mu y:\mu^{-1}w:z].
 	\end{equation}

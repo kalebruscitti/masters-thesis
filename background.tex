@@ -4,7 +4,7 @@
 	Thanks to the work of Narasimhan and Seshadri and Donaldson \cite{donaldson_new_1983}\cite{narasimhan_stable_1965} there are multiple ways in which one can view $\MM$. One equivalence is between flat unitary connections and irreducible representations of $\pi_1(\Sigma)$ into $G$.
 	Gauge equivalence for the connections is accounted for by a quotient: $\Hom(\pi_1(\Sigma), G)/ G$. Another equivalence is with holomorphic $SL(n,\C)$ bundles over $\Sigma$, which we think of as Doubeault operators $\dbar_E$ on a smooth complex vector bundle $E$. Different aspects of the geometry of $\MM$ become clear in different pictures, so we will explain each of them here. 
 	
-	\section{Flat Connections as Representations of the Fundamental Group}
+	\section{Flat Connections as Fundamental Group Representations}
 	\label{s:vectorbundles}
 	We begin with the correspondence between flat connections and representations of the fundamental group. For a Lie group $G$, given any $G$-connection $A$ on a manifold $\Sigma$, the holonomy of $A$ around a loop $\gamma$ based at $p\in \Sigma$ gives us a map $\text{Hol}_A(\gamma):\text{Loops}(p,\Sigma)\to G$. Generically, the holonomy is not invariant up to homotopy, so this map does not pass to a map on $\pi_1(\Sigma) \to G$. However, if one restricts to \emph{flat} connections, which are those whose holonomy around any contractible loop is trivial, then one can pass to the quotient to get a map $\text{Hol}_A(\gamma):\pi_1(p,\Sigma)\to G$. Picking a different basepoint or trivialization conjugates the resulting morphism in $G$, so that we can associate to any flat connection $A$ a map $\pi_1(\Sigma)\to G$ up to conjugation. This \emph{holonomy representation} determines $A$ up to gauge equivalence.
 	
@@ -297,7 +297,7 @@
 			c_1(\End(E)) + \text{rank}(\End(E))(1-g) &= \dim H^0(\End(E)) - \dim H^1(\End(E))\\
 			\dim H^1(\End(E)) &= 1 - n^2(1-g) = n^2(g-1) + 1.
 		\end{align*}
-		For $H^1(\Sigma,\mathfrak{sl}(E))$, we instead have from lemma \ref{l:stablesimple} that the dimension of $H^0 = 0$ and $\text{rank}~\mathfrak{sl}(E) = (n^2-1)$ so we obtain:
+		For $H^1(\Sigma,\mathfrak{sl}(E))$, we instead have from Lemma \ref{l:stablesimple} that the dimension of $H^0 = 0$ and $\text{rank}~\mathfrak{sl}(E) = (n^2-1)$ so we obtain:
 		\begin{align*}
 			\dim H^1(\mathfrak{sl}(n,\C)) &=  0-(n-1)^2(1-g) = (n-1)^2(g-1).
 		\end{align*}
@@ -323,7 +323,7 @@
 
 	\section{Symplectic Picture}
 	\label{s:background-sym}
-	Another description of the moduli space $\MM$ is in terms of a symplectic reduction, which makes the symplectic structure more clear. We will be considering an infinite dimensional symplectic manifold and taking a symplectic quotient, which requires more careful consideration then we provide here. Rigourous details of this picture can be read in Atiyah-Bott \cite{atiyah_yang-mills_1983}.
+	Another description of the moduli space $\MM$ is in terms of a symplectic reduction, which makes the symplectic structure more clear. We will be considering an infinite dimensional symplectic manifold and taking a symplectic quotient, which requires more careful consideration then we provide here. Rigorous details of this picture can be read in Atiyah-Bott \cite{atiyah_yang-mills_1983}.
 	
 	Again let $\Sigma$ be the compact connected Riemann surface of genus $g$. Consider the trivial principal $G=SU(2)$ bundle $P$, over $\Sigma$ and let $\cA$ denote the space of smooth principal connections on $P$. In a fixed trivialization $P \cong G\times \Sigma$, a connection is determined by a form $A \in \Omega^1(\Sigma)\otimes \mathfrak{g}$. A connection is flat if and only if it has zero curvature, $0 = F_A:= dA + A \wedge A$. The gauge group $\cG = \Hom(\Sigma, G)$ acts on $\cA$ as follows: for $g\in \cG$,
 	 \begin{equation}

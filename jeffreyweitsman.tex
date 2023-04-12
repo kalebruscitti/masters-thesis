@@ -1,5 +1,5 @@
 
-	In chapter \ref{s:background}, we built the space $\MM$ of flat $SU(2)$ connections on a compact connected Riemann surface $\Sigma$ of genus $g\geq 2$, which is a complex projective variety with dimension $3g-3$. Furthermore, $\MM$ is equipped with the Atiyah-Bott symplectic form $\omega$, and in section \ref{s:cs-bundle} we will equip $\MM$ with a prequantum line bundle $(\LL,\nabla)$ over $\MM$ with curvature $2\pi i \omega$.
+	In Chapter \ref{s:background}, we built the space $\MM$ of flat $SU(2)$ connections on a compact connected Riemann surface $\Sigma$ of genus $g\geq 2$, which is a complex projective variety with dimension $3g-3$. Furthermore, $\MM$ is equipped with the Atiyah-Bott symplectic form $\omega$, and in Section \ref{s:cs-bundle} we will equip $\MM$ with a prequantum line bundle $(\LL,\nabla)$ over $\MM$ with curvature $2\pi i \omega$.
 	
 	This system has two notable polarisations one can use to perform a geometric quantization. There is a Kahler polarisation, whose quantization is known to have dimension computed by the \emph{Verlinde formula}, and there is a real polarisation introduced by Weitsman \cite{weitsman_real_1992}. Jeffrey and Weitsman discuss the Bohr-Sommerfeld geometric quantization of $\MM$ with this real polarisation. Bohr-Sommerfeld quantization typically requires a compact symplectic manifold $(M,\omega)$ and line bundle $\LL$, with a real polarization of $M$. A real polarization of $M$ is a map $\pi:M\to B$ onto a manifold of half dimension, such that $\omega|_{\pi^{-1}(b)} =0$ for all $b\in B$. Supposing $\pi:M\to B$ is also a fibration, there will be a finite set of \textit{Bohr-Sommerfeld points} $b_i$ for which $\LL$ restricted to the fibers $L_{b_i}$ of $\pi$ possesses global covariant constant sections. Let $J_\pi$ denote the sheaf of sections of $\LL$ which are covariant constant along the fibres of $\pi$. Then the Bohr-Sommerfeld quantization of a prequantum system $(M,\omega,\LL)$ (for $\pi$) is the vector space
 	\begin{equation}
@@ -154,7 +154,7 @@ There is another construction of a prequantum line bundle for $\MM$, the \textit
 	\begin{equation}
 		h^{-1}\left(\frac{\partial h}{\partial \theta} - Rh\right) = 0.
 	\end{equation}
-	Such an $h$ must exist as Equation (\ref{e:atd-pde1}) is four linear first order ODEs for the components of the matrix $h$. One must only check that this solution will be an $SU(2)$ matrix for all $s$ as required. At $\theta=0$, $h = \mathds{1}$, and the derivative is $-R(0,0) \in \mathfrak{su}(2)$; therefore the solution starts in $SU(2)$ and its derivative for all time is an $\mathfrak{su}(2)$ matrix, so the solution remains in $SU(2)$. Notice that $h(0) \neq h(2\pi)$ so this gauge transformation exists on $[0,2\pi]\times[-1,1]$ but it does not pass to $V$.
+	Such an $h$ must exist as equation (\ref{e:atd-pde1}) is four linear first order ODEs for the components of the matrix $h$. One must only check that this solution will be an $SU(2)$ matrix for all $s$ as required. At $\theta=0$, $h = \mathds{1}$, and the derivative is $-R(0,0) \in \mathfrak{su}(2)$; therefore the solution starts in $SU(2)$ and its derivative for all time is an $\mathfrak{su}(2)$ matrix, so the solution remains in $SU(2)$. Notice that $h(0) \neq h(2\pi)$ so this gauge transformation exists on $[0,2\pi]\times[-1,1]$ but it does not pass to $V$.
 	
 	Now let $H=h(0,2\pi)$ and let $X \in \mathfrak{t}$ be the element such that $\exp(2\pi X) = H^{-1}$ and define $f(s,\theta) = \exp(\theta X)$. Then $\partial_s f = 0$, $\partial_\theta f = Xf$ and 
 	\begin{equation}
@@ -165,7 +165,7 @@ There is another construction of a prequantum line bundle for $\MM$, the \textit
 		\label{e:atd-pde2}
 		\frac{\partial k}{\partial s} - Sk = 0,
 	\end{equation} 
-	with $k(-1,\theta) = \mathds{1}$ and $\partial_\theta k = 0$. As before Equation (\ref{e:atd-pde2}) is four first order ODEs with a unique solution, and the same argument as before shows $k$ will be in $SU(2)$. The $s$ co-ordinate has no periodic boundary condition, so $k$ immediately passes to $V$, and the composition $g = kfh$ gives us our gauge transformation on $V$ putting $y$ in the desired form.
+	with $k(-1,\theta) = \mathds{1}$ and $\partial_\theta k = 0$. As before equation (\ref{e:atd-pde2}) is four first order ODEs with a unique solution, and the same argument as before shows $k$ will be in $SU(2)$. The $s$ co-ordinate has no periodic boundary condition, so $k$ immediately passes to $V$, and the composition $g = kfh$ gives us our gauge transformation on $V$ putting $y$ in the desired form.
 	
 	Repeating this process for each boundary circle $C_i$ in our decomposition gives a set of local gauge transformations $g_i$ on each $V_i$. Complete $V_i$ to a cover $\{U_i\}$ of $\Sigma$ and let $g_i = \mathds{1}$ on the additional sets added. Within each $V_i$, pick a smaller tubular neighbourhood $W_i$, and let $\{\phi_i\}$ be a partition of unity for $\{U_i\}$ with $\phi_i = 1$ on $W_i$. Define the global gauge transformation $g = \sum g_i \phi_i$. Then for all $i$, $(g\cdot y)|_{W_i} = X_i d\theta_i$ and so $g\cdot y$ is an a.t.d. representative for $y \mod \cG$.
 	\end{proof}
@@ -209,7 +209,7 @@ There is another construction of a prequantum line bundle for $\MM$, the \textit
 	\end{proof}
 
 \section{Moduli of Connections on a Trinion}
-	In order to build the moduli space $\MM$ by gluing together connections defined along a trinion decomposition, one must first understand the possible connections on one trinion $D$, denoted $\MM(D)$. As in section \ref{s:moduli-as-reps}, $\MM(D)$ can be described by the set $\Hom(\pi_1(D),G)/G$. For a trinion, 
+	In order to build the moduli space $\MM$ by gluing together connections defined along a trinion decomposition, one must first understand the possible connections on one trinion $D$, denoted $\MM(D)$. As in Section \ref{s:moduli-as-reps}, $\MM(D)$ can be described by the set $\Hom(\pi_1(D),G)/G$. For a trinion, 
 	\begin{equation}
 		\pi_1(D) = \left\{
 		[C_1], [C_2], [C_3] ~|~ [C_1][C_2][C_3]  =1
@@ -239,7 +239,7 @@ There is another construction of a prequantum line bundle for $\MM$, the \textit
 	Using this result, and the gluing process described in the last section, the image of $\MM$ under the holonomy angles $\theta_1,...,\theta_{3g-3}$ are the values satisfying the inequalities (\ref{e:trinion-ineqs}) on every trinion. Applying a theorem of Guillemin and Steinberg \cite{guillemin_gelfand-cetlin_1983} to this case, one obtains:
 	\begin{theorem}
 		\label{t:torusfibres}
-		Suppose $x\in \pi(\MM) \subset B$ (defined in eqn. \ref{e:B-def}) Then
+		Suppose $x\in \pi(\MM) \subset B$ (equation \ref{e:B-def}) Then
 		\begin{itemize}
 			\item The Hamiltonian vector fields corresponding to the functions $\theta_i$ are linearly independent on the fibre $\pi^{-1}(x)$, if and only if $x$ is a point where all the inequalities (\ref{e:trinion-ineqs}) are strict.
 			\item In general, the number of linearly independent Hamiltonian vector fields on the fibre $\pi^{-1}(x)$ is equal to $3g-3-s$, where $s$ is the number of independent linear equations out of the following satisfied by $\theta(x)$:
@@ -249,7 +249,7 @@ There is another construction of a prequantum line bundle for $\MM$, the \textit
 					\theta_{i_1(\gamma)}(x) + \theta_{i_2(\gamma)}(x) + \theta_{i_3(\gamma)}(x) = 2\pi.
 					\label{e:theta-ineqs2}
 				\end{align}
-			where $\sigma:{1,2,3}\to{1,2,3}$ is any cyclic permutation. These inequalities correspond to $(\ref{e:trinion-ineqs})$.
+			where $\sigma:{1,2,3}\to{1,2,3}$ is any cyclic permutation. These inequalities correspond to (\ref{e:trinion-ineqs}).
 		\end{itemize}
 	\end{theorem}
 	Furthermore
@@ -258,7 +258,7 @@ There is another construction of a prequantum line bundle for $\MM$, the \textit
 	\end{lemma}
 	Motivated by this lemma, define \emph{interior triples} in $[0,\pi]^3$ to be those for which none of the equations is satisfied, i.e those on the interior of the convex polytope. These triples correspond to points in $\MM(D)$ which are conjugacy classes of irreducible representations of $\pi_1(D)$. Theorem \ref{t:torusfibres} tells us that the fibre $\pi^{-1}(x)$ is a torus of dimension $3g-3$ if and only if $\theta(x)$ is an interior triple.
 	\begin{theorem}
-		Let $x\in B$ and let $A$ be a flat a.t.d. connection whose gauge equivalence class is in $\pi^{-1}(x)$. Further, assume that on every trinion the holonomy angles of $x$ is an interior triple. Then the fibre $\pi^{-1}(x)$ is identified with $T^{3g-3}/(\mathbb{Z}_2)^{2g-2}$ under the map $\psi_A$ defined in eqn. (\ref{e:psiA}).
+		Let $x\in B$ and let $A$ be a flat a.t.d. connection whose gauge equivalence class is in $\pi^{-1}(x)$. Further, assume that on every trinion the holonomy angles of $x$ is an interior triple. Then the fibre $\pi^{-1}(x)$ is identified with $T^{3g-3}/(\mathbb{Z}_2)^{2g-2}$ under the map $\psi_A$ defined in equation (\ref{e:psiA}).
 	\end{theorem}
 	Thus, the fibres corresponding to interior triples, which are the generic fibres, are tori of dimension $3g-3$. 
 	
@@ -280,7 +280,7 @@ There is another construction of a prequantum line bundle for $\MM$, the \textit
 		
 	Let $\{\tilde{\mu}_i\}\in C^\infty(B,\mathbb{R})$ be a basis of the period lattice, and define $\mu_i = \tilde{\mu}_i\circ \pi \in C^\infty(\MM,\mathbb{R})$. Then the Hamiltonian flows of the $\mu_i$ have period 1, and the fundamental group $\pi_1(L_x)$ is generated by the loops $\gamma_i$ which are the period 1 trajectories of the Hamiltonian flows of $\mu_i$. The functions $(\mu_1,...,\mu_m)$ define a moment map for a torus $(S^1)^m$ action on on $\MM$, preserving the Lagrangian fibration \cite[\S4]{jeffrey_bohr-sommerfeld_1992}. These functions correspond to a set of \emph{action variables} to pair with our $\theta_i$ angle variables on $\MM$. The period lattice is important, as Jeffrey and Weitsman show that the Bohr-Sommerfeld points correspond to integer values of a set of functions generating the period lattice \cite[\S5]{jeffrey_bohr-sommerfeld_1992}. 
 	
-	For $\Sigma$ a connected compact Riemann surface of genus $g$, fix a trinion decomposition $\{D_\gamma\}$, and label the boundary loops of $D_\gamma$ as $C_{i_1(\gamma)}$, $C_{i_2(\gamma)}$ and $C_{i_3(\gamma)}$. We call a boundary loop $C_i$ \emph{separating} if removing it disconnects $\Sigma$. Recall the co-ordinates $\theta_i$ for the points $x\in \MM$ defined in equation $\ref{e:thetacoords}$. 
+	For $\Sigma$ a connected compact Riemann surface of genus $g$, fix a trinion decomposition $\{D_\gamma\}$, and label the boundary loops of $D_\gamma$ as $C_{i_1(\gamma)}$, $C_{i_2(\gamma)}$ and $C_{i_3(\gamma)}$. We call a boundary loop $C_i$ \emph{separating} if removing it disconnects $\Sigma$. Recall the co-ordinates $\theta_i$ for the points $x\in \MM$ defined in equation \ref{e:thetacoords}. 
 	\begin{theorem}[Jeffrey and Weitsman, Theorem 8.1]
 		\label{t:bs-count}
 		The set $P^{bs}$ of Bohr-Sommerfeld points in $B$ for the line bundle $\LL^k$ is given by the points $x\in B$ satisfying the conditions:
@@ -302,11 +302,11 @@ There is another construction of a prequantum line bundle for $\MM$, the \textit
 
 	\begin{figure}[h]
 		\centering
-		\label{fig:g2-graphs}
 		\subfloat[][The symmetric decomposition and graph.]{\includegraphics[width=0.4\linewidth]{g2sym_graph.png}\label{fig:sym-graph}}
 		\hspace{0.1\linewidth}
 		\subfloat[][The asymmetric decomposition and graph.]{\includegraphics[width=0.4\linewidth]{g2asym_graph.png}\label{fig:asym-graph}}
 		\caption{Decompositions of a genus 2 surface and the corresponding trivalent graphs.}
+		\label{fig:g2-graphs}
 	\end{figure}
 
 	\underline{Example}:

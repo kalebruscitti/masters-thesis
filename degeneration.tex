@@ -99,9 +99,9 @@
 	
 	Let $\Delta = [1/2,1]$, which divides into three faces $\{1/2\}, \{1\}$ and $(1/2,1)$. When $\gamma \in (1/2,1)$, the corresponding holonomy matrix has two distinct eigenvalues $\gamma$ and $-\gamma$.  If $\gamma=1/2$ then $A_i = -\mathds{1}$, and if $\gamma = 1$ then $A_i = \mathds{1}$.
 	
-	Fix $\gamma \in [1/2,1]$ and consider the space of connections with holonomy whose logarithm is $\gamma$ about $p_i$. Quotienting out the gauge choice of $SL(2,\C)$ framing around $p_i$, the Mehta-Seshadri theorem \cite{mehta_moduli_1980} tells us that this space of connections corresponds to the holomorphic moduli space of parabolic $SL(n,\C)$ vector bundles $E$ with parabolic structure at $p_i$ of weight $\gamma$. The parabolic structure is the flag given by the largest eigenspace of the holonomy, i.e. that with eigenvalue $\gamma$. When $\gamma = 1/2$ or $1$, then we acquire instead a framed parabolic sheaf with torsion at $p_1$ and the $SL(2,\C)$ structure vanishes, as discussed in section \ref{s:mastermoduli}.
+	Fix $\gamma \in [1/2,1]$ and consider the space of connections with holonomy whose logarithm is $\gamma$ about $p_i$. Quotienting out the gauge choice of $SL(2,\C)$ framing around $p_i$, the Mehta-Seshadri theorem \cite{mehta_moduli_1980} tells us that this space of connections corresponds to the holomorphic moduli space of parabolic $SL(n,\C)$ vector bundles $E$ with parabolic structure at $p_i$ of weight $\gamma$. The parabolic structure is the flag given by the largest eigenspace of the holonomy, i.e. that with eigenvalue $\gamma$. When $\gamma = 1/2$ or $1$, then we acquire instead a framed parabolic sheaf with torsion at $p_1$ and the $SL(2,\C)$ structure vanishes, as discussed in Chapter \ref{s:mastermoduli}.
 		
-	To obtain the entire moduli space of connections on $\Sigma_0$ and $\tilde{\Sigma}_0$, we need to allow the weights to vary and fit the space for each weight together. This was the construction of $\cP$ from section \ref{s:mastermoduli}, the space of framed parabolic sheaves constructed by Hurtubise and Jeffrey. In summary, we have \cite[Theorems 3.17, 4.1]{biswas_degenerations_2021}
+	To obtain the entire moduli space of connections on $\Sigma_0$ and $\tilde{\Sigma}_0$, we need to allow the weights to vary and fit the space for each weight together. This was the construction of $\cP$ from Chapter \ref{s:mastermoduli}, the space of framed parabolic sheaves constructed by Hurtubise and Jeffrey. In summary, we have \cite[Theorems 3.17, 4.1]{biswas_degenerations_2021}
 	\begin{theorem}[Biswas and Hurtubise]
 		\label{t:bishurt}
 		There is a fibre bundle $\pi: \XX \to \C$, for which
@@ -112,7 +112,7 @@
 		\end{itemize}
 		We refer to this bundle as the \emph{degeneration of $\MM$ to $\cP$}, or simply \emph{the degeneration}.
 	\end{theorem}
-	We can rephrase this degeneration as a surjective map $\phi:\MM\to P$, given by taking an element $A\in X_1 \cong \MM$ to its corresponding degenerated element $A_0 \in X_0 \cong P$, given locally by the model in section \ref{s:local-model-conns}. In terms of the extended moduli spaces of section $\ref{s:mastermoduli}$, $\phi$ is the composition of the inclusion and quotient maps:
+	We can rephrase this degeneration as a surjective map $\phi:\MM\to P$, given by taking an element $A\in X_1 \cong \MM$ to its corresponding degenerated element $A_0 \in X_0 \cong P$, given locally by the model in section \ref{s:local-model-conns}. In terms of the extended moduli spaces of Chapter $\ref{s:mastermoduli}$, $\phi$ is the composition of the inclusion and quotient maps:
 	\begin{equation}
 		\MM = \MM^T \hookrightarrow \MM^G \twoheadrightarrow P,
 	\end{equation}
@@ -126,7 +126,7 @@
 		where the surjection is the quotient map of the imploded cross-section.
 	\end{lemma}
 	\begin{proof}
-		Fix one closed curve $\gamma_k$ in the trinion decomposition. Then an element $A\in \MM$ defines a holonomy $C_k\in T\subset SU(2)$ around $\gamma_k$, and we also have the local model for the degeneration $D(A)$ on a tubular neighbourhood around $\gamma_k$. First let us compute $\phi(A)$. Suppose $A = (A_i,B_i,C_j,D_j)$. Then to compute the quotient for the imploded cross-section, we have three faces $\{\sigma_0, \sigma_+, \sigma_-\}$ of $\Delta = [0,1]$ to consider. If $C_j^{-1} \in \exp \sigma_0$ then it is quotiented by the stabiliser $[G_\sigma,G_\sigma] = \{e\}$ as discussed in section \ref{s:mastermoduli}. If $C_j^{-1} = \pm 1$, then it is quotiented by the stabiliser $[G_\sigma, G_\sigma] = G$, under the action
+		Fix one closed curve $\gamma_k$ in the trinion decomposition. Then an element $A\in \MM$ defines a holonomy $C_k\in T\subset SU(2)$ around $\gamma_k$, and we also have the local model for the degeneration $D(A)$ on a tubular neighbourhood around $\gamma_k$. First let us compute $\phi(A)$. Suppose $A = (A_i,B_i,C_j,D_j)$. Then to compute the quotient for the imploded cross-section, we have three faces $\{\sigma_0, \sigma_+, \sigma_-\}$ of $\Delta = [0,1]$ to consider. If $C_j^{-1} \in \exp \sigma_0$ then it is quotiented by the stabiliser $[G_\sigma,G_\sigma] = \{e\}$ as discussed in Chapter \ref{s:mastermoduli}. If $C_j^{-1} = \pm 1$, then it is quotiented by the stabiliser $[G_\sigma, G_\sigma] = G$, under the action
 		\begin{equation}
 			D_k \to D_k g^{-1},~ C_l \to g C_l g^{-1}.
 		\end{equation}
@@ -165,7 +165,7 @@
 		\begin{equation}
 			g\cdot(W_1,...,W_{n}) = (C_1,gD_2,C_2,...,gD_n, C_n). 
 		\end{equation}
-		As for the degeneration $D$, the final copy of $G$ acts by global conjugation on the representations $\Hom(\pi_1(G),G)$. However, as we already fixed the connection $A$ to be in A.T.D. gauge, we know $C_j \in T$ and hence the conjugation action fixes $C_j$, and is given by
+		As for the degeneration $D$, the final copy of $G$ acts by conjugation on the representations $\Hom(\pi_1(G),G)$. However, as we already fixed the connection $A$ to be in A.T.D. gauge, we know $C_j \in T$ and hence the conjugation action fixes $C_j$, and is given by
 		\begin{equation}
 			g \cdot (C_1,(C_j,D_j, D_j\mu)_{j=2}^n) = (C_1, (C_j, gD_j, gD_j\mu)_{j=2}^n),
 		\end{equation}
@@ -176,7 +176,7 @@
 	
 	Theorem \ref{t:bishurt} gives us a relationship between the moduli space $\MM$ of flat $SU(2)$ connections over the Riemann surface $\Sigma$, and a toric variety $\cP$ via degeneration. Such degenerations to toric varieties have been studied in other contexts, where one can often prove a result about some space $X$ by degenerating it to a toric variety for which the result holds. In this case, one may hope to prove that the number of Bohr-Sommerfeld points of $\MM$ is equal to the number of fiberwise flat sections by proving Sniyaticki's theorem for toric varieties and then using the degeneration of $\MM$ to $\cP$. If the degeneration preserved the space of sections, then by relating the fibrewise flat sections of $\cP$ to the Bohr-Sommerfeld points you could obtain a similar relation for $\MM$. 
 	
-	However, it turns out that Sniyaticki's theorem does not hold for toric varieties. Hamilton proved in 2010 that if $M$ is a compact toric symplectic manifold with a singular Lagrangian fibration and a prequantum line bundle $\LL$, then the number of fibre-wise flat sections $(\dim H^0(\JJ_{\pi}, M))$ is equal to the number of \emph{non-singular} Bohr-Sommerfeld points \cite[Theorem 8.3.2]{hamilton_locally_2010}. For example, when $g=2$ we computed in section \ref{s:p-gluing} that the toric variety $\cP$ corresponding to the symmetric decomposition is $\PP^3$. This is also a compact symplectic manifold, so Hamilton's result applies. In this case, $\cP$ had four Bohr-Sommerfeld points, corresponding to the vertices of its moment polytope, which are all singular. Therefore this result tells us that $\cP$ has \emph{no} fibre-wise flat sections. It is conjectured that the number of fibre-wise flat sections of $\MM$ should agree with the Verlinde formula, so if the degeneration from $\MM$ to $\cP$ is section-preserving, this would contradict our expectations.
+	However, it turns out that Sniyaticki's theorem does not hold for toric varieties. Hamilton proved in 2010 that if $M$ is a compact toric symplectic manifold with a singular Lagrangian fibration and a prequantum line bundle $\LL$, then the number of fibre-wise flat sections $(\dim H^0(\JJ_{\pi}, M))$ is equal to the number of \emph{non-singular} Bohr-Sommerfeld points \cite[Theorem 8.3.2]{hamilton_locally_2010}. For example, when $g=2$ we computed in Section \ref{s:p-gluing} that the toric variety $\cP$ corresponding to the symmetric decomposition is $\PP^3$. This is also a compact symplectic manifold, so Hamilton's result applies. In this case, $\cP$ had four Bohr-Sommerfeld points, corresponding to the vertices of its moment polytope, which are all singular. Therefore this result tells us that $\cP$ has \emph{no} fibre-wise flat sections. It is conjectured that the number of fibre-wise flat sections of $\MM$ should agree with the Verlinde formula, so if the degeneration from $\MM$ to $\cP$ is section-preserving, this would contradict our expectations.
 	
 	To investigate the behaviour of the holomorphic and fibre-wise flat sections of $\LL$, we take inspiration from a result of Harada and Kaveh \cite{harada_integrable_2015}, which constructs an integrable system from a \textit{toric degeneration} satisfying some additional hypotheses which do not apply to the degeneration of Biswas and Hurtubise. 
 	\begin{definition}
@@ -220,7 +220,7 @@
 	\begin{equation}
 		Q_t = \{(x,y)\in B ~|~ xy = t, x\geq y, t\in U\}.
 	\end{equation}
-	By requiring $x\geq y$, we are taking only half of the local model for the curve that we had before. For $t=0$, the space $Q_0$ becomes a punctured disk, which is a local model for $D$ in a neighbourhood of one of the punctures $p_i$. Now, restricting all the discussion of our local connections in section $\ref{s:local-model-conns}$ to $Q_t$, we get that a connection
+	By requiring $x\geq y$, we are taking only half of the local model for the curve that we had before. For $t=0$, the space $Q_0$ becomes a punctured disk, which is a local model for $D$ in a neighbourhood of one of the punctures $p_i$. Now, restricting all the discussion of our local connections in Section $\ref{s:local-model-conns}$ to $Q_t$, we get that a connection
 	\begin{equation}
 		\nabla = d + i\frac{\alpha}{2}(d\theta_x - d\theta_y)
 	\end{equation}

@@ -2,7 +2,7 @@
 	Given a Riemann surface $\Sigma$ and a unitary group $G=U(n)$ or $G=SU(n)$, we are interested in the moduli space $\MM$ of connections on a principal $G$ bundle over $\Sigma$, up to gauge equivalence. A detailed study of these spaces was made by Atiyah and Bott \cite{atiyah_yang-mills_1983}, from which we take much of the following discussion.
 	
 	Thanks to the work of Narasimhan and Seshadri and Donaldson \cite{donaldson_new_1983}\cite{narasimhan_stable_1965} there are multiple ways in which one can view $\MM$. One equivalence is between flat unitary connections and irreducible representations of $\pi_1(\Sigma)$ into $G$.
-	Gauge equivalence for the connections is accounted for by a quotient: $\Hom(\pi_1(\Sigma), G)/ G$. Another equivalence is with holomorphic $SL(n,\C)$ bundles over $\Sigma$, which we think of as Doubeault operators $\dbar_E$ on a smooth complex vector bundle $E$. Different aspects of the geometry of $\MM$ become clear in different pictures, so we will explain each of them here. 
+	Gauge equivalence for the connections is accounted for by a quotient: $\Hom(\pi_1(\Sigma), G)/ G$. Another equivalence is with holomorphic $SL(n,\C)$ bundles over $\Sigma$, which we think of as Dolbeault operators $\dbar_E$ on a smooth complex vector bundle $E$. Different aspects of the geometry of $\MM$ become clear in different pictures, so we will explain each of them here. 
 	
 	\section{Flat Connections as Fundamental Group Representations}
 	\label{s:vectorbundles}
@@ -238,7 +238,7 @@
 	\begin{proof}
 		Originally proven by Mumford \cite{mumford_projective_2004}, see also an outline given by Thaddeus \cite[4]{andersen_introduction_2021}.
 	\end{proof}
-	Remark: For $g=0$ there are no stable holomorphic bundles. It is a theorem of Grothendieck \cite[Theorem 2.1]{grothendieck_sur_1957} that any holomorphic bundle $E$ over $\mathbb{P}^1$ can be written as $E \cong \oplus_{i=1}^{\text{rank} E} \OO(n_i)$, which lets us verify that $E$ is at best semi-stable. 
+	Remark: For $g=0$ there are no stable holomorphic bundles. It is a theorem of Grothendieck \cite[Theorem 2.1]{grothendieck_sur_1957} that any holomorphic bundle $E$ over $\mathbb{P}^1$ can be written as $E \cong \oplus_{i=1}^{\text{rank} E} \OO(n_i)$, which lets us verify that $E$ is at best semi-stable, which occurs when all the $n_i$ are equal. 
 
 	Now let us focus only on $\MM$. Just as in the representation picture, we will write $\MM_0$ to denote the stable bundles. $\MM_0$ is a smooth manifold \cite[\S7]{atiyah_yang-mills_1983}, and we can talk about its geometry. Being degree 0 means that the line bundle $\det E$ is topologically trivial, and a choice of global trivialization gives us an $SL(n,\C)$ structure on $E$. To preserve this trivialization, we will restrict $\text{Aut}(E)$ and $\End E$ to their intersections in $SL(n,\C)$ and $\mathfrak{sl}(n,\C)$ respectively.
 	
@@ -248,11 +248,11 @@
 		\label{l:stablesimple}
 	\end{lemma}
 	\begin{proof}
-		Suppose $f\in H^0(\Sigma,\End(E))$, $\lambda \in \mathbb{C}$. Then $\ker(f)$ and im$(f)$ are subbundles of $E$ and we have the exact sequence
+		Suppose $f\in H^0(\Sigma,\End(E))$, $\lambda \in \mathbb{C}$. Then $\ker(f)$ and im$(f)$ are subsheaves of $E$ and we have the exact sequence
 		\begin{equation}
 			0\to \ker(f) \to E \to \text{im}(f)\to 0,
 		\end{equation}
-		therefore $c_1(\ker(f))c_1(\text{im})(f) = c_1(E)$ and $\text{rank}(\ker(f)) + \text{rank im}(f) = n$. This forces that either $\mu(\ker(f))$ or $\mu(\text{im}(f))$ must be greater than or equal to $\mu(E)$, and hence either $\ker(f) = E$ or $\text{im}(f)=E$ since $E$ is stable.
+		therefore $c_1(\ker(f))c_1(\text{im})(f) = c_1(E)$ and $\text{rank}(\ker(f)) + \text{rank im}(f) = n$. Then either $\mu(\ker(f))$ or $\mu(\text{im}(f))$ must be greater than or equal to $\mu(E)$, and hence either $\ker(f) = E$ or $\text{im}(f)=E$ since $E$ is stable.
 		
 		Now for $\mathds{1}\in H^0(\Sigma,\End(E))$, the argument above applied to $f-\lambda \mathds{1}$, $\lambda \in \mathbb{C}$ shows that $f = \lambda \mathds{1}$ and therefore $H^0(\Sigma,\End(E)) =\C$. Since $\mathds{1}$ is not traceless, it is not in $\mathfrak{sl}(E)$, and hence $H^0(\Sigma,\mathfrak{sl}(E)) =0$.
 	\end{proof}

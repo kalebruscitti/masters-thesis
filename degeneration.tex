@@ -1,5 +1,5 @@
 
-	In sections 2, 3 and 4, we have described the moduli space $\MM$ of flat $SU(2)$ connections on a compact Riemann surface $\Sigma$, and the corresponding spaces $P$ and $\cP$ of representations with weighted frames on $\Sigma$ and framed parabolic sheaves on $\tilde{\Sigma}$, a singular curve corresponding to $\Sigma$ via degeneration. Now in this section we will describe how this degeneration of $\Sigma$ to $\tilde{\Sigma}$ induces a degeneration of $\MM$ to $\cP$. This degeneration of moduli spaces is due to Biswas and Hurtubise \cite{biswas_degenerations_2021}. 
+	In Chapters 2, 3 and 4, we have described the moduli space $\MM$ of flat $SU(2)$ connections on a compact Riemann surface $\Sigma$, and the corresponding spaces $P$ and $\cP$ of representations with weighted frames on $\Sigma$ and framed parabolic sheaves on $\tilde{\Sigma}$, a singular curve corresponding to $\Sigma$ via degeneration. Now in this section we will describe how this degeneration of $\Sigma$ to $\tilde{\Sigma}$ induces a degeneration of $\MM$ to $\cP$. This degeneration of moduli spaces is due to Biswas and Hurtubise \cite{biswas_degenerations_2021}. 
 \section{Degeneration of the Curves}
 	The relationship between the moduli spaces $\MM$ and $\cP$ is given by degenerating the Riemann surface $\Sigma$ to a nodal curve by smoothly shrinking the boundary curves of the trinion decomposition. First we describe a local model for this shrinking process.
 	
@@ -61,23 +61,22 @@
 	\end{equation}
 	which also passes well to the limit $x\to 0$. Therefore we obtain a partial connection $\nabla^p$ defined everywhere on $Q_0$ except the nodal point $x_0$. 
 	
-	This local model can also be described in terms of the holonomy of the connection. Suppose first that $\Sigma - c_1$ is not disconnected \footnote{A similar analysis can be performed for disconnecting curves, see \cite[Page 10]{biswas_degenerations_2021}.}, and denote by $\tilde{\Sigma}_0$ the desingularized degenerated curve. In this case, $\tilde{\Sigma}_0$ has genus $g-1$. Let $p_1, p_2$ denote the punctures in $\tilde{\Sigma}$ corresponding to $c_0 = x_0$. Then $\tilde{\Sigma}$ is a twice punctured curve for which we have the extended moduli space $\MM^G$ from section \ref{s:mastermoduli}:
+	This local model can also be described in terms of the holonomy of the connection. Suppose that $\Sigma - c_1$ is not disconnected\footnote{A similar analysis can be performed for disconnecting curves, see \cite[Page 10]{biswas_degenerations_2021}.}, and denote by $\tilde{\Sigma}_0$ the desingularized degenerated curve. In this case, $\tilde{\Sigma}_0$ has genus $g-1$. Let $p_1, p_2$ denote the punctures in $\tilde{\Sigma}$ corresponding to $c_0 = x_0$. Then $\tilde{\Sigma}$ is a twice punctured curve for which we have the extended moduli space $\MM^G$ from Chapter \ref{s:mastermoduli}:
 	\begin{equation}
 		\MM^G = \left\{\left((A_i,B_i)_{i=1}^{g-1}, (C_1,C_2,D_1,D_2)\right), ~|~ \prod_{i=1}^{g-1}[A_i,B_i]D_1C_1D_1^{-1}D_2C_2D_2^{-1} = 1\right\} / SU(n)
 	\end{equation}
-	On the original space $\Sigma$, the connections correspond to representations of $\pi_1(\Sigma)$; picking a point $p\in\Sigma$, let $d_1$ and $d_2$ be curves from $p$ to $c_1$ such that $d_1d^{-1}_2$ is a non-contractible loop based at $p$. Then let $(A_i,B_i)_{i=1}^{g-1}$ denote the standard generators for the rest of $\pi_1(\Sigma)$. In this notation, a connection on $\Sigma$ is represented by holonomies $\left((A_i,B_i)_{i=1}^{g-1}, C,D_1,D_2\right)$ around these curves.
+	On the original curve $\Sigma$, a connection corresponds to a representation of $\pi_1(\Sigma)$; picking a point $p\in\Sigma$, let $d_1$ and $d_2$ be curves from $p$ to $c_1$ such that $d_1d^{-1}_2$ is a non-contractible loop based at $p$. Then let $(A_i,B_i)_{i=1}^{g-1}$ denote the standard generators for the rest of $\pi_1(\Sigma)$. In this notation, a connection on $\Sigma$ is represented by holonomies $\left((A_i,B_i)_{i=1}^{g-1}, C,D_1,D_2\right)$ around these curves.
 	
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.8\linewidth]{d1d2_degen.png}
 		\caption{Example of $d_1$ and $d_2$, and the degeneration to $\tilde{\Sigma}_0$.}
 	\end{figure}
-	
-	Applying the degeneration, the resulting connection on $\tilde{\Sigma}_0$ has holonomy $C$ around the puncture $p_1$ and $C^{-1}$ around the puncture $p_2$. Gluing $p_1$ and $p_2$, the fundamental group of the result $\Sigma_0$ has the relation
+	On $\tilde{\Sigma}_0$ we have two circles around the punctures $p_1$ and $p_2$, denoted $c_1$ and $c_2$. Gluing open neighbourhoods of these points back together to obtain $\Sigma$ identifies $c_1$ and $c_2^{-1}$, meaning a connection on $\tilde{\Sigma}_0$ which can be glued to form a connection on $\Sigma$ must have the relation
 	\begin{equation}
-	 D_1CD_1^{-1}D_2C^{-1}D_2^{-1} = 1, \implies D_2^{-1}D_1CD_1^{-1}D_2 = C.
+	D_2^{-1}D_1C_1D_1^{-1}D_2 = C_2^{-1} = C_1.
 	\end{equation}
-	Therefore, $D_2^{-1}D_1 \in \Stab(C)$, or $D_1\mu^{-1} = D_2$ for some $\mu\in \Stab(C)$. Our local degeneration thus sends the connection $\nabla = (A_i,B_i,C,D_1,D_2)$ on $\Sigma$ to the orbit under $\mu \in \Stab(C)$
+	Therefore, $D_2^{-1}D_1 \in \Stab(C_1)$, or $D_1\mu^{-1} = D_2$ for some $\mu\in \Stab(C_1)$. Our local degeneration thus sends the connection $\nabla = (A_i,B_i,C,D_1,D_2)$ on $\Sigma$ to the orbit under $\mu \in \Stab(C)$
 	\begin{equation}
 		\label{e:degen-action}
 		(A_i,B_i,C,D_1,D_2) \to \left(
@@ -87,7 +86,7 @@
 	in $\MM^G$. If $C$ is in $\exp \Delta^0$, then $\Stab(C) = \{e\}$ and the degeneration is bijective. Otherwise, when $C = \pm 1$, then $\Stab(C) = SU(2)$. Notice that the action of equation \ref{e:degen-action} matches the action of the $k$-th copy of $G$ on $\MM^G$ of equation \ref{e:impl-action}. Therefore, these orbits are points in the strata of the imploded cross-section of $\MM^G$. When we perform this local degeneration for each curve in the trinion decomposition, which corresponds to imploding $\MM^G$ for each puncture, we will obtain an element in the imploded cross-section $P$. 
  	
 \section{Degeneration of the Moduli Space}
-	Using this local model, one can describe the degeneration of the entire moduli space $\MM$ as $\Sigma$ is degenerated to $\Sigma_0$. Let $\{c_i\}_{i=1}^{3g-3}$ be boundary curves in a trinion decomposition for $\Sigma$, which degenerate to points $\{p_i\}_{i=1}^{6g-6}$ in the desingularized curve; $p_{2k-1}$ and $p_{2k}$ each come from the degeneration of the curve $c_k$. On $\Sigma_t$ for $t\neq 0$, we simply have the moduli space $\MM_t$ of flat $SU(2)$ connections which corresponds to the moduli space of stable holomorphic vector bundles with $SL(2,\C)$ structure over $\Sigma_t$. Therefore it remains to understand the moduli space over $\Sigma_0$ and the desingularisation $\tilde{\Sigma}_0$. 
+	Using this local model, one can describe the degeneration of the entire moduli space $\MM$ as all of the boundary curves in a trinion decomposition of $\Sigma$ are degenerated to a singular curve $\Sigma_0$. Let $\{c_i\}_{i=1}^{3g-3}$ be boundary curves in a trinion decomposition for $\Sigma$, which degenerate to points $\{p_i\}_{i=1}^{6g-6}$ in the desingularized curve; $p_{2k-1}$ and $p_{2k}$ each come from the degeneration of the curve $c_k$. On $\Sigma_t$ for $t\neq 0$, we simply have the moduli space $\MM_t$ of flat $SU(2)$ connections which corresponds to the moduli space of stable holomorphic vector bundles with $SL(2,\C)$ structure over $\Sigma_t$. Therefore it remains to understand the moduli space over $\Sigma_0$ and the desingularisation $\tilde{\Sigma}_0$. 
 	
 	Let $p$ be a nodal point in $\Sigma_0$ and $x_1,x_2$ the two points in $\tilde{\Sigma}_0$ which correspond to $p$. Any connection on $\Sigma_0$ has holonomy $A_i\in SU(2)$ around each nodal point which lives in the fundamental alcove of $SU(2)$. We can write the alcove as
 	\begin{equation}
@@ -101,10 +100,10 @@
 	
 	Fix $\gamma \in [1/2,1]$ and consider the space of connections with holonomy whose logarithm is $\gamma$ about $p_i$. Quotienting out the gauge choice of $SL(2,\C)$ framing around $p_i$, the Mehta-Seshadri theorem \cite{mehta_moduli_1980} tells us that this space of connections corresponds to the holomorphic moduli space of parabolic $SL(n,\C)$ vector bundles $E$ with parabolic structure at $p_i$ of weight $\gamma$. The parabolic structure is the flag given by the largest eigenspace of the holonomy, i.e. that with eigenvalue $\gamma$. When $\gamma = 1/2$ or $1$, then we acquire instead a framed parabolic sheaf with torsion at $p_1$ and the $SL(2,\C)$ structure vanishes, as discussed in Chapter \ref{s:mastermoduli}.
 		
-	To obtain the entire moduli space of connections on $\Sigma_0$ and $\tilde{\Sigma}_0$, we need to allow the weights to vary and fit the space for each weight together. This was the construction of $\cP$ from Chapter \ref{s:mastermoduli}, the space of framed parabolic sheaves constructed by Hurtubise and Jeffrey. In summary, we have \cite[Theorems 3.17, 4.1]{biswas_degenerations_2021}
+	To obtain the entire moduli space of connections on $\Sigma_0$ and $\tilde{\Sigma}_0$, we need to allow the weights to vary and fit the space for each weight together. This was the construction of $\cP$ from Chapter \ref{s:mastermoduli}, the space of framed parabolic sheaves glued along a trinion decomposition, constructed by Hurtubise and Jeffrey. In summary, we have \cite[Theorems 3.17, 4.1]{biswas_degenerations_2021}
 	\begin{theorem}[Biswas and Hurtubise]
 		\label{t:bishurt}
-		There is a fibre bundle $\pi: \XX \to \C$, for which
+		There is a family $\pi: \XX \to \C$, for which
 		\begin{itemize}
 			\item $\pi:\XX\to \C$ is a flat family of irreducible reduced schemes.
 			\item For any $t\in \C^\ast$, the fibre $X_t = \pi^{-1}(t)$ is isomorphic to $\MM$.
@@ -112,18 +111,18 @@
 		\end{itemize}
 		We refer to this bundle as the \emph{degeneration of $\MM$ to $\cP$}, or simply \emph{the degeneration}.
 	\end{theorem}
-	We can rephrase this degeneration as a surjective map $\phi:\MM\to P$, given by taking an element $A\in X_1 \cong \MM$ to its corresponding degenerated element $A_0 \in X_0 \cong P$, given locally by the model in section \ref{s:local-model-conns}. In terms of the extended moduli spaces of Chapter $\ref{s:mastermoduli}$, $\phi$ is the composition of the inclusion and quotient maps:
+	In the symplectic picture, one can rephrase this degeneration as a surjective map $\phi:\MM\to P$, given by taking an element $A\in X_1 \cong \MM$ to its corresponding degenerated element $A_0 \in X_0 \cong P$, given locally by the model in Section \ref{s:local-model-conns}. In terms of the extended moduli spaces of Chapter $\ref{s:mastermoduli}$, $\phi$ is the composition of the inclusion and symplectic implosion quotient maps:
 	\begin{equation}
-		\MM = \MM^T \hookrightarrow \MM^G \twoheadrightarrow P,
+		\MM = \MM^T \hookrightarrow \MM^G \twoheadrightarrow \coprod_{\sigma \in \Delta} \Phi^{-1}(\sigma) \twoheadrightarrow P,
 	\end{equation}
-	described by Hurtubise and Jeffrey \cite[prop 2.37]{hurtubise_representations_2000}. 
+	described by Hurtubise and Jeffrey \cite[prop 2.37]{hurtubise_representations_2000}. Note that $\coprod_{\sigma \in \Delta} \Phi^{-1}(\sigma) = \MM^T$, just described in a way that respects the strata defined by the moment polytope $\Delta$.
 	\begin{lemma}
 		\label{l:degen-equal}
-		Given an element $A\in \MM$, let $D(A)$ denote the element in $P$ obtained by performing the local degeneration of section \ref{s:local-model-conns} at each curve in a trinion decomposition for $\Sigma$. Then $D(A) = \phi(A)$, where $\phi(A)$ is the composition of maps 
+		Given an element $A\in \MM$, let $D(A)$ denote the element in $P$ obtained by performing the local degeneration of Section \ref{s:local-model-conns} at each curve in a trinion decomposition for $\Sigma$. Then $D(A) = \phi(A)$, where $\phi(A)$ is the composition of maps 
 		\begin{equation}
-			\MM = \MM^T \hookrightarrow \MM^G \twoheadrightarrow P,
+		\MM = \MM^T \hookrightarrow \MM^G \twoheadrightarrow \coprod_{\sigma \in \Delta} \Phi^{-1}(\sigma) \twoheadrightarrow P,
 		\end{equation}
-		where the surjection is the quotient map of the imploded cross-section.
+		where the surjections are the restriction and quotient maps of the imploded cross-section.
 	\end{lemma}
 	\begin{proof}
 		Fix one closed curve $\gamma_k$ in the trinion decomposition. Then an element $A\in \MM$ defines a holonomy $C_k\in T\subset SU(2)$ around $\gamma_k$, and we also have the local model for the degeneration $D(A)$ on a tubular neighbourhood around $\gamma_k$. First let us compute $\phi(A)$. Suppose $A = (A_i,B_i,C_j,D_j)$. Then to compute the quotient for the imploded cross-section, we have three faces $\{\sigma_0, \sigma_+, \sigma_-\}$ of $\Delta = [0,1]$ to consider. If $C_j^{-1} \in \exp \sigma_0$ then it is quotiented by the stabiliser $[G_\sigma,G_\sigma] = \{e\}$ as discussed in Chapter \ref{s:mastermoduli}. If $C_j^{-1} = \pm 1$, then it is quotiented by the stabiliser $[G_\sigma, G_\sigma] = G$, under the action
@@ -174,9 +173,9 @@
 	
 	\section{Toric Degenerations and Bohr-Sommerfeld Points}
 	
-	Theorem \ref{t:bishurt} gives us a relationship between the moduli space $\MM$ of flat $SU(2)$ connections over the Riemann surface $\Sigma$, and a toric variety $\cP$ via degeneration. Such degenerations to toric varieties have been studied in other contexts, where one can often prove a result about some space $X$ by degenerating it to a toric variety for which the result holds. In this case, one may hope to prove that the number of Bohr-Sommerfeld points of $\MM$ is equal to the number of fiberwise flat sections by proving Sniyaticki's theorem for toric varieties and then using the degeneration of $\MM$ to $\cP$. If the degeneration preserved the space of sections, then by relating the fibrewise flat sections of $\cP$ to the Bohr-Sommerfeld points you could obtain a similar relation for $\MM$. 
+	Theorem \ref{t:bishurt} gives us a relationship between the moduli space $\MM$ of flat $SU(2)$ connections over the Riemann surface $\Sigma$, and a toric variety $\cP$ via degeneration. Such degenerations to toric varieties have been studied in other contexts, where one can often prove a result about some space $X$ by degenerating it to a toric variety for which the result holds. In this case, one may hope to prove that the number of Bohr-Sommerfeld points of $\MM$ is equal to the number of fiberwise flat sections by proving Sniatycki's theorem for toric varieties and then using the degeneration of $\MM$ to $\cP$. If the degeneration preserved the space of sections, then by relating the fibrewise flat sections of $\cP$ to the Bohr-Sommerfeld points you could obtain a similar relation for $\MM$. 
 	
-	However, it turns out that Sniyaticki's theorem does not hold for toric varieties. Hamilton proved in 2010 that if $M$ is a compact toric symplectic manifold with a singular Lagrangian fibration and a prequantum line bundle $\LL$, then the number of fibre-wise flat sections $(\dim H^0(\JJ_{\pi}, M))$ is equal to the number of \emph{non-singular} Bohr-Sommerfeld points \cite[Theorem 8.3.2]{hamilton_locally_2010}. For example, when $g=2$ we computed in Section \ref{s:p-gluing} that the toric variety $\cP$ corresponding to the symmetric decomposition is $\PP^3$. This is also a compact symplectic manifold, so Hamilton's result applies. In this case, $\cP$ had four Bohr-Sommerfeld points, corresponding to the vertices of its moment polytope, which are all singular. Therefore this result tells us that $\cP$ has \emph{no} fibre-wise flat sections. It is conjectured that the number of fibre-wise flat sections of $\MM$ should agree with the Verlinde formula, so if the degeneration from $\MM$ to $\cP$ is section-preserving, this would contradict our expectations.
+	However, it turns out that Sniatycki's theorem does not hold for toric varieties. Hamilton proved in 2010 that if $M$ is a compact toric symplectic manifold with a singular Lagrangian fibration and a prequantum line bundle $\LL$, then the number of fibre-wise flat sections $(\dim H^0(\JJ_{\pi}, M))$ is equal to the number of \emph{non-singular} Bohr-Sommerfeld points \cite[Theorem 8.3.2]{hamilton_locally_2010}. For example, when $g=2$ we computed in Section \ref{s:p-gluing} that the toric variety $\cP$ corresponding to the symmetric decomposition is $\PP^3$. This is also a compact symplectic manifold, so Hamilton's result applies. In this case, $\cP$ had four Bohr-Sommerfeld points, corresponding to the vertices of its moment polytope, which are all singular. Therefore this result tells us that $\cP$ has \emph{no} fibre-wise flat sections. It is conjectured that the number of fibre-wise flat sections of $\MM$ should agree with the Verlinde formula, so if the degeneration from $\MM$ to $\cP$ is section-preserving, this would contradict our expectations.
 	
 	To investigate the behaviour of the holomorphic and fibre-wise flat sections of $\LL$, we take inspiration from a result of Harada and Kaveh \cite{harada_integrable_2015}, which constructs an integrable system from a \textit{toric degeneration} satisfying some additional hypotheses which do not apply to the degeneration of Biswas and Hurtubise. 
 	\begin{definition}
@@ -190,7 +189,7 @@
 	\end{definition}
 	Theorem \ref{t:bishurt} tells us that in this case, the moduli space $\MM$ of flat $SU(2)$ connections serve as our quasi-projective scheme, and we have a toric degeneration to the moduli space of parabolic sheaves $\cP$. Now let us describe the additional hypothesis that are required for Harada and Kaveh's result.
 	
-	Suppose $\pi:\XX\to\C$ is a toric degeneration of $X$, and $X$ has a Kahler form $\omega$. Let $\Omega$ denote a constant multiple of a Fubini-Study Kahler form on $\mathbb{P}^N$, and equip $\mathbb{P}^N\times\C$ with the Kahler structure $\Omega \times \omega_{std}$. Assume that:
+	Suppose $\pi:\XX\to\C$ is a toric degeneration of $X$, and $X$ has a Kaehler form $\omega$. Let $\Omega$ denote a constant multiple of a Fubini-Study Kaehler form on $\mathbb{P}^N$, and equip $\mathbb{P}^N\times\C$ with the Kaehler structure $\Omega \times \omega_{std}$. Assume that:
 	\begin{enumerate}
 		\item The family $\XX$ is smooth away from the zero fibre $X_0$.
 		\item The family $\XX$ is embedded in $\mathbb{P}^N\times \C$ as an algebraic subvariety, for some projective space $\mathbb{P}^N$ such that:
@@ -199,13 +198,13 @@
 			\item the action of $\mathbb{T}$ on $X_0$ extends to a linear action on $\mathbb{P}^N$.
 		\end{itemize}
 		Let $\omega_t$ denote the restriction of $\Omega\times \omega_{std}$ to the fibre $X_t$ embedded in $\mathbb{P}^N \times {t}$. Then
-		\item The map $\rho_1 : X\to X_1$ is an isomorphism of Kahler manifolds; $\rho_1^\ast(\omega_1) = \omega$;
-		\item Let $T = (S^1)^n$ denote the compact subtorus of $\mathbb{T}$. The Kahler form $\Omega$ on $\mathbb{P}^N$ is $T$-invariant and in particular the restriction $\omega_0$ to the toric variety $X_0$ is a $T$-invariant Kahler form.
+		\item The map $\rho_1 : X\to X_1$ is an isomorphism of Kaehler manifolds; $\rho_1^\ast(\omega_1) = \omega$;
+		\item Let $T = (S^1)^n$ denote the compact subtorus of $\mathbb{T}$. The Kaehler form $\Omega$ on $\mathbb{P}^N$ is $T$-invariant and in particular the restriction $\omega_0$ to the toric variety $X_0$ is a $T$-invariant Kaehler form.
 	\end{enumerate}
 	Given a toric variety satisfying these conditions, Harada and Kaveh provide the following theorem:
 	\begin{theorem}[Harada and Kaveh]
 		\label{t:haradakaveh}
-		Let $\pi:\XX\to \C$ be a toric degeneration of $X$, and let $\omega$ be a Kahler structure on $X$. If $\pi:\XX\to\C$ satisfies conditions 1-4 above, then:
+		Let $\pi:\XX\to \C$ be a toric degeneration of $X$, and let $\omega$ be a Kaehler structure on $X$. If $\pi:\XX\to\C$ satisfies conditions 1-4 above, then:
 		\begin{enumerate}
 			\item There exists a surjective continuous map $\phi:X\to X_0$ which is a symplectomorphism restricted to a dense open subset $U\subset X$.
 			\item There exists a completely integrable system $\mu = (F_1,...,F_n)$ on $(X,\omega)$ whose moment polytope $\Delta$ coincides with the moment polytope of $(X_0, \omega_0)$.
@@ -214,27 +213,4 @@
 	\end{theorem}
 	
 	For the degeneration $\MM\to \cP$, the spaces $\MM_t$ are not smooth, so the theorem does not apply. Despite that, in this case we still have a surjective continuous map $\phi:\MM\to \cP$ which is a symplectomorphism on a dense open subset of $\MM$, and we still have the moment polytopes of $\MM$ and $\cP$ coinciding. 
-	\iffalse
-	\section{Degeneration of the Moduli Space over one Trinion}
-	The local model for our degeneration gives us a description of the degeneration of the moduli space $\MM(D) \to P(D)$ for a single trinion $D = S^2 - {p_1,p_3,p_3}$. Let $B$ be the polydisk in $\C^2$ given by the product of two disks of radius 2 centred at the origin, and $U$ the unit disk in $\C$. As before, we can define a family for $t\in U$ by
-	\begin{equation}
-		Q_t = \{(x,y)\in B ~|~ xy = t, x\geq y, t\in U\}.
-	\end{equation}
-	By requiring $x\geq y$, we are taking only half of the local model for the curve that we had before. For $t=0$, the space $Q_0$ becomes a punctured disk, which is a local model for $D$ in a neighbourhood of one of the punctures $p_i$. Now, restricting all the discussion of our local connections in Section $\ref{s:local-model-conns}$ to $Q_t$, we get that a connection
-	\begin{equation}
-		\nabla = d + i\frac{\alpha}{2}(d\theta_x - d\theta_y)
-	\end{equation}
-	on $Q_1$ degenerates to a connection
-	\begin{equation}
-		\nabla' = d + i\alpha d\theta_x
-	\end{equation}
-	on $Q_0$. Given two trinions $D_1$ and $D_2$ which we wish to glue together at the punctures $p_1$ and $q_1$, let $Q_{0,1}$ and $Q_{0,2}$ be local models around $p_1$ in $D_1$ and $q_1$ in $D_2$ respectively. If we let $Q_{0,1}$'s co-ordinate be $x$ and $Q_{0,2}$'s co-ordinate be $y$, we see that $Q_{0,1}\cup Q_{0,2}$ agrees with our local model for the desingularized degenerated curve $\tilde{\Sigma}$ around the glued points. That is:
-	\begin{equation}
-		Q_{0,1}\cup Q_{0,2} = \{(x,0)\in B~|~ x\neq 0 \}\cup {(0,y)\in B~|~ y\neq 0} = \{(x,y)\in B~|~ xy=0\} 
-	\end{equation}
-	Given connections
-	\begin{align*}
-		\nabla_1 &= d + i\alpha d\theta_{x_1}, & \nabla_2 &= d + i\beta d\theta_{x_2}
-	\end{align*} 
-	on $Q_{0,1}$ and $Q_{0,2}$, equations (\ref{e:dtx}) and (\ref{e:dty}) tell us that $\nabla_1$ and $\nabla_2$ are in the image of the degeneration if $\alpha = -\beta$. 
-	\fi
+	
